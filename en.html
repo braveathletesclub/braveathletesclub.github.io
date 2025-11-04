@@ -1,596 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brave Athletes Club | Sports, Conditioning & Traditional Performing Arts</title>
-<!-- =========================
-     Brave Athletes Club EN META
-========================= -->
-<meta name="description" content="Coaching and conditioning for kids, general, athletes, and traditional performing arts. Based in Osaka and Kyoto, Brave Athletes Club helps you assess, align, and strengthen your movement.">
-<meta name="keywords" content="Brave Athletes Club, sports class, conditioning, rehabilitation, athlete training, personal training, team support, traditional performing arts, Osaka, Kyoto, Japan">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATHLETES CLUB BRAVE | Kids Sports & Personal Support</title>
+  <meta name="description" content="ATHLETES CLUB BRAVE offers kids sports classes and personal training: posture & muscle function, performance improvement, and functional recovery." />
+  <link rel="canonical" href="https://braveathletesclub.github.io/en.html" />
 
-<!-- SNS / OGP -->
-<meta property="og:title" content="Brave Athletes Club | Assess, Align, and Strengthen Your Movement">
-<meta property="og:description" content="Training and conditioning tailored to each age, sport, and performance field — from kids to professionals and traditional performers.">
-<meta property="og:image" content="https://braveathletesclub.github.io/assets/logos/logo-autumn.png">
-<meta property="og:url" content="https://braveathletesclub.github.io/en.html">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
+  <!-- SEO / SNS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ATHLETES CLUB BRAVE" />
+  <meta property="og:title" content="ATHLETES CLUB BRAVE | Kids Sports & Personal Support" />
+  <meta property="og:description" content="Local sports club for kids and adults. Posture & muscle function, performance improvement, and functional recovery." />
+  <meta property="og:url" content="https://braveathletesclub.github.io/en.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ATHLETES CLUB BRAVE" />
+  <meta name="twitter:description" content="Kids sports & personal support." />
+  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brave Athletes Club | Coaching and Conditioning in Japan">
-<meta name="twitter:description" content="Assess, Align, and Strengthen Your Movement. Professional training and conditioning for all ages.">
-<meta name="twitter:image" content="https://braveathletesclub.github.io/assets/logos/logo-autumn.png">
+  <!-- language alternates -->
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html" />
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/" />
 
-<!-- 言語リンク -->
-<link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/">
-<link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html">
-<link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/">
-<link rel="canonical" href="https://braveathletesclub.github.io/en.html">
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
 
-  <!-- SEO: hreflang / canonical -->
-  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/">
-  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html">
-  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/en.html">
-  <link rel="canonical" href="https://braveathletesclub.github.io/en.html">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #f5f5f5;
-      --white: #ffffff;
-      --text: #1f2933;
+      --bg: #ffffff;
+      --ink: #111827;
       --muted: #6b7280;
-      --accent: #f25b84; /* Accent to match pink-logo tone */
-      --dark: #1b2330;
-      --radius-lg: 1.4rem;
-      --shadow: 0 16px 40px rgba(0,0,0,0.04);
-      --max: 1100px;
+      --brand: #1f2937;
+      --accent: #f59e0b;
     }
-
     * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; color: var(--ink); background: var(--bg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    a { text-decoration: none; color: inherit; }
+    /* Header */
+    header { position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; z-index: 10; }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand img { height: 28px; }
+    .nav-links { display: flex; gap: 16px; align-items: center; }
+    .lang { font-size: 14px; color: var(--muted); }
+    .seasonal-badge img { height: 28px; }
 
-    header {
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(15px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
-    }
-
-    .nav-inner {
-      max-width: var(--max);
-      padding: 0.8rem 1.2rem;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .logo-area img {
-      height: 44px;
-      border-radius: 10px;
-      display: block;
-    }
-
-    .site-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.01em;
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 1.2rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      align-items: center;
-    }
-
-    .nav-links a { font-size: 0.85rem; color: #374151; }
-
-    .lang-switch { font-size: .9rem; opacity: .9; }
-    .lang-switch strong { font-weight: 700; }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.55rem 1.05rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
+    /* EN版はヘッダー右に季節ロゴを表示 */
+    .seasonal-badge { display: inline-flex; align-items: center; gap: 8px; }
 
     /* Hero */
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 2.8rem 1.2rem 2.4rem;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2.2rem;
-      align-items: center;
-    }
-
-    .hero-text small {
-      display: inline-block;
-      background: rgba(242,91,132,0.12);
-      color: var(--accent);
-      padding: 0.25rem 0.6rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      font-size: 0.65rem;
-      letter-spacing: 0.04em;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.05rem, 3vw, 2.4rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .hero p { color: var(--muted); max-width: 540px; }
-
-    .hero-actions {
-      margin-top: 1.4rem;
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: #000;
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 9999px;
-      padding: 0.55rem 1.05rem;
-      font-weight: 600;
-      font-size: 0.8rem;
-    }
-
-    .hero-visual {
-      background: linear-gradient(160deg, #fff 0%, #f8d5e0 30%, #f5f5f5 100%);
-      border-radius: 1.5rem;
-      min-height: 300px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-photo {
-      position: absolute;
-      inset: 0;
-      background:
-        url("https://braveathletesclub.github.io/Autumn-logo.png") center/contain no-repeat,
-        linear-gradient(135deg, #ffe5d3 0%, #ffb07a 100%);
-      background-blend-mode: multiply;
-      border-radius: 1rem;
-    }
-
-    /* 4 segments */
-    .segments {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 1.2rem 2.5rem;
-      display: grid;
-      gap: 1.1rem;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .seg-card {
-      background: #fff;
-      border-radius: 1.15rem;
-      padding: 1.0rem 1.0rem 1.15rem;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.02);
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      border: 1px solid rgba(242,91,132,0.03);
-    }
-
-    .seg-tag {
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: var(--accent);
-      background: rgba(242,91,132,0.14);
-      padding: 0.2rem 0.56rem;
-      border-radius: 9999px;
-      width: fit-content;
-    }
-
-    .seg-card h3 { font-size: 1rem; margin: 0; }
-    .seg-card p { font-size: 0.75rem; color: #6b7280; flex: 1 1 auto; }
-    .seg-card a { font-size: 0.74rem; font-weight: 600; color: var(--accent); display: inline-flex; gap: 0.25rem; align-items: center; }
+    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; padding: 48px 0; }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; line-height: 1.2; }
+    .hero p { color: var(--muted); font-size: 16px; margin: 0 0 20px; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 600; }
+    .cta.secondary { background: #fff; color: var(--ink); border: 1px solid #e5e7eb; }
+    .hero-card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px; }
+    .hero-card h3 { margin: 0 0 8px; }
 
     /* Sections */
-    .section { max-width: var(--max); margin: 0 auto; padding: 0 1.2rem 2.8rem; }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.4rem;
-      gap: 1rem;
-    }
-
-    .section-title h2 { font-size: 1.4rem; margin: 0; }
-
-    .news-schedule { display: grid; grid-template-columns: 1.5fr 1fr; gap: 1.3rem; }
-
-    .news-list, .schedule-box {
-      background: #fff;
-      border-radius: 1.15rem;
-      box-shadow: var(--shadow);
-      padding: 1.1rem 1.1rem 1.25rem;
-    }
-
-    .news-item { padding: 0.55rem 0; border-bottom: 1px solid rgba(0,0,0,0.03); }
-    .news-item:last-child { border-bottom: none; }
-
-    .news-date { font-size: 0.65rem; color: #9ca3af; display: block; margin-bottom: 0.2rem; }
-    .news-title { font-size: 0.8rem; }
-
-    .schedule-img {
-      width: 100%;
-      background: #e5e7eb;
-      border-radius: 1rem;
-      min-height: 160px;
-      display: grid;
-      place-items: center;
-      font-size: 0.75rem;
-      color: #6b7280;
-    }
-
-    /* Coaches */
-    .coaches { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
-
-    .coach-card {
-      background: #fff;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
-
-    .coach-name { font-weight: 600; margin-bottom: 0.35rem; }
-    .coach-role { font-size: 0.7rem; color: #9ca3af; margin-bottom: 0.5rem; }
-    .coach-text { font-size: 0.72rem; color: #4b5563; }
+    section { padding: 28px 0; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+    .card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 18px; }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
 
     /* Footer */
-    footer {
-      background: #1b1f2b;
-      color: rgba(255,255,255,0.7);
-      padding: 2.2rem 1.2rem 2.4rem;
-      margin-top: 2rem;
-    }
+    footer { padding: 28px 0 48px; border-top: 1px solid #e5e7eb; margin-top: 28px; color: var(--muted); }
+    .socials a { margin-right: 12px; }
 
-    .footer-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .footer-logo { display: flex; gap: 0.4rem; align-items: center; }
-    .footer-logo-badge { width: 42px; height: 42px; background: var(--accent); border-radius: 9999px; }
-
-    .footer-col h4 { margin-bottom: 0.6rem; color: #fff; font-size: 0.85rem; }
-    .footer-col a { display: block; font-size: 0.72rem; margin-bottom: 0.4rem; color: rgba(255,255,255,0.6); }
-
-    .copyright {
-      text-align: center;
-      font-size: 0.65rem;
-      margin-top: 1.5rem;
-      color: rgba(255,255,255,0.4);
-    }
-
-    /* responsive */
-    @media (max-width: 1024px) {
+    @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
-      .segments { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .news-schedule { grid-template-columns: 1fr; }
-      .coaches { grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .segments { grid-template-columns: 1fr; }
-      .hero { padding-top: 1.3rem; }
-      .section-title { flex-direction: column; align-items: flex-start; }
-      .coaches { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "ATHLETES CLUB BRAVE",
+    "email": "braveathletesclub@gmail.com",
+    "url": "https://braveathletesclub.github.io/en.html",
+    "sameAs": [
+      "https://www.facebook.com/"
+    ],
+    "description": "Local sports club offering kids classes and personal support."
+  }
+  </script>
+
+  <script>
+    // Seasonal logo logic (EN header shows seasonal mark)
+    (function() {
+      var month = new Date().getMonth() + 1; // 1-12
+      var season = (month<=2||month==12) ? "winter" : (month<=5) ? "spring" : (month<=8) ? "summer" : "autumn";
+      var pathCandidates = [
+        "/assets/seasonal/logo-" + season + ".svg",
+        "/assets/seasonal/logo-" + season + ".png"
+      ];
+      var img = document.getElementById("seasonLogo");
+      function tryNext(i) {
+        if (i >= pathCandidates.length) return;
+        var test = new Image();
+        test.onload = function() { img.src = pathCandidates[i]; };
+        test.onerror = function() { tryNext(i+1); };
+        test.src = pathCandidates[i];
+      }
+      if (img) tryNext(0);
+    })();
+  </script>
 </head>
+
 <body>
-<header>
-  <div class="nav-inner">
-    <div class="logo-area">
-      <img src="https://raw.githubusercontent.com/braveathletesclub/braveathletesclub.github.io/main/brave-athletes-club3.jpg" alt="Brave Athletes Club">
-      <div class="site-title">Brave Athletes Club</div>
-    </div>
-
-    <div class="nav-right">
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="/assets/logo-wordmark.svg" alt="ATHLETES CLUB BRAVE wordmark" />
+      </div>
       <nav class="nav-links">
-        <a href="#kids">Kids / Junior</a>
-        <a href="#general">General & Functional</a>
-        <a href="#athlete">Athletes / Teams</a>
-        <a href="#arts">For Traditional Arts</a>
-        <a href="#contact" class="btn-primary">Trial & Contact</a>
+        <a href="#classes">Classes</a>
+        <a href="#personal">Personal</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="cta secondary">Contact</a>
+        <span class="seasonal-badge">
+          <img id="seasonLogo" src="/assets/seasonal/logo-autumn.svg" alt="Seasonal logo" />
+        </span>
+        <span class="lang"><a href="/" hreflang="ja">JP</a></span>
       </nav>
-      <!-- Language switch -->
-      <div class="lang-switch">
-        <a href="/" aria-label="Japanese">JP</a>
-        <span aria-hidden="true"> / </span>
-        <strong>EN</strong>
-      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-text">
-      <small>Kids, General, Athletes, and Traditional Performing Arts</small>
-      <h1>Assess, Align, and Strengthen Your Movement.<br>Coaching by Brave Athletes Club</h1>
-      <p>We provide training and conditioning that develop the functions you need—tailored to age and sport. From kids’ classes and personal sessions to team support and conditioning for traditional performing arts.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Start with a Trial</a>
-        <a href="#programs" class="btn-secondary">View Programs</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-photo"></div>
-    </div>
-  </section>
-
-  <!-- 4 Segments -->
-  <section class="segments" id="programs">
-    <div class="seg-card" id="kids">
-      <span class="seg-tag">KIDS / JUNIOR</span>
-      <h3>Kids & Junior Sports Class</h3>
-      <p>Develop coordination and fundamental fitness through fun play. Seasonal short programs (winter/spring/summer) are also available.</p>
-      <a href="#news">See Schedule →</a>
-    </div>
-    <div class="seg-card" id="general">
-      <span class="seg-tag">GENERAL</span>
-      <h3>General & Functional Training</h3>
-      <p>One-to-one conditioning for those with pain, poor posture, or movement difficulties. Improve performance in daily life and work.</p>
-      <a href="#contact">Ask about Conditioning →</a>
-    </div>
-    <div class="seg-card" id="athlete">
-      <span class="seg-tag">ATHLETES / TEAM</span>
-      <h3>Athletes & Teams</h3>
-      <p>Integrated coaching for speed, agility, core control, and mental preparedness—tailored to each sport. Team trainer dispatch available.</p>
-      <a href="#contact">About Team Support →</a>
-    </div>
-    <div class="seg-card" id="arts">
-      <span class="seg-tag">TRADITIONAL ARTS</span>
-      <h3>For Traditional Performing Arts</h3>
-      <p>Conditioning that supports posture and endurance required for Noh, Japanese dance, and other stage arts—without breaking the aesthetics of the forms.</p>
-      <a href="#contact">Consult Individually →</a>
-    </div>
-  </section>
-
-  <!-- News & Schedule -->
-  <section class="section" id="news">
-    <div class="section-title">
-      <h2>News & Schedule</h2>
-      <a href="#contact" class="btn-secondary">Join / Apply Here</a>
-    </div>
-    <div class="news-schedule">
-      <div class="news-list">
-        <div class="news-item">
-          <span class="news-date">2025.10.21</span>
-          <div class="news-title">Winter Short Program “2025–2026 Winter” dates are now available.</div>
-        </div>
-        <div class="news-item">
-          <span class="news-date">2025.10.10</span>
-          <div class="news-title">Additional conditioning slots for traditional performing arts (Takatsuki, Osaka).</div>
-        </div>
-        <div class="news-item">
-          <span class="news-date">2025.09.30</span>
-          <div class="news-title">For teams seeking on-site trainer support.</div>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <h1>For the confident and the cautious.<br/>A place to enjoy movement.</h1>
+        <p>From kids sports classes to posture & muscle function, performance improvement, and functional recovery — our trainers are here to help.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="cta" href="mailto:braveathletesclub@gmail.com">Email us</a>
+          <a class="cta secondary" href="#personal">See Personal Support</a>
         </div>
       </div>
-      <div class="schedule-box">
-        <h3 style="margin-top:0;">This Month’s Schedule</h3>
-        <p style="font-size:0.7rem;color:#6b7280;margin-bottom:0.6rem;">*Please refer to Instagram and printed flyers for the latest information.</p>
-        <div class="schedule-img">
-          Place your “This Month’s Schedule” image here
+      <div class="hero-card">
+        <h3>News</h3>
+        <p>Event updates are posted on Facebook.</p>
+        <p><a href="https://www.facebook.com/" target="_blank" rel="noopener">Open Facebook</a></p>
+      </div>
+    </section>
+
+    <section id="classes">
+      <h2>Classes</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Kids Sports Class</h3>
+          <p>Build fundamentals, body control, and movement skills with fun.</p>
+        </div>
+        <div class="card">
+          <h3>Seasonal Programs</h3>
+          <p>Intensive sessions during spring/summer/winter breaks.</p>
+        </div>
+        <div class="card">
+          <h3>On-Site Support</h3>
+          <p>Schools and club teams — contact us for details.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Coaches -->
-  <section class="section" id="coaches">
-    <div class="section-title">
-      <h2>Coaches</h2>
-    </div>
-    <div class="coaches">
-      <div class="coach-card">
-        <div class="coach-name">Head Coach (Sample)</div>
-        <div class="coach-role">Performance & Conditioning</div>
-        <p class="coach-text">From competitive sports to traditional culture, we coach by analyzing the essence of movement. Experience with international travel and team support.</p>
-      </div>
-      <div class="coach-card">
-        <div class="coach-name">Kids Coach (Sample)</div>
-        <div class="coach-role">Kids & Junior</div>
-        <p class="coach-text">Fun sessions where every child takes home a “I did it!” moment.</p>
-      </div>
-      <div class="coach-card">
-        <div class="coach-name">Personal Coach (Sample)</div>
-        <div class="coach-role">Functional / Posture Improvement</div>
-        <p class="coach-text">Feel free to consult us if you have pain or discomfort. Collaboration with medical institutions is also possible.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section" id="contact">
-    <div class="section-title">
-      <h2>Trial & Contact</h2>
-      <p style="margin:0;color:#6b7280;font-size:0.9rem;">For classes, personal sessions, team support, and traditional arts conditioning—contact us here.</p>
-    </div>
-    <div style="background:#fff;border-radius:1.15rem;box-shadow:var(--shadow);padding:1.2rem 1.1rem 1.4rem;max-width:720px;">
-      <form>
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-          <div style="flex:1 1 210px;">
-            <label>Name</label><br>
-            <input type="text" name="name" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;">
-          </div>
-          <div style="flex:1 1 210px;">
-            <label>Email</label><br>
-            <input type="email" name="email" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;">
-          </div>
+    <section id="personal">
+      <h2>Personal Support</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>60 min | Functional Recovery</h3>
+          <p>¥13,200 (incl. tax) / No travel fee</p>
         </div>
-        <div style="margin-top:0.8rem;">
-          <label>Topic</label><br>
-          <select name="type" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;">
-            <option>Kids / Junior Class</option>
-            <option>General / Functional Training</option>
-            <option>Athletes / Team Support</option>
-            <option>Traditional Arts Conditioning</option>
-            <option>Other</option>
-          </select>
+        <div class="card">
+          <h3>75 min | Personal Training</h3>
+          <p>¥16,500 (incl. tax) / No travel fee</p>
         </div>
-        <div style="margin-top:0.8rem;">
-          <label>Message</label><br>
-          <textarea rows="4" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;"></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="margin-top:1rem;">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Pricing / Fees -->
-  <section class="section" id="fees">
-    <div class="section-title">
-      <h2>Programs & Fees</h2>
-      <p style="margin:0;color:#6b7280;font-size:0.85rem;">*Fees vary by number of people, content, and location. Please contact us first.</p>
-    </div>
-
-    <!-- Personal / Conditioning -->
-    <div style="background:#fff;border-radius:1.15rem;box-shadow:0 12px 30px rgba(0,0,0,0.02);padding:1.2rem 1.1rem 1.4rem;margin-bottom:1.2rem;">
-      <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">Conditioning & Personal Training</h3>
-      <p style="font-size:0.75rem;color:#6b7280;margin-bottom:0.6rem;">For general clients, performers, and competitive athletes—fully individualized sessions.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.5rem;">
-        <li style="display:flex;justify-content:space-between;gap:1rem;">
-          <span>Functional Recovery Training (60min)</span>
-          <strong>¥13,200</strong>
-        </li>
-        <li style="display:flex;justify-content:space-between;gap:1rem;">
-          <span>Personal Training (75min〜)</span>
-          <strong>¥16,500〜</strong>
-        </li>
-        <li style="display:flex;justify-content:space-between;gap:1rem;">
-          <span>Multi-session Cards (8 / 16 / 24 sessions)</span>
-          <span style="font-size:0.7rem;color:#6b7280;">Depends on content & goals</span>
-        </li>
-      </ul>
-      <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.6rem;">*Same as our PDF guide. Online pre-consultation available.</p>
-    </div>
-
-    <!-- Teams / Groups -->
-    <div style="background:#fff;border-radius:1.15rem;box-shadow:0 12px 30px rgba(0,0,0,0.02);padding:1.2rem 1.1rem 1.4rem;margin-bottom:1.2rem;">
-      <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">For Athletes / Teams / Groups</h3>
-      <p style="font-size:0.75rem;color:#6b7280;margin-bottom:0.6rem;">We visit school teams, club teams, performance sites, and training camps.</p>
-      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.5rem;">
-        <li style="display:flex;justify-content:space-between;gap:1rem;">
-          <span>Team Conditioning</span>
-          <strong>¥25,000〜</strong>
-        </li>
-        <li style="display:flex;justify-content:space-between;gap:1rem;">
-          <span>Trainer Dispatch (Game / Camp / Trip)</span>
-          <strong>¥25,000〜</strong>
-        </li>
-        <li style="display:flex;justify-content:space-between;gap:1rem;">
-          <span>Instructor Dispatch to Classes</span>
-          <strong>¥22,000〜</strong>
-        </li>
-      </ul>
-      <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.6rem;">*Quotation depends on scale, time, and location. Online meetings available.</p>
-    </div>
-
-    <!-- Kids -->
-    <div style="background:#fff;border-radius:1.15rem;box-shadow:0 12px 30px rgba(0,0,0,0.02);padding:1.2rem 1.1rem 1.4rem;">
-      <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">Kids & Junior Classes</h3>
-      <p style="font-size:0.75rem;color:#6b7280;margin-bottom:0.6rem;">Regular classes plus seasonal short programs (winter / spring / summer).</p>
-      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.35rem;">
-        <li>・Monthly class (Takatsuki)</li>
-        <li>・Seasonal Short Program “2025–2026 Winter”</li>
-        <li>・Instructor dispatch for kids’ activity events</li>
-      </ul>
-      <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.6rem;">*For latest dates/venues/fees, see “News & Schedule”.</p>
-      <a href="#news" class="btn-secondary" style="margin-top:0.8rem;display:inline-block;">Go to Latest Schedule</a>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="footer-logo">
-        <span class="footer-logo-badge"></span>
-        <div>
-          <div style="font-weight:700;">Brave Athletes Club</div>
-          <div style="font-size:0.7rem;">Sports • Conditioning • Training</div>
+        <div class="card">
+          <h3>Posture & Muscle Function</h3>
+          <p>Evidence-based assessment and gradual improvement.</p>
         </div>
       </div>
-      <p style="max-width:300px;font-size:0.7rem;margin-top:0.6rem;">
-        From kids to professionals and traditional performing arts, we deliver “movement-centric” training. Available in the Osaka–Kyoto area and for travel.
-      </p>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>ATHLETES CLUB BRAVE supports health and growth through sports for everyone in the community.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/" target="_blank" rel="noopener">See updates</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="socials">
+        <a href="mailto:braveathletesclub@gmail.com">Email</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="/">日本語</a>
+      </div>
+      <div style="margin-top:8px;">© 2025 ATHLETES CLUB BRAVE</div>
     </div>
-    <div class="footer-col">
-      <h4>Programs</h4>
-      <a href="#kids">Kids / Junior</a>
-      <a href="#general">General & Functional</a>
-      <a href="#athlete">Athletes / Teams</a>
-      <a href="#arts">For Traditional Arts</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a href="#contact">Send from Form</a>
-      <a href="#">Instagram (@brave)</a>
-    </div>
-  </div>
-  <div class="copyright">
-    © Brave Athletes Club
-  </div>
-</footer>
+  </footer>
 </body>
 </html>
-
