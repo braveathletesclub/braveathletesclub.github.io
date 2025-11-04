@@ -25,7 +25,7 @@
   <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/" />
 
   <!-- Favicon -->
-  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="icon" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#111827" />
 
@@ -52,7 +52,7 @@
     header { position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; z-index: 10; }
     .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .brand { display: flex; align-items: center; gap: 12px; }
-    .brand img { height: 28px; }
+    .brand img { height: 32px; } /* was 28px */
     .nav-links { display: flex; gap: 16px; align-items: center; }
     .lang { font-size: 14px; color: var(--muted); }
     .seasonal-badge img { height: 28px; }
@@ -99,27 +99,6 @@
     ],
     "description": "Local sports club offering kids classes and personal support."
   }
-  </script>
-
-  <script>
-    // Seasonal logo logic (EN header shows seasonal mark)
-    (function() {
-      var month = new Date().getMonth() + 1; // 1-12
-      var season = (month<=2||month==12) ? "winter" : (month<=5) ? "spring" : (month<=8) ? "summer" : "autumn";
-      var pathCandidates = [
-        "/assets/seasonal/logo-" + season + ".svg",
-        "/assets/seasonal/logo-" + season + ".png"
-      ];
-      var img = document.getElementById("seasonLogo");
-      function tryNext(i) {
-        if (i >= pathCandidates.length) return;
-        var test = new Image();
-        test.onload = function() { img.src = pathCandidates[i]; };
-        test.onerror = function() { tryNext(i+1); };
-        test.src = pathCandidates[i];
-      }
-      if (img) tryNext(0);
-    })();
   </script>
 </head>
 
@@ -217,5 +196,26 @@
       <div style="margin-top:8px;">© 2025 ATHLETES CLUB BRAVE</div>
     </div>
   </footer>
+
+  <!-- Seasonal logo logic AFTER DOM is ready -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var month = new Date().getMonth() + 1; // 1-12
+      var season = (month<=2||month==12) ? "winter" : (month<=5) ? "spring" : (month<=8) ? "summer" : "autumn";
+      var pathCandidates = [
+        "/assets/seasonal/logo-" + season + ".svg",
+        "/assets/seasonal/logo-" + season + ".png"
+      ];
+      var img = document.getElementById("seasonLogo");
+      function tryNext(i) {
+        if (i >= pathCandidates.length) return;
+        var test = new Image();
+        test.onload = function() { img.src = pathCandidates[i]; };
+        test.onerror = function() { tryNext(i+1); };
+        test.src = pathCandidates[i];
+      }
+      if (img) tryNext(0);
+    });
+  </script>
 </body>
 </html>
