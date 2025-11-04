@@ -1,715 +1,199 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brave Athletes Club | スポーツ・コンディショニング・伝統芸能の身体づくり</title>
-  <!-- =========================
-     Brave Athletes Club JP META
-========================= -->
-<meta name="description" content="子どもから一般、アスリート、伝統芸能まで。Brave Athletes Clubは『動きを見て、整えて、強くする』トレーニングとコンディショニングを提供します。大阪・京都を中心に全国対応。">
-<meta name="keywords" content="Brave Athletes Club, スポーツ教室, コンディショニング, 機能改善, アスリート, パーソナルトレーニング, トレーナー派遣, 伝統芸能, 日本舞踊, 能楽, 高槻, 京都, 大阪">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ATHLETES CLUB BRAVE｜子ども運動教室・パーソナルサポート</title>
+  <meta name="description" content="ATHLETES CLUB BRAVE（アスリーツクラブブレイブ）は、子どもの運動教室と大人のパーソナルサポートを行う地域密着型クラブです。姿勢・筋機能の改善、競技力向上、運動機能回復をサポートします。" />
+  <link rel="canonical" href="https://braveathletesclub.github.io/" />
 
-<!-- SNS / OGP -->
-<meta property="og:title" content="Brave Athletes Club | 動きを見て、整えて、強くする。">
-<meta property="og:description" content="年齢や競技に合わせたトレーニング・コンディショニングを提供。スポーツ教室、パーソナル、チーム派遣、伝統芸能向けなど幅広く対応。">
-<meta property="og:image" content="https://braveathletesclub.github.io/assets/logos/logo-autumn.png"> <!-- ←後でロゴに差し替え -->
-<meta property="og:url" content="https://braveathletesclub.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ja_JP">
+  <!-- SEO / SNS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ATHLETES CLUB BRAVE" />
+  <meta property="og:title" content="ATHLETES CLUB BRAVE｜子ども運動教室・パーソナルサポート" />
+  <meta property="og:description" content="地域密着の運動教室＆パーソナルサポート。姿勢・筋機能・運動機能回復を丁寧にサポートします。" />
+  <meta property="og:url" content="https://braveathletesclub.github.io/" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ATHLETES CLUB BRAVE" />
+  <meta name="twitter:description" content="運動教室とパーソナルサポートならBRAVEへ。" />
+  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Brave Athletes Club | スポーツ・コンディショニング・伝統芸能の身体づくり">
-<meta name="twitter:description" content="動きを見て、整えて、強くする。Brave Athletes Clubの指導。">
-<meta name="twitter:image" content="https://braveathletesclub.github.io/assets/logos/logo-autumn.png">
+  <!-- language alternates -->
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html" />
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/" />
 
-<!-- 言語リンク -->
-<link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/">
-<link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html">
-<link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/">
-<link rel="canonical" href="https://braveathletesclub.github.io/">
+  <!-- Favicon (用意できているものだけでOK) -->
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
 
-  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/">
-  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html">
-  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/">
-  <link rel="canonical" href="https://braveathletesclub.github.io/">
+  <!-- Preconnect (軽微な最適化) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --bg: #f5f5f5;
-      --white: #ffffff;
-      --text: #1f2933;
+      --bg: #ffffff;
+      --ink: #111827;
       --muted: #6b7280;
-      --accent: #f25b84; /* ピンク版ロゴに合わせるアクセント */
-      --dark: #1b2330;
-      --radius-lg: 1.4rem;
-      --shadow: 0 16px 40px rgba(0,0,0,0.04);
-      --max: 1100px;
+      --brand: #1f2937;
+      --accent: #f59e0b;
     }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; color: var(--ink); background: var(--bg); font-family: "Noto Sans JP", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    * {
-      box-sizing: border-box;
-    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-    }
+    /* Header */
+    header { position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; z-index: 10; }
+    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand img { height: 28px; }
+    .nav-links { display: flex; gap: 16px; align-items: center; }
+    .lang { font-size: 14px; color: var(--muted); }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      background: rgba(255,255,255,0.7);
-      backdrop-filter: blur(15px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
-    }
-
-    .nav-inner {
-      max-width: var(--max);
-      padding: 0.8rem 1.2rem;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .logo-area img {
-  　　height: 38px;        /* ロゴの大きさ */
-  　　border-radius: 16px; /* 角を丸くする */
-  　　display: block;
-　　}
-    .logo-mark { display:none; }
-      width: 46px;
-      height: 46px;
-      background: ur1("https://raw.githubusercontent.com/braveathletesclub/braveathletesclub.github.io/main/brave-athletes-club3.jpg")center/cover no-repeat;
-      border-radius: 9999px;
-      display: inline-block;
-    }
-
-    .site-title {
-      font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.2rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-size: 0.85rem;
-      color: #374151;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      padding: 0.55rem 1.05rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      font-size: 0.8rem;
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
+    /* JP版は季節ロゴはヘッダーに表示しない（ご要望準拠） */
+    .seasonal-badge { display: none; }
 
     /* Hero */
-    .hero {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 2.8rem 1.2rem 2.4rem;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 2.2rem;
-      align-items: center;
-    }
+    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; padding: 48px 0; }
+    .hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; line-height: 1.2; }
+    .hero p { color: var(--muted); font-size: 16px; margin: 0 0 20px; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 600; }
+    .cta.secondary { background: #fff; color: var(--ink); border: 1px solid #e5e7eb; }
+    .hero-card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px; }
+    .hero-card h3 { margin: 0 0 8px; }
 
-    .hero-text small {
-      display: inline-block;
-      background: rgba(242,91,132,0.12);
-      color: var(--accent);
-      padding: 0.25rem 0.6rem;
-      border-radius: 9999px;
-      font-weight: 600;
-      font-size: 0.65rem;
-      letter-spacing: 0.04em;
-      margin-bottom: 1.2rem;
-    }
+    /* Sections */
+    section { padding: 28px 0; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+    .card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 18px; }
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { margin: 0; color: var(--muted); }
 
-    .hero h1 {
-      font-size: clamp(2.05rem, 3vw, 2.4rem);
-      font-weight: 700;
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
-    }
+    /* Footer */
+    footer { padding: 28px 0 48px; border-top: 1px solid #e5e7eb; margin-top: 28px; color: var(--muted); }
+    .socials a { margin-right: 12px; }
 
-    .hero p {
-      color: var(--muted);
-      max-width: 540px;
-    }
-
-    .hero-actions {
-      margin-top: 1.4rem;
-      display: flex;
-      gap: 0.9rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-secondary {
-      background: #fff;
-      color: #000;
-      border: 1px solid rgba(0,0,0,0.06);
-      border-radius: 9999px;
-      padding: 0.55rem 1.05rem;
-      font-weight: 600;
-      font-size: 0.8rem;
-    }
-
-    .hero-visual {
-      background: linear-gradient(160deg, #fff 0%, #f8d5e0 30%, #f5f5f5 100%);
-      border-radius: 1.5rem;
-      min-height: 300px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* Hero の右側ビジュアルの中身（JP用） */
-    .hero-photo{
-      position: absolute;
-      inset: 0;
-      background:
-        url("https://braveathletesclub.github.io/Autumn-logo.png") center/contain no-repeat,
-        linear-gradient(135deg, #ffe5d3 0%, #ffb07a 100%);
-  /* ↑ ロゴ画像のURLは後で冬などに差し替えOK */
-      border-radius: 1rem;
-  /* blend は不要。ロゴがしっかり見えるように通常合成でOK */
-   }
-
-    /* 4セグメント */
-    .segments {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 1.2rem 2.5rem;
-      display: grid;
-      gap: 1.1rem;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .seg-card {
-      background: #fff;
-      border-radius: 1.15rem;
-      padding: 1.0rem 1.0rem 1.15rem;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.02);
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      border: 1px solid rgba(242,91,132,0.03);
-    }
-
-    .seg-tag {
-      font-size: 0.65rem;
-      font-weight: 600;
-      color: var(--accent);
-      background: rgba(242,91,132,0.14);
-      padding: 0.2rem 0.56rem;
-      border-radius: 9999px;
-      width: fit-content;
-    }
-
-    .seg-card h3 {
-      font-size: 1rem;
-      margin: 0;
-    }
-
-    .seg-card p {
-      font-size: 0.75rem;
-      color: #6b7280;
-      flex: 1 1 auto;
-    }
-
-    .seg-card a {
-      font-size: 0.74rem;
-      font-weight: 600;
-      color: var(--accent);
-      display: inline-flex;
-      gap: 0.25rem;
-      align-items: center;
-    }
-
-    /* お知らせ＆スケジュール */
-    .section {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 1.2rem 2.8rem;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1.4rem;
-      gap: 1rem;
-    }
-
-    .section-title h2 {
-      font-size: 1.4rem;
-      margin: 0;
-    }
-
-    .news-schedule {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 1.3rem;
-    }
-
-    .news-list, .schedule-box {
-      background: #fff;
-      border-radius: 1.15rem;
-      box-shadow: var(--shadow);
-      padding: 1.1rem 1.1rem 1.25rem;
-    }
-
-    .news-item {
-      padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(0,0,0,0.03);
-    }
-
-    .news-item:last-child {
-      border-bottom: none;
-    }
-
-    .news-date {
-      font-size: 0.65rem;
-      color: #9ca3af;
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-
-    .news-title {
-      font-size: 0.8rem;
-    }
-
-    .schedule-img {
-      width: 100%;
-      background: #e5e7eb;
-      border-radius: 1rem;
-      min-height: 160px;
-      display: grid;
-      place-items: center;
-      font-size: 0.75rem;
-      color: #6b7280;
-    }
-
-    /* コーチ紹介（簡易） */
-    .coaches {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 1rem;
-    }
-
-    .coach-card {
-      background: #fff;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
-
-    .coach-name {
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    .coach-role {
-      font-size: 0.7rem;
-      color: #9ca3af;
-      margin-bottom: 0.5rem;
-    }
-
-    .coach-text {
-      font-size: 0.72rem;
-      color: #4b5563;
-    }
-
-    /* フッター */
-    footer {
-      background: #1b1f2b;
-      color: rgba(255,255,255,0.7);
-      padding: 2.2rem 1.2rem 2.4rem;
-      margin-top: 2rem;
-    }
-
-    .footer-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      display: flex;
-      gap: 2rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .footer-logo {
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-    }
-
-    .footer-logo-badge {
-      width: 42px;
-      height: 42px;
-      background: var(--accent); /* フッターはピンク版ロゴを想定 */
-      border-radius: 9999px;
-    }
-
-    .footer-col h4 {
-      margin-bottom: 0.6rem;
-      color: #fff;
-      font-size: 0.85rem;
-    }
-
-    .footer-col a {
-      display: block;
-      font-size: 0.72rem;
-      margin-bottom: 0.4rem;
-      color: rgba(255,255,255,0.6);
-    }
-
-    .copyright {
-      text-align: center;
-      font-size: 0.65rem;
-      margin-top: 1.5rem;
-      color: rgba(255,255,255,0.4);
-    }
-
-    /* responsive */
-    @media (max-width: 1024px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-      .segments {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-      .news-schedule {
-        grid-template-columns: 1fr;
-      }
-      .coaches {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-links {
-        display: none;
-      }
-      .segments {
-        grid-template-columns: 1fr;
-      }
-      .hero {
-        padding-top: 1.3rem;
-      }
-      .section-title {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .coaches {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
+
+  <!-- JSON-LD (構造化データ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "ATHLETES CLUB BRAVE",
+    "email": "braveathletesclub@gmail.com",
+    "url": "https://braveathletesclub.github.io/",
+    "sameAs": [
+      "https://www.facebook.com/"
+    ],
+    "description": "子どもの運動教室と大人のパーソナルサポートを提供する地域クラブ。姿勢・筋機能の改善、競技力向上、運動機能回復を支援します。"
+  }
+  </script>
 </head>
+
 <body>
-<header>
-  <div class="nav-inner">
-    <div class="logo-area">
-      <img src="https://raw.githubusercontent.com/braveathletesclub/braveathletesclub.github.io/main/brave-athletes-club3.jpg" alt="Brave Athletes Club" style="height:44px;display:block;border-radius:10px;">
-      <div class="site-title">Brave Athletes Club</div>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="/assets/logo-wordmark.svg" alt="ATHLETES CLUB BRAVE ロゴ" />
+      </div>
+      <nav class="nav-links">
+        <a href="#classes">教室</a>
+        <a href="#personal">パーソナル</a>
+        <a href="#about">クラブについて</a>
+        <a href="#contact" class="cta secondary">お問い合わせ</a>
+        <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="#kids">キッズ・ジュニア</a>
-      <a href="#general">一般・機能改善</a>
-      <a href="#athlete">アスリート・チーム</a>
-      <a href="#arts">伝統芸能の方へ</a>
-      <a href="#contact" class="btn-primary">体験・お問い合わせ</a>
-    </nav>
-    <div class="lang-switch">
-      <strong>JP</strong>
-      <span aria-hidden="true"> / </span>
-      <a href="/en.html" aria-label="English">EN</a>
-    </div>
-</header>
- 
+  </header>
 
-  <main>
-    <!-- Hero -->
+  <main class="container">
     <section class="hero">
-      <div class="hero-text">
-        <small>子ども・一般・アスリート・伝統芸能まで対応</small>
-        <h1>動きを見て、整えて、強くする。<br>Brave Athletes Clubの指導</h1>
-        <p>年齢や競技に合わせて、必要な機能を引き出すトレーニング・コンディショニングを提供しています。スポーツ教室、パーソナル、チーム派遣、舞台芸術向けなど幅広く対応。</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">体験・お問い合わせする</a>
-          <a href="#programs" class="btn-secondary">メニューをみる</a>
+      <div>
+        <h1>得意でも、苦手でも。<br/>運動がたのしくなる場所。</h1>
+        <p>キッズスポーツクラスから、姿勢・筋機能の改善、競技力アップ、運動機能回復まで。目的に合わせて、専門トレーナーが伴走します。</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="cta" href="mailto:braveathletesclub@gmail.com">メールで相談する</a>
+          <a class="cta secondary" href="#personal">パーソナルを見る</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-photo"></div>
+      <div class="hero-card">
+        <h3>お知らせ</h3>
+        <p>最新のイベント情報はFacebookで公開中です。</p>
+        <p><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebookで見る</a></p>
       </div>
     </section>
 
-    <!-- 4 Segments -->
-    <section class="segments" id="programs">
-      <div class="seg-card" id="kids">
-        <span class="seg-tag">KIDS / JUNIOR</span>
-        <h3>子ども・ジュニア向けスポーツ教室</h3>
-        <p>基礎体力、コーディネーション、苦手克服に。冬休み・春休みなどの短期教室もこちらから。</p>
-        <a href="#news">スケジュールを見る →</a>
-      </div>
-      <div class="seg-card" id="general">
-        <span class="seg-tag">GENERAL</span>
-        <h3>一般・機能改善・リハビリ的運動</h3>
-        <p>痛みや姿勢、動きにくさのある方へ。1対1のコンディショニングで生活と仕事のパフォーマンスを上げます。</p>
-        <a href="#contact">コンディショニングを相談 →</a>
-      </div>
-      <div class="seg-card" id="athlete">
-        <span class="seg-tag">ATHLETES / TEAM</span>
-        <h3>アスリート・チーム向け指導</h3>
-        <p>競技特性に合わせたスピード・アジリティ・体幹・メンタルを統合して指導。チームへのトレーナー派遣も可能。</p>
-        <a href="#contact">チーム派遣について →</a>
-      </div>
-      <div class="seg-card" id="arts">
-        <span class="seg-tag">TRADITIONAL ARTS</span>
-        <h3>能楽・日本舞踊など伝統芸能の方へ</h3>
-        <p>所作を崩さずに、長時間の立ち座り・稽古を支える身体づくり。非スポーツ領域にも対応します。</p>
-        <a href="#contact">個別に相談する →</a>
-      </div>
-    </section>
-
-    <!-- News & Schedule -->
-    <section class="section" id="news">
-      <div class="section-title">
-        <h2>お知らせ・スケジュール</h2>
-        <a href="#contact" class="btn-secondary">参加・申込はこちら</a>
-      </div>
-      <div class="news-schedule">
-        <div class="news-list">
-          <div class="news-item">
-            <span class="news-date">2025.10.21</span>
-            <div class="news-title">冬休み短期教室『2025-2026 Winter』日程を公開しました。</div>
-          </div>
-          <div class="news-item">
-            <span class="news-date">2025.10.10</span>
-            <div class="news-title">伝統芸能向けコンディショニング枠を追加しました（大阪・高槻）。</div>
-          </div>
-          <div class="news-item">
-            <span class="news-date">2025.09.30</span>
-            <div class="news-title">アスリートチームへのトレーナー派遣をご希望の方へ。</div>
-          </div>
+    <section id="classes">
+      <h2>教室</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>キッズスポーツクラス</h3>
+          <p>基礎運動・体づくり・動きの習得を楽しく。</p>
         </div>
-        <div class="schedule-box">
-          <h3 style="margin-top:0;">今月のスケジュール</h3>
-          <p style="font-size:0.7rem;color:#6b7280;margin-bottom:0.6rem;">※Instagram・配布チラシの最新情報を優先してください。</p>
-          <div class="schedule-img">
-            ここに「今月のスケジュール」画像を貼付
-          </div>
+        <div class="card">
+          <h3>短期講座・季節イベント</h3>
+          <p>春・夏・冬休みの集中プログラムなど。</p>
+        </div>
+        <div class="card">
+          <h3>出張サポート</h3>
+          <p>学校／クラブチーム向け。ご相談ください。</p>
         </div>
       </div>
     </section>
 
-    <!-- Coaches -->
-    <section class="section" id="coaches">
-      <div class="section-title">
-        <h2>指導者</h2>
-      </div>
-      <div class="coaches">
-        <div class="coach-card">
-          <div class="coach-name">代表コーチ（例）</div>
-          <div class="coach-role">パフォーマンス・コンディショニング</div>
-          <p class="coach-text">競技スポーツから伝統文化まで、動きの本質を見て指導しています。海外帯同・チーム指導経験あり。</p>
+    <section id="personal">
+      <h2>パーソナルサポート</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>60分｜運動機能回復プログラム</h3>
+          <p>13,200円（税込）／出張費無料</p>
         </div>
-        <div class="coach-card">
-          <div class="coach-name">キッズ担当（例）</div>
-          <div class="coach-role">キッズ・ジュニア指導</div>
-          <p class="coach-text">楽しく、でも「できた！」を必ず持ち帰れるレッスンを行います。</p>
+        <div class="card">
+          <h3>75分｜パーソナルトレーニング</h3>
+          <p>16,500円（税込）／出張費無料</p>
         </div>
-        <div class="coach-card">
-          <div class="coach-name">パーソナル担当（例）</div>
-          <div class="coach-role">機能改善・姿勢改善</div>
-          <p class="coach-text">痛みや違和感のある方もご相談ください。医療機関との連携も可能です。</p>
+        <div class="card">
+          <h3>姿勢・筋機能の改善</h3>
+          <p>専門的な評価に基づき、無理なく改善。</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="section-title">
-        <h2>体験・お問い合わせ</h2>
-        <p style="margin:0;color:#6b7280;font-size:0.9rem;">クラス・パーソナル・チーム派遣・伝統芸能向け、すべてこちらからどうぞ。</p>
-      </div>
-      <div style="background:#fff;border-radius:1.15rem;box-shadow:var(--shadow);padding:1.2rem 1.1rem 1.4rem;max-width:720px;">
-        <form>
-          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-            <div style="flex:1 1 210px;">
-              <label>お名前</label><br>
-              <input type="text" name="name" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;">
-            </div>
-            <div style="flex:1 1 210px;">
-              <label>メールアドレス</label><br>
-              <input type="email" name="email" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;">
-            </div>
-          </div>
-          <div style="margin-top:0.8rem;">
-            <label>お問い合わせ区分</label><br>
-            <select name="type" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;">
-              <option>子ども・ジュニア教室について</option>
-              <option>一般・機能改善トレーニングについて</option>
-              <option>アスリート・チーム指導について</option>
-              <option>伝統芸能向けコンディショニングについて</option>
-              <option>その他</option>
-            </select>
-          </div>
-          <div style="margin-top:0.8rem;">
-            <label>内容</label><br>
-            <textarea rows="4" style="width:100%;padding:0.55rem 0.6rem;border-radius:0.6rem;border:1px solid #e5e7eb;"></textarea>
-          </div>
-          <button type="submit" class="btn-primary" style="margin-top:1rem;">送信する</button>
-        </form>
-      </div>
-    </section>
-    <!-- Pricing / Fees -->
-    <section class="section" id="fees">
-      <div class="section-title">
-        <h2>メニュー・料金</h2>
-        <p style="margin:0;color:#6b7280;font-size:0.85rem;">※人数・内容・出張場所によって料金が変わります。まずはご相談ください。</p>
-      </div>
-
-      <!-- コンディショニング・パーソナル -->
-      <div style="background:#fff;border-radius:1.15rem;box-shadow:0 12px 30px rgba(0,0,0,0.02);padding:1.2rem 1.1rem 1.4rem;margin-bottom:1.2rem;">
-        <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">コンディショニング・パーソナルトレーニング</h3>
-        <p style="font-size:0.75rem;color:#6b7280;margin-bottom:0.6rem;">一般の方・伝統芸能をされている方・競技者の方向けの個別セッションです。</p>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.5rem;">
-          <li style="display:flex;justify-content:space-between;gap:1rem;">
-            <span>運動機能回復トレーニング（60分）</span>
-            <strong>13,200円</strong>
-          </li>
-          <li style="display:flex;justify-content:space-between;gap:1rem;">
-            <span>パーソナルトレーニング（75分）</span>
-            <strong>16,500円</strong>
-          </li>
-          <li style="display:flex;justify-content:space-between;gap:1rem;">
-            <span>回数カード（8 / 16 / 24回）</span>
-            <span style="font-size:0.7rem;color:#6b7280;">内容・目的により変動</span>
-          </li>
-        </ul>
-        <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.6rem;">※PDFのご案内と同じ内容でご説明します。オンラインでの事前相談も可能です。</p>
-      </div>
-
-      <!-- チーム・団体向け -->
-      <div style="background:#fff;border-radius:1.15rem;box-shadow:0 12px 30px rgba(0,0,0,0.02);padding:1.2rem 1.1rem 1.4rem;margin-bottom:1.2rem;">
-        <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">アスリート・チーム・団体向け</h3>
-        <p style="font-size:0.75rem;color:#6b7280;margin-bottom:0.6rem;">部活動・クラブチーム・芸能・舞台の現場などへ伺います。</p>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.5rem;">
-          <li style="display:flex;justify-content:space-between;gap:1rem;">
-            <span>チームコンディショニング指導</span>
-            <strong>25,000円〜</strong>
-          </li>
-          <li style="display:flex;justify-content:space-between;gap:1rem;">
-            <span>トレーナー派遣（試合・合宿・遠征）</span>
-            <strong>25,000円〜</strong>
-          </li>
-          <li style="display:flex;justify-content:space-between;gap:1rem;">
-            <span>各スポーツ教室への指導者派遣</span>
-            <strong>22,000円〜</strong>
-          </li>
-        </ul>
-        <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.6rem;">※規模・時間・場所によりお見積りします。オンラインでの打合せも可能です。</p>
-      </div>
-
-      <!-- キッズ・短期教室 -->
-      <div style="background:#fff;border-radius:1.15rem;box-shadow:0 12px 30px rgba(0,0,0,0.02);padding:1.2rem 1.1rem 1.4rem;">
-        <h3 style="margin-top:0;margin-bottom:0.5rem;font-size:1rem;">子ども・ジュニア向け教室</h3>
-        <p style="font-size:0.75rem;color:#6b7280;margin-bottom:0.6rem;">通常クラス＋冬休み・春休み・夏休みなどの短期教室があります。</p>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.35rem;">
-          <li>・月◯回クラス（高槻）</li>
-          <li>・シーズン短期教室「2025-2026 Winter」</li>
-          <li>・講師派遣による出張運動教室</li>
-        </ul>
-        <p style="font-size:0.7rem;color:#9ca3af;margin-top:0.6rem;">※最新の日程・会場・参加費は「お知らせ・スケジュール」をご覧ください。</p>
-        <a href="#news" class="btn-secondary" style="margin-top:0.8rem;display:inline-block;">最新スケジュールへ</a>
-      </div>
+    <section id="about">
+      <h2>クラブについて</h2>
+      <p>ATHLETES CLUB BRAVEは、地域の子どもから大人まで、スポーツを通じて健康と成長を支えるクラブです。</p>
     </section>
 
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <p>メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a></p>
+      <p>Facebook：<a href="https://www.facebook.com/" target="_blank" rel="noopener">最新情報はこちら</a></p>
+    </section>
   </main>
 
   <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-logo">
-          <span class="footer-logo-badge"></span>
-          <div>
-            <div style="font-weight:700;">Brave Athletes Club</div>
-            <div style="font-size:0.7rem;">スポーツ・コンディショニング・トレーニング</div>
-          </div>
-        </div>
-        <p style="max-width:300px;font-size:0.7rem;margin-top:0.6rem;">
-          子どもからプロ・伝統芸能まで、「動きに合わせた」トレーニングを提供しています。大阪・京都エリアほか出張も可能です。
-        </p>
+    <div class="container">
+      <div class="socials">
+        <a href="mailto:braveathletesclub@gmail.com">メール</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="/en.html">English</a>
       </div>
-      <div class="footer-col">
-        <h4>メニュー</h4>
-        <a href="#kids">キッズ・ジュニア</a>
-        <a href="#general">一般・機能改善</a>
-        <a href="#athlete">アスリート・チーム</a>
-        <a href="#arts">伝統芸能の方へ</a>
-      </div>
-      <div class="footer-col">
-        <h4>お問い合わせ</h4>
-        <a href="#contact">フォームから問い合わせる</a>
-        <a href="#">Instagram（@brave）</a>
-      </div>
-    </div>
-    <div class="copyright">
-      © Brave Athletes Club
+      <div style="margin-top:8px;">© 2025 ATHLETES CLUB BRAVE</div>
     </div>
   </footer>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
