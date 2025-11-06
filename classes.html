@@ -1,1 +1,218 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brave Athletes Club | キッズ・ジュニア指導プログラム</title>
+  <meta name="description" content="Brave Athletes Club のキッズ・ジュニア指導プログラム。1〜18歳を対象に、発育発達・姿勢改善・アジリティ・インクルーシブ対応で安全に成長をサポート。" />
+  <style>
+    :root{
+      --brand:#0f172a;     /* テキスト色 */
+      --accent:#ef4444;    /* アクセント（季節ロゴに合わせて変更可） */
+      --muted:#475569;     /* 補助テキスト */
+      --ring:#e5e7eb;      /* 枠線 */
+      --card:#f8fafc;      /* カード背景 */
+      --bg:#ffffff;        /* 背景 */
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--brand);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif;line-height:1.75}
+    a{color:var(--accent);text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{max-width:1080px;margin:auto;padding:24px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;font-weight:700}
+    .btn.alt{background:var(--accent)}
+    .pill{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:12px;letter-spacing:.02em}
+
+    header.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--ring)}
+    .hero-wrap{display:grid;gap:24px;grid-template-columns:1.2fr 1fr;align-items:center}
+    @media (max-width:900px){.hero-wrap{grid-template-columns:1fr}}
+    h1{font-size:clamp(24px,3.6vw,40px);margin:.3em 0 .2em;font-weight:800}
+    h2{font-size:clamp(20px,2.6vw,28px);margin:1.6em 0 .6em;font-weight:800}
+    h3{font-size:clamp(16px,2.2vw,20px);margin:1.2em 0 .4em;font-weight:800}
+    p.lead{color:var(--muted);font-size:clamp(14px,1.9vw,18px)}
+
+    .hero-photo{aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:#dbeafe}
+    .grid{display:grid;gap:18px}
+    .grid-2{grid-template-columns:1fr 1fr}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+    .section{margin:48px 0}
+    .divider{height:1px;background:var(--ring);margin:32px 0}
+
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:18px}
+    .thumb{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#e2e8f0;margin-bottom:12px}
+
+    .list{padding-left:1.2em}
+    .list li{margin:.3em 0}
+
+    .features{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.features{grid-template-columns:1fr}}
+    .feature{border:1px solid var(--ring);border-radius:14px;padding:16px;background:#fff}
+
+    .gallery{display:grid;gap:12px;grid-template-columns:2fr 1fr}
+    .gallery .big{grid-row:span 2;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e2e8f0}
+    .gallery .sm{aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e2e8f0}
+    @media(max-width:900px){.gallery{grid-template-columns:1fr}}
+
+    footer{border-top:1px solid var(--ring);margin-top:40px;padding-top:24px;color:var(--muted)}
+  </style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="container hero-wrap">
+    <div>
+      <span class="pill">Kids & Junior Program</span>
+      <h1>キッズ・ジュニア指導プログラム（1歳〜18歳）</h1>
+      <p class="lead">運動が得意でも、苦手でも。“楽しく動けて、確実に成長できる” 教室を。発育発達 × 姿勢・動作の専門性 × スポーツ教育で、安全に自信と力を育てます。</p>
+      <div class="cta" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+        <a class="btn" href="#kids">キッズスポーツ</a>
+        <a class="btn alt" href="#bb">コンディショニングBB</a>
+        <a class="btn" href="#cond">コンディショニングクラス</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <!-- 差し替え: 16:10 比率推奨 -->
+      <img src="assets/classes-hero.jpg" alt="キッズ・ジュニア教室 ヒーロー画像" />
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ============== 特徴 ============== -->
+  <section class="section" id="features">
+    <h2>特徴（スポーティ × 専門性）</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>発育発達に基づく「正しい動き」</h3>
+        <p class="lead">走る・跳ぶ・投げる・支えるなど、スポーツの土台となる基本動作を年齢と成長に合わせて習得。</p>
+      </div>
+      <div class="feature">
+        <h3>姿勢・動作改善に強い専門性</h3>
+        <p class="lead">猫背・反り腰・扁平足・成長痛に配慮。正しいフォームで“ケガをしない身体”づくり。</p>
+      </div>
+      <div class="feature">
+        <h3>スポーティで楽しいアプローチ</h3>
+        <p class="lead">アジリティ／コーディネーション／ゲーム形式で、自然と「できた！」が増える設計。</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============== クラス紹介 ============== -->
+  <section class="section" id="kids">
+    <h2>🟩 キッズスポーツ（1歳〜9歳）</h2>
+    <div class="grid grid-2">
+      <div class="thumb"><img src="assets/classes-kids.jpg" alt="キッズスポーツ クラス写真" /></div>
+      <div class="card">
+        <h3>運動の楽しさと “できる” を増やすクラス</h3>
+        <ul class="list">
+          <li>遊びを通した運動体験</li>
+          <li>走る・跳ぶ・投げるの基礎</li>
+          <li>コーディネーション・バランス</li>
+          <li>姿勢づくりの基礎</li>
+        </ul>
+        <p><b>対象：</b> 1歳〜9歳（未就園児・園児・小学校低学年）</p>
+        <p><b>おすすめ：</b> 体を動かすのが好き／運動が苦手で自信をつけたい／姿勢を良くしたい／落ち着いて動くのが難しい など</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="bb">
+    <h2>🟦 コンディショニングBB（6歳〜15歳）</h2>
+    <div class="grid grid-2">
+      <div class="thumb"><img src="assets/classes-bb.jpg" alt="コンディショニングBB クラス写真" /></div>
+      <div class="card">
+        <h3>運動の土台を強化し、スポーツ万能な身体へ</h3>
+        <ul class="list">
+          <li>姿勢・動作改善</li>
+          <li>アジリティ（敏捷性）</li>
+          <li>バランス・体幹・可動性の向上</li>
+          <li>正しいフォーム習得／ケガ予防</li>
+        </ul>
+        <p><b>対象：</b> 6歳〜15歳（小学生〜中学生）</p>
+        <p><b>おすすめ：</b> スポーツが上手くなりたい／ケガを減らしたい／動きのクセを改善したい／体力・柔軟性を上げたい</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cond">
+    <h2>🟥 コンディショニングクラス（13歳〜18歳）</h2>
+    <div class="grid grid-2">
+      <div class="thumb"><img src="assets/classes-cond.jpg" alt="コンディショニング クラス写真" /></div>
+      <div class="card">
+        <h3>競技力を高めたいジュニアアスリート向け</h3>
+        <ul class="list">
+          <li>パフォーマンス向上（スピード・パワー）</li>
+          <li>姿勢・動作改善と安定性（体幹）</li>
+          <li>SAQトレーニングと正しいフォーム</li>
+          <li>ケガ予防のコンディショニング</li>
+        </ul>
+        <p><b>対象：</b> 13歳〜18歳（中高生アスリート）</p>
+        <p><b>おすすめ：</b> 部活・クラブでのパフォーマンスを上げたい／成長痛・フォーム崩れが気になる／ケガを繰り返したくない</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============== インクルーシブ（控えめ） ============== -->
+  <section class="section" id="inclusive">
+    <h2>🤝 どなたでも安心して参加できる環境づくり</h2>
+    <p class="lead">少し運動に不安があるお子さまや、ゆっくり取り組みたいお子さまにも、ペースに合わせてサポート。刺激（音・光）への配慮や、コミュニケーション方法の工夫を行います。</p>
+  </section>
+
+  <!-- ============== 身につく力 ============== -->
+  <section class="section" id="skills">
+    <h2>📈 身につく力</h2>
+    <div class="grid grid-3">
+      <div class="card"><b>姿勢・体幹</b><p class="lead">正しい姿勢と安定性が、あらゆる動きの土台に。</p></div>
+      <div class="card"><b>バランス・協調性</b><p class="lead">転ばない・ぶつからない・スムーズに動く力。</p></div>
+      <div class="card"><b>スピード・敏捷性</b><p class="lead">速く正確に、方向転換できる身体へ。</p></div>
+      <div class="card"><b>基本動作</b><p class="lead">走る・跳ぶ・投げる・支えるの基礎を確実に。</p></div>
+      <div class="card"><b>筋力・体力</b><p class="lead">年齢に応じた安全な強度で段階的に向上。</p></div>
+      <div class="card"><b>自信・達成感</b><p class="lead">「できた！」を積み重ねる設計で継続しやすい。</p></div>
+    </div>
+  </section>
+
+  <!-- ============== クラスの流れ ============== -->
+  <section class="section" id="flow">
+    <h2>🧭 クラスの流れ（例）</h2>
+    <ol>
+      <li>姿勢・動きのチェック</li>
+      <li>ウォームアップ</li>
+      <li>コーディネーション</li>
+      <li>基本動作ドリル</li>
+      <li>アジリティ・ゲーム形式</li>
+      <li>振り返り</li>
+    </ol>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ============== お問い合わせ ============== -->
+  <section class="section" id="contact">
+    <h2>📞 お問い合わせ</h2>
+    <p>Facebook：Brave Athletes Club ／ メール：braveathletesclub@gmail.com<br>※ 問い合わせフォームは追加予定です。</p>
+  </section>
+
+</main>
+
+<footer class="container">
+  <small>© Brave Athletes Club</small>
+</footer>
+
+<!-- 季節ロゴに合わせて色を変える場合：
+<script>
+  const root = document.documentElement;
+  // 例：冬 #0ea5e9, 春 #22c55e, 夏 #f59e0b, 秋 #ef4444
+  // root.style.setProperty('--accent', '#0ea5e9');
+</script>
+-->
+</body>
+</html>
 
