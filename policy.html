@@ -1,1 +1,241 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brave Athletes Club｜指導方針（女性・ジュニア・インクルーシブ）</title>
+  <meta name="description" content="Brave Athletes Clubの指導方針ページ。女性（一般・アスリート）とジュニア、インクルーシブサポートに強み。パーソナル・教室に対応。" />
+  <style>
+    :root{
+      --brand:#0f172a; /* 文字基本 */
+      --accent:#ef4444; /* 強調色（季節ロゴに合わせて変更可）*/
+      --bg:#ffffff;
+      --muted:#475569;
+      --card:#f8fafc;
+      --ring:#e5e7eb;
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--brand);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif;line-height:1.75}
+    .container{max-width:1080px;margin:auto;padding:24px}
+    header.hero{position:relative;border-bottom:1px solid var(--ring);}
+    .hero-wrap{display:grid;gap:24px;grid-template-columns:1.2fr 1fr;align-items:center}
+    @media (max-width:900px){.hero-wrap{grid-template-columns:1fr}}
+    .logo{display:flex;gap:12px;align-items:center}
+    .logo img{height:56px;width:auto}
+    .badge{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:12px;letter-spacing:.02em}
+    h1{font-size:clamp(24px,3.4vw,40px);margin:.4em 0 .2em;font-weight:800}
+    h2{font-size:clamp(20px,2.6vw,28px);margin:1.6em 0 .6em;font-weight:800}
+    h3{font-size:clamp(16px,2.2vw,20px);margin:1.2em 0 .4em;font-weight:800}
+    p.lead{color:var(--muted);font-size:clamp(14px,1.8vw,18px)}
+    .hero-photo{aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:#ddd}
+    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+    .grid{display:grid;gap:18px}
+    .grid-2{grid-template-columns:1fr 1fr}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:18px}
+    .card .thumb{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#e2e8f0;margin-bottom:12px}
+    .card .thumb img{width:100%;height:100%;object-fit:cover}
+    ul{padding-left:1.2em}
+    li{margin:.3em 0}
+
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+    .btn{appearance:none;border:none;cursor:pointer;background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+    .btn.alt{background:var(--accent)}
+
+    .section{margin:48px 0}
+    .divider{height:1px;background:var(--ring);margin:32px 0}
+
+    /* ギャラリー */
+    .gallery{display:grid;gap:12px;grid-template-columns:2fr 1fr}
+    .gallery .big{grid-row:span 2;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e2e8f0}
+    .gallery .big img,.gallery .sm img{width:100%;height:100%;object-fit:cover;display:block}
+    .gallery .sm{aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e2e8f0}
+    @media(max-width:900px){.gallery{grid-template-columns:1fr}}
+
+    footer{border-top:1px solid var(--ring);margin-top:40px;padding-top:24px;color:var(--muted)}
+    .small{font-size:12px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-wrap">
+      <div>
+        <div class="logo">
+          <!-- ▼ ロゴ確定後に差し替え：assets/logo.svg など -->
+          <img src="assets/logo-placeholder.svg" alt="Brave Athletes Club" />
+          <span class="badge">女性・ジュニアに強い／インクルーシブ</span>
+        </div>
+        <h1>Brave Athletes Club 指導方針</h1>
+        <p class="lead">女性（一般・アスリート）とジュニアの育成に特化し、姿勢・機能改善から競技パフォーマンス向上まで、一人ひとりに合わせた完全個別サポートを提供します。</p>
+        <div class="cta">
+          <a class="btn" href="#personal">パーソナル（60分／75分）</a>
+          <a class="btn alt" href="#junior">キッズ・ジュニア教室</a>
+          <a class="btn" href="#inclusive">インクルーシブ</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <!-- ▼ トップ写真を差し替え：assets/hero.jpg -->
+        <img src="assets/hero-sample.jpg" alt="Brave Athletes Club" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 女性＆女性アスリート -->
+    <section class="section" id="women">
+      <h2>🌼 一般女性・女性アスリート向け指導</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="thumb"><img src="assets/women-1.jpg" alt="女性向けトレーニング"></div>
+          <h3>ホルモン・競技特性に配慮</h3>
+          <ul>
+            <li>生理周期に応じた強度調整</li>
+            <li>PMS・更年期などの不調に対応</li>
+            <li>自律神経・睡眠の改善サポート</li>
+            <li>女性アスリートの疲労管理</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="assets/women-2.jpg" alt="機能改善"></div>
+          <h3>姿勢・機能改善に基づく安全設計</h3>
+          <ul>
+            <li>骨盤・体幹の安定性向上</li>
+            <li>肩こり・腰痛・むくみ対策</li>
+            <li>正しい動作でケガを予防</li>
+            <li>体力・パフォーマンス向上</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ジュニア -->
+    <section class="section" id="junior">
+      <h2>🧒 ジュニア向け指導（幼児〜中高生）</h2>
+      <p class="lead">楽しく・安全に・確実に伸ばす。発育発達と年齢に合わせたドリルで、基礎運動能力と正しい動作を育てます。</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="thumb"><img src="assets/junior-1.jpg" alt="基礎運動"></div>
+          <h3>年齢別アプローチ</h3>
+          <ul>
+            <li>走る・跳ぶ・投げるの基礎</li>
+            <li>遊びを通じた自然な学習</li>
+            <li>成長期に合わせた強度調整</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="assets/junior-2.jpg" alt="正しい動作"></div>
+          <h3>安全な“正しい動き”づくり</h3>
+          <ul>
+            <li>姿勢改善（猫背・反り腰・偏平足）</li>
+            <li>成長痛（オスグッド等）に配慮</li>
+            <li>誤ったフォームを改善</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="assets/junior-3.jpg" alt="基礎能力"></div>
+          <h3>全スポーツに通じる土台</h3>
+          <ul>
+            <li>バランス・敏捷性・協調性</li>
+            <li>身体操作力の獲得</li>
+            <li>将来の競技スポーツの基礎</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- インクルーシブ -->
+    <section class="section" id="inclusive">
+      <h2>🤝 インクルーシブサポート（発達障害・機能障害のある方へ）</h2>
+      <div class="grid grid-2">
+        <div>
+          <p>上級パラスポーツ指導員を中心に、障害特性を理解したうえで、誰でも安心して参加できる運動環境を提供します。</p>
+          <h3>主な取り組み</h3>
+          <ul>
+            <li>特性に合わせた声かけと環境調整</li>
+            <li>刺激過多を避けるレイアウト・進行</li>
+            <li>個別ペースで無理なく取り組める設定</li>
+            <li>「できた！」を積み重ねる成功体験</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="assets/inclusive-1.jpg" alt="インクルーシブ"></div>
+          <h3>安心・参加しやすい環境</h3>
+          <ul>
+            <li>車いす・義足・装具使用に配慮</li>
+            <li>可動域・筋力に合わせて段階調整</li>
+            <li>ご家族と連携した丁寧なサポート</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- パーソナル（価格／メニュー） -->
+    <section class="section" id="personal">
+      <h2>💪 パーソナルサポート（完全個別）</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>運動機能回復プログラム（60分）<span class="small">　13,200円</span></h3>
+          <ul>
+            <li>姿勢・動作評価、可動域改善</li>
+            <li>体幹・骨盤の安定化</li>
+            <li>機能改善ムーブメント</li>
+            <li>日常生活への落とし込み</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>パーソナルトレーニング（75分）<span class="small">　16,500円</span></h3>
+          <ul>
+            <li>カウンセリング／姿勢・体力評価</li>
+            <li>目的別メニュー（筋力・安定性・スピード・パワー）</li>
+            <li>脂肪燃焼・持久力アップ</li>
+            <li>ホームエクササイズ提案</li>
+          </ul>
+          <p class="small">※男性クライアントには「競技サポート経験に基づく指導」として訴求可能です。</p>
+        </div>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#contact">お問い合わせ</a>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 写真ギャラリー（後で差し替え） -->
+    <section class="section" id="gallery">
+      <h2>📷 ギャラリー</h2>
+      <div class="gallery">
+        <div class="big"><img src="assets/gallery-1.jpg" alt="トレーニング風景"></div>
+        <div class="sm"><img src="assets/gallery-2.jpg" alt="ジュニア教室"></div>
+        <div class="sm"><img src="assets/gallery-3.jpg" alt="インクルーシブサポート"></div>
+      </div>
+      <p class="small">※ 画像はダミーです。ロゴ納品後に差し替えてください（assets/以下）。</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- 連絡先 -->
+    <section class="section" id="contact">
+      <h2>📞 お問い合わせ</h2>
+      <p>
+        Facebook：<a href="https://www.facebook.com/BraveAthletesClub" target="_blank" rel="noopener">Brave Athletes Club</a><br>
+        メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="small">© Brave Athletes Club</p>
+    </div>
+  </footer>
+</body>
+</html>
 
