@@ -90,6 +90,54 @@
   color: inherit;
   height: 100%;
 }
+/* --- Tidy up / match JP page --- */
+:root{
+  --brand:#0f172a;        /* 本文色 */
+  --accent:#ef4444;       /* 赤アクセント（JPに合わせる） */
+  --muted:#475569;
+  --ring:#e5e7eb;
+  --card:#f8fafc;
+}
+
+/* タイトル周りを少し締める */
+h1{ line-height:1.15; letter-spacing:.2px; }
+
+/* ヒーローの左右バランスと角丸感 */
+.hero-wrap{ grid-template-columns:1.2fr 1fr; }
+.hero-photo{ aspect-ratio:16/10; border-radius:18px; overflow:hidden; background:#dbeafe; }
+.hero-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ボタン（JPと同じトーンになるよう微調整） */
+.btn{ background:#0f172a; }
+.btn.alt{ background:var(--accent); }
+
+/* カードの見た目統一（高さ揃え＋軽い陰影） */
+.card{
+  background:var(--card);
+  border:1px solid var(--ring);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 1px 2px rgba(0,0,0,.03);
+  height:100%;
+}
+
+/* セクションの上下余白を揃える */
+.section{ margin:48px 0; }
+.divider{ height:1px; background:var(--ring); margin:32px 0; }
+
+/* 2カラムのレスポンシブ調整 */
+.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+@media (max-width:900px){
+  .grid-2{ grid-template-columns:1fr; }
+}
+
+/* アンカー（#kids,#bb,#cond）に飛んだ時の見出しが隠れにくいようオフセット */
+[id]::before{
+  content:"";
+  display:block;
+  height:72px;   /* 固定ヘッダー分の余白 */
+  margin-top:-72px;
+}
 
   </style>
 
