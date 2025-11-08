@@ -139,6 +139,32 @@ h1{ line-height:1.15; letter-spacing:.2px; }
   margin-top:-72px;
 }
 
+  /* Event card */
+  .event-wrap { margin-top: 16px; }
+  .event-header { font-weight: 700; margin: 0 0 10px; }
+  .event-card {
+    border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px;
+    display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center;
+  }
+  .event-thumb img {
+    width: 160px; height: auto; border-radius: 12px; border: 1px solid #e5e7eb;
+    display:block;
+  }
+  .event-title { font-weight: 700; margin: 0 0 4px; font-size: 18px; }
+  .event-meta { color: #6b7280; font-size: 14px; }
+  .event-actions { display: grid; gap: 8px; }
+  .btn-pill {
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:10px 14px; border-radius:999px; font-weight:600; text-decoration:none;
+    border:1px solid #e5e7eb; background:#fff; color:#111827;
+  }
+  .btn-pill.primary { background:#111827; color:#fff; border-color:#111827; }
+  @media (max-width: 900px) {
+    .event-card { grid-template-columns: 1fr; }
+    .event-actions { grid-template-columns: 1fr 1fr; }
+    .event-thumb img { width: 100%; }
+  }
+
   </style>
 
   <!-- JSON-LD -->
