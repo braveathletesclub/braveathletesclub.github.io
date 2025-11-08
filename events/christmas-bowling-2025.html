@@ -42,17 +42,20 @@
     .btn.secondary { background:#fff; color:#111827; border:1px solid #e5e7eb; }
     footer { padding:28px 0 48px; border-top:1px solid #e5e7eb; color:#6b7280; }
     @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
-    /* Event detail hero image */
-.event-hero{
-  width: 100%;
-  max-width: 960px;         /* PCでの最大幅 */
-  aspect-ratio: 16 / 9;     /* 比率を固定 */
-  object-fit: cover;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  display: block;
-  margin: 0 auto;
+    
+　　/* Event detail hero */
+.hero{
+  display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;
 }
+.hero img{
+  width:100%;height:auto;max-height:420px;object-fit:cover;
+  border-radius:16px;border:1px solid #e5e7eb;
+}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero img{max-height:320px;}
+}
+
 
   </style>
 </head>
