@@ -177,6 +177,31 @@
   .event-actions{ justify-content: flex-start; }
   .event-thumb img{ width: 100%; height: auto; }
 }
+/* Event card */
+.event-wrap{margin:24px 0;}
+.event-header{font-weight:700;margin-bottom:8px;}
+.event-card{
+  display:flex;align-items:center;gap:16px;
+  padding:16px;border:1px solid #e5e7eb;border-radius:16px;
+}
+.event-thumb img{
+  width:140px;height:auto;border-radius:12px;border:1px solid #e5e7eb;display:block;
+}
+.event-body{flex:1;min-width:0;}
+.event-title{font-weight:700;margin-bottom:4px;}
+.event-meta{color:#6b7280;}
+.event-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-pill{
+  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;
+  border-radius:999px;background:#fff;color:#111827;border:1px solid #e5e7eb;
+  font-weight:600;text-decoration:none;
+}
+.btn-pill.primary{background:#111827;color:#fff;border-color:#111827;}
+@media (max-width:780px){
+  .event-card{flex-direction:column;align-items:flex-start;}
+  .event-thumb img{width:100%;max-width:420px;}
+  .event-actions{width:100%;}
+}
 
   </style>
 
@@ -235,12 +260,14 @@
 
   <div class="event-card">
     <div class="event-thumb">
-      <img src="/assets/events/christmas-bowling-2025-thumb.jpg" alt="クリスマスプレゼント争奪ボーリング大会">
+      <img src="/events/christmas-bowling-2025-thumb.jpg" alt="クリスマスプレゼント争奪ボーリング大会">
     </div>
 
     <div class="event-body">
       <div class="event-title">クリスマスプレゼント争奪ボーリング大会</div>
-      <div class="event-meta">2025年12月20日（土）15:00-17:00｜バスターボウル<strong>阪急</strong>茨木店</div>
+      <div class="event-meta">
+        2025年12月20日（土）15:00-17:00｜バスターボウル<strong>阪急</strong>茨木店
+      </div>
     </div>
 
     <div class="event-actions">
@@ -249,6 +276,7 @@
     </div>
   </div>
 </div>
+
 
 </section>
 
@@ -320,6 +348,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
