@@ -139,32 +139,45 @@ h1{ line-height:1.15; letter-spacing:.2px; }
   margin-top:-72px;
 }
 <style>
-  /* Event card */
-  .event-wrap { margin-top: 16px; }
-  .event-header { font-weight: 700; margin: 0 0 10px; }
-  .event-card {
-    border: 1px solid #e5e7eb; border-radius: 16px; padding: 16px;
-    display: grid; grid-template-columns: 160px 1fr auto; gap: 16px; align-items: center;
-  }
-  .event-thumb img {
-    width: 160px; height: auto; border-radius: 12px; border: 1px solid #e5e7eb;
-    display:block;
-  }
-  .event-title { font-weight: 700; margin: 0 0 4px; font-size: 18px; }
-  .event-meta { color: #6b7280; font-size: 14px; }
-  .event-actions { display: grid; gap: 8px; }
-  .btn-pill {
-    display:inline-flex; align-items:center; justify-content:center; gap:8px;
-    padding:10px 14px; border-radius:999px; font-weight:600; text-decoration:none;
-    border:1px solid #e5e7eb; background:#fff; color:#111827;
-  }
-  .btn-pill.primary { background:#111827; color:#fff; border-color:#111827; }
-  @media (max-width: 900px) {
-    .event-card { grid-template-columns: 1fr; }
-    .event-actions { grid-template-columns: 1fr 1fr; }
-    .event-thumb img { width: 100%; }
-  }
-</style>
+  /* ---------- Event card styles ---------- */
+.event-wrap { margin-top: 12px; }
+.event-header { font-weight: 700; margin: 0 0 8px; }
+
+.event-card {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 12px;
+  background: #fff;
+}
+
+.event-thumb img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: block;
+}
+
+.event-title { font-weight: 700; margin: 2px 0 6px; }
+.event-meta { color: var(--muted); font-size: 14px; }
+
+.event-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 12px; border-radius: 999px;
+  background: #fff; color: var(--ink); border: 1px solid #e5e7eb;
+  font-weight: 600; font-size: 14px; text-decoration: none;
+}
+.btn-pill.primary { background: var(--ink); color:#fff; border-color: var(--ink); }
+
+/* 英語ページのサイドカード内でやや小さめに */
+.event-card.small .event-thumb img { width: 120px; }
+.event-card.small .event-meta { font-size: 13px; }
 
   
   </style>
