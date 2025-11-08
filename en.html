@@ -113,32 +113,43 @@
   .event-thumb img { width: 100%; height: auto; max-width: 360px; }
   .event-actions { justify-self: start; }
 }
-/* ===== Event card (top page) ===== */
-.event-wrap{margin:20px 0}
-.event-header{font-weight:700;margin:0 0 10px}
+/* Event card (top page) */
+.event-wrap { margin: 16px 0 4px; }
+.event-header { font-weight: 700; margin-bottom: 8px; }
+
 .event-card{
-  display:flex;gap:16px;align-items:center;
-  border:1px solid #e5e7eb;border-radius:16px;padding:14px 16px;
-  background:#fff;
+  display: grid;
+  grid-template-columns: 140px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
 }
+
 .event-thumb img{
-  width:140px;height:96px;object-fit:cover;
-  border-radius:12px;border:1px solid #e5e7eb;display:block;
+  width: 140px; height: 88px; object-fit: cover;
+  border-radius: 12px; border: 1px solid #e5e7eb;
+  display: block;
 }
-.event-body{flex:1;min-width:0}
-.event-title{font-weight:700;margin:0 0 4px}
-.event-meta{color:#6b7280;font-size:14px}
-.event-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.event-title{ font-weight: 700; margin-bottom: 4px; }
+.event-meta{ color: var(--muted); font-size: 14px; }
+
+.event-actions{ display: flex; gap: 10px; flex-wrap: wrap; }
 .btn-pill{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:10px 14px;border-radius:999px;
-  background:#fff;color:#111827;border:1px solid #e5e7eb;text-decoration:none;font-weight:600
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 14px; border-radius:999px;
+  background:#fff; color:#111827; border:1px solid #e5e7eb; font-weight:600;
 }
-.btn-pill.primary{background:#111827;color:#fff;border-color:#111827}
-@media (max-width:900px){
-  .event-card{align-items:flex-start}
-  .event-thumb img{width:120px;height:82px}
+.btn-pill.primary{ background:#111827; color:#fff; border-color:#111827; }
+
+@media (max-width: 720px){
+  .event-card{ grid-template-columns: 1fr; align-items: start; }
+  .event-actions{ justify-content: flex-start; }
+  .event-thumb img{ width: 100%; height: auto; }
 }
+
 
   </style>
 </head>
