@@ -83,6 +83,25 @@
       .hero { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
     }
+    /* ==== Event Card ==== */
+.event-wrap{margin:16px 0 0;}
+.event-header{font-weight:700;margin:0 0 10px;}
+.event-card{
+  display:grid;grid-template-columns:140px 1fr auto;gap:14px;
+  border:1px solid #e5e7eb;border-radius:16px;padding:14px;
+  align-items:center;background:#fff;
+}
+.event-thumb img{width:140px;height:auto;border-radius:12px;border:1px solid #e5e7eb;display:block;}
+.event-title{font-weight:700;margin:0 0 6px;}
+.event-meta{color:#6b7280;font-size:14px;}
+.event-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.btn-pill{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;color:#111827;text-decoration:none;font-weight:600}
+.btn-pill.primary{background:#111827;color:#fff;border-color:#111827}
+@media (max-width:800px){
+  .event-card{grid-template-columns:1fr;align-items:start}
+  .event-thumb img{width:100%}
+}
+
   </style>
 
   <!-- JSON-LD (構造化データ) -->
@@ -133,8 +152,8 @@
         <p><a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebookで見る</a></p>
       </div>
     
-    </section>
-    <!-- 冬のイベント（カード） -->
+   </section>
+<!-- 冬のイベント（カード） -->
 <div class="event-wrap">
   <div class="event-header">冬のイベント</div>
 
@@ -146,7 +165,7 @@
     <div class="event-body">
       <div class="event-title">クリスマスプレゼント争奪ボーリング大会</div>
       <div class="event-meta">
-        2025年12月20日（土）15:00-17:00｜バスターボウル<strong>阪急</strong>茨木店
+        2025年12月20日（土）15:00–17:00｜バスターボウル<strong>阪急</strong>茨木店
       </div>
     </div>
 
@@ -156,6 +175,8 @@
     </div>
   </div>
 </div>
+
+<section id="classes">
 
     <section id="classes">
   <h2>教室</h2>
@@ -225,6 +246,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
