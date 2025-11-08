@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Brave Athletes Club//Events//JP
+BEGIN:VEVENT
+UID:christmas-bowling-2025@braveathletesclub.github.io
+DTSTAMP:20251108T052344Z
+DTSTART:20251220T060000Z
+DTEND:20251220T080000Z
+SUMMARY:クリスマスプレゼント争奪ボーリング大会
+LOCATION:バスターボウル阪泉茨木店
+DESCRIPTION:参加費 大人:2,500円 子ども:2,000円\n詳細: https://braveathletesclub.github.io/events/christmas-bowling-2025.html
+END:VEVENT
+END:VCALENDAR
