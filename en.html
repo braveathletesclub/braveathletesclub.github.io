@@ -3,216 +3,88 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BRAVE ATHLETES CLUB | Kids Sports & Personal Support</title>
-  <meta name="description" content="BRAVE ATHLETES CLUB offers kids sports classes and personal training: posture & muscle function, performance improvement, and functional recovery." />
+  <title>Brave Athletes Club | Kids Sports & Personal Support</title>
+  <meta name="description" content="Kids sports classes and personal training: posture & muscle function, performance improvement, and functional recovery." />
   <link rel="canonical" href="https://braveathletesclub.github.io/en.html" />
 
   <!-- SEO / SNS -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
-  <meta property="og:title" content="BRAVE ATHLETES CLUB | Kids Sports & Personal Support" />
+  <meta property="og:site_name" content="Brave Athletes Club" />
+  <meta property="og:title" content="Brave Athletes Club | Kids Sports & Personal Support" />
   <meta property="og:description" content="Local sports club for kids and adults. Posture & muscle function, performance improvement, and functional recovery." />
   <meta property="og:url" content="https://braveathletesclub.github.io/en.html" />
   <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BRAVE ATHLETES CLUB" />
-  <meta name="twitter:description" content="Kids sports & personal support." />
-  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
 
-  <!-- language alternates -->
+  <!-- alternates -->
   <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html" />
   <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/" />
   <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/" />
 
-  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#111827" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --ink: #111827;
-      --muted: #6b7280;
-      --brand: #1f2937;
-      --accent: #f59e0b;
+    :root{--bg:#ffffff;--ink:#111827;--muted:#6b7280;--accent:#f59e0b}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;color:var(--ink);background:var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid #e5e7eb;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand img{height:32px}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .lang{font-size:14px;color:var(--muted)}
+    .seasonal-badge{display:inline-flex;align-items:center;gap:8px}
+    .seasonal-badge img{height:28px}
+
+    .hero{display:grid;grid-template-columns:1.2fr 0.8fr;gap:24px;align-items:center;padding:48px 0}
+    .hero h1{font-size:clamp(28px,4vw,44px);margin:0 0 12px;line-height:1.2}
+    .hero p{color:var(--muted);font-size:16px;margin:0 0 20px}
+    .cta{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:#111827;color:#fff;font-weight:600}
+    .cta.secondary{background:#fff;color:#111827;border:1px solid #e5e7eb}
+    .hero-card{border:1px solid #e5e7eb;border-radius:16px;padding:20px}
+    .hero-card h3{margin:0 0 8px}
+
+    section{padding:28px 0}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    .card{border:1px solid #e5e7eb;border-radius:16px;padding:18px}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+    footer{padding:28px 0 48px;border-top:1px solid #e5e7eb;margin-top:28px;color:#6b7280}
+    .socials a{margin-right:12px}
+
+    /* ==== Event Card (EN) ==== */
+    .event-wrap{margin:16px 0 0}
+    .event-header{font-weight:700;margin:0 0 10px}
+    .event-card{
+      display:grid;grid-template-columns:140px 1fr auto;gap:14px;
+      border:1px solid #e5e7eb;border-radius:16px;padding:14px;
+      align-items:center;background:#fff
     }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; color: var(--ink); background: var(--bg); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-    /* Header */
-    header { position: sticky; top: 0; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid #e5e7eb; z-index: 10; }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand img { height: 32px; } /* was 28px */
-    .nav-links { display: flex; gap: 16px; align-items: center; }
-    .lang { font-size: 14px; color: var(--muted); }
-    .seasonal-badge img { height: 28px; }
-
-    /* EN版はヘッダー右に季節ロゴを表示 */
-    .seasonal-badge { display: inline-flex; align-items: center; gap: 8px; }
-
-    /* Hero */
-    .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; padding: 48px 0; }
-    .hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; line-height: 1.2; }
-    .hero p { color: var(--muted); font-size: 16px; margin: 0 0 20px; }
-    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 600; }
-    .cta.secondary { background: #fff; color: var(--ink); border: 1px solid #e5e7eb; }
-    .hero-card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 20px; }
-    .hero-card h3 { margin: 0 0 8px; }
-
-    /* Sections */
-    section { padding: 28px 0; }
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
-    .card { border: 1px solid #e5e7eb; border-radius: 16px; padding: 18px; }
-    .card h3 { margin: 0 0 8px; font-size: 18px; }
-    .card p { margin: 0; color: var(--muted); }
-
-    /* Footer */
-    footer { padding: 28px 0 48px; border-top: 1px solid #e5e7eb; margin-top: 28px; color: var(--muted); }
-    .socials a { margin-right: 12px; }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr; }
-    }
-    .card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  height: 100%;
-}
-/* --- Tidy up / match JP page --- */
-:root{
-  --brand:#0f172a;        /* 本文色 */
-  --accent:#ef4444;       /* 赤アクセント（JPに合わせる） */
-  --muted:#475569;
-  --ring:#e5e7eb;
-  --card:#f8fafc;
-}
-
-/* タイトル周りを少し締める */
-h1{ line-height:1.15; letter-spacing:.2px; }
-
-/* ヒーローの左右バランスと角丸感 */
-.hero-wrap{ grid-template-columns:1.2fr 1fr; }
-.hero-photo{ aspect-ratio:16/10; border-radius:18px; overflow:hidden; background:#dbeafe; }
-.hero-photo img{ width:100%; height:100%; object-fit:cover; display:block; }
-
-/* ボタン（JPと同じトーンになるよう微調整） */
-.btn{ background:#0f172a; }
-.btn.alt{ background:var(--accent); }
-
-/* カードの見た目統一（高さ揃え＋軽い陰影） */
-.card{
-  background:var(--card);
-  border:1px solid var(--ring);
-  border-radius:16px;
-  padding:18px;
-  box-shadow:0 1px 2px rgba(0,0,0,.03);
-  height:100%;
-}
-
-/* セクションの上下余白を揃える */
-.section{ margin:48px 0; }
-.divider{ height:1px; background:var(--ring); margin:32px 0; }
-
-/* 2カラムのレスポンシブ調整 */
-.grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-@media (max-width:900px){
-  .grid-2{ grid-template-columns:1fr; }
-}
-
-/* アンカー（#kids,#bb,#cond）に飛んだ時の見出しが隠れにくいようオフセット */
-[id]::before{
-  content:"";
-  display:block;
-  height:72px;   /* 固定ヘッダー分の余白 */
-  margin-top:-72px;
-}
-<style>
-  /* ---------- Event card styles ---------- */
-.event-wrap { margin-top: 12px; }
-.event-header { font-weight: 700; margin: 0 0 8px; }
-
-.event-card {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 14px;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 12px;
-  background: #fff;
-}
-
-.event-thumb img {
-  width: 140px;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-  display: block;
-}
-
-.event-title { font-weight: 700; margin: 2px 0 6px; }
-.event-meta { color: var(--muted); font-size: 14px; }
-
-.event-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-
-.btn-pill {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 8px 12px; border-radius: 999px;
-  background: #fff; color: var(--ink); border: 1px solid #e5e7eb;
-  font-weight: 600; font-size: 14px; text-decoration: none;
-}
-.btn-pill.primary { background: var(--ink); color:#fff; border-color: var(--ink); }
-
-/* 英語ページのサイドカード内でやや小さめに */
-.event-card.small .event-thumb img { width: 120px; }
-.event-card.small .event-meta { font-size: 13px; }
-
-  
+    .event-thumb img{width:140px;height:auto;border-radius:12px;border:1px solid #e5e7eb;display:block}
+    .event-title{font-weight:700;margin:0 0 6px}
+    .event-meta{color:#6b7280;font-size:14px}
+    .event-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-pill{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;border:1px solid #e5e7eb;background:#fff;color:#111827;text-decoration:none;font-weight:600}
+    .btn-pill.primary{background:#111827;color:#fff;border-color:#111827}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.event-card{grid-template-columns:1fr}}
   </style>
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SportsClub",
-    "name": "BRAVE ATHLETES CLUB",
-    "email": "braveathletesclub@gmail.com",
-    "url": "https://braveathletesclub.github.io/en.html",
-    "sameAs": [
-      "https://www.facebook.com/BraveAthletesClub/"
-    ],
-    "description": "Local sports club offering kids classes and personal support."
-  }
-  </script>
 </head>
-
 <body>
   <header>
     <div class="container nav">
-      <div class="brand">
-        <img src="/assets/logo-wordmark.svg" alt="ATHLETES CLUB BRAVE wordmark" />
-      </div>
+      <div class="brand"><a href="/"><img src="/assets/logo-wordmark.svg" alt="Brave Athletes Club" /></a></div>
       <nav class="nav-links">
         <a href="#classes">Classes</a>
         <a href="#personal">Personal</a>
         <a href="#about">About</a>
-        <a href="/policy-en.html">Policy</a>
         <a href="#contact" class="cta secondary">Contact</a>
-        <span class="seasonal-badge">
-          <img id="seasonLogo" src="/assets/seasonal/logo-autumn.svg" alt="Seasonal logo" />
-        </span>
+        <span class="seasonal-badge"><img id="seasonLogo" src="/assets/seasonal/logo-autumn.svg" alt="Seasonal logo" /></span>
         <span class="lang"><a href="/" hreflang="ja">JP</a></span>
       </nav>
     </div>
@@ -223,101 +95,65 @@ h1{ line-height:1.15; letter-spacing:.2px; }
       <div>
         <h1>For the confident and the cautious.<br/>A place to enjoy movement.</h1>
         <p>From kids sports classes to posture & muscle function, performance improvement, and functional recovery — our trainers are here to help.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <a class="cta" href="mailto:braveathletesclub@gmail.com">Email us</a>
           <a class="cta secondary" href="#personal">See Personal Support</a>
         </div>
       </div>
+
+      <!-- Right column: News + Event card -->
       <div class="hero-card">
-        <h3>News</h3> 
+        <h3>News</h3>
         <p>Event updates are posted on Facebook.</p>
-        <p><a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Open Facebook</a></p>
+        <p><a href="https://www.facebook.com/BraveAthletesClub" target="_blank" rel="noopener">Open Facebook</a></p>
+
+        <!-- Winter Event (card) -->
+        <div class="event-wrap">
+          <div class="event-header">Winter Event</div>
+          <div class="event-card">
+            <div class="event-thumb">
+              <img src="/events/christmas-bowling-2025-thumb.jpg" alt="Christmas Bowling Gift Challenge">
+            </div>
+            <div class="event-body">
+              <div class="event-title">Christmas Bowling Gift Challenge</div>
+              <div class="event-meta">Sat, Dec 20, 2025 — 15:00–17:00 ｜ Buster Bowl <strong>Hankyu</strong> Ibaraki</div>
+            </div>
+            <div class="event-actions">
+              <a class="btn-pill primary" href="/events/christmas-bowling-2025.html">Event Details</a>
+              <a class="btn-pill" href="/events/christmas-bowling-2025.ics">Add to Calendar</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-     <!-- Winter Event (card) -->
-<div class="event-wrap">
-  <div class="event-header">Winter Event</div>
 
-  <div class="event-card">
-    <div class="event-thumb">
-      <img src="/events/christmas-bowling-2025-thumb.jpg" alt="Christmas Bowling Event">
-    </div>
-
-    <div class="event-body">
-      <div class="event-title">Christmas Bowling Gift Challenge</div>
-      <div class="event-meta">
-        Sat, Dec 20, 2025 — 15:00–17:00 ｜ Buster Bowl <strong>Hankyu</strong> Ibaraki
+    <section id="classes">
+      <h2>Classes</h2>
+      <div class="grid">
+        <div class="card"><h3>Kids Sports Class</h3><p>Build fundamentals, body control, and movement skills with fun.</p></div>
+        <div class="card"><h3>Seasonal Programs</h3><p>Intensive sessions during spring/summer/winter breaks.</p></div>
+        <div class="card"><h3>On-Site Support</h3><p>Schools and club teams — contact us for details.</p></div>
       </div>
-    </div>
-
-    <div class="event-actions">
-      <a class="btn-pill primary" href="/events/christmas-bowling-2025.html">Event Details</a>
-      <a class="btn-pill" href="/events/christmas-bowling-2025.ics">Add to Calendar</a>
-    </div>
-  </div>
-</div>
-
-    
-   <section id="classes">
-  <h2>Classes</h2>
-  <div class="grid">
-
-    <!-- ✅ Kids：ページ先頭に飛ぶ（#kids は付けない） -->
-    <a class="card card-link" href="/classes-en.html" style="text-decoration:none; color:inherit;">
-      <h3>Kids Sports Class</h3>
-      <p>Build fundamentals, body control, and movement skills with fun.</p>
-    </a>
-
-    <!-- ✅ 日本語トップに合わせて：イベント（季節講座） -->
-    <div class="card">
-      <h3>Seasonal Programs & Events</h3>
-      <p>Intensive sessions during spring/summer/winter breaks.</p>
-      <!-- 必要なら下のリンクを有効化
-      <p><a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">See events on Facebook</a></p>
-      -->
-    </div>
-
-    <!-- ✅ 日本語トップに合わせて：出張サポート -->
-    <div class="card">
-      <h3>On-Site Support</h3>
-      <p>For schools and club teams. Please contact us for details.</p>
-      <!-- 必要なら問い合わせリンクにしてOK
-      <p><a href="mailto:braveathletesclub@gmail.com">Email us</a></p>
-      -->
-    </div>
-
-  </div>
-</section>
-
-
+    </section>
 
     <section id="personal">
       <h2>Personal Support</h2>
       <div class="grid">
-        <div class="card">
-          <h3>60 min | Functional Recovery</h3>
-          <p>¥13,200 (incl. tax) / No travel fee</p>
-        </div>
-        <div class="card">
-          <h3>75 min | Personal Training</h3>
-          <p>¥16,500 (incl. tax) / No travel fee</p>
-        </div>
-        <div class="card">
-          <h3>Posture & Muscle Function</h3>
-          <p>Evidence-based assessment and gradual improvement.</p>
-        </div>
+        <div class="card"><h3>60 min | Functional Recovery</h3><p>¥13,200 (incl. tax) / No travel fee</p></div>
+        <div class="card"><h3>75 min | Personal Training</h3><p>¥16,500 (incl. tax) / No travel fee</p></div>
+        <div class="card"><h3>Posture & Muscle Function</h3><p>Evidence-based assessment and gradual improvement.</p></div>
       </div>
     </section>
 
     <section id="about">
       <h2>About</h2>
-      <p>BRAVE ATHLETES CLUB supports health and growth through sports for everyone in the community.</p>
+      <p>Brave Athletes Club supports health and growth through sports for everyone in the community.</p>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">See updates</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/BraveAthletesClub" target="_blank" rel="noopener">See updates</a></p>
     </section>
   </main>
 
@@ -325,31 +161,22 @@ h1{ line-height:1.15; letter-spacing:.2px; }
     <div class="container">
       <div class="socials">
         <a href="mailto:braveathletesclub@gmail.com">Email</a>
-        <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.facebook.com/BraveAthletesClub" target="_blank" rel="noopener">Facebook</a>
         <a href="/">日本語</a>
       </div>
-      <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+      <div style="margin-top:8px;">© 2025 Brave Athletes Club</div>
     </div>
   </footer>
 
-  <!-- Seasonal logo logic AFTER DOM is ready -->
+  <!-- seasonal logo swap after DOM ready -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var month = new Date().getMonth() + 1; // 1-12
+    document.addEventListener("DOMContentLoaded", function(){
+      var month = new Date().getMonth()+1;
       var season = (month<=2||month==12) ? "winter" : (month<=5) ? "spring" : (month<=8) ? "summer" : "autumn";
-      var pathCandidates = [
-        "/assets/seasonal/logo-" + season + ".svg",
-        "/assets/seasonal/logo-" + season + ".png"
-      ];
+      var candidates = ["/assets/seasonal/logo-"+season+".svg","/assets/seasonal/logo-"+season+".png"];
       var img = document.getElementById("seasonLogo");
-      function tryNext(i) {
-        if (i >= pathCandidates.length) return;
-        var test = new Image();
-        test.onload = function() { img.src = pathCandidates[i]; };
-        test.onerror = function() { tryNext(i+1); };
-        test.src = pathCandidates[i];
-      }
-      if (img) tryNext(0);
+      function tryNext(i){ if(i>=candidates.length) return; var t=new Image(); t.onload=function(){img.src=candidates[i];}; t.onerror=function(){tryNext(i+1);}; t.src=candidates[i]; }
+      if(img) tryNext(0);
     });
   </script>
 </body>
