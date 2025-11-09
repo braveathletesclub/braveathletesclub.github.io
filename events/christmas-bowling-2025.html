@@ -43,18 +43,25 @@
     footer { padding:28px 0 48px; border-top:1px solid #e5e7eb; color:#6b7280; }
     @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
     
-　　/* Event detail hero image */
-.event-hero-img {
-  display: block;
-  width: 100%;
-  max-width: 960px;   /* PCの最大幅 */
-  height: auto;
-  margin: 0 auto 12px;/* 中央寄せ */
-  border-radius: 16px;
-  border: 1px solid #e5e7eb;
+　　/* Event detail hero */
+.event-hero-wrap{
+  display:flex;
+  justify-content:center;   /* 画像を水平方向に中央寄せ */
 }
-@media (max-width: 900px){
-  .event-hero-img{ max-width: 720px; }
+
+.event-hero{
+  display:block;            /* 余計なインライン隙間を消す */
+  width:100%;
+  max-width:960px;          /* PCでの最大幅 */
+  height:auto;
+  margin:0;                 /* ラッパーで中央寄せするので margin:auto は不要 */
+  border-radius:16px;
+  border:1px solid #e5e7eb;
+  box-sizing:border-box;
+}
+
+@media (max-width:900px){
+  .event-hero{ max-width:720px; }
 }
 
   </style>
@@ -75,8 +82,8 @@
   </header>
   
 <main class="container">
-  <div>
-    <img class="event-hero-img"
+ <div class="event-hero-wrap">
+    <img class="event-hero"
          src="/events/christmas-bowling-2025-hero.jpg"
          alt="Christmas Bowling Event">
   </div>
