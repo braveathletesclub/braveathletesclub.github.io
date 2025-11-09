@@ -45,24 +45,19 @@
     
 　　/* Event detail hero */
 .event-hero{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:16px;
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;  /* 比率維持 */
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  display: block;
+  margin: 0 auto;
 }
-.event-hero img{
-  width:100%;
-  height:auto;
-  max-height:420px;
-  object-fit:cover;
-  border-radius:16px;
-  border:1px solid #e5e7eb;
+@media (max-width: 900px){
+  .event-hero{ max-width: 720px; }
 }
-@media (max-width:900px){
-  .event-hero img{
-    max-height:320px;
-  }
 }
-
 
   </style>
 </head>
