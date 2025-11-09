@@ -58,35 +58,49 @@
     footer{padding:28px 0 48px;border-top:1px solid #e5e7eb;margin-top:28px;color:#6b7280}
     .socials a{margin-right:12px}
 
-    /* Event card */
-.event-wrap{margin:24px 0;}
-.event-header{font-weight:700;margin-bottom:8px;}
+ /* === Event card (EN top) === */
+.event-wrap { margin: 16px 0 4px; }
+.event-header { font-weight: 700; margin-bottom: 8px; }
+
 .event-card{
-  display:flex;align-items:center;gap:16px;
-  padding:16px;border:1px solid #e5e7eb;border-radius:16px;
+  display: grid;
+  grid-template-columns: 140px 1fr auto; /* サムネ固定＋本文＋ボタン */
+  gap: 12px;
+  align-items: center;                  /* 縦ズレ防止 */
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
+  background: #fff;
 }
+
 .event-thumb img{
-  width:140px;height:auto;border-radius:12px;border:1px solid #e5e7eb;display:block;
+  width: 140px;
+  height: 88px;          /* 16:10より少し低めで行高をそろえる */
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: block;
 }
-.event-body{flex:1;min-width:0;}
-.event-title{font-weight:700;margin-bottom:4px;}
-.event-meta{color:#6b7280;}
-.event-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+.event-title{ font-weight: 700; margin: 0 0 4px; }
+.event-meta{ color: #6b7280; font-size: 14px; margin-top: 2px; }
+
+.event-actions{ display: flex; gap: 10px; flex-wrap: wrap; }
 .btn-pill{
-  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;
-  border-radius:999px;background:#fff;color:#111827;border:1px solid #e5e7eb;
-  font-weight:600;text-decoration:none;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 14px; border-radius: 999px;
+  background: #fff; color: #111827; border: 1px solid #e5e7eb; font-weight: 600;
 }
-.btn-pill.primary{background:#111827;color:#fff;border-color:#111827;}
-@media (max-width:780px){
-  .event-card{flex-direction:column;align-items:flex-start;}
-  .event-thumb img{width:100%;max-width:420px;}
-  .event-actions{width:100%;}
+.btn-pill.primary{ background: #111827; color: #fff; border-color: #111827; }
+
+@media (max-width: 780px){
+  .event-card{ grid-template-columns: 1fr; align-items: start; }
+  .event-thumb img{ width: 100%; height: auto; max-width: 420px; }
+  .event-actions{ justify-content: flex-start; }
 }
-
-
 
   </style>
+  
 </head>
 <body>
   <header>
