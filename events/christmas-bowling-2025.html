@@ -44,15 +44,19 @@
     @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
     
 　　/* Event detail hero image */
-.event-hero {
+.event-hero-img {
   display: block;
   width: 100%;
-  max-width: 960px;  /* PCでの最大幅 */
+  max-width: 960px;   /* PCの最大幅 */
   height: auto;
-  margin: 0 auto 12px; /* 中央揃え */
+  margin: 0 auto 12px;/* 中央寄せ */
   border-radius: 16px;
   border: 1px solid #e5e7eb;
 }
+@media (max-width: 900px){
+  .event-hero-img{ max-width: 720px; }
+}
+
 
 @media (max-width: 900px){
   .event-hero{
@@ -81,11 +85,13 @@
       </nav>
     </div>
   </header>
-<main class="container">
   
-  <div class="event-hero">
-  <img class="event-hero" src="/events/christmas-bowling-2025-hero.jpg" alt="Christmas Bowling Event">
-</div>
+<main class="container">
+  <div>
+    <img class="event-hero-img"
+         src="/events/christmas-bowling-2025-hero.jpg"
+         alt="Christmas Bowling Event">
+  </div>
 
     <h1>クリスマスプレゼント争奪ボーリング大会</h1>
     <div class="meta">日時：2025年12月20日（土）15:00-17:00 ／ 会場：バスターボウル阪急茨木店</div>
