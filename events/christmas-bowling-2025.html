@@ -43,20 +43,19 @@
     footer { padding:28px 0 48px; border-top:1px solid #e5e7eb; color:#6b7280; }
     @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
     
-　　/* Event detail hero */
+　　/* Event detail hero image */
 .event-hero{
-  width: 100%;
-  max-width: 960px;
-  aspect-ratio: 16 / 9;  /* 比率維持 */
-  object-fit: cover;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;   /* ここで上限幅を指定 */
+  height: auto;
+  margin: 0 auto 12px;/* 中央寄せ＋下マージン */
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
 }
+
 @media (max-width: 900px){
   .event-hero{ max-width: 720px; }
-}
 }
 
   </style>
@@ -78,7 +77,7 @@
 <main class="container">
   
   <div class="event-hero">
-  <img src="/assets/events/christmas-bowling-2025-hero.jpg" alt="Christmas Bowling Event">
+  <img class="event-hero" src="/events/christmas-bowling-2025-hero.jpg" alt="Christmas Bowling Event">
 </div>
 
     <h1>クリスマスプレゼント争奪ボーリング大会</h1>
