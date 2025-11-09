@@ -44,15 +44,22 @@
     @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
     
 　　/* Event detail hero image */
-.event-hero{
+.event-hero {
   display: block;
   width: 100%;
-  max-width: 960px;   /* ここで上限幅を指定 */
+  max-width: 960px;  /* PCでの最大幅 */
   height: auto;
-  margin: 0 auto 12px;/* 中央寄せ＋下マージン */
+  margin: 0 auto 12px; /* 中央揃え */
   border-radius: 16px;
   border: 1px solid #e5e7eb;
 }
+
+@media (max-width: 900px){
+  .event-hero{
+    max-width: 720px;
+  }
+}
+
 
 @media (max-width: 900px){
   .event-hero{ max-width: 720px; }
