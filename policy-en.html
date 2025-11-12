@@ -127,6 +127,19 @@
       border-top: 1px solid #e5e7eb;
       margin-top: 60px;
     }
+    /* ヒーロー画像（右側の画像）を中央・枠付き・最大幅制御 */
+.hero-photo img,
+.hero .container.hero-wrap img {
+  display: block;
+  width: 100%;
+  max-width: 720px;  /* PCでの最大幅 */
+  height: auto;
+  margin: 0 auto 12px;  /* 中央寄せ＋下マージン */
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  object-fit: cover;
+}
+
   </style>
 </head>
 <body>
