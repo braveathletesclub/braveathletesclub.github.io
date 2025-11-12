@@ -1,207 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brave Athletes Club | Training Policy (Women • Junior • Inclusive)</title>
-  <meta name="description" content="Brave Athletes Club training policy page. Specialized in women (general & athletes), junior development, and inclusive support." />
-
+  <title>Training Policy | Brave Athletes Club</title>
+  <meta name="description" content="Brave Athletes Club training policy for women, juniors, and inclusive support. Personalized training focusing on motor development, posture & functional improvement." />
+  <link rel="icon" href="/assets/favicon.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root{
-      --brand:#0f172a;
-      --accent:#ef4444;
-      --bg:#ffffff;
-      --muted:#475569;
-      --card:#f8fafc;
-      --ring:#e5e7eb;
-    }
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--brand);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic UI",sans-serif;line-height:1.75}
-    .container{max-width:1080px;margin:auto;padding:24px}
-    header.hero{position:relative;border-bottom:1px solid var(--ring);}
-    .hero-wrap{display:grid;gap:24px;grid-template-columns:1.2fr 1fr;align-items:center}
-    @media (max-width:900px){.hero-wrap{grid-template-columns:1fr}}
-    .logo{display:flex;gap:12px;align-items:center}
-    .logo img{height:56px;width:auto}
-    .badge{display:inline-block;background:var(--accent);color:#fff;border-radius:999px;padding:6px 12px;font-weight:700;font-size:12px;letter-spacing:.02em}
-    h1{font-size:clamp(24px,3.4vw,40px);margin:.4em 0 .2em;font-weight:800}
-    h2{font-size:clamp(20px,2.6vw,28px);margin:1.6em 0 .6em;font-weight:800}
-    h3{font-size:clamp(16px,2.2vw,20px);margin:1.2em 0 .4em;font-weight:800}
-    p.lead{color:var(--muted);font-size:clamp(14px,1.8vw,18px)}
-    .hero-photo{aspect-ratio:16/10;border-radius:18px;overflow:hidden;background:#ddd}
-    .hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .grid{display:grid;gap:18px}
-    .grid-2{grid-template-columns:1fr 1fr}
-    .grid-3{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:18px}
-    .card .thumb{aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:#e2e8f0;margin-bottom:12px}
-    .card .thumb img{width:100%;height:100%;object-fit:cover}
-    ul{padding-left:1.2em} li{margin:.3em 0}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-    .btn{background:var(--brand);color:#fff;padding:12px 16px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-flex;gap:8px;align-items:center}
-    .btn.alt{background:var(--accent)}
-    .section{margin:48px 0}
-    .divider{height:1px;background:var(--ring);margin:32px 0}
-    .gallery{display:grid;gap:12px;grid-template-columns:2fr 1fr}
-    .gallery .big{grid-row:span 2;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e2e8f0}
-    .gallery .big img,.gallery .sm img{width:100%;height:100%;object-fit:cover;display:block}
-    .gallery .sm{aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#e2e8f0}
-    @media(max-width:900px){.gallery{grid-template-columns:1fr}}
-    footer{border-top:1px solid var(--ring);margin-top:40px;padding-top:24px;color:var(--muted)}
-    .small{font-size:12px;color:var(--muted)}
+    :root{--bg:#ffffff;--ink:#111827;--muted:#6b7280;--accent:#f59e0b;--ring:#e5e7eb}
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
 
-    /* ======= Global layout helpers ======= */
-:root{--bg:#ffffff;--ink:#111827;--muted:#6b7280;--accent:#f59e0b}
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;color:var(--ink);background:var(--bg);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
-a{color:var(--accent);text-decoration:none}
-a:hover{text-decoration:underline}
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
+    /* ======= Site header (shared) ======= */
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);
+      border-bottom:1px solid var(--ring);z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:2px}
+    .brand img{height:32px}
+    .brand small{font-size:12px;color:var(--muted)}
+    .nav-links{display:flex;gap:16px;align-items:center}
+    .cta{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;
+      background:#111827;color:#fff;font-weight:600;text-decoration:none}
+    .cta.secondary{background:#fff;color:#111827;border:1px solid var(--ring)}
+    .lang{font-size:14px;color:var(--muted)}
+    .seasonal-badge img{height:24px}
 
-/* ======= Site header (same as top/en.html) ======= */
-header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid #e5e7eb;z-index:10}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{display:flex;flex-direction:column;gap:2px}
-.brand img{height:32px}
-.brand small{font-size:12px;color:var(--muted)}
-.nav-links{display:flex;gap:16px;align-items:center}
-.cta{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:#111827;color:#fff;font-weight:600}
-.cta.secondary{background:#fff;color:#111827;border:1px solid #e5e7eb}
-.lang{font-size:14px;color:var(--muted)}
-.seasonal-badge img{height:24px}
+    /* ======= Page-specific (hero image) ======= */
+    .hero{padding:28px 0}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+    .hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 8px}
+    .hero p.lead{color:var(--muted);margin:0 0 16px}
+    .hero-photo img{display:block;width:100%;max-width:720px;height:auto;margin:0 auto;
+      border-radius:16px;border:1px solid var(--ring)}
+    .pills{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
 
-/* （ヒーロー画像など既存のスタイルはそのままでOK） */
-
+    /* Cards below (既存セクションが続く想定) */
+    section{padding:28px 0}
+    .card{border:1px solid var(--ring);border-radius:16px;padding:16px}
+    .grid{display:grid;gap:16px}
+    @media (min-width:900px){.grid.cols-2{grid-template-columns:1fr 1fr}}
   </style>
 </head>
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <a href="/en.html"><img src="/assets/logo-wordmark.svg" alt="Brave Athletes Club" /></a>
-      <small>Training & Performance</small>
+<body>
+
+  <!-- ======= Site header START ======= -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="/en.html"><img src="/assets/logo-wordmark.svg" alt="Brave Athletes Club" /></a>
+        <small>Training &amp; Performance</small>
+      </div>
+      <nav class="nav-links">
+        <a href="/en.html#classes">Classes</a>
+        <a href="/en.html#personal">Personal</a>
+        <a href="/en.html#about">About</a>
+        <a href="/policy-en.html" class="cta secondary" style="pointer-events:none">Policy</a>
+        <a href="/en.html#contact" class="cta">Contact</a>
+        <span class="lang"><a href="/policy.html" hreflang="ja">JP</a></span>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="/en.html#classes">Classes</a>
-      <a href="/en.html#personal">Personal</a>
-      <a href="/en.html#about">About</a>
-      <a href="/policy-en.html" class="cta secondary">Policy</a>
-      <a href="/en.html#contact" class="cta">Contact</a>
-      <span class="lang"><a href="/policy.html" hreflang="ja">JP</a></span>
-    </nav>
-  </div>
-</header>
+  </header>
+  <!-- ======= Site header END ======= -->
 
+  <!-- ======= Hero ======= -->
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Training Policy</h1>
+          <p class="lead">
+            Specialized in women (general &amp; athletes) and junior development.
+            Offering personalized training from functional improvement to performance enhancement
+            in an inclusive environment.
+          </p>
+          <div class="pills">
+            <a class="cta" href="#personal">Personal Training</a>
+            <a class="cta secondary" href="#junior">Junior Programs</a>
+            <a class="cta secondary" href="#inclusive">Inclusive Support</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <!-- 好きな画像に差し替え可 -->
+          <img src="/assets/hero-sample.jpg" alt="Brave Athletes Club" />
+        </div>
+      </div>
+    </section>
 
-<main class="container">
+    <!-- 以降は既存のポリシー本文・カード群をそのまま置いてください -->
+    <!-- 例）
+    <section id="women">
+      <h2>Women &amp; Female Athletes</h2>
+      <div class="grid cols-2">
+        <article class="card">…</article>
+        <article class="card">…</article>
+      </div>
+    </section>
+    -->
+  </main>
 
-<section class="section" id="women">
-  <h2>🌼 Women & Female Athletes</h2>
-  <div class="grid grid-2">
-    <div class="card">
-      <div class="thumb"><img src="assets/women-1.jpg" alt="Women's Training"></div>
-      <h3>Hormonal & Performance-aware Programming</h3>
-      <ul>
-        <li>Training adjustments based on menstrual cycle</li>
-        <li>Support for PMS, menopause, fatigue</li>
-        <li>Autonomic balance & sleep improvement</li>
-        <li>Fatigue management for female athletes</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="thumb"><img src="assets/women-2.jpg" alt="Functional Training"></div>
-      <h3>Posture & Functional Improvement</h3>
-      <ul>
-        <li>Pelvic & core stability</li>
-        <li>Relief for shoulder/low back discomfort</li>
-        <li>Movement corrections to prevent injury</li>
-        <li>Strength & performance improvement</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="section" id="junior">
-  <h2>🧒 Junior Development (Ages 4–18)</h2>
-  <p class="lead">Fun, safe, and effective training based on growth and development — building fundamental movement skills and athletic foundations.</p>
-
-  <div class="grid grid-3">
-    <div class="card">
-      <div class="thumb"><img src="assets/junior-1.jpg" alt="Basic movement"></div>
-      <h3>Age-appropriate Training</h3>
-      <ul>
-        <li>Running, jumping, throwing fundamentals</li>
-        <li>Play-based learning</li>
-        <li>Intensity adjusted for growth phases</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="assets/junior-2.jpg" alt="Movement quality"></div>
-      <h3>Safe & Correct Movement</h3>
-      <ul>
-        <li>Posture correction (rounded back, swayback, flat feet)</li>
-        <li>Consideration for growth-related pain</li>
-        <li>Technique correction to prevent injury</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="assets/junior-3.jpg" alt="Athletic foundation"></div>
-      <h3>Athletic Foundations</h3>
-      <ul>
-        <li>Balance, agility, coordination</li>
-        <li>Body control for all sports</li>
-        <li>Foundation for future competitive performance</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="section" id="inclusive">
-  <h2>🤝 Inclusive Support (Developmental & Physical Disabilities)</h2>
-  <div class="grid grid-2">
-    <div>
-      <p>Led by a certified advanced Para-Sports instructor, we provide an environment where individuals with diverse abilities can participate safely and confidently.</p>
-      <h3>Key Approaches</h3>
-      <ul>
-        <li>Communication & environment tailored to each individual</li>
-        <li>Reduced sensory overload (sound, visual stimuli)</li>
-        <li>Flexible pacing to match individual needs</li>
-        <li>Building confidence through achievable success</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="thumb"><img src="assets/inclusive-1.jpg" alt="Inclusive training"></div>
-      <h3>Safe & Accessible Environment</h3>
-      <ul>
-        <li>Wheelchair, prosthetics, and orthosis-friendly setup</li>
-        <li>Programming based on range of motion & strength</li>
-        <li>Supportive communication with family members</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section class="section" id="personal">
-  <h2>💪 Personal Training (1-on-1)</h2>
-  <div class="grid grid-2">
-    <div class="card">
-      <h3>Functional Recovery Program (60 min) <span class="small">¥13,200</span></h3>
-      <ul>
-        <li>Posture & movement assessment</li>
-        <li>Mobility improvement</li>
-        <li>Core & pelvic stability training</li>
-        <li>Functional movement corrections</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h
-
+  <footer class="container" style="padding:28px 0;color:#6b7280;border-top:1px solid var(--ring);margin-top:24px">
+    © 2025 Brave Athletes Club
+  </footer>
+</body>
+</html>
