@@ -1,37 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About the Club | Brave Athletes Club</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>About | Brave Athletes Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* about.html とほぼ同じ CSS（英語ページ用） */
+    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
+    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
+    .brand img{height:32px;}
+    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
+    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
+    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
+    nav.main-nav a.active{font-weight:600;}
+    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
+    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
+    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    nav.main-nav span.lang a{color:var(--accent);}
+    main{padding:40px 0 60px;}
+    h1{font-size:32px;margin-bottom:10px;}
+    h2{font-size:22px;margin-top:40px;margin-bottom:12px;}
+    p{line-height:1.8;margin:0 0 12px;}
+    .two-column{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;margin-top:24px;align-items:flex-start;}
+    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;}
+    ul{margin:0 0 12px 1.2em;padding:0;}
+    li{margin-bottom:6px;}
+    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+    @media(max-width:768px){
+      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+      .two-column{grid-template-columns:minmax(0,1fr);}
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <a href="en.html">
-        <div class="brand-title">ATHLETES CLUB BRAVE</div>
-        <div class="brand-tagline">Training &amp; Performance</div>
-      </a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="en.html">
+          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
+      <nav class="main-nav">
+        <a href="classes-en.html">Classes</a>
+        <a href="personal-en.html">Personal</a>
+        <a href="about-en.html" class="active">About</a>
+        <a href="contact-en.html" class="cta">Contact</a>
+        <span class="lang"><a href="about.html" hreflang="ja">JP</a></span>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="classes-en.html">Classes</a>
-      <a href="personal-en.html">Personal</a>
-      <a href="about-en.html"class="active">About</a>
-      <a href="policy-en.html" >Policy</a>
-      <a href="contact-en.html" class="cta">Contact</a>
-      <a href="index.html" class="lang">JP</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
   <main class="container">
     <h1>About Brave Athletes Club</h1>
-    <p>This page is under construction. We will add our philosophy and background here.</p>
+    <p>
+      Brave Athletes Club is a training community where people of all ages can
+      enjoy movement, build confidence, and continue taking on new challenges.
+    </p>
+
+    <div class="two-column">
+      <section>
+        <h2>What We Offer</h2>
+        <div class="card">
+          <ul>
+            <li>Small-group classes tailored to age and level</li>
+            <li>Posture &amp; movement quality work through conditioning</li>
+            <li>Progressive programs for performance enhancement</li>
+            <li>An inclusive, supportive atmosphere for everyone</li>
+          </ul>
+        </div>
+
+        <h2>Training Policy</h2>
+        <div class="card">
+          <p>
+            We believe training should be a place where you feel your abilities
+            growing, not a place where your weaknesses are judged.
+          </p>
+          <ul>
+            <li>Build on what you can already do, then take the next step</li>
+            <li>Prioritize safety and movement quality before intensity</li>
+            <li>Encourage understanding and ownership, not just “do as told”</li>
+            <li>Support both sports performance and daily-life comfort</li>
+          </ul>
+          <p>
+            Our long-term goal is that you learn how to take care of your own
+            body and make good choices independently.
+          </p>
+        </div>
+      </section>
+
+      <aside>
+        <h2>Who It’s For</h2>
+        <div class="card">
+          <ul>
+            <li>Kids who want to enjoy moving, regardless of skill level</li>
+            <li>Junior &amp; student athletes returning from injury</li>
+            <li>Adults who want to improve posture or reduce recurring pain</li>
+            <li>Competitive athletes aiming for the next performance step</li>
+          </ul>
+        </div>
+
+        <h2>Trainer</h2>
+        <div class="card">
+          <p>
+            Sessions are led by a certified sports trainer with experience in
+            junior development, women’s training, and para sports.
+            For a more detailed profile, please see the Personal page.
+          </p>
+          <p>
+            → <a href="personal-en.html">See Personal Training</a>
+          </p>
+        </div>
+      </aside>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Brave Athletes Club</p>
+    &copy; 2025 Brave Athletes Club
   </footer>
 </body>
 </html>
+
