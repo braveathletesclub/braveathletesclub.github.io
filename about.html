@@ -4,32 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>クラブについて｜BRAVE ATHLETES CLUB</title>
-  <meta name="description" content="BRAVE ATHLETES CLUB（ブレイブアスリーツクラブ）は、子どもから大人まで、楽しく前向きにチャレンジできる人を増やすことを目指したトレーニングクラブです。クラブの特徴や指導方針をご紹介します。" />
+  <meta name="description" content="BRAVE ATHLETES CLUB（ブレイブアスリーツクラブ）は、子どもの運動教室と大人・アスリートのパーソナルサポートを行う地域密着型クラブです。姿勢・筋機能の改善から競技力向上、運動機能回復まで一人ひとりに合わせてサポートします。" />
   <link rel="canonical" href="https://braveathletesclub.github.io/about.html" />
 
   <!-- SEO / SNS -->
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
   <meta property="og:title" content="クラブについて｜BRAVE ATHLETES CLUB" />
-  <meta property="og:description" content="クラブの特徴や指導方針、どんな方におすすめかをご紹介します。" />
+  <meta property="og:description" content="子どもの運動教室と大人・アスリートのパーソナルサポートを行う地域密着型クラブです。" />
   <meta property="og:url" content="https://braveathletesclub.github.io/about.html" />
   <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- language alternates -->
-  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html" />
   <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/about.html" />
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/about-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/about.html" />
 
   <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#111827" />
 
   <style>
     :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
     *{box-sizing:border-box;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);}
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
+    img{max-width:100%;display:block;}
+
     .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+
+    /* ヘッダー（indexと統一） */
     header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
     .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
     .brand{display:flex;align-items:center;gap:12px;min-width:0;}
@@ -42,62 +48,51 @@
     nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
     nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
     nav.main-nav span.lang a{color:var(--accent);}
+
     main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:40px;margin-bottom:12px;}
-    h3{font-size:18px;margin:0 0 8px;}
-    p{line-height:1.8;margin:0 0 12px;}
-    ul{margin:0 0 12px 1.2em;padding:0;}
-    li{margin-bottom:6px;}
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+    h1{font-size:28px;margin:0 0 8px;}
+    h2{font-size:22px;margin:32px 0 12px;}
+    h3{font-size:18px;margin:20px 0 8px;}
+    p{line-height:1.8;margin:0 0 10px;color:var(--ink);}
+    .lead{color:var(--muted);}
+
+    .page-hero{padding:32px 0 12px;border-bottom:1px solid #e5e7eb;}
+    .page-hero p{max-width:720px;}
 
     .two-column{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;margin-top:24px;align-items:flex-start;}
     .card{background:#f9fafb;border-radius:18px;padding:20px 22px;border:1px solid #e5e7eb;}
-    .badge{display:inline-block;font-size:12px;font-weight:600;color:#fff;background:#111827;border-radius:999px;padding:3px 10px;margin-bottom:8px;}
-    .section{padding:28px 0;}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);}
-    .grid .card{height:100%;}
-    .lead{color:var(--muted);}
 
-    .list-check{margin:0 0 0 1.4em;padding:0;}
-    .list-check li{margin-bottom:4px;position:relative;}
-    .list-check li::before{
-      content:"・";
-      position:absolute;
-      left:-1.1em;
-      top:0;
-    }
+    ul{margin:0 0 10px 1.2em;padding:0;}
+    li{margin-bottom:4px;}
 
-    .trainer{display:flex;gap:16px;align-items:flex-start;}
-    .trainer-photo{
-      flex:0 0 96px;
-      width:96px;height:96px;
-      border-radius:50%;
-      background:#e5e7eb;
-    }
-    .trainer-body{flex:1;min-width:0;}
+    .badge{display:inline-block;background:#fee2e2;color:#b91c1c;font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:6px;}
 
-    @media(max-width:900px){
+    .trainer-header{display:flex;align-items:center;gap:16px;margin-bottom:8px;}
+    .trainer-name{font-size:18px;font-weight:700;}
+    .trainer-role{font-size:14px;color:var(--muted);}
+
+    .label{font-size:12px;font-weight:700;color:var(--muted);margin-top:4px;}
+
+    .subgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:12px;}
+
+    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);margin-top:40px;}
+    .socials a{margin-right:12px;}
+
+    @media(max-width:768px){
       .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
       .two-column{grid-template-columns:minmax(0,1fr);}
-      .grid{grid-template-columns:minmax(0,1fr);}
-      main{padding:24px 0 40px;}
-      h1{font-size:26px;}
+      .subgrid{grid-template-columns:minmax(0,1fr);}
     }
-
-    /* JP版は季節ロゴはヘッダーに表示しない */
-    .seasonal-badge { display: none; }
   </style>
 </head>
 
 <body>
-  <!-- ヘッダー（他ページと共通デザイン） -->
   <header class="site-header">
     <div class="container site-header-inner">
       <div class="brand">
         <a href="index.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+          <img src="images/logo-wordmark.svg" alt="BRAVE ATHLETES CLUB" />
         </a>
         <small>Training &amp; Performance</small>
       </div>
@@ -106,132 +101,126 @@
         <a href="personal.html">パーソナル</a>
         <a href="about.html" class="active">クラブについて</a>
         <a href="contact.html" class="cta">お問い合わせ</a>
-        <span class="lang"><a href="en.html" hreflang="en">EN</a></span>
+        <span class="lang"><a href="about-en.html" hreflang="en">EN</a></span>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- メイン見出し -->
-    <section class="section">
-      <div class="badge">About BRAVE</div>
+    <!-- HERO -->
+    <section class="page-hero">
+      <p class="badge">About BRAVE ATHLETES CLUB</p>
       <h1>クラブについて</h1>
       <p class="lead">
-        Brave Athletes Club は「楽しく動いて、前向きにチャレンジできる人を増やしたい」という思いから生まれたトレーニングクラブです。<br />
-        キッズ・ジュニアから一般女性、アスリートまで、それぞれの背景に合わせたコンディショニングと動きづくりを提供します。
+        BRAVE ATHLETES CLUB は、子どもから大人・アスリートまで、「できた！」「楽しい！」を重ねながら、からだとこころの成長を支えるクラブです。
+        姿勢・筋機能、運動機能の回復、競技パフォーマンスアップまで、一人ひとりに合わせたサポートを行います。
       </p>
     </section>
 
-    <!-- クラブの特徴 ＋ 指導コンセプト（2カラム） -->
-    <section class="section two-column">
-      <div class="card">
+    <!-- クラブ概要＋指導方針 -->
+    <section class="two-column">
+      <div>
         <h2>クラブの特徴</h2>
+        <p>BRAVE は、</p>
         <ul>
-          <li>一人ひとりの目的・レベルに合わせた少人数制サポート</li>
-          <li>姿勢・動きの質・身体機能を整えるコンディショニング</li>
-          <li>スポーツパフォーマンス向上に向けた段階的トレーニング</li>
-          <li>年齢・競技・経験を問わず参加できるオープンな雰囲気</li>
+          <li>▶ 子どもの「運動が苦手」を「少し得意かも」に変えていくキッズスポーツクラス</li>
+          <li>▶ 大人・アスリートのためのパーソナルサポート（姿勢・筋機能／パフォーマンスアップ／運動機能回復）</li>
+          <li>▶ 障がいのある方も一緒に参加できるインクルーシブな環境づくり</li>
+        </ul>
+        <p>を大切にしています。競技レベルや運動経験に関わらず、「今の自分から少し前へ」を一緒に目指します。</p>
+
+        <h2>指導方針</h2>
+        <ul>
+          <li>● からだの「土台づくり」：姿勢・動きのくせを整えるところからスタート</li>
+          <li>● 一人ひとりの「できる」に合わせた段階的なステップ</li>
+          <li>● 成功体験と「ほめる」コミュニケーションを重視</li>
+          <li>● 安全を最優先しつつ、楽しくチャレンジできる雰囲気づくり</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>指導コンセプト</h2>
-        <p>
-          トレーニングは「できないことを責める時間」ではなく、「できることが少しずつ増えていく時間」であってほしいと考えています。
-        </p>
-        <ul class="list-check">
-          <li>今できている部分を見つけ、そこから次のステップへつなげる</li>
-          <li>身体の安全性を最優先に、正しい動き方を丁寧に身につける</li>
-          <li>その人のペースを尊重し、無理なく続けられるプログラム設計</li>
+        <h3>対象</h3>
+        <ul>
+          <li>・幼児〜小学生のキッズ／ジュニア</li>
+          <li>・中高生〜一般の方</li>
+          <li>・競技力向上を目指したいアスリート</li>
+          <li>・ケガからの復帰や、日常動作を楽にしたい方</li>
+          <li>・パラスポーツ・インクルーシブな運動機会を求める方</li>
         </ul>
-      </div>
-    </section>
 
-    <!-- 指導方針（カード） -->
-    <section class="section">
-      <h2>指導方針</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>① 安全で正しい動きづくり</h3>
-          <p>関節や筋肉に負担の少ないフォームを身につけることで、ケガの予防とパフォーマンス向上を両立します。</p>
-        </div>
-        <div class="card">
-          <h3>② 小さな成功体験を積み重ねる</h3>
-          <p>「できた！」「前よりラクになった！」という感覚を大切にし、自己肯定感とチャレンジする気持ちを育てます。</p>
-        </div>
-        <div class="card">
-          <h3>③ 日常生活にも活きるトレーニング</h3>
-          <p>スポーツだけでなく、姿勢・歩き方・疲れにくさなど、日常の動きが楽になることも目指します。</p>
-        </div>
+        <h3>主なサポート内容</h3>
+        <ul>
+          <li>・キッズスポーツクラス</li>
+          <li>・短期講座・季節イベント</li>
+          <li>・パーソナルトレーニング（60分／75分）</li>
+          <li>・運動機能回復プログラム</li>
+          <li>・チーム／学校への出張サポート</li>
+        </ul>
       </div>
     </section>
 
     <!-- トレーナー紹介 -->
-    <section class="section">
+    <section>
       <h2>トレーナー紹介</h2>
-      <div class="card trainer">
-        <div class="trainer-photo">
-          <!-- 顔写真を入れる場合はここに img を配置 -->
-          <!-- <img src="images/trainer.jpg" alt="トレーナー" /> -->
-        </div>
-        <div class="trainer-body">
-          <p>
-            競技スポーツから健康づくりまで幅広い現場での指導経験を活かし、<br />
-            「専門的だけれど、わかりやすく・楽しく」を大切にサポートします。
-          </p>
-          <ul class="list-check">
-            <li>一般女性・女性アスリートのコンディショニング</li>
-            <li>キッズ・ジュニアの基礎運動能力向上</li>
-            <li>ケガからの復帰を目指す運動機能回復プログラム　など</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <!-- こんな方におすすめ -->
-    <section class="section">
-      <h2>こんな方におすすめです</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>子ども・ジュニア</h3>
-          <ul class="list-check">
-            <li>運動が得意でも苦手でも、楽しく基礎を身につけたい</li>
-            <li>ケガをしにくい体づくりをしたい</li>
-            <li>今のクラブ活動のパフォーマンスを上げたい</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>一般女性</h3>
-          <ul class="list-check">
-            <li>姿勢や体のクセを整えたい</li>
-            <li>肩こり・腰まわりの不調を動きから改善したい</li>
-            <li>「がんばり過ぎない」運動習慣をつくりたい</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>アスリート・競技者</h3>
-          <ul class="list-check">
-            <li>競技特性に合わせたコンディショニングを受けたい</li>
-            <li>動きの質を上げてパフォーマンスアップを目指したい</li>
-            <li>長く競技を続けるための体づくりをしたい</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- お問い合わせ案内 -->
-    <section class="section">
-      <h2>体験・ご相談について</h2>
       <div class="card">
+        <div class="trainer-header">
+          <!-- 将来ここに集合写真やプロフィール写真を入れる想定 -->
+          <!-- <img src="assets/trainer-haraguchi.jpg" alt="原口 博子" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid #e5e7eb;"> -->
+          <div>
+            <div class="trainer-name">原口 博子（Haraguchi Hiroko）</div>
+            <div class="trainer-role">BRAVE ATHLETES CLUB 代表／コンディショニングトレーナー</div>
+          </div>
+        </div>
+
         <p>
-          クラブの雰囲気やトレーニング内容について、まずはお気軽にお問い合わせください。<br />
-          目的やご希望をうかがった上で、最適なクラスやパーソナルサポートをご提案します。
+          「運動が得意な子も、ちょっと苦手な子も、それぞれのペースで前に進める場所にしたい」という想いから、
+          子ども向け教室とパーソナルサポートを行っています。<br />
+          スポーツ現場・トレーニング指導・パラスポーツや健康支援の経験を活かし、安心して任せていただける
+          “かかりつけの運動サポート役” を目指しています。
         </p>
+
+        <div class="subgrid">
+          <div>
+            <div class="label">保有資格</div>
+            <ul>
+              <li>□ 日本スポーツ協会公認スポーツプログラマー</li>
+              <li>□ 日本スポーツ施設協会公認トレーニング指導士</li>
+              <li>□ 財団法人 日本パラスポーツ協会 上級パラスポーツ指導員</li>
+              <li>□ NASM - Performance Enhancement Specialist</li>
+              <li>□ 健康管理士（健康管理検定１級）</li>
+              <li>□ 日本バスケットボール協会公認C級コーチ（日本体育協会公認スポーツ指導者）</li>
+              <li>□ Weight Management Specialist</li>
+              <li>□ NUAD BO - RARN THAI MASSAGE</li>
+              <li>□ Certificate of CPR &amp; AED Provider</li>
+            </ul>
+          </div>
+          <div>
+            <div class="label">主な活動分野</div>
+            <ul>
+              <li>・キッズ／ジュニアの基礎運動・体づくり</li>
+              <li>・女性のためのコンディショニング／ボディメイク</li>
+              <li>・競技者のパフォーマンス向上</li>
+              <li>・パラスポーツ・インクルーシブスポーツ支援</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 活動エリア・お問い合わせ -->
+    <section>
+      <h2>活動エリア・お問い合わせ</h2>
+      <div class="card">
+        <h3>主な活動エリア</h3>
+        <p>大阪府北部（茨木市・高槻市・吹田市など）を中心に活動しています。<br/>
+        出張サポートについては、内容・場所によりご相談のうえ対応いたします。</p>
+
+        <h3>お問い合わせ</h3>
+        <p>教室の内容やパーソナルのご相談は、メールまたはFacebookメッセージからお気軽にお問い合わせください。</p>
         <p>
-          メール：
-          <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br />
-          Facebook：
-          <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">最新情報はこちら</a>
+          メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br/>
+          Facebook：<a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Brave Athletes Club 公式ページ</a>
         </p>
       </div>
     </section>
