@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>About | Brave Athletes Club</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | BRAVE ATHLETES CLUB</title>
+  <meta name="description" content="BRAVE ATHLETES CLUB is a local club that offers kids sports classes and personal conditioning support for adults and athletes. From posture & muscle function to performance enhancement and functional recovery." />
+  <link rel="canonical" href="https://braveathletesclub.github.io/about-en.html" />
+
+  <!-- SEO / SNS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="About | BRAVE ATHLETES CLUB" />
+  <meta property="og:description" content="Kids sports classes and personal conditioning support for adults and athletes." />
+  <meta property="og:url" content="https://braveathletesclub.github.io/about-en.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/about-en.html" />
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/about.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/about-en.html" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+
   <style>
-    /* about.html とほぼ同じ CSS（英語ページ用） */
     :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
     *{box-sizing:border-box;}
     body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
+    img{max-width:100%;display:block;}
+
     .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+
     header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
     .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
     .brand{display:flex;align-items:center;gap:12px;min-width:0;}
@@ -24,28 +46,51 @@
     nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
     nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
     nav.main-nav span.lang a{color:var(--accent);}
+
     main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:40px;margin-bottom:12px;}
-    p{line-height:1.8;margin:0 0 12px;}
+    h1{font-size:28px;margin:0 0 8px;}
+    h2{font-size:22px;margin:32px 0 12px;}
+    h3{font-size:18px;margin:20px 0 8px;}
+    p{line-height:1.8;margin:0 0 10px;color:var(--ink);}
+    .lead{color:var(--muted);}
+
+    .page-hero{padding:32px 0 12px;border-bottom:1px solid #e5e7eb;}
+    .page-hero p{max-width:720px;}
+
     .two-column{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;margin-top:24px;align-items:flex-start;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;}
-    ul{margin:0 0 12px 1.2em;padding:0;}
-    li{margin-bottom:6px;}
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;border:1px solid #e5e7eb;}
+
+    ul{margin:0 0 10px 1.2em;padding:0;}
+    li{margin-bottom:4px;}
+
+    .badge{display:inline-block;background:#fee2e2;color:#b91c1c;font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:6px;}
+
+    .trainer-header{display:flex;align-items:center;gap:16px;margin-bottom:8px;}
+    .trainer-name{font-size:18px;font-weight:700;}
+    .trainer-role{font-size:14px;color:var(--muted);}
+
+    .label{font-size:12px;font-weight:700;color:var(--muted);margin-top:4px;}
+
+    .subgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:12px;}
+
+    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);margin-top:40px;}
+    .socials a{margin-right:12px;}
+
     @media(max-width:768px){
       .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
       .two-column{grid-template-columns:minmax(0,1fr);}
+      .subgrid{grid-template-columns:minmax(0,1fr);}
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container site-header-inner">
       <div class="brand">
         <a href="en.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+          <img src="images/logo-wordmark.svg" alt="BRAVE ATHLETES CLUB" />
         </a>
         <small>Training &amp; Performance</small>
       </div>
@@ -60,71 +105,136 @@
   </header>
 
   <main class="container">
-    <h1>About Brave Athletes Club</h1>
-    <p>
-      Brave Athletes Club is a training community where people of all ages can
-      enjoy movement, build confidence, and continue taking on new challenges.
-    </p>
+    <!-- HERO -->
+    <section class="page-hero">
+      <p class="badge">About BRAVE ATHLETES CLUB</p>
+      <h1>About the Club</h1>
+      <p class="lead">
+        BRAVE ATHLETES CLUB is a community-based club that supports growth through movement – from kids who are confident in sports to those who feel a bit hesitant, as well as adults and athletes.
+        We provide personalized support from posture & muscle function to performance enhancement and functional recovery.
+      </p>
+    </section>
 
-    <div class="two-column">
-      <section>
-        <h2>What We Offer</h2>
-        <div class="card">
-          <ul>
-            <li>Small-group classes tailored to age and level</li>
-            <li>Posture &amp; movement quality work through conditioning</li>
-            <li>Progressive programs for performance enhancement</li>
-            <li>An inclusive, supportive atmosphere for everyone</li>
-          </ul>
+    <!-- Overview + Policy -->
+    <section class="two-column">
+      <div>
+        <h2>What We Do</h2>
+        <p>At BRAVE, we focus on:</p>
+        <ul>
+          <li>▶ Kids sports classes that turn “I’m not good at sports” into “I can do this a bit more!”</li>
+          <li>▶ Personal conditioning for adults & athletes (posture, muscle function, performance, and recovery)</li>
+          <li>▶ Inclusive environments where people with disabilities can enjoy moving together</li>
+        </ul>
+        <p>
+          Regardless of experience or level, we aim to help each person take one step forward from where they are now.
+        </p>
+
+        <h2>Training Approach</h2>
+        <ul>
+          <li>● Building a solid foundation: improving posture and movement patterns first</li>
+          <li>● Step-by-step progress tailored to each individual</li>
+          <li>● Emphasis on positive feedback and “small successes”</li>
+          <li>● Safety first, while creating an enjoyable and encouraging environment</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Who It’s For</h3>
+        <ul>
+          <li>・Kids & juniors (preschool to elementary)</li>
+          <li>・Teens and adults</li>
+          <li>・Athletes aiming to improve performance</li>
+          <li>・Those recovering from injury or wanting easier daily movement</li>
+          <li>・People seeking inclusive and para-sport friendly support</li>
+        </ul>
+
+        <h3>Main Services</h3>
+        <ul>
+          <li>・Kids sports classes</li>
+          <li>・Seasonal intensive programs and events</li>
+          <li>・Personal training (60 / 75 minutes)</li>
+          <li>・Functional recovery programs</li>
+          <li>・On-site support for teams and schools</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trainer introduction -->
+    <section>
+      <h2>Trainer</h2>
+
+      <div class="card">
+        <div class="trainer-header">
+          <!-- Future group photo or profile photo can be placed here -->
+          <!-- <img src="assets/trainer-haraguchi.jpg" alt="Hiroko Haraguchi" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid #e5e7eb;"> -->
+          <div>
+            <div class="trainer-name">Hiroko Haraguchi</div>
+            <div class="trainer-role">Founder / Conditioning Trainer</div>
+          </div>
         </div>
 
-        <h2>Training Policy</h2>
-        <div class="card">
-          <p>
-            We believe training should be a place where you feel your abilities
-            growing, not a place where your weaknesses are judged.
-          </p>
-          <ul>
-            <li>Build on what you can already do, then take the next step</li>
-            <li>Prioritize safety and movement quality before intensity</li>
-            <li>Encourage understanding and ownership, not just “do as told”</li>
-            <li>Support both sports performance and daily-life comfort</li>
-          </ul>
-          <p>
-            Our long-term goal is that you learn how to take care of your own
-            body and make good choices independently.
-          </p>
-        </div>
-      </section>
+        <p>
+          I want BRAVE to be a place where both kids who love sports and those who feel a bit shy about movement can enjoy moving in their own way.
+          By combining experience in sports coaching, training, para-sport, and health support, I aim to be a “go-to person” for your movement and conditioning needs.
+        </p>
 
-      <aside>
-        <h2>Who It’s For</h2>
-        <div class="card">
-          <ul>
-            <li>Kids who want to enjoy moving, regardless of skill level</li>
-            <li>Junior &amp; student athletes returning from injury</li>
-            <li>Adults who want to improve posture or reduce recurring pain</li>
-            <li>Competitive athletes aiming for the next performance step</li>
-          </ul>
+        <div class="subgrid">
+          <div>
+            <div class="label">Qualifications</div>
+            <ul>
+              <li>□ JSPO Certified Sports Programmer</li>
+              <li>□ Japan Sports Facilities Association Certified Training Instructor</li>
+              <li>□ Japan Para-Sports Association Senior Para-Sports Instructor</li>
+              <li>□ NASM - Performance Enhancement Specialist</li>
+              <li>□ Health Management Specialist (Level 1)</li>
+              <li>□ JBA Certified C-Class Basketball Coach (JSPO Sports Instructor)</li>
+              <li>□ Weight Management Specialist</li>
+              <li>□ NUAD BO - RARN THAI MASSAGE</li>
+              <li>□ Certificate of CPR & AED Provider</li>
+            </ul>
+          </div>
+          <div>
+            <div class="label">Main Fields</div>
+            <ul>
+              <li>・Kids & junior fundamental movement and physical development</li>
+              <li>・Conditioning and body care for women</li>
+              <li>・Performance support for competitive athletes</li>
+              <li>・Para-sport and inclusive sports support</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <h2>Trainer</h2>
-        <div class="card">
-          <p>
-            Sessions are led by a certified sports trainer with experience in
-            junior development, women’s training, and para sports.
-            For a more detailed profile, please see the Personal page.
-          </p>
-          <p>
-            → <a href="personal-en.html">See Personal Training</a>
-          </p>
-        </div>
-      </aside>
-    </div>
+    <!-- Area & Contact -->
+    <section>
+      <h2>Area & Contact</h2>
+      <div class="card">
+        <h3>Activity Area</h3>
+        <p>
+          Mainly in the northern area of Osaka (Ibaraki, Takatsuki, Suita, etc.).<br/>
+          For on-site support, we will discuss the details and location individually.
+        </p>
+
+        <h3>Contact</h3>
+        <p>Please feel free to contact us via email or Facebook message regarding class details or personal support.</p>
+        <p>
+          Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br/>
+          Facebook: <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Brave Athletes Club (official page)</a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 Brave Athletes Club
+    <div class="container">
+      <div class="socials">
+        <a href="mailto:braveathletesclub@gmail.com">Email</a>
+        <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+        <a href="/index.html">日本語</a>
+      </div>
+      <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+    </div>
   </footer>
 </body>
 </html>
