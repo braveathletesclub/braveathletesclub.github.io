@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>クラブについて | Brave Athletes Club</title>
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>クラブについて｜BRAVE ATHLETES CLUB</title>
+  <meta name="description" content="BRAVE ATHLETES CLUB（ブレイブアスリーツクラブ）は、子どもから大人まで、楽しく前向きにチャレンジできる人を増やすことを目指したトレーニングクラブです。クラブの特徴や指導方針をご紹介します。" />
+  <link rel="canonical" href="https://braveathletesclub.github.io/about.html" />
+
+  <!-- SEO / SNS -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="クラブについて｜BRAVE ATHLETES CLUB" />
+  <meta property="og:description" content="クラブの特徴や指導方針、どんな方におすすめかをご紹介します。" />
+  <meta property="og:url" content="https://braveathletesclub.github.io/about.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- language alternates -->
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/en.html" />
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/about.html" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+  <meta name="theme-color" content="#111827" />
+
   <style>
-    /* ここは about.html と同じ CSS を貼り付けています */
     :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
     *{box-sizing:border-box;}
     body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
@@ -26,108 +44,209 @@
     nav.main-nav span.lang a{color:var(--accent);}
     main{padding:40px 0 60px;}
     h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
+    h2{font-size:22px;margin-top:40px;margin-bottom:12px;}
+    h3{font-size:18px;margin:0 0 8px;}
     p{line-height:1.8;margin:0 0 12px;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
     ul{margin:0 0 12px 1.2em;padding:0;}
     li{margin-bottom:6px;}
     footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
-    @media(max-width:768px){
+
+    .two-column{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;margin-top:24px;align-items:flex-start;}
+    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;border:1px solid #e5e7eb;}
+    .badge{display:inline-block;font-size:12px;font-weight:600;color:#fff;background:#111827;border-radius:999px;padding:3px 10px;margin-bottom:8px;}
+    .section{padding:28px 0;}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);}
+    .grid .card{height:100%;}
+    .lead{color:var(--muted);}
+
+    .list-check{margin:0 0 0 1.4em;padding:0;}
+    .list-check li{margin-bottom:4px;position:relative;}
+    .list-check li::before{
+      content:"・";
+      position:absolute;
+      left:-1.1em;
+      top:0;
+    }
+
+    .trainer{display:flex;gap:16px;align-items:flex-start;}
+    .trainer-photo{
+      flex:0 0 96px;
+      width:96px;height:96px;
+      border-radius:50%;
+      background:#e5e7eb;
+    }
+    .trainer-body{flex:1;min-width:0;}
+
+    @media(max-width:900px){
       .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+      .two-column{grid-template-columns:minmax(0,1fr);}
+      .grid{grid-template-columns:minmax(0,1fr);}
+      main{padding:24px 0 40px;}
+      h1{font-size:26px;}
     }
+
+    /* JP版は季節ロゴはヘッダーに表示しない */
+    .seasonal-badge { display: none; }
   </style>
 </head>
+
 <body>
-  <!-- ヘッダー（このページでは「クラブについて」を active に） -->
+  <!-- ヘッダー（他ページと共通デザイン） -->
   <header class="site-header">
-  <div class="container site-header-inner">
+    <div class="container site-header-inner">
       <div class="brand">
         <a href="index.html">
           <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
         </a>
         <small>Training &amp; Performance</small>
       </div>
-
-    <nav class="main-nav">
-      <a href="/classes.html">教室</a>
-      <a href="/personal.html">パーソナル</a>
-      <a href="/about.html"class="active">クラブについて</a>
-      <a href="/contact.html" class="cta">お問い合わせ</a>
-      <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
-    </nav>
-  </div>
-</header>
-
+      <nav class="main-nav">
+        <a href="classes.html">教室</a>
+        <a href="personal.html">パーソナル</a>
+        <a href="about.html" class="active">クラブについて</a>
+        <a href="contact.html" class="cta">お問い合わせ</a>
+        <span class="lang"><a href="en.html" hreflang="en">EN</a></span>
+      </nav>
+    </div>
+  </header>
 
   <main class="container">
-    <h1>クラブについて</h1>
-    <p>
-      Brave Athletes Club は「楽しく動いて、前向きにチャレンジできる人を増やしたい」
-      という想いから生まれたトレーニングクラブです。<br />
-      キッズ・ジュニアから一般女性、アスリートまで、それぞれの背景に合わせた
-      コンディショニングと動きづくりを提供します。
-    </p>
+    <!-- メイン見出し -->
+    <section class="section">
+      <div class="badge">About BRAVE</div>
+      <h1>クラブについて</h1>
+      <p class="lead">
+        Brave Athletes Club は「楽しく動いて、前向きにチャレンジできる人を増やしたい」という思いから生まれたトレーニングクラブです。<br />
+        キッズ・ジュニアから一般女性、アスリートまで、それぞれの背景に合わせたコンディショニングと動きづくりを提供します。
+      </p>
+    </section>
 
-    <div class="two-column">
-      <section>
+    <!-- クラブの特徴 ＋ 指導コンセプト（2カラム） -->
+    <section class="section two-column">
+      <div class="card">
         <h2>クラブの特徴</h2>
+        <ul>
+          <li>一人ひとりの目的・レベルに合わせた少人数制サポート</li>
+          <li>姿勢・動きの質・身体機能を整えるコンディショニング</li>
+          <li>スポーツパフォーマンス向上に向けた段階的トレーニング</li>
+          <li>年齢・競技・経験を問わず参加できるオープンな雰囲気</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>指導コンセプト</h2>
+        <p>
+          トレーニングは「できないことを責める時間」ではなく、「できることが少しずつ増えていく時間」であってほしいと考えています。
+        </p>
+        <ul class="list-check">
+          <li>今できている部分を見つけ、そこから次のステップへつなげる</li>
+          <li>身体の安全性を最優先に、正しい動き方を丁寧に身につける</li>
+          <li>その人のペースを尊重し、無理なく続けられるプログラム設計</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 指導方針（カード） -->
+    <section class="section">
+      <h2>指導方針</h2>
+      <div class="grid">
         <div class="card">
-          <ul>
-            <li>一人ひとりの目的・レベルに合わせた少人数制サポート</li>
-            <li>姿勢・動きの質・身体機能を整えるコンディショニング</li>
-            <li>スポーツパフォーマンス向上に向けた段階的トレーニング</li>
-            <li>年齢・競技・経験を問わず参加できるオープンな雰囲気</li>
+          <h3>① 安全で正しい動きづくり</h3>
+          <p>関節や筋肉に負担の少ないフォームを身につけることで、ケガの予防とパフォーマンス向上を両立します。</p>
+        </div>
+        <div class="card">
+          <h3>② 小さな成功体験を積み重ねる</h3>
+          <p>「できた！」「前よりラクになった！」という感覚を大切にし、自己肯定感とチャレンジする気持ちを育てます。</p>
+        </div>
+        <div class="card">
+          <h3>③ 日常生活にも活きるトレーニング</h3>
+          <p>スポーツだけでなく、姿勢・歩き方・疲れにくさなど、日常の動きが楽になることも目指します。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- トレーナー紹介 -->
+    <section class="section">
+      <h2>トレーナー紹介</h2>
+      <div class="card trainer">
+        <div class="trainer-photo">
+          <!-- 顔写真を入れる場合はここに img を配置 -->
+          <!-- <img src="images/trainer.jpg" alt="トレーナー" /> -->
+        </div>
+        <div class="trainer-body">
+          <p>
+            競技スポーツから健康づくりまで幅広い現場での指導経験を活かし、<br />
+            「専門的だけれど、わかりやすく・楽しく」を大切にサポートします。
+          </p>
+          <ul class="list-check">
+            <li>一般女性・女性アスリートのコンディショニング</li>
+            <li>キッズ・ジュニアの基礎運動能力向上</li>
+            <li>ケガからの復帰を目指す運動機能回復プログラム　など</li>
           </ul>
         </div>
+      </div>
+    </section>
 
-        <h2>指導方針</h2>
+    <!-- こんな方におすすめ -->
+    <section class="section">
+      <h2>こんな方におすすめです</h2>
+      <div class="grid">
         <div class="card">
-          <p>
-            トレーニングは「できないことを責める時間」ではなく、
-            「できることが少しずつ増えていく時間」であってほしいと考えています。
-          </p>
-          <ul>
-            <li>できている部分を見つけ、そこから次のステップへつなげる</li>
-            <li>身体の安全性を最優先に、正しい動き方を丁寧に身につける</li>
-            <li>一方的に「やらせる」のではなく、本人の理解と納得を大切にする</li>
-            <li>スポーツの成果だけでなく、日常生活の「動きやすさ」もサポート</li>
-          </ul>
-          <p>
-            その場だけの指導ではなく、「自分の体を自分で整えられる」ようになることを
-            ゴールとしています。
-          </p>
-        </div>
-      </section>
-
-      <aside>
-        <h2>対象となる方</h2>
-        <div class="card">
-          <ul>
-            <li>運動が苦手だけれど、楽しく体を動かしたいお子さま</li>
-            <li>ケガや不調からの復帰をめざすジュニア・学生アスリート</li>
-            <li>姿勢や肩こり・腰痛など、日常の不調を改善したい方</li>
-            <li>競技パフォーマンスをもう一段階引き上げたいアスリート</li>
+          <h3>子ども・ジュニア</h3>
+          <ul class="list-check">
+            <li>運動が得意でも苦手でも、楽しく基礎を身につけたい</li>
+            <li>ケガをしにくい体づくりをしたい</li>
+            <li>今のクラブ活動のパフォーマンスを上げたい</li>
           </ul>
         </div>
-
-        <h2>トレーナーについて</h2>
         <div class="card">
-          <p>
-            公認スポーツ指導者としての資格・経験に加え、パラスポーツ現場での指導、
-            海外での研修など、多角的なバックグラウンドを持つトレーナーが担当します。<br />
-            詳しい経歴はパーソナルページをご覧ください。
-          </p>
-          <p>
-            → <a href="personal.html">パーソナル（トレーナー紹介）はこちら</a>
-          </p>
+          <h3>一般女性</h3>
+          <ul class="list-check">
+            <li>姿勢や体のクセを整えたい</li>
+            <li>肩こり・腰まわりの不調を動きから改善したい</li>
+            <li>「がんばり過ぎない」運動習慣をつくりたい</li>
+          </ul>
         </div>
-      </aside>
-    </div>
+        <div class="card">
+          <h3>アスリート・競技者</h3>
+          <ul class="list-check">
+            <li>競技特性に合わせたコンディショニングを受けたい</li>
+            <li>動きの質を上げてパフォーマンスアップを目指したい</li>
+            <li>長く競技を続けるための体づくりをしたい</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- お問い合わせ案内 -->
+    <section class="section">
+      <h2>体験・ご相談について</h2>
+      <div class="card">
+        <p>
+          クラブの雰囲気やトレーニング内容について、まずはお気軽にお問い合わせください。<br />
+          目的やご希望をうかがった上で、最適なクラスやパーソナルサポートをご提案します。
+        </p>
+        <p>
+          メール：
+          <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br />
+          Facebook：
+          <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">最新情報はこちら</a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 Brave Athletes Club
+    <div class="container">
+      <div class="socials">
+        <a href="mailto:braveathletesclub@gmail.com">メール</a>
+        <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+        <a href="/en.html">English</a>
+      </div>
+      <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+    </div>
   </footer>
 </body>
 </html>
+
