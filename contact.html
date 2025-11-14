@@ -1,38 +1,87 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>お問い合わせ | Brave Athletes Club</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* 共通CSS（簡略版） */
+    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .container{max-width:800px;margin:0 auto;padding:0 20px;}
+    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
+    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
+    .brand img{height:32px;}
+    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
+    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
+    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
+    nav.main-nav a.active{font-weight:600;}
+    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
+    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
+    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    nav.main-nav span.lang a{color:var(--accent);}
+    main{padding:40px 0 60px;}
+    h1{font-size:32px;margin-bottom:10px;}
+    p{line-height:1.8;margin:0 0 12px;}
+    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
+    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+    @media(max-width:768px){
+      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <a href="index.html">
-        <div class="brand-title">ATHLETES CLUB BRAVE</div>
-        <div class="brand-tagline">Training &amp; Performance</div>
-      </a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="index.html">
+          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
+      <nav class="main-nav">
+        <a href="classes.html">教室</a>
+        <a href="personal.html">パーソナル</a>
+        <a href="about.html">クラブについて</a>
+        <a href="contact.html" class="cta active">お問い合わせ</a>
+        <span class="lang"><a href="contact-en.html" hreflang="en">EN</a></span>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="classes.html">教室</a>
-      <a href="personal.html">パーソナル</a>
-      <a href="about.html">クラブについて</a>
-      <a href="policy.html" >指導方針</a>
-      <a href="contact.html" class="cta"class="active">お問い合わせ</a>
-      <a href="en.html" class="lang">EN</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-  
   <main class="container">
     <h1>お問い合わせ</h1>
-    <p>お問い合わせは <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a> までお願いします。</p>
+    <div class="card">
+      <p>
+        体験のお申込み、日程や内容のご相談、各種ご質問など、下記メールアドレスまでお気軽にご連絡ください。
+      </p>
+      <p>
+        <strong>メール：</strong>
+        <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
+      </p>
+      <p>
+        内容を確認のうえ、数日以内にご返信いたします。<br />
+        メールの受信設定により返信が届かない場合がありますので、
+        「@gmail.com」からのメールを受信できるよう設定をお願いいたします。
+      </p>
+    </div>
+
+    <div class="card">
+      <p>最新のイベント情報は Facebook でもご案内しています。</p>
+      <p>
+        → <a href="https://www.facebook.com/" target="_blank" rel="noopener">Brave Athletes Club Facebook ページ</a>
+        （URL は実際のページに変更してください）
+      </p>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Brave Athletes Club</p>
+    &copy; 2025 Brave Athletes Club
   </footer>
 </body>
 </html>
