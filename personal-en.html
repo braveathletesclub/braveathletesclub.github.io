@@ -1,38 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Personal Training | Brave Athletes Club</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
+    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
+    .brand img{height:32px;}
+    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
+    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
+    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
+    nav.main-nav a.active{font-weight:600;}
+    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
+    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
+    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    nav.main-nav span.lang a{color:var(--accent);}
+    main{padding:40px 0 60px;}
+    h1{font-size:32px;margin-bottom:10px;}
+    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
+    p{line-height:1.8;margin:0 0 12px;}
+    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
+    ul{margin:0 0 12px 1.2em;padding:0;}
+    li{margin-bottom:6px;}
+    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+    @media(max-width:768px){
+      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+    }
+  </style>
 </head>
 <body>
-<header class="site-header">
-  <div class="header-inner">
-    <div class="brand">
-      <a href="en.html">
-        <div class="brand-title">ATHLETES CLUB BRAVE</div>
-        <div class="brand-tagline">Training &amp; Performance</div>
-      </a>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="en.html">
+          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
+      <nav class="main-nav">
+        <a href="classes-en.html">Classes</a>
+        <a href="personal-en.html" class="active">Personal</a>
+        <a href="about-en.html">About</a>
+        <a href="contact-en.html" class="cta">Contact</a>
+        <span class="lang"><a href="personal.html" hreflang="ja">JP</a></span>
+      </nav>
     </div>
-    <nav class="nav-links">
-      <a href="classes-en.html">Classes</a>
-      <a href="personal-en.html"class="active">Personal</a>
-      <a href="about-en.html">About</a>
-      <a href="policy-en.html" >Policy</a>
-      <a href="contact-en.html" class="cta">Contact</a>
-      <a href="index.html" class="lang">JP</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
-  
   <main class="container">
     <h1>Personal Training</h1>
-    <p>This page is under construction. We will add detailed information about personal support here.</p>
+    <p>
+      One-on-one sessions tailored to your goals: return from injury, posture
+      improvement, performance enhancement, or simply feeling better in daily life.
+    </p>
+
+    <div class="card">
+      <h2>Session Length &amp; Fees</h2>
+      <ul>
+        <li>60 minutes – 13,200 JPY (functional recovery / conditioning focus)</li>
+        <li>75 minutes – 16,500 JPY (from conditioning to performance training)</li>
+        <li>Travel fee – currently free within our service area (please ask)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Recommended For</h2>
+      <ul>
+        <li>Athletes or adults who struggle with recurring pain or tightness</li>
+        <li>Those who want to refine technique and reduce injury risk</li>
+        <li>Women dealing with body changes such as postpartum or menopause</li>
+        <li>Anyone who prefers focused one-to-one guidance</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Trainer Profile (Short)</h2>
+      <p>
+        Certified sports programmer, strength &amp; conditioning coach,
+        para-sports instructor, and NASM-PES, with experience from youth to
+        elite level, especially in basketball.
+      </p>
+      <p>
+        A detailed CV is available on request. Please contact us if you need it
+        in English.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Booking &amp; Questions</h2>
+      <p>
+        For schedule, location, or content inquiries, please contact us via the
+        Contact page.
+      </p>
+      <p>→ <a href="contact-en.html">Go to Contact</a></p>
+    </div>
   </main>
 
   <footer>
-    <p>© 2025 Brave Athletes Club</p>
+    &copy; 2025 Brave Athletes Club
   </footer>
 </body>
 </html>
