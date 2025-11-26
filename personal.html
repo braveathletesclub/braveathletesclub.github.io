@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <title>パーソナルトレーニング | Brave Athletes Club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- スタイルは about.html と同じ。必要に応じてまとめてください -->
+
   <style>
-    /* ここは about.html と同じ CSS を貼り付けています */
     :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
     *{box-sizing:border-box;}
     body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
@@ -25,33 +24,36 @@
     nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
     nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
     nav.main-nav span.lang a{color:var(--accent);}
+
     main{padding:40px 0 60px;}
     h1{font-size:32px;margin-bottom:10px;}
     h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
     p{line-height:1.8;margin:0 0 12px;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
+    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:24px;}
     ul{margin:0 0 12px 1.2em;padding:0;}
     li{margin-bottom:6px;}
     footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+
     @media(max-width:768px){
       .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
+<header class="site-header">
   <div class="container site-header-inner">
       <div class="brand">
         <a href="index.html">
           <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
         </a>
-        <small>Training &amp; Performance</small>
+        <small>Training & Performance</small>
       </div>
 
     <nav class="main-nav">
       <a href="/classes.html">教室</a>
-      <a href="/personal.html"class="active">パーソナル</a>
+      <a href="/personal.html" class="active">パーソナル</a>
       <a href="/about.html">クラブについて</a>
       <a href="/contact.html" class="cta">お問い合わせ</a>
       <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
@@ -59,57 +61,64 @@
   </div>
 </header>
 
+<main class="container">
 
-  <main class="container">
-    <h1>パーソナルトレーニング</h1>
-    <p>
-      ケガからの復帰、姿勢の改善、競技パフォーマンスアップなど、目的に合わせた
-      オーダーメイドのセッションを行います。
-    </p>
+  <h1>パーソナルトレーニング</h1>
+  <p>
+    ケガからの復帰、姿勢改善、競技パフォーマンス向上など、目的に合わせた
+    オーダーメイドのセッションを行います。
+  </p>
 
-    <div class="card">
-      <h2>料金・時間</h2>
-      <ul>
-        <li>60分：13,200円（税込） … 運動機能回復・コンディショニング中心</li>
-        <li>75分：16,500円（税込） … パフォーマンストレーニングまでしっかり</li>
-        <li>出張費：現在は <strong>無料</strong>（対応エリアはご相談ください）</li>
-      </ul>
-      <p>初回はカウンセリングと動きのチェックを行い、最適なプランをご提案します。</p>
-    </div>
+  <!-- 料金 -->
+  <div class="card">
+    <h2>料金・時間</h2>
+    <ul>
+      <li>60分：13,200円（税込） … 運動機能回復・コンディショニング中心</li>
+      <li>75分：16,500円（税込） … パフォーマンストレーニングまでしっかり</li>
+      <li>出張費：現在は <strong>無料</strong>（対応エリアはご相談ください）</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h2>こんな方におすすめ</h2>
-      <ul>
-        <li>痛みや違和感が気になり、思い切り動けていない</li>
-        <li>フォームを見直して、ケガを減らしたいアスリート</li>
-        <li>産後・更年期など、身体の変化に合わせた運動をしたい</li>
-        <li>グループではなく、じっくりマンツーマンで見てもらいたい</li>
-      </ul>
-    </div>
+  <!-- Early Bird Project -->
+  <div class="card">
+    <h2>🌅 Early Bird Project（5日間限定・先着2名）</h2>
+    <p>寒い朝も動き出すチャンス！明日から5日間限定で、先着2名の早朝パーソナル割引を販売します。</p>
 
-    <div class="card">
-      <h2>トレーナー紹介（簡略版）</h2>
-      <p>
-        日本スポーツ協会公認スポーツプログラマー、トレーニング指導士、上級パラスポーツ指導員、
-        NASM-PES などの資格を持ち、バスケットボールを中心にジュニアからトップカテゴリーまで
-        幅広い指導経験があります。
-      </p>
-      <p>
-        詳しい経歴資料が必要な場合は、お問い合わせフォームからご連絡ください。
-      </p>
-    </div>
+    <img src="assets/earlybird.jpg" alt="Early Bird Project" style="width:100%; border-radius:18px; margin:12px 0;" />
 
-    <div class="card">
-      <h2>お申込み・お問い合わせ</h2>
-      <p>
-        日時や場所のご相談は、お問い合わせページよりお気軽にご連絡ください。
-      </p>
-      <p>→ <a href="contact.html">お問い合わせページへ</a></p>
-    </div>
-  </main>
+    <ul>
+      <li>早朝6:00〜7:30にトレーニング開始</li>
+      <li>16回 or 24回 の回数券 → 通常価格の <b>10% OFF</b></li>
+      <li>対象期間：12月1日〜2月28日</li>
+      <li><b>明日から5日間限定</b>・<b>先着2名</b></li>
+    </ul>
 
-  <footer>
-    &copy; 2025 Brave Athletes Club
-  </footer>
+    <p>→ <a href="contact.html">お問い合わせはこちら</a></p>
+  </div>
+
+  <!-- おすすめ -->
+  <div class="card">
+    <h2>こんな方におすすめ</h2>
+    <ul>
+      <li>痛みや違和感があり、思い切り動けていない</li>
+      <li>フォームを見直して、ケガを減らしたいアスリート</li>
+      <li>産後・更年期など、身体の変化に合わせて運動したい</li>
+      <li>マンツーマンでしっかり見てもらいたい</li>
+    </ul>
+  </div>
+
+  <!-- お問い合わせ -->
+  <div class="card">
+    <h2>お申込み・お問い合わせ</h2>
+    <p>日時や場所の相談は、お問い合わせページよりお気軽にどうぞ。</p>
+    <p>→ <a href="contact.html">お問い合わせページへ</a></p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2025 Brave Athletes Club
+</footer>
+
 </body>
 </html>
