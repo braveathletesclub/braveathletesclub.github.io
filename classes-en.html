@@ -32,6 +32,7 @@
       padding:0 20px;
     }
 
+    /* ====== HEADER ====== */
     header.site-header{
       position:sticky;
       top:0;
@@ -44,7 +45,7 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      height:72px;
+      height:80px;
       gap:24px;
     }
     .brand{
@@ -53,9 +54,20 @@
       gap:12px;
       min-width:0;
     }
-    .brand img{height:32px;}
-    .brand small{
+    .brand img{
+      height:52px; /* ロゴ少し大きめ */
       display:block;
+    }
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .brand-name{
+      font-size:16px;
+      font-weight:700;
+    }
+    .brand-text small{
       font-size:12px;
       color:var(--muted);
       white-space:nowrap;
@@ -136,13 +148,13 @@
       min-width:260px;
     }
     .hero-photo{
-      flex:1 1 360px;
-      min-width:260px;
+      flex:0 0 260px;   /* 右側のロゴを少し小さめに */
       display:flex;
       justify-content:center;
     }
     .hero-photo img{
-      max-width:100%;
+      max-width:260px;
+      width:100%;
       border-radius:24px;
       box-shadow:0 18px 45px rgba(15,23,42,0.25);
       display:block;
@@ -204,6 +216,9 @@
       .hero-wrap{flex-direction:column-reverse;}
       .grid-2{grid-template-columns:1fr;}
       .grid-3{grid-template-columns:1fr;}
+      .hero-photo{
+        flex:1 1 auto;
+      }
     }
   </style>
 </head>
@@ -212,10 +227,16 @@
 <header class="site-header">
   <div class="container site-header-inner">
     <div class="brand">
-      <a href="en.html">
-        <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+      <a href="en.html" class="brand-logo">
+        <!-- 季節ロゴ（JSで差し替え） -->
+        <img id="seasonal-logo"
+             src="/assets/seasonal/logo-allseaso.png"
+             alt="Brave Athletes Club logo" />
       </a>
-      <small>Training &amp; Performance</small>
+      <div class="brand-text">
+        <span class="brand-name">Brave Athletes Club</span>
+        <small>Training &amp; Performance</small>
+      </div>
     </div>
 
     <nav class="main-nav">
@@ -369,6 +390,50 @@
 <footer class="container">
   <small>© Brave Athletes Club</small>
 </footer>
+
+<!-- ===== ヘッダーの季節ロゴ 自動切り替え ===== -->
+<script>
+  (function () {
+    const logo = document.getElementById("seasonal-logo");
+    if (!logo) return;
+
+    const today = new Date();
+    const year  = today.getFullYear();
+
+    function inRange(m1, d1, m2, d2) {
+      const start = new Date(year, m1 - 1, d1);
+      const end   = new Date(year, m2 - 1, d2, 23, 59, 59);
+      return today >= start && today <= end;
+    }
+
+    let file = "logo-allseaso.png";
+
+    // 期間は日本語ページと同じルール
+    if (inRange(12, 6, 12, 25)) {
+      file = "logo-christmas.png";
+    } else if (inRange(12, 26, 2, 2)) {
+      file = "logo-winter-pink.png";
+    } else if (inRange(2, 3, 3, 15)) {
+      file = "logo-spring-yellow.png";
+    } else if (inRange(3, 16, 4, 15)) {
+      file = "logo-spring-pink.png";
+    } else if (inRange(4, 15, 5, 15)) {
+      file = "logo-black-pink.png";
+    } else if (inRange(5, 15, 6, 30)) {
+      file = "logo-fishing.png";
+    } else if (inRange(7, 1, 8, 15)) {
+      file = "logo-summer-sea.png";
+    } else if (inRange(8, 16, 9, 30)) {
+      file = "logo-allseaso.png";
+    } else if (inRange(10, 1, 11, 15)) {
+      file = "logo-autumn-mapl.png";
+    } else if (inRange(11, 16, 12, 5)) {
+      file = "logo-autumn-winter-yello.png";
+    }
+
+    logo.src = "/assets/seasonal/" + file;
+  })();
+</script>
 
 <!-- ===== 月ごとのヒーロー画像 自動切り替え ===== -->
 <script>
