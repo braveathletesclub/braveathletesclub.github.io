@@ -114,6 +114,15 @@
       .event-actions{width:100%;}
     }
     .card-link { display:block; color:inherit; text-decoration:none; }
+
+    .cta-row .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 16px;border-radius:999px;border:1px solid #111827;
+      background:#111827;color:#fff;font-weight:600;text-decoration:none;
+    }
+    .cta-row .btn.secondary{
+      background:#fff;color:#111827;border-color:#e5e7eb;
+    }
   </style>
 
   <!-- JSON-LD -->
@@ -137,7 +146,7 @@
     <div class="container site-header-inner">
       <div class="brand">
         <a href="en.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+          <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" id="seasonal-logo" />
         </a>
         <small>Training &amp; Performance</small>
       </div>
@@ -260,6 +269,53 @@
       <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
     </div>
   </footer>
+
+  <!-- 季節ロゴ 自動切り替え（日本語ページと同じスクリプト） -->
+  <script>
+  (function(){
+    const img = document.getElementById('seasonal-logo') || document.querySelector('.brand img');
+    if (!img) return;
+
+    const today = new Date();
+    const year  = today.getFullYear();
+    const d = (m, day) => new Date(year, m - 1, day);
+
+    function between(from, to) {
+      if (from <= to) {
+        return today >= from && today <= to;
+      } else {
+        return today >= from || today <= to;
+      }
+    }
+
+    let src = "/assets/seasonal/logo-allseaso.png";
+
+    if (between(d(12,6), d(12,25))) {
+      src = "/assets/seasonal/logo-christmas.png";
+    } else if (between(d(12,26), d(2,2))) {
+      src = "/assets/seasonal/logo-winter-pink.png";
+    } else if (between(d(2,3), d(3,15))) {
+      src = "/assets/seasonal/logo-spring-yellow.png";
+    } else if (between(d(3,16), d(4,15))) {
+      src = "/assets/seasonal/logo-spring-pink.png";
+    } else if (between(d(4,16), d(5,15))) {
+      src = "/assets/seasonal/logo-black-pink.png";
+    } else if (between(d(5,16), d(6,30))) {
+      src = "/assets/seasonal/logo-fishing.png";
+    } else if (between(d(7,1), d(8,15))) {
+      src = "/assets/seasonal/logo-summer-sea.png";
+    } else if (between(d(8,16), d(9,30))) {
+      src = "/assets/seasonal/logo-allseaso.png";
+    } else if (between(d(10,1), d(11,15))) {
+      src = "/assets/seasonal/logo-autumn-mapl.png";
+    } else if (between(d(11,16), d(12,5))) {
+      src = "/assets/seasonal/logo-autumn-winter-yello.png";
+    }
+
+    img.src = src;
+  })();
+  </script>
 </body>
 </html>
+
 
