@@ -24,14 +24,10 @@
   <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/" />
   <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/" />
 
-  <!-- Favicon (用意できているものだけでOK) -->
+  <!-- Favicon  -->
   <link rel="icon" href="/assets/favicon.ico" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#111827" />
-
-  <!-- Preconnect (軽微な最適化) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
@@ -67,9 +63,6 @@
       .two-column{grid-template-columns:minmax(0,1fr);}
     }
 
-    /* JP版は季節ロゴはヘッダーに表示しない（ご要望準拠） */
-    .seasonal-badge { display: none; }
-
     /* Hero */
     .hero { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; align-items: center; padding: 48px 0; }
     .hero h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; line-height: 1.2; }
@@ -94,34 +87,43 @@
       .hero { grid-template-columns: 1fr; }
       .grid { grid-template-columns: 1fr; }
     }
- 
-/* Event card */
-.event-wrap{margin:24px 0;}
-.event-header{font-weight:700;margin-bottom:8px;}
-.event-card{
-  display:flex;align-items:center;gap:16px;
-  padding:16px;border:1px solid #e5e7eb;border-radius:16px;
-}
-.event-thumb img{
-  width:140px;height:auto;border-radius:12px;border:1px solid #e5e7eb;display:block;
-}
-.event-body{flex:1;min-width:0;}
-.event-title{font-weight:700;margin-bottom:4px;}
-.event-meta{color:#6b7280;}
-.event-actions{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-pill{
-  display:inline-flex;align-items:center;gap:8px;padding:10px 14px;
-  border-radius:999px;background:#fff;color:#111827;border:1px solid #e5e7eb;
-  font-weight:600;text-decoration:none;
-}
-.btn-pill.primary{background:#111827;color:#fff;border-color:#111827;}
-@media (max-width:780px){
-  .event-card{flex-direction:column;align-items:flex-start;}
-  .event-thumb img{width:100%;max-width:420px;}
-  .event-actions{width:100%;}
-}
-.card-link { display:block; color:inherit; text-decoration:none; }
 
+    /* Event card */
+    .event-wrap{margin:24px 0;}
+    .event-header{font-weight:700;margin-bottom:8px;}
+    .event-card{
+      display:flex;align-items:center;gap:16px;
+      padding:16px;border:1px solid #e5e7eb;border-radius:16px;
+    }
+    .event-thumb img{
+      width:140px;height:auto;border-radius:12px;border:1px solid #e5e7eb;display:block;
+    }
+    .event-body{flex:1;min-width:0;}
+    .event-title{font-weight:700;margin-bottom:4px;}
+    .event-meta{color:#6b7280;}
+    .event-actions{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn-pill{
+      display:inline-flex;align-items:center;gap:8px;padding:10px 14px;
+      border-radius:999px;background:#fff;color:#111827;border:1px solid #e5e7eb;
+      font-weight:600;text-decoration:none;
+    }
+    .btn-pill.primary{background:#111827;color:#fff;border-color:#111827;}
+    @media (max-width:780px){
+      .event-card{flex-direction:column;align-items:flex-start;}
+      .event-thumb img{width:100%;max-width:420px;}
+      .event-actions{width:100%;}
+    }
+    .card-link { display:block; color:inherit; text-decoration:none; }
+
+    /* 画像ボタン用（簡易） */
+    .cta-row .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 16px;border-radius:999px;border:1px solid #111827;
+      background:#111827;color:#fff;font-weight:600;text-decoration:none;
+    }
+    .cta-row .btn.secondary{
+      background:#fff;color:#111827;border-color:#e5e7eb;
+    }
   </style>
 
   <!-- JSON-LD (構造化データ) -->
@@ -134,6 +136,7 @@
     "url": "https://braveathletesclub.github.io/",
     "sameAs": [
       "https://www.facebook.com/BraveAthletesClub/"
+    ],
     "description": "子どもの運動教室と大人のパーソナルサポートを提供する地域クラブ。姿勢・筋機能の改善、競技力向上、運動機能回復を支援します。"
   }
   </script>
@@ -144,7 +147,8 @@
   <div class="container site-header-inner">
     <div class="brand">
       <a href="/">
-        <img src="/assets/logo-wordmark.svg" alt="Brave Athletes Club" />
+        <!-- ここを季節ロゴが自動で切り替わる img にする -->
+        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" id="seasonal-logo" />
       </a>
       <small>Training &amp; Performance</small>
     </div>
@@ -159,126 +163,172 @@
   </div>
 </header>
 
-  <main class="container">
-    <section class="hero">
-      <div>
-        <h1>得意でも、苦手でも。<br/>運動がたのしくなる場所。</h1>
-        <p>キッズスポーツクラスから、姿勢・筋機能の改善、競技力アップ、運動機能回復まで。目的に合わせて、専門トレーナーが伴走します。</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap;">
-          <a class="cta" href="mailto:braveathletesclub@gmail.com">メールで相談する</a>
-          <a class="cta secondary" href="#personal">パーソナルを見る</a>
+<main class="container">
+  <section class="hero">
+    <div>
+      <h1>得意でも、苦手でも。<br/>運動がたのしくなる場所。</h1>
+      <p>キッズスポーツクラスから、姿勢・筋機能の改善、競技力アップ、運動機能回復まで。目的に合わせて、専門トレーナーが伴走します。</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <a class="cta" href="mailto:braveathletesclub@gmail.com">メールで相談する</a>
+        <a class="cta secondary" href="#personal">パーソナルを見る</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>お知らせ</h3>
+      <p>最新のイベント情報はFacebookで公開中です。</p>
+      <p><a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebookで見る</a></p>
+    </div>
+  </section>
+
+  <!-- 冬のイベント（カード） -->
+  <div class="event-wrap">
+    <div class="event-header">冬のイベント</div>
+
+    <div class="event-card">
+      <div class="event-thumb">
+        <img src="/events/christmas-bowling-2025-thumb.jpg" alt="クリスマスプレゼント争奪ボーリング大会">
+      </div>
+
+      <div class="event-body">
+        <div class="event-title">クリスマスプレゼント争奪ボーリング大会</div>
+        <div class="event-meta">
+          2025年12月20日（土）15:00-17:00｜バスターボウル<strong>阪急</strong>茨木店
         </div>
       </div>
-      <div class="hero-card">
-        <h3>お知らせ</h3>
-        <p>最新のイベント情報はFacebookで公開中です。</p>
-        <p><a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebookで見る</a></p>
-      </div>
-    
-   </section>
-<!-- 冬のイベント（カード） -->
-<div class="event-wrap">
-  <div class="event-header">冬のイベント</div>
 
-  <div class="event-card">
-    <div class="event-thumb">
-      <img src="/events/christmas-bowling-2025-thumb.jpg" alt="クリスマスプレゼント争奪ボーリング大会">
-    </div>
-
-    <div class="event-body">
-      <div class="event-title">クリスマスプレゼント争奪ボーリング大会</div>
-      <div class="event-meta">
-        2025年12月20日（土）15:00-17:00｜バスターボウル<strong>阪急</strong>茨木店
+      <div class="event-actions">
+        <a class="btn-pill primary" href="/events/christmas-bowling-2025.html">イベント詳細</a>
+        <a class="btn-pill" href="/events/christmas-bowling-2025.ics">カレンダーに追加</a>
       </div>
     </div>
+  </div>
 
-    <div class="event-actions">
-      <a class="btn-pill primary" href="/events/christmas-bowling-2025.html">イベント詳細</a>
-      <a class="btn-pill" href="/events/christmas-bowling-2025.ics">カレンダーに追加</a>
+  <section id="classes">
+    <h2>教室</h2>
+    <div class="grid">
+      <a class="card card-link" href="/classes.html">
+        <h3>キッズスポーツクラス</h3>
+        <p>基礎運動・体づくり・動きの習得を楽しく。</p>
+      </a>
+
+      <a class="card card-link" href="#">
+        <h3>短期講座・季節イベント</h3>
+        <p>春・夏・冬休みの集中プログラムなど。</p>
+      </a>
+
+      <a class="card card-link" href="#">
+        <h3>出張サポート</h3>
+        <p>学校／クラブチーム向け。ご相談ください。</p>
+      </a>
     </div>
-  </div>
-</div>
 
+    <div class="card">
+      <h3>教室スケジュール</h3>
+      <p>2025年冬の予定はこちらからご確認ください。</p>
+      <div class="cta-row">
+        <a class="btn" href="/assets/schedule-2025-winter.png" target="_blank" rel="noopener">画像で見る</a>
+        <a class="btn secondary" href="/assets/schedule-2025-winter.png" download>ダウンロード</a>
+      </div>
+    </div>
+  </section>
 
-</section>
-
-    <section id="classes">
-  <h2>教室</h2>
-  <div class="grid">
-
-    <!-- ✅ キッズスポーツクラス（独立ページへ） -->
-    <a class="card card-link" href="/classes.html">
-      <h3>キッズスポーツクラス</h3>
-      <p>基礎運動・体づくり・動きの習得を楽しく。</p>
-    </a>
-
-    <!-- 短期講座・季節イベント（必要なら後でリンク追加） -->
-    <a class="card card-link" href="#">
-      <h3>短期講座・季節イベント</h3>
-      <p>春・夏・冬休みの集中プログラムなど。</p>
-    </a>
-
-    <!-- 出張サポート（必要なら後でリンク追加） -->
-    <a class="card card-link" href="#">
-      <h3>出張サポート</h3>
-      <p>学校／クラブチーム向け。ご相談ください。</p>
-    </a>
-
-  </div>
+  <section id="personal">
+    <h2>パーソナルサポート</h2>
+    <div class="grid">
       <div class="card">
-  <h3>教室スケジュール</h3>
-  <p>2025年冬の予定はこちらからご確認ください。</p>
-  <div class="cta-row">
-    <a class="btn" href="/assets/schedule-2025-winter.png" target="_blank" rel="noopener">画像で見る</a>
-    <a class="btn secondary" href="/assets/schedule-2025-winter.png" download>ダウンロード</a>
-  </div>
-</div>
-
-</section>
-
-
-    <section id="personal">
-      <h2>パーソナルサポート</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>60分｜運動機能回復プログラム</h3>
-          <p>13,200円（税込）／出張費無料</p>
-        </div>
-        <div class="card">
-          <h3>75分｜パーソナルトレーニング</h3>
-          <p>16,500円（税込）／出張費無料</p>
-        </div>
-        <div class="card">
-          <h3>姿勢・筋機能の改善</h3>
-          <p>専門的な評価に基づき、無理なく改善。</p>
-        </div>
+        <h3>60分｜運動機能回復プログラム</h3>
+        <p>13,200円（税込）／出張費無料</p>
       </div>
-    </section>
-
-    <section id="about">
-      <h2>クラブについて</h2>
-      <p>BRAVE ATHLETES CLUBは、地域の子どもから大人まで、スポーツを通じて健康と成長を支えるクラブです。</p>
-    </section>
-
-    <section id="contact">
-      <h2>お問い合わせ</h2>
-      <p>メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a></p>
-      <p>Facebook：<a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">最新情報はこちら</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <div class="socials">
-        <a href="mailto:braveathletesclub@gmail.com">メール</a>
-        <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
-        <a href="/en.html">English</a>
+      <div class="card">
+        <h3>75分｜パーソナルトレーニング</h3>
+        <p>16,500円（税込）／出張費無料</p>
       </div>
-      <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB </div>
+      <div class="card">
+        <h3>姿勢・筋機能の改善</h3>
+        <p>専門的な評価に基づき、無理なく改善。</p>
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <section id="about">
+    <h2>クラブについて</h2>
+    <p>BRAVE ATHLETES CLUBは、地域の子どもから大人まで、スポーツを通じて健康と成長を支えるクラブです。</p>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a></p>
+    <p>Facebook：<a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">最新情報はこちら</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="socials">
+      <a href="mailto:braveathletesclub@gmail.com">メール</a>
+      <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+      <a href="/en.html">English</a>
+    </div>
+    <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+  </div>
+</footer>
+
+<!-- ▼ 季節ロゴ 自動切り替えスクリプト（JA/EN 共通仕様） -->
+<script>
+(function(){
+  const img = document.getElementById('seasonal-logo') || document.querySelector('.brand img');
+  if (!img) return;
+
+  const today = new Date();
+  const year  = today.getFullYear();
+  const d = (m, day) => new Date(year, m - 1, day);
+
+  function between(from, to) {
+    if (from <= to) {
+      return today >= from && today <= to;
+    } else {
+      // 年をまたぐ期間（例: 12/26〜2/2）
+      return today >= from || today <= to;
+    }
+  }
+
+  let src = "/assets/seasonal/logo-allseaso.png"; // デフォルト（オールシーズン）
+
+  if (between(d(12,6), d(12,25))) {
+    // 12/6〜12/25  クリスマス
+    src = "/assets/seasonal/logo-christmas.png";
+  } else if (between(d(12,26), d(2,2))) {
+    // 12/26〜2/2 冬ピンクサイ
+    src = "/assets/seasonal/logo-winter-pink.png";
+  } else if (between(d(2,3), d(3,15))) {
+    // 2/3〜3/15 春・黄色サイ
+    src = "/assets/seasonal/logo-spring-yellow.png";
+  } else if (between(d(3,16), d(4,15))) {
+    // 3/16〜4/15 春・ピンクサイ
+    src = "/assets/seasonal/logo-spring-pink.png";
+  } else if (between(d(4,16), d(5,15))) {
+    // 4/16〜5/15 黒背景ピンクサイ
+    src = "/assets/seasonal/logo-black-pink.png";
+  } else if (between(d(5,16), d(6,30))) {
+    // 5/16〜6/30 釣りサイ
+    src = "/assets/seasonal/logo-fishing.png";
+  } else if (between(d(7,1), d(8,15))) {
+    // 7/1〜8/15 海サイ
+    src = "/assets/seasonal/logo-summer-sea.png";
+  } else if (between(d(8,16), d(9,30))) {
+    // 8/16〜9/30 オールシーズン
+    src = "/assets/seasonal/logo-allseaso.png";
+  } else if (between(d(10,1), d(11,15))) {
+    // 10/1〜11/15 もみじサイ
+    src = "/assets/seasonal/logo-autumn-mapl.png";
+  } else if (between(d(11,16), d(12,5))) {
+    // 11/16〜12/5 秋冬背景の黄色サイ
+    src = "/assets/seasonal/logo-autumn-winter-yello.png";
+  }
+
+  img.src = src;
+})();
+</script>
+
 </body>
 </html>
-
-
-
