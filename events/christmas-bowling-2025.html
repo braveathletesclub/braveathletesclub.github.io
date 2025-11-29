@@ -4,102 +4,271 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>クリスマスプレゼント争奪ボーリング大会｜Brave Athletes Club</title>
-  <meta name="description" content="Brave Athletes Club 冬のイベント『クリスマスプレゼント争奪ボーリング大会』のご案内。2025年12月20日（土）15:00-17:00、会場：バスターボウル阪泉茨木店。" />
+  <meta name="description" content="Brave Athletes Club 冬のイベント『クリスマスプレゼント争奪ボーリング大会』のご案内。2025年12月20日（土）15:00-17:00、会場：バスターボウル阪急茨木店。" />
+
   <link rel="canonical" href="https://braveathletesclub.github.io/events/christmas-bowling-2025.html" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Brave Athletes Club" />
   <meta property="og:title" content="クリスマスプレゼント争奪ボーリング大会｜Brave Athletes Club" />
-  <meta property="og:description" content="日時：2025年12月20日（土）15:00-17:00／会場：バスターボウル阪泉茨木店／参加費：大人 2,500円 子ども 2,000円" />
+  <meta property="og:description" content="日時：2025年12月20日（土）15:00-17:00／会場：バスターボウル阪急茨木店／参加費：大人 2,500円 子ども 2,000円" />
   <meta property="og:url" content="https://braveathletesclub.github.io/events/christmas-bowling-2025.html" />
   <meta property="og:image" content="https://braveathletesclub.github.io/assets/events/christmas-bowling-2025-og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="クリスマスプレゼント争奪ボーリング大会｜Brave Athletes Club" />
   <meta name="twitter:description" content="冬のイベントのご案内" />
   <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/events/christmas-bowling-2025-og.jpg" />
-  <link rel="icon" href="/assets/favicon.png" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
   <meta name="theme-color" content="#111827" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    :root { --ink:#111827; --muted:#6b7280; --accent:#f59e0b; }
-    * { box-sizing:border-box; }
-    body { margin:0; color:var(--ink); font-family:"Noto Sans JP", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    .container { max-width:1000px; margin:0 auto; padding:0 20px; }
-    header { position:sticky; top:0; background:#fff; border-bottom:1px solid #e5e7eb; z-index:10; }
-    .nav { display:flex; align-items:center; justify-content:space-between; height:64px; }
-    .brand img { height:32px; }
-    main { padding:28px 0 48px; }
-    .hero img { width:100%; height:auto; border-radius:16px; border:1px solid #e5e7eb; }
-    h1 { font-size:clamp(24px,4vw,36px); margin:16px 0 8px; }
-    .meta { color:var(--muted); margin-bottom:12px; }
-    .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-    .card { border:1px solid #e5e7eb; border-radius:16px; padding:16px; }
-    .cta-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
-    .btn { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:999px; background:#111827; color:#fff; font-weight:600; }
-    .btn.secondary { background:#fff; color:#111827; border:1px solid #e5e7eb; }
-    footer { padding:28px 0 48px; border-top:1px solid #e5e7eb; color:#6b7280; }
-    @media (max-width:800px) { .grid { grid-template-columns:1fr; } }
-    
-　　/* Event detail hero */
-.event-hero-wrap{
-  display:flex;
-  justify-content:center;   /* 画像を水平方向に中央寄せ */
-}
+    :root {
+      --bg:#ffffff;
+      --ink:#111827;
+      --accent:#ff8800;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+    }
 
-.event-hero{
-  display:block;            /* 余計なインライン隙間を消す */
-  width:100%;
-  max-width:960px;          /* PCでの最大幅 */
-  height:auto;
-  margin:0;                 /* ラッパーで中央寄せするので margin:auto は不要 */
-  border-radius:16px;
-  border:1px solid #e5e7eb;
-  box-sizing:border-box;
-}
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    img{max-width:100%;display:block;}
 
-@media (max-width:900px){
-  .event-hero{ max-width:720px; }
-}
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
 
+    /* ===== 共通ヘッダー ===== */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(8px);
+      background:var(--nav-bg);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand img{
+      height:52px;
+      display:block;
+      border-radius:16px;
+      background:#fff;
+      box-shadow:0 6px 18px rgba(15,23,42,0.15);
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+    nav.main-nav span.lang a{color:var(--accent);}
+
+    /* ===== 本文 ===== */
+    main{
+      padding:32px 0 48px;
+    }
+    h1{
+      font-size:clamp(24px,4vw,36px);
+      margin:16px 0 8px;
+    }
+    .meta{
+      color:var(--muted);
+      margin-bottom:12px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    .card{
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:16px;
+      background:#fff;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-weight:600;
+    }
+    .btn.secondary{
+      background:#fff;
+      color:#111827;
+      border:1px solid #e5e7eb;
+    }
+
+    /* Event detail hero */
+    .event-hero-wrap{
+      display:flex;
+      justify-content:center;
+    }
+    .event-hero{
+      display:block;
+      width:100%;
+      max-width:960px;
+      height:auto;
+      margin:0;
+      border-radius:16px;
+      border:1px solid #e5e7eb;
+      box-sizing:border-box;
+    }
+    @media (max-width:900px){
+      .event-hero{max-width:720px;}
+    }
+
+    footer{
+      padding:28px 0 48px;
+      border-top:1px solid #e5e7eb;
+      color:#6b7280;
+      font-size:12px;
+    }
+
+    @media (max-width:800px){
+      .grid{grid-template-columns:1fr;}
+    }
+    @media (max-width:768px){
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
+      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="container nav">
+  <!-- 共通ヘッダー -->
+  <header class="site-header">
+    <div class="container site-header-inner">
       <div class="brand">
-        <a href="/"><img src="/assets/logo-wordmark.svg" alt="Brave Athletes Club"></a>
+        <a href="/index.html">
+          <img src="/assets/seasonal/logo-allseaso.png"
+               alt="Brave Athletes Club"
+               id="global-seasonal-logo" />
+        </a>
+        <small>Training &amp; Performance</small>
       </div>
-      <nav style="display:flex; gap:16px; align-items:center;">
-        <a href="/">ホーム</a>
-        <a href="/#classes">教室</a>
-        <a href="/#personal">パーソナル</a>
-        <a href="/en.html">EN</a>
+      <nav class="main-nav">
+        <a href="/classes.html">教室</a>
+        <a href="/personal.html">パーソナル</a>
+        <a href="/about.html">クラブについて</a>
+        <a href="/contact.html" class="cta">お問い合わせ</a>
+        <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
       </nav>
     </div>
   </header>
-  
-<main class="container">
- <div class="event-hero-wrap">
-    <img class="event-hero"
-         src="/events/christmas-bowling-2025-hero.jpg"
-         alt="Christmas Bowling Event">
-  </div>
 
-    <h1>クリスマスプレゼント争奪ボーリング大会</h1>
-    <div class="meta">日時：2025年12月20日（土）15:00-17:00 ／ 会場：バスターボウル阪急茨木店</div>
-    <div class="cta-row">
-      <a class="btn" href="https://www.facebook.com/BraveAthletesClub" target="_blank" rel="noopener">Facebookで詳細を見る</a>
-      <a class="btn secondary" href="/events/christmas-bowling-2025.ics">カレンダーに追加（.ics）</a>
-      <a class="btn secondary" href="mailto:braveathletesclub@gmail.com">メールで問い合わせ</a>
+  <main class="container">
+    <div class="event-hero-wrap">
+      <img
+        class="event-hero"
+        src="/events/christmas-bowling-2025-hero.jpg"
+        alt="Christmas Bowling Event"
+      />
     </div>
 
-    <section class="grid" style="margin-top:16px;">
+    <h1>クリスマスプレゼント争奪ボーリング大会</h1>
+    <div class="meta">
+      日時：2025年12月20日（土）15:00-17:00 ／ 会場：バスターボウル阪急茨木店
+    </div>
+
+    <div class="cta-row">
+      <a class="btn"
+         href="https://www.facebook.com/BraveAthletesClub/"
+         target="_blank" rel="noopener">
+        Facebookで詳細を見る
+      </a>
+      <a class="btn secondary" href="/events/christmas-bowling-2025.ics">
+        カレンダーに追加（.ics）
+      </a>
+      <a class="btn secondary" href="mailto:braveathletesclub@gmail.com">
+        メールで問い合わせ
+      </a>
+    </div>
+
+    <section class="grid">
       <div class="card">
         <h3>イベント概要</h3>
-        <p>クリスマスならではの景品をご用意したボーリングイベントです。お子さまから大人まで、どなたでも参加OK！</p>
+        <p>
+          クリスマスならではの景品をご用意したボーリングイベントです。
+          お子さまから大人まで、どなたでも参加OK！
+        </p>
       </div>
       <div class="card">
         <h3>参加費</h3>
@@ -112,11 +281,59 @@
     <div class="container">
       <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap;">
         <a href="mailto:braveathletesclub@gmail.com">メール</a>
-        <a href="https://www.facebook.com/BraveAthletesClub" target="_blank" rel="noopener">Facebook</a>
-        <a href="/">ホーム</a>
+        <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+        <a href="/index.html">ホーム</a>
       </div>
       <div style="margin-top:8px;">© 2025 Brave Athletes Club</div>
     </div>
   </footer>
+
+  <!-- 季節ロゴ自動切り替え -->
+  <script>
+    (function () {
+      const img = document.getElementById("global-seasonal-logo");
+      if (!img) return;
+
+      const today = new Date();
+      const m = today.getMonth() + 1; // 1–12
+      const d = today.getDate();
+
+      let file = "logo-allseaso.png"; // デフォルト
+
+      if (m === 12 && d >= 6 && d <= 25) {
+        // クリスマス：12/6〜12/25
+        file = "logo-christmas.png";
+      } else if ((m === 12 && d >= 26) || m === 1 || (m === 2 && d <= 2)) {
+        // 冬ピンク：12/26〜2/2
+        file = "logo-winter-pink.png";
+      } else if ((m === 2 && d >= 3) || (m === 3 && d <= 15)) {
+        // Spring Yellow：2/3〜3/15
+        file = "logo-spring-yellow.png";
+      } else if ((m === 3 && d >= 16) || (m === 4 && d <= 15)) {
+        // Spring Pink：3/16〜4/15
+        file = "logo-spring-pink.png";
+      } else if ((m === 4 && d >= 16) || (m === 5 && d <= 15)) {
+        // 黒背景ピンク：4/16〜5/15
+        file = "logo-black-pink.png";
+      } else if ((m === 5 && d >= 16) || (m === 6 && d <= 30)) {
+        // 釣りサイ：5/16〜6/30
+        file = "logo-fishing.png";
+      } else if ((m === 7 && d >= 1) || (m === 8 && d <= 15)) {
+        // 海サイ：7/1〜8/15
+        file = "logo-summer-sea.png";
+      } else if ((m === 8 && d >= 16) || m === 9) {
+        // オールシーズン：8/16〜9/30
+        file = "logo-allseaso.png";
+      } else if (m === 10 || (m === 11 && d <= 15)) {
+        // もみじ：10/1〜11/15
+        file = "logo-autumn-mapl.png";
+      } else if ((m === 11 && d >= 16) || (m === 12 && d <= 5)) {
+        // 秋冬背景の黄色サイ：11/16〜12/5
+        file = "logo-autumn-winter-yello.png";
+      }
+
+      img.src = "/assets/seasonal/" + file;
+    })();
+  </script>
 </body>
 </html>
