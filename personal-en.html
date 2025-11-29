@@ -7,19 +7,23 @@
 
   <style>
     :root {
-      --bg:#ffffff;
-      --ink:#111827;
+      --bg:#0b1120;
+      --ink:#0f172a;
       --accent:#ff8800;
-      --ring:#111827;
+      --accent-soft:#fed7aa;
       --muted:#6b7280;
-      --nav-bg:rgba(255,255,255,0.9);
+      --nav-bg:rgba(15,23,42,0.9);
+      --card-bg:#0f172a;
+      --card-border:#1f2937;
     }
+
     *{box-sizing:border-box;}
     body{
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:var(--bg);
+      background:
+        radial-gradient(circle at top left,#1f2937 0, #020617 45%, #020617 100%);
     }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
@@ -30,13 +34,14 @@
       padding:0 20px;
     }
 
+    /* ========== SHARED HEADER ========== */
     header.site-header{
       position:sticky;
       top:0;
       z-index:50;
-      backdrop-filter:blur(8px);
+      backdrop-filter:blur(10px);
       background:var(--nav-bg);
-      border-bottom:1px solid #e5e7eb;
+      border-bottom:1px solid #1f2937;
     }
     .site-header-inner{
       display:flex;
@@ -51,11 +56,15 @@
       gap:12px;
       min-width:0;
     }
-    .brand img{height:32px;}
+    .brand img{
+      height:52px;          /* ロゴを少し大きく＆角丸 */
+      display:block;
+      border-radius:16px;
+    }
     .brand small{
       display:block;
       font-size:12px;
-      color:var(--muted);
+      color:#9ca3af;
       white-space:nowrap;
     }
 
@@ -69,7 +78,7 @@
       position:relative;
       padding:4px 0;
       white-space:nowrap;
-      color:var(--ink);
+      color:#e5e7eb;
     }
     nav.main-nav a.active{
       font-weight:600;
@@ -87,49 +96,213 @@
     nav.main-nav a.cta{
       padding:8px 18px;
       border-radius:999px;
-      border:1px solid var(--ink);
+      border:1px solid #e5e7eb;
       font-weight:600;
     }
     nav.main-nav span.lang{
       font-size:14px;
-      color:var(--muted);
+      color:#9ca3af;
       margin-left:8px;
     }
     nav.main-nav span.lang a{color:var(--accent);}
 
-    main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
-    p{line-height:1.8;margin:0 0 12px;}
-    .lead{color:var(--muted);}
-
-    .card{
-      background:#0b1120;
+    /* ================= MAIN ================= */
+    main{
+      padding:40px 0 60px;
       color:#e5e7eb;
-      border-radius:18px;
-      padding:20px 22px;
-      margin-bottom:24px;
-      border:1px solid #1f2937;
-      box-shadow:0 18px 40px rgba(15,23,42,0.55);
     }
-    .card h2{
-      margin-top:0;
+
+    h1{
+      font-size:32px;
+      margin:0 0 10px;
       color:#f9fafb;
     }
-    .card a{color:#f97316;}
-    .card strong{color:#facc15;}
+    h2{
+      font-size:22px;
+      margin:0 0 12px;
+      color:#f9fafb;
+    }
+    p{
+      line-height:1.8;
+      margin:0 0 12px;
+    }
 
-    ul{margin:0 0 12px 1.2em;padding:0;}
+    /* HERO */
+    .hero-personal{
+      padding:40px 0 32px;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+      gap:32px;
+      align-items:center;
+    }
+    .hero-kv{
+      position:relative;
+      padding:24px;
+      border-radius:24px;
+      background:radial-gradient(circle at top left,#111827,#020617 60%);
+      border:1px solid #1f2937;
+      box-shadow:0 24px 60px rgba(15,23,42,0.7);
+      overflow:hidden;
+    }
+    .hero-kv::after{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:radial-gradient(circle at top,#f97316 0,transparent 55%);
+      opacity:0.15;
+      pointer-events:none;
+    }
+    .hero-tag{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:#fefce8;
+      background:rgba(24,37,55,0.9);
+      border:1px solid rgba(248,250,252,0.1);
+    }
+    .hero-main-copy{
+      margin:14px 0 10px;
+      font-size:26px;
+      font-weight:700;
+      letter-spacing:0.02em;
+      color:#f9fafb;
+    }
+    .hero-sub{
+      font-size:14px;
+      color:#cbd5f5;
+    }
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:14px 0 4px;
+      font-size:12px;
+    }
+    .hero-badge{
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid rgba(248,250,252,0.12);
+      background:rgba(15,23,42,0.9);
+    }
+    .hero-cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .btn-primary,
+    .btn-outline{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,#fb923c,#f97316);
+      color:#111827;
+      border:none;
+    }
+    .btn-outline{
+      background:transparent;
+      color:#e5e7eb;
+      border:1px solid #4b5563;
+    }
+    .btn-primary:hover,
+    .btn-outline:hover{
+      text-decoration:none;
+      opacity:0.9;
+    }
+
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .hero-metric{
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid #1f2937;
+      background:rgba(15,23,42,0.9);
+    }
+    .hero-metric strong{
+      font-size:20px;
+      color:var(--accent-soft);
+    }
+    .hero-metric span{
+      display:block;
+      font-size:12px;
+      color:#9ca3af;
+      margin-top:4px;
+    }
+
+    /* SECTIONS */
+    .section{
+      margin-top:36px;
+    }
+    .section-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,1.1fr);
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:20px;
+      padding:20px 22px;
+      margin-bottom:24px;
+      border:1px solid var(--card-border);
+      box-shadow:0 14px 40px rgba(15,23,42,0.65);
+    }
+    .card-light{
+      background:#0b1120;
+      border-color:#111827;
+      box-shadow:none;
+    }
+
+    ul{margin:0 0 8px 1.2em;padding:0;}
     li{margin-bottom:6px;}
 
+    .tagline{
+      font-size:13px;
+      color:#9ca3af;
+      margin-bottom:4px;
+    }
+
+    .early-bird-image{
+      width:100%;
+      border-radius:18px;
+      margin:10px 0 14px;
+      border:1px solid #1f2937;
+    }
+
+    /* FOOTER */
     footer{
-      border-top:1px solid #e5e7eb;
+      border-top:1px solid #1f2937;
       padding:24px 0 32px;
       text-align:center;
       font-size:12px;
-      color:var(--muted);
+      color:#9ca3af;
+      background:#020617;
     }
 
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero-inner{
+        grid-template-columns:minmax(0,1fr);
+      }
+      .hero-side{flex-direction:row;flex-wrap:wrap;}
+    }
     @media(max-width:768px){
       .site-header-inner{
         flex-direction:column;
@@ -139,107 +312,244 @@
         gap:10px;
       }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+      .section-inner{
+        grid-template-columns:minmax(0,1fr);
+      }
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container site-header-inner">
-      <div class="brand">
-        <a href="en.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
-        </a>
-        <small>Training &amp; Performance</small>
+<header class="site-header">
+  <div class="container site-header-inner">
+    <div class="brand">
+      <a href="en.html">
+        <!-- Seasonal logo in header (auto-switched by JS) -->
+        <img src="assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" id="global-seasonal-logo" />
+      </a>
+      <small>Training &amp; Performance</small>
+    </div>
+
+    <nav class="main-nav">
+      <a href="classes-en.html">Classes</a>
+      <a href="personal-en.html" class="active">Personal</a>
+      <a href="about-en.html">About</a>
+      <a href="contact-en.html" class="cta">Contact</a>
+      <span class="lang"><a href="personal.html" hreflang="ja">JP</a></span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-personal">
+    <div class="hero-inner">
+      <div class="hero-kv">
+        <span class="hero-tag">Personal Conditioning &amp; Performance</span>
+        <h1 class="hero-main-copy">Take your performance to the next level.</h1>
+        <p class="hero-sub">
+          From return-to-sport after injury to posture improvement and performance enhancement.<br>
+          We customize each cycle – assessment → planning → training → review –
+          to match the way <strong>you</strong> want to move and feel.
+        </p>
+
+        <div class="hero-badges">
+          <div class="hero-badge">Junior Athletes</div>
+          <div class="hero-badge">Women Athletes</div>
+          <div class="hero-badge">General &amp; Returners</div>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="mailto:braveathletesclub@gmail.com" class="btn-primary">Email us</a>
+          <a href="#early-bird" class="btn-outline">See Early Bird Project</a>
+        </div>
       </div>
-      <nav class="main-nav">
-        <a href="classes-en.html">Classes</a>
-        <a href="personal-en.html" class="active">Personal</a>
-        <a href="about-en.html">About</a>
-        <a href="contact-en.html" class="cta">Contact</a>
-        <span class="lang"><a href="personal.html" hreflang="ja">JP</a></span>
-      </nav>
+
+      <div class="hero-side">
+        <div class="hero-metric">
+          <strong>60 / 75 min</strong>
+          <span>Two session lengths – choose based on your goals.</span>
+        </div>
+        <div class="hero-metric">
+          <strong>Movement × Strength</strong>
+          <span>A hybrid style that looks at both movement quality and conditioning.</span>
+        </div>
+        <div class="hero-metric">
+          <strong>1 on 1</strong>
+          <span>Fully one-on-one sessions with detailed form and condition checks.</span>
+        </div>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main class="container">
-    <h1>Personal Training</h1>
-    <p>
-      One-on-one sessions tailored to your goals: return from injury, posture
-      improvement, performance enhancement, or simply feeling better in daily life.
-    </p>
+  <!-- ===== Session Plans ===== -->
+  <section class="section" id="plans">
+    <div class="section-inner">
+      <div class="card">
+        <div class="tagline">Session Plans</div>
+        <h2>Session Length &amp; Fees</h2>
+        <ul>
+          <li>60 minutes – 13,200 JPY (functional recovery / conditioning focus)</li>
+          <li>75 minutes – 16,500 JPY (conditioning plus performance training)</li>
+          <li>Travel fee – currently <strong>free</strong> within our service area (please ask)</li>
+        </ul>
+        <p style="font-size:14px;color:#cbd5f5;">
+          In the first session, we begin with a movement screen and short interview
+          to clarify your goals and current status, then design the most effective plan for you.
+        </p>
+      </div>
 
-    <!-- Session length & fees -->
-    <div class="card">
-      <h2>Session Length &amp; Fees</h2>
-      <ul>
-        <li>60 minutes – 13,200 JPY (functional recovery / conditioning focus)</li>
-        <li>75 minutes – 16,500 JPY (from conditioning to performance training)</li>
-        <li>Travel fee – currently <strong>free</strong> within our service area (please ask)</li>
-      </ul>
-      <p class="lead">
-        In the first session, we begin with a movement screen and short interview
-        to design the most effective plan for you.
-      </p>
+      <div class="card card-light">
+        <div class="tagline">Recommended For</div>
+        <h2>Who This Is For</h2>
+        <ul>
+          <li>Athletes or adults who struggle with pain, tightness, or recurring issues</li>
+          <li>Those who want to refine technique and reduce injury risk</li>
+          <li>Women facing changes such as postpartum or menopause</li>
+          <li>Anyone who prefers focused one-to-one guidance over group sessions</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <!-- Early Bird Project -->
+  <!-- ===== Early Bird Project ===== -->
+  <section class="section" id="early-bird">
     <div class="card">
+      <div class="tagline">Special Offer</div>
       <h2>🌅 Early Bird Project (5-Day Limited / First 2 Clients)</h2>
-      <p class="lead">
-        Cold mornings are a chance to move. For <strong>5 days only</strong>, we offer
-        a special early-morning personal training pass for the
-        <strong>first two clients</strong>.
+      <p>
+        Cold mornings are a perfect chance to move.<br>
+        This limited project is for those who want quiet, early-morning time
+        to focus on training at their own pace.
       </p>
 
-      <div style="margin:14px 0;text-align:center;">
-        <img
-          src="assets/early-bird-project-2025.png"
-          alt="Early Bird Project campaign"
-          style="max-width:100%;border-radius:16px;"
-        />
-      </div>
+      <img
+        src="assets/early-bird-project-2025.png"
+        alt="Early Bird Project"
+        class="early-bird-image"
+      />
 
       <ul>
-        <li>Start time: between <strong>6:00 and 7:30 a.m.</strong></li>
-        <li>
-          Choose a <strong>16-session</strong> or <strong>24-session</strong> pass –
-          both at <strong>10% off</strong> the regular price.
-        </li>
+        <li>Start your session between <strong>6:00 and 7:30 a.m.</strong></li>
+        <li>Choose a <strong>16-session</strong> or <strong>24-session</strong> pass – both at <strong>10% off</strong>.</li>
         <li>Training period: <strong>December 1 – February 28</strong></li>
-        <li><strong>5-day limited sale</strong> from November 26 / <strong>First 2 clients</strong></li>
+        <li><strong>5-day sales period from November 26</strong>, limited to <strong>2 clients</strong>.</li>
       </ul>
-      <p class="lead">
-        If you want to build a new morning routine at your own pace, this project is for you.
-      </p>
-      <p style="margin-top:10px;">
-        → <a href="contact-en.html">Contact us about the Early Bird Project</a>
+
+      <p>
+        For details and availability, please contact us via email or the Contact page.<br>
+        → <a href="contact-en.html">Go to Contact</a>
       </p>
     </div>
+  </section>
 
-    <!-- Recommended for -->
-    <div class="card">
-      <h2>Recommended For</h2>
-      <ul>
-        <li>Athletes or adults who struggle with recurring pain or tightness</li>
-        <li>Those who want to refine technique and reduce injury risk</li>
-        <li>Women dealing with body changes such as postpartum or menopause</li>
-        <li>Anyone who prefers focused one-to-one guidance</li>
-      </ul>
-    </div>
-
-    <!-- Booking -->
-    <div class="card">
+  <!-- ===== Contact ===== -->
+  <section class="section" id="contact">
+    <div class="card card-light">
+      <div class="tagline">Contact</div>
       <h2>Booking &amp; Questions</h2>
       <p>
-        For schedule, location, or program content inquiries, please contact us via
-        the Contact page.
+        For questions about schedule, location, injury history, or goals,
+        feel free to send us a message first.
       </p>
-      <p>→ <a href="contact-en.html">Go to Contact</a></p>
+      <p>
+        Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br>
+        Form: <a href="contact-en.html">Contact page</a>
+      </p>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    &copy; 2025 Brave Athletes Club
-  </footer>
+</main>
+
+<footer>
+  &copy; 2025 Brave Athletes Club
+</footer>
+
+<!-- ===== Seasonal header logo: auto-switch by date ===== -->
+<script>
+  (function () {
+    const img = document.getElementById("global-seasonal-logo");
+    if (!img) return;
+
+    const today = new Date();
+    const m = today.getMonth() + 1; // 1–12
+    const d = today.getDate();
+
+    let file = "logo-allseaso.png"; // default (all season)
+
+    // Christmas: 12/6–12/25
+    if (m === 12 && d >= 6 && d <= 25) {
+      file = "logo-christmas.png";
+
+    // Winter pink: 12/26–2/2
+    } else if (
+      (m === 12 && d >= 26) ||
+      m === 1 ||
+      (m === 2 && d <= 2)
+    ) {
+      file = "logo-winter-pink.png";
+
+    // Spring yellow: 2/3–3/15
+    } else if (
+      (m === 2 && d >= 3) ||
+      (m === 3 && d <= 15)
+    ) {
+      file = "logo-spring-yellow.png";
+
+    // Spring pink: 3/16–4/15
+    } else if (
+      (m === 3 && d >= 16) ||
+      (m === 4 && d <= 15)
+    ) {
+      file = "logo-spring-pink.png";
+
+    // Black background pink: 4/16–5/15
+    } else if (
+      (m === 4 && d >= 16) ||
+      (m === 5 && d <= 15)
+    ) {
+      file = "logo-black-pink.png";
+
+    // Fishing rhino: 5/16–6/30
+    } else if (
+      (m === 5 && d >= 16) ||
+      (m === 6 && d <= 30)
+    ) {
+      file = "logo-fishing.png";
+
+    // Sea rhino: 7/1–8/15
+    } else if (
+      (m === 7 && d >= 1) ||
+      (m === 8 && d <= 15)
+    ) {
+      file = "logo-summer-sea.png";
+
+    // All-season: 8/16–9/30
+    } else if (
+      (m === 8 && d >= 16) ||
+      m === 9
+    ) {
+      file = "logo-allseaso.png";
+
+    // Autumn maple: 10/1–11/15
+    } else if (
+      m === 10 ||
+      (m === 11 && d <= 15)
+    ) {
+      file = "logo-autumn-mapl.png";
+
+    // Autumn-winter yellow: 11/16–12/5
+    } else if (
+      (m === 11 && d >= 16) ||
+      (m === 12 && d <= 5)
+    ) {
+      file = "logo-autumn-winter-yello.png";
+    }
+
+    img.src = "assets/seasonal/" + file;
+  })();
+</script>
+
 </body>
 </html>
