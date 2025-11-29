@@ -2,92 +2,332 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>お問い合わせ | Brave Athletes Club</title>
+  <title>お問い合わせ | BRAVE ATHLETES CLUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style>
-    /* ここは about.html と同じ CSS を貼り付けています */
-    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+  <meta name="description" content="Brave Athletes Club へのお問い合わせページです。教室のお申し込み・日程や内容のご相談・パーソナルサポートに関するご質問など、お気軽にご連絡ください。" />
+
+  <!-- OGP / SNS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="お問い合わせ | BRAVE ATHLETES CLUB" />
+  <meta property="og:description" content="教室のお申し込み・パーソナルのご相談など、お問い合わせはこちらから。" />
+  <meta property="og:url" content="https://braveathletesclub.github.io/contact.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- language alternates -->
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/contact-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/contact.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --ink:#111827;
+      --accent:#ff8800;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+      --card-bg:#ffffff;
+      --card-border:#e5e7eb;
+    }
     *{box-sizing:border-box;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
+      color:var(--ink);
+      background:
+        linear-gradient(180deg,#eef2ff 0,#ffffff 220px);
+    }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
+    img{max-width:100%;display:block;}
+
     .container{max-width:1100px;margin:0 auto;padding:0 20px;}
-    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
-    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
-    .brand img{height:32px;}
-    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
-    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
-    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
+
+    /* ===== 共通ヘッダー ===== */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(8px);
+      background:var(--nav-bg);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand img{
+      height:52px;
+      display:block;
+      border-radius:16px;
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
     nav.main-nav a.active{font-weight:600;}
-    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
-    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
-    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
     nav.main-nav span.lang a{color:var(--accent);}
-    main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
-    p{line-height:1.8;margin:0 0 12px;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
-    ul{margin:0 0 12px 1.2em;padding:0;}
-    li{margin-bottom:6px;}
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+
+    /* ===== MAIN ===== */
+    main{
+      padding:40px 0 60px;
+    }
+    h1{font-size:30px;margin:0 0 10px;}
+    h2{font-size:22px;margin:0 0 12px;}
+    p{line-height:1.8;margin:0 0 10px;}
+
+    .page-hero{
+      padding:32px 0 24px;
+    }
+    .page-hero-lead{
+      max-width:720px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:18px;
+      padding:20px 22px;
+      border:1px solid var(--card-border);
+      box-shadow:0 10px 30px rgba(15,23,42,0.06);
+      margin-bottom:20px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:11px;
+      font-weight:700;
+      padding:4px 10px;
+      border-radius:999px;
+      background:#fee2e2;
+      color:#b91c1c;
+      margin-bottom:8px;
+    }
+
+    .contact-label{
+      font-weight:700;
+      margin-bottom:4px;
+    }
+    .contact-email{
+      font-size:16px;
+      font-weight:700;
+    }
+    .note{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      border-top:1px solid #e5e7eb;
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffcc;
+      backdrop-filter:blur(4px);
+    }
+    .socials a{margin-right:12px;}
+
     @media(max-width:768px){
-      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
     }
   </style>
- 
 </head>
+
 <body>
-  <header class="site-header">
+<header class="site-header">
   <div class="container site-header-inner">
-      <div class="brand">
-        <a href="index.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
-        </a>
-        <small>Training &amp; Performance</small>
-      </div>
+    <div class="brand">
+      <a href="index.html">
+        <!-- 季節ごとのロゴ（JS で自動切り替え） -->
+        <img src="assets/seasonal/logo-allseaso.png"
+             alt="Brave Athletes Club"
+             id="global-seasonal-logo" />
+      </a>
+      <small>Training &amp; Performance</small>
+    </div>
 
     <nav class="main-nav">
-      <a href="/classes.html">教室</a>
-      <a href="/personal.html">パーソナル</a>
-      <a href="/about.html">クラブについて</a>
-      <a href="/contact.html" class="cta active">お問い合わせ</a>
-      <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
+      <a href="classes.html">教室</a>
+      <a href="personal.html">パーソナル</a>
+      <a href="about.html">クラブについて</a>
+      <a href="contact.html" class="cta active">お問い合わせ</a>
+      <span class="lang"><a href="contact-en.html" hreflang="en">EN</a></span>
     </nav>
   </div>
 </header>
 
+<main class="container">
 
-  <main class="container">
+  <!-- HERO -->
+  <section class="page-hero">
+    <span class="badge">Contact</span>
     <h1>お問い合わせ</h1>
+    <p class="page-hero-lead">
+      体験のお申し込み、日程や内容のご相談、パーソナルサポートに関するご質問など、<br>
+      下記メールアドレスまたは Facebook ページよりお気軽にご連絡ください。
+    </p>
+  </section>
+
+  <!-- EMAIL -->
+  <section>
     <div class="card">
-      <p>
-        体験のお申込み、日程や内容のご相談、各種ご質問など、下記メールアドレスまでお気軽にご連絡ください。
-      </p>
-      <p>
-        <strong>メール：</strong>
+      <h2>メールでのお問い合わせ</h2>
+      <p class="contact-label">メールアドレス</p>
+      <p class="contact-email">
         <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
       </p>
       <p>
-        内容を確認のうえ、数日以内にご返信いたします。<br />
-        メールの受信設定により返信が届かない場合がありますので、
+        内容を確認のうえ、数日以内にご返信いたします。<br>
+        体験希望日時・お子さまの年齢や学年・ご相談内容などを、わかる範囲でお書き添えください。
+      </p>
+      <p class="note">
+        ※ 迷惑メール設定などにより返信が届かない場合があります。<br>
         「@gmail.com」からのメールを受信できるよう設定をお願いいたします。
       </p>
     </div>
 
+    <!-- FACEBOOK -->
     <div class="card">
-      <p>最新のイベント情報は Facebook でもご案内しています。</p>
+      <h2>最新情報のご案内</h2>
       <p>
-        → <a href="https://www.facebook.com/" target="_blank" rel="noopener">Brave Athletes Club Facebook ページ</a>
-        （URL は実際のページに変更してください）
+        クラスのスケジュールやイベント情報は、Facebook ページでもご案内しています。
+      </p>
+      <p>
+        → <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">
+          Brave Athletes Club Facebook ページ
+        </a>
       </p>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    &copy; 2025 Brave Athletes Club
-  </footer>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="socials">
+      <a href="mailto:braveathletesclub@gmail.com">メール</a>
+      <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+      <a href="/en.html">English</a>
+    </div>
+    <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+  </div>
+</footer>
+
+<!-- ===== ヘッダー季節ロゴ：日付で自動切り替え ===== -->
+<script>
+  (function () {
+    const img = document.getElementById("global-seasonal-logo");
+    if (!img) return;
+
+    const today = new Date();
+    const m = today.getMonth() + 1; // 1–12
+    const d = today.getDate();
+
+    let file = "logo-allseaso.png"; // デフォルト
+
+    // クリスマス：12/6〜12/25
+    if (m === 12 && d >= 6 && d <= 25) {
+      file = "logo-christmas.png";
+
+    // 冬ピンク：12/26〜2/2
+    } else if ((m === 12 && d >= 26) || m === 1 || (m === 2 && d <= 2)) {
+      file = "logo-winter-pink.png";
+
+    // Spring Yellow：2/3〜3/15
+    } else if ((m === 2 && d >= 3) || (m === 3 && d <= 15)) {
+      file = "logo-spring-yellow.png";
+
+    // Spring Pink：3/16〜4/15
+    } else if ((m === 3 && d >= 16) || (m === 4 && d <= 15)) {
+      file = "logo-spring-pink.png";
+
+    // 黒背景ピンク：4/16〜5/15
+    } else if ((m === 4 && d >= 16) || (m === 5 && d <= 15)) {
+      file = "logo-black-pink.png";
+
+    // 釣りサイ：5/16〜6/30
+    } else if ((m === 5 && d >= 16) || (m === 6 && d <= 30)) {
+      file = "logo-fishing.png";
+
+    // 海サイ：7/1〜8/15
+    } else if ((m === 7 && d >= 1) || (m === 8 && d <= 15)) {
+      file = "logo-summer-sea.png";
+
+    // オールシーズン：8/16〜9/30
+    } else if ((m === 8 && d >= 16) || m === 9) {
+      file = "logo-allseaso.png";
+
+    // もみじ：10/1〜11/15
+    } else if (m === 10 || (m === 11 && d <= 15)) {
+      file = "logo-autumn-mapl.png";
+
+    // 秋冬背景の黄色サイ：11/16〜12/5
+    } else if ((m === 11 && d >= 16) || (m === 12 && d <= 5)) {
+      file = "logo-autumn-winter-yello.png";
+    }
+
+    img.src = "assets/seasonal/" + file;
+  })();
+</script>
+
 </body>
 </html>
