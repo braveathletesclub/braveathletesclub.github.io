@@ -209,6 +209,47 @@
       }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
     }
+        /* ===== Sponsor section ===== */
+    .sponsors{
+      margin-top:32px;
+    }
+    .sponsors h2{
+      margin:24px 0 8px;
+      font-size:22px;
+    }
+    .sponsors .meta{
+      font-size:14px;
+      color:#6b7280;
+      margin-bottom:16px;
+    }
+    .sponsor-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+    }
+    .sponsor-card{
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:12px 14px;
+      background:#ffffff;
+    }
+    .sponsor-card img{
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      margin-bottom:8px;
+      object-fit:cover;
+    }
+    .sponsor-name{
+      font-weight:700;
+      margin-bottom:4px;
+    }
+    .sponsor-desc{
+      font-size:14px;
+      color:#4b5563;
+      line-height:1.7;
+    }
+
   </style>
 </head>
 
@@ -273,6 +314,43 @@
       <div class="card">
         <h3>参加費</h3>
         <p>大人：2,500円／子ども：2,000円</p>
+      </div>        
+    </section>
+    <!-- ===== Sponsors ===== -->
+    <section class="sponsors">
+      <h2>🎁 賞品提供企業さま</h2>
+      <p class="meta">
+        イベントの賞品をご提供いただいた企業・サロンのみなさまです。（順不同）
+      </p>
+
+      <div class="sponsor-grid">
+        <!-- ① 株式会社 西田本店 -->
+        <article class="sponsor-card">
+          <img src="/assets/events/sponsor-nishida.jpg" alt="株式会社 西田本店">
+          <div class="sponsor-name">株式会社 西田本店</div>
+          <p class="sponsor-desc">
+            天保3年（1832年）創業。西國街道に面する、江戸時代から続く
+            「まちの酒屋さん」です。
+          </p>
+        </article>
+
+        <!-- ② メナードフェイシャルサロン日吉台カンナ店 -->
+        <article class="sponsor-card">
+          <img src="/assets/events/sponsor-salon-menard.jpg" alt="メナードフェイシャルサロン日吉台カンナ店">
+          <div class="sponsor-name">メナードフェイシャルサロン日吉台カンナ店</div>
+          <p class="sponsor-desc">
+            アットホームで気軽に立ち寄っていただける、
+            あたたかいフェイシャルサロンです。
+          </p>
+        </article>
+
+        <!-- ③ まだ未定の２社ぶんは、暫定で「coming soon」 -->
+        <article class="sponsor-card">
+          <div class="sponsor-name">Coming soon…</div>
+          <p class="sponsor-desc">
+            ほか２社さまからの賞品も、届き次第こちらでご紹介予定です。
+          </p>
+        </article>
       </div>
     </section>
   </main>
