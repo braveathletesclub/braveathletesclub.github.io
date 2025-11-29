@@ -25,59 +25,198 @@
   <meta name="theme-color" content="#111827" />
 
   <style>
-    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    :root{
+      --bg:#fff7ed;
+      --ink:#111827;
+      --accent:#ff8800;
+      --ring:#111827;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+      --card:#ffffff;
+      --card-soft:#fef3c7;
+    }
+
     *{box-sizing:border-box;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top,#fde68a 0,#fff7ed 40%,#ffffff 100%);
+    }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
     img{max-width:100%;display:block;}
 
     .container{max-width:1100px;margin:0 auto;padding:0 20px;}
 
-    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
-    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
-    .brand img{height:32px;}
-    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
-    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
-    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
+    /* ===== common header ===== */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand-logo img{
+      height:52px;
+      display:block;
+      border-radius:16px;
+      background:#ffffff;
+      box-shadow:0 6px 18px rgba(15,23,42,0.15);
+    }
+    .brand-text-title{
+      font-size:18px;
+      font-weight:700;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      margin-top:2px;
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
     nav.main-nav a.active{font-weight:600;}
-    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
-    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
-    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
     nav.main-nav span.lang a{color:var(--accent);}
 
+    /* ===== layout ===== */
     main{padding:40px 0 60px;}
-    h1{font-size:28px;margin:0 0 8px;}
+    h1{font-size:30px;margin:0 0 8px;}
     h2{font-size:22px;margin:32px 0 12px;}
     h3{font-size:18px;margin:20px 0 8px;}
     p{line-height:1.8;margin:0 0 10px;color:var(--ink);}
     .lead{color:var(--muted);}
 
-    .page-hero{padding:32px 0 12px;border-bottom:1px solid #e5e7eb;}
-    .page-hero p{max-width:720px;}
+    .page-hero{
+      margin-top:10px;
+      margin-bottom:24px;
+      padding:24px 22px 20px;
+      border-radius:24px;
+      background:linear-gradient(135deg,#fef3c7,#fffbeb);
+      border:1px solid #fed7aa;
+      box-shadow:0 12px 30px rgba(251,191,36,0.25);
+    }
+    .page-hero .badge{
+      display:inline-block;
+      background:#f97316;
+      color:#fff7ed;
+      font-size:11px;
+      font-weight:700;
+      border-radius:999px;
+      padding:4px 10px;
+      margin-bottom:6px;
+    }
+    .page-hero p{max-width:760px;}
 
-    .two-column{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;margin-top:24px;align-items:flex-start;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;border:1px solid #e5e7eb;}
+    .two-column{
+      display:grid;
+      grid-template-columns:minmax(0,3fr) minmax(0,2fr);
+      gap:32px;
+      margin-top:8px;
+      align-items:flex-start;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:18px;
+      padding:20px 22px;
+      border:1px solid #fee2e2;
+      box-shadow:0 10px 24px rgba(15,23,42,0.08);
+    }
 
     ul{margin:0 0 10px 1.2em;padding:0;}
     li{margin-bottom:4px;}
 
-    .badge{display:inline-block;background:#fee2e2;color:#b91c1c;font-size:11px;font-weight:700;border-radius:999px;padding:4px 10px;margin-bottom:6px;}
-
-    .trainer-header{display:flex;align-items:center;gap:16px;margin-bottom:8px;}
+    .trainer-header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:8px;
+    }
     .trainer-name{font-size:18px;font-weight:700;}
     .trainer-role{font-size:14px;color:var(--muted);}
+    .label{
+      font-size:12px;
+      font-weight:700;
+      color:var(--muted);
+      margin-top:4px;
+    }
+    .subgrid{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+      gap:16px;
+      margin-top:12px;
+    }
 
-    .label{font-size:12px;font-weight:700;color:var(--muted);margin-top:4px;}
-
-    .subgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;margin-top:12px;}
-
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);margin-top:40px;}
+    footer{
+      border-top:1px solid #e5e7eb;
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffdd;
+      backdrop-filter:blur(8px);
+    }
     .socials a{margin-right:12px;}
 
     @media(max-width:768px){
-      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
       .two-column{grid-template-columns:minmax(0,1fr);}
       .subgrid{grid-template-columns:minmax(0,1fr);}
@@ -89,10 +228,13 @@
   <header class="site-header">
     <div class="container site-header-inner">
       <div class="brand">
-        <a href="en.html">
-          <img src="images/logo-wordmark.svg" alt="BRAVE ATHLETES CLUB" />
+        <a href="en.html" class="brand-logo">
+          <img src="assets/seasonal/logo-allseaso.png" alt="BRAVE ATHLETES CLUB" id="global-seasonal-logo" />
         </a>
-        <small>Training &amp; Performance</small>
+        <div class="brand-text">
+          <div class="brand-text-title">Brave Athletes Club</div>
+          <small>Training &amp; Performance</small>
+        </div>
       </div>
       <nav class="main-nav">
         <a href="classes-en.html">Classes</a>
@@ -111,7 +253,7 @@
       <h1>About the Club</h1>
       <p class="lead">
         BRAVE ATHLETES CLUB is a community-based club that supports growth through movement – from kids who are confident in sports to those who feel a bit hesitant, as well as adults and athletes.
-        We provide personalized support from posture & muscle function to performance enhancement and functional recovery.
+        We provide personalized support from posture &amp; muscle function to performance enhancement and functional recovery.
       </p>
     </section>
 
@@ -121,8 +263,8 @@
         <h2>What We Do</h2>
         <p>At BRAVE, we focus on:</p>
         <ul>
-          <li>Kids sports classes that turn “I’m not good at sports” into “I can do this a bit more!”</li>
-          <li>Personal conditioning for adults & athletes (posture, muscle function, performance, and recovery)</li>
+          <li>Kids sports classes that turn “I’m not good at sports” into “Maybe I can do this!”</li>
+          <li>Personal conditioning for adults &amp; athletes (posture, muscle function, performance, and recovery)</li>
           <li>Inclusive environments where people with disabilities can enjoy moving together</li>
         </ul>
         <p>
@@ -141,7 +283,7 @@
       <div class="card">
         <h3>Who It’s For</h3>
         <ul>
-          <li>Kids & juniors (preschool to elementary)</li>
+          <li>Kids &amp; juniors (preschool to elementary)</li>
           <li>Teens and adults</li>
           <li>Athletes aiming to improve performance</li>
           <li>Those recovering from injury or wanting easier daily movement</li>
@@ -165,8 +307,7 @@
 
       <div class="card">
         <div class="trainer-header">
-          <!-- Future group photo or profile photo can be placed here -->
-          <!-- <img src="assets/trainer-haraguchi.jpg" alt="Hiroko Haraguchi" style="width:96px;height:96px;border-radius:50%;object-fit:cover;border:1px solid #e5e7eb;"> -->
+          <!-- Future profile photo can be placed here -->
           <div>
             <div class="trainer-name">Hiroko Haraguchi</div>
             <div class="trainer-role">Founder / Conditioning Trainer</div>
@@ -190,13 +331,13 @@
               <li>JBA Certified C-Class Basketball Coach</li>
               <li>Weight Management Specialist</li>
               <li>NUAD BO - RARN THAI MASSAGE</li>
-              <li>Certificate of CPR & AED Provider</li>
+              <li>Certificate of CPR &amp; AED Provider</li>
             </ul>
           </div>
           <div>
             <div class="label">Main Fields</div>
             <ul>
-              <li>Kids & junior fundamental movement and physical development</li>
+              <li>Kids &amp; junior fundamental movement and physical development</li>
               <li>Conditioning and body care for women</li>
               <li>Performance support for competitive athletes</li>
               <li>Para-sport and inclusive sports support</li>
@@ -208,18 +349,18 @@
 
     <!-- Area & Contact -->
     <section>
-      <h2>Area & Contact</h2>
+      <h2>Area &amp; Contact</h2>
       <div class="card">
         <h3>Activity Area</h3>
         <p>
-          Mainly in the Kansai (Osaka, Kyoto, Hyogoetc.)Kanto(Tokyo, Kanagawa).<br/>
+          Mainly in the Kansai region (Osaka, Kyoto, Hyogo, etc.) and the Kanto region (Tokyo, Kanagawa).<br />
           For on-site support, we will discuss the details and location individually.
         </p>
 
         <h3>Contact</h3>
         <p>Please feel free to contact us via email or Facebook message regarding class details or personal support.</p>
         <p>
-          Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br/>
+          Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br />
           Facebook: <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Brave Athletes Club (official page)</a>
         </p>
       </div>
@@ -236,6 +377,72 @@
       <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
     </div>
   </footer>
+
+  <!-- seasonal header logo -->
+  <script>
+    (function () {
+      const img = document.getElementById("global-seasonal-logo");
+      if (!img) return;
+
+      const today = new Date();
+      const m = today.getMonth() + 1;
+      const d = today.getDate();
+
+      let file = "logo-allseaso.png";
+
+      if (m === 12 && d >= 6 && d <= 25) {
+        file = "logo-christmas.png";
+      } else if (
+        (m === 12 && d >= 26) ||
+        m === 1 ||
+        (m === 2 && d <= 2)
+      ) {
+        file = "logo-winter-pink.png";
+      } else if (
+        (m === 2 && d >= 3) ||
+        (m === 3 && d <= 15)
+      ) {
+        file = "logo-spring-yellow.png";
+      } else if (
+        (m === 3 && d >= 16) ||
+        (m === 4 && d <= 15)
+      ) {
+        file = "logo-spring-pink.png";
+      } else if (
+        (m === 4 && d >= 16) ||
+        (m === 5 && d <= 15)
+      ) {
+        file = "logo-black-pink.png";
+      } else if (
+        (m === 5 && d >= 16) ||
+        (m === 6 && d <= 30)
+      ) {
+        file = "logo-fishing.png";
+      } else if (
+        (m === 7 && d >= 1) ||
+        (m === 8 && d <= 15)
+      ) {
+        file = "logo-summer-sea.png";
+      } else if (
+        (m === 8 && d >= 16) ||
+        m === 9
+      ) {
+        file = "logo-allseaso.png";
+      } else if (
+        m === 10 ||
+        (m === 11 && d <= 15)
+      ) {
+        file = "logo-autumn-mapl.png";
+      } else if (
+        (m === 11 && d >= 16) ||
+        (m === 12 && d <= 5)
+      ) {
+        file = "logo-autumn-winter-yello.png";
+      }
+
+      img.src = "assets/seasonal/" + file;
+    })();
+  </script>
 </body>
 </html>
 
