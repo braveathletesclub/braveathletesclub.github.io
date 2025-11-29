@@ -1,45 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact | Brave Athletes Club</title>
+  <meta charset="utf-8" />
+  <title>Contact | BRAVE ATHLETES CLUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact BRAVE ATHLETES CLUB for class inquiries, personal training, and event information. You can reach us by email or via our official Facebook page." />
+  <link rel="canonical" href="https://braveathletesclub.github.io/contact-en.html" />
+
+  <!-- SEO / SNS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="Contact | BRAVE ATHLETES CLUB" />
+  <meta property="og:description" content="Get in touch with BRAVE ATHLETES CLUB by email or Facebook message." />
+  <meta property="og:url" content="https://braveathletesclub.github.io/contact-en.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- language alternates -->
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/contact-en.html" />
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/contact-en.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+
   <style>
-    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    :root {
+      --bg:#f3f4ff;
+      --ink:#111827;
+      --accent:#ff8800;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.92);
+    }
+
     *{box-sizing:border-box;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top,#e5f0ff 0,#f3f4ff 40%,#f9fafb 100%);
+    }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
-    .container{max-width:800px;margin:0 auto;padding:0 20px;}
-    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
-    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
-    .brand img{height:32px;}
-    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
-    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
-    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
-    nav.main-nav a.active{font-weight:600;}
-    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
-    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
-    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    img{max-width:100%;display:block;}
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ===== Header (shared) ===== */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand img{
+      height:52px;
+      display:block;
+      border-radius:16px;
+      background:#ffffff;
+      box-shadow:0 6px 18px rgba(15,23,42,0.15);
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
     nav.main-nav span.lang a{color:var(--accent);}
-    main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    p{line-height:1.8;margin:0 0 12px;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+
+    /* ===== Main ===== */
+    main{
+      padding:40px 0 60px;
+    }
+    h1{
+      font-size:30px;
+      margin:0 0 8px;
+    }
+    p{
+      line-height:1.8;
+      margin:0 0 10px;
+    }
+    .lead{
+      color:var(--muted);
+    }
+
+    .page-hero{
+      padding:28px 0 16px;
+    }
+    .badge{
+      display:inline-block;
+      background:#ffedd5;
+      color:#9a3412;
+      font-size:11px;
+      font-weight:700;
+      border-radius:999px;
+      padding:4px 10px;
+      margin-bottom:6px;
+    }
+
+    .card{
+      background:#ffffff;
+      border-radius:20px;
+      padding:22px 24px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 18px 40px rgba(15,23,42,0.08);
+    }
+
+    .section{
+      margin-top:28px;
+    }
+
+    .contact-email{
+      font-size:16px;
+      font-weight:600;
+      margin-top:8px;
+    }
+    .contact-email a{
+      font-family:monospace;
+      word-break:break-all;
+    }
+
+    .note{
+      font-size:13px;
+      color:var(--muted);
+      margin-top:4px;
+    }
+
+    footer{
+      border-top:1px solid #e5e7eb;
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffcc;
+      backdrop-filter:blur(6px);
+    }
+    .socials a{margin-right:12px;}
+
     @media(max-width:768px){
-      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
     }
   </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container site-header-inner">
       <div class="brand">
         <a href="en.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
+          <!-- Seasonal header logo (auto-switched by JS) -->
+          <img src="assets/seasonal/logo-allseaso.png"
+               alt="BRAVE ATHLETES CLUB"
+               id="global-seasonal-logo" />
         </a>
         <small>Training &amp; Performance</small>
       </div>
@@ -47,43 +225,151 @@
         <a href="classes-en.html">Classes</a>
         <a href="personal-en.html">Personal</a>
         <a href="about-en.html">About</a>
-        <a href="contact-en.html" class="cta active">Contact</a>
+        <a href="contact-en.html" class="active cta">Contact</a>
         <span class="lang"><a href="contact.html" hreflang="ja">JP</a></span>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h1>Contact</h1>
-    <div class="card">
-      <p>
-        For trial sessions, schedule inquiries, or any questions, please contact
-        us by e-mail.
+    <!-- Hero -->
+    <section class="page-hero">
+      <p class="badge">Contact BRAVE ATHLETES CLUB</p>
+      <h1>Contact</h1>
+      <p class="lead">
+        For trial bookings, schedule and program inquiries, or any questions,
+        please contact us by email. We will reply after checking the contents.
       </p>
-      <p>
-        <strong>E-mail:</strong>
-        <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
-      </p>
-      <p>
-        We will reply as soon as possible. Please make sure your mail settings
-        allow messages from “@gmail.com”.
-      </p>
-    </div>
+    </section>
 
-    <div class="card">
-      <p>
-        We also share updates and event information on Facebook.
-      </p>
-      <p>
-        → <a href="https://www.facebook.com/" target="_blank" rel="noopener">Brave Athletes Club Facebook page</a>
-        (replace with your actual URL)
-      </p>
-    </div>
+    <!-- Email block -->
+    <section class="section">
+      <div class="card">
+        <h2 style="margin-top:0;">Email</h2>
+        <p>If you would like to get in touch, please email us at:</p>
+        <p class="contact-email">
+          Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
+        </p>
+        <p class="note">
+          We usually reply within a few days. If you do not receive a response,
+          please check your spam folder and make sure emails from
+          “@gmail.com” are allowed.
+        </p>
+      </div>
+    </section>
+
+    <!-- Facebook block -->
+    <section class="section">
+      <div class="card">
+        <h2 style="margin-top:0;">Facebook</h2>
+        <p>
+          Latest event information and schedule updates are also posted on our
+          official Facebook page.
+        </p>
+        <p>
+          → <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">
+            BRAVE ATHLETES CLUB Facebook Page
+          </a>
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer>
-    &copy; 2025 Brave Athletes Club
+    <div class="container">
+      <div class="socials">
+        <a href="mailto:braveathletesclub@gmail.com">Email</a>
+        <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
+        <a href="/index.html">日本語</a>
+      </div>
+      <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+    </div>
   </footer>
+
+  <!-- Seasonal header logo auto-switch -->
+  <script>
+    (function () {
+      const img = document.getElementById("global-seasonal-logo");
+      if (!img) return;
+
+      const today = new Date();
+      const m = today.getMonth() + 1; // 1–12
+      const d = today.getDate();
+
+      let file = "logo-allseaso.png"; // default (all season)
+
+      // Christmas: 12/6–12/25
+      if (m === 12 && d >= 6 && d <= 25) {
+        file = "logo-christmas.png";
+
+      // Winter pink: 12/26–2/2
+      } else if (
+        (m === 12 && d >= 26) ||
+        m === 1 ||
+        (m === 2 && d <= 2)
+      ) {
+        file = "logo-winter-pink.png";
+
+      // Spring Yellow: 2/3–3/15
+      } else if (
+        (m === 2 && d >= 3) ||
+        (m === 3 && d <= 15)
+      ) {
+        file = "logo-spring-yellow.png";
+
+      // Spring Pink: 3/16–4/15
+      } else if (
+        (m === 3 && d >= 16) ||
+        (m === 4 && d <= 15)
+      ) {
+        file = "logo-spring-pink.png";
+
+      // Black background pink: 4/16–5/15
+      } else if (
+        (m === 4 && d >= 16) ||
+        (m === 5 && d <= 15)
+      ) {
+        file = "logo-black-pink.png";
+
+      // Fishing rhino: 5/16–6/30
+      } else if (
+        (m === 5 && d >= 16) ||
+        (m === 6 && d <= 30)
+      ) {
+        file = "logo-fishing.png";
+
+      // Summer sea: 7/1–8/15
+      } else if (
+        (m === 7 && d >= 1) ||
+        (m === 8 && d <= 15)
+      ) {
+        file = "logo-summer-sea.png";
+
+      // All season: 8/16–9/30
+      } else if (
+        (m === 8 && d >= 16) ||
+        m === 9
+      ) {
+        file = "logo-allseaso.png";
+
+      // Autumn maple: 10/1–11/15
+      } else if (
+        m === 10 ||
+        (m === 11 && d <= 15)
+      ) {
+        file = "logo-autumn-mapl.png";
+
+      // Autumn–winter yellow: 11/16–12/5
+      } else if (
+        (m === 11 && d >= 16) ||
+        (m === 12 && d <= 5)
+      ) {
+        file = "logo-autumn-winter-yello.png";
+      }
+
+      img.src = "assets/seasonal/" + file;
+    })();
+  </script>
 </body>
 </html>
 
