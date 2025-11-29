@@ -4,35 +4,140 @@
   <meta charset="UTF-8" />
   <title>Personal Training | Brave Athletes Club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
-    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    :root {
+      --bg:#ffffff;
+      --ink:#111827;
+      --accent:#ff8800;
+      --ring:#111827;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+    }
     *{box-sizing:border-box;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
-    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
-    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(8px);
+      background:var(--nav-bg);
+      border-bottom:1px solid #e5e7eb;
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
     .brand img{height:32px;}
-    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
-    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
-    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
-    nav.main-nav a.active{font-weight:600;}
-    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
-    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
-    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
     nav.main-nav span.lang a{color:var(--accent);}
+
     main{padding:40px 0 60px;}
     h1{font-size:32px;margin-bottom:10px;}
     h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
     p{line-height:1.8;margin:0 0 12px;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:18px;}
+    .lead{color:var(--muted);}
+
+    .card{
+      background:#0b1120;
+      color:#e5e7eb;
+      border-radius:18px;
+      padding:20px 22px;
+      margin-bottom:24px;
+      border:1px solid #1f2937;
+      box-shadow:0 18px 40px rgba(15,23,42,0.55);
+    }
+    .card h2{
+      margin-top:0;
+      color:#f9fafb;
+    }
+    .card a{color:#f97316;}
+    .card strong{color:#facc15;}
+
     ul{margin:0 0 12px 1.2em;padding:0;}
     li{margin-bottom:6px;}
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+
+    footer{
+      border-top:1px solid #e5e7eb;
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+    }
+
     @media(max-width:768px){
-      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
     }
   </style>
@@ -63,13 +168,37 @@
       improvement, performance enhancement, or simply feeling better in daily life.
     </p>
 
-    <!-- Early Bird Project campaign -->
+    <!-- Session length & fees -->
     <div class="card">
-      <h2>Early Bird Project – Limited 5-Day Offer</h2>
+      <h2>Session Length &amp; Fees</h2>
+      <ul>
+        <li>60 minutes – 13,200 JPY (functional recovery / conditioning focus)</li>
+        <li>75 minutes – 16,500 JPY (from conditioning to performance training)</li>
+        <li>Travel fee – currently <strong>free</strong> within our service area (please ask)</li>
+      </ul>
       <p class="lead">
-        Cold mornings are a chance to move. For <strong>5 days only</strong>, we offer a special
-        early-morning personal training pass for the <strong>first two clients</strong>.
+        In the first session, we begin with a movement screen and short interview
+        to design the most effective plan for you.
       </p>
+    </div>
+
+    <!-- Early Bird Project -->
+    <div class="card">
+      <h2>🌅 Early Bird Project (5-Day Limited / First 2 Clients)</h2>
+      <p class="lead">
+        Cold mornings are a chance to move. For <strong>5 days only</strong>, we offer
+        a special early-morning personal training pass for the
+        <strong>first two clients</strong>.
+      </p>
+
+      <div style="margin:14px 0;text-align:center;">
+        <img
+          src="assets/early-bird-project-2025.png"
+          alt="Early Bird Project campaign"
+          style="max-width:100%;border-radius:16px;"
+        />
+      </div>
+
       <ul>
         <li>Start time: between <strong>6:00 and 7:30 a.m.</strong></li>
         <li>
@@ -77,27 +206,17 @@
           both at <strong>10% off</strong> the regular price.
         </li>
         <li>Training period: <strong>December 1 – February 28</strong></li>
-        <li>Limited to <strong>2 people</strong> (first come, first served).</li>
+        <li><strong>5-day limited sale</strong> from November 26 / <strong>First 2 clients</strong></li>
       </ul>
-      <p>
+      <p class="lead">
         If you want to build a new morning routine at your own pace, this project is for you.
       </p>
-      <div style="margin-top:14px;text-align:center;">
-        <img src="assets/early-bird-project-2025.png"
-             alt="Early Bird Project campaign"
-             style="max-width:100%;border-radius:16px;" />
-      </div>
+      <p style="margin-top:10px;">
+        → <a href="contact-en.html">Contact us about the Early Bird Project</a>
+      </p>
     </div>
 
-    <div class="card">
-      <h2>Session Length &amp; Fees</h2>
-      <ul>
-        <li>60 minutes – 13,200 JPY (functional recovery / conditioning focus)</li>
-        <li>75 minutes – 16,500 JPY (from conditioning to performance training)</li>
-        <li>Travel fee – currently free within our service area (please ask)</li>
-      </ul>
-    </div>
-
+    <!-- Recommended for -->
     <div class="card">
       <h2>Recommended For</h2>
       <ul>
@@ -108,11 +227,12 @@
       </ul>
     </div>
 
+    <!-- Booking -->
     <div class="card">
       <h2>Booking &amp; Questions</h2>
       <p>
-        For schedule, location, or content inquiries, please contact us via the
-        Contact page.
+        For schedule, location, or program content inquiries, please contact us via
+        the Contact page.
       </p>
       <p>→ <a href="contact-en.html">Go to Contact</a></p>
     </div>
