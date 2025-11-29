@@ -6,37 +6,314 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <style>
-    :root { --bg:#ffffff; --ink:#111827; --accent:#ff8800; --ring:#111827; --muted:#6b7280; --nav-bg:rgba(255,255,255,0.9);}
+    :root {
+      --bg:#0b1120;
+      --ink:#0f172a;
+      --accent:#ff8800;
+      --accent-soft:#fed7aa;
+      --muted:#6b7280;
+      --nav-bg:rgba(15,23,42,0.9);
+      --card-bg:#0f172a;
+      --card-border:#1f2937;
+    }
+
     *{box-sizing:border-box;}
-    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left,#1f2937 0, #020617 45%, #020617 100%);
+    }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
-    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
-    header.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:var(--nav-bg);border-bottom:1px solid #e5e7eb;}
-    .site-header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;}
-    .brand{display:flex;align-items:center;gap:12px;min-width:0;}
-    .brand img{height:32px;}
-    .brand small{display:block;font-size:12px;color:var(--muted);white-space:nowrap;}
-    nav.main-nav{display:flex;align-items:center;gap:20px;font-size:15px;}
-    nav.main-nav a{position:relative;padding:4px 0;white-space:nowrap;color:var(--ink);}
-    nav.main-nav a.active{font-weight:600;}
-    nav.main-nav a.active::after{content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;border-radius:999px;background:var(--accent);}
-    nav.main-nav a.cta{padding:8px 18px;border-radius:999px;border:1px solid var(--ink);font-weight:600;}
-    nav.main-nav span.lang{font-size:14px;color:var(--muted);margin-left:8px;}
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    /* ========== HEADER（共通） ========== */
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid #1f2937;
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand img{
+      height:52px;           /* ロゴを少し大きめに */
+      display:block;
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:#9ca3af;
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:#e5e7eb;
+    }
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:#9ca3af;
+      margin-left:8px;
+    }
     nav.main-nav span.lang a{color:var(--accent);}
 
-    main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
-    p{line-height:1.8;margin:0 0 12px;}
-    .card{background:#f9fafb;border-radius:18px;padding:20px 22px;margin-bottom:24px;}
-    ul{margin:0 0 12px 1.2em;padding:0;}
-    li{margin-bottom:6px;}
-    footer{border-top:1px solid #e5e7eb;padding:24px 0 32px;text-align:center;font-size:12px;color:var(--muted);}
+    /* ================= MAIN ================= */
+    main{
+      padding:40px 0 60px;
+      color:#e5e7eb;
+    }
 
+    h1{
+      font-size:32px;
+      margin:0 0 10px;
+      color:#f9fafb;
+    }
+    h2{
+      font-size:22px;
+      margin:0 0 12px;
+      color:#f9fafb;
+    }
+    p{
+      line-height:1.8;
+      margin:0 0 12px;
+    }
+
+    /* HERO */
+    .hero-personal{
+      padding:40px 0 32px;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);
+      gap:32px;
+      align-items:center;
+    }
+    .hero-kv{
+      position:relative;
+      padding:24px;
+      border-radius:24px;
+      background:radial-gradient(circle at top left,#111827,#020617 60%);
+      border:1px solid #1f2937;
+      box-shadow:0 24px 60px rgba(15,23,42,0.7);
+      overflow:hidden;
+    }
+    .hero-kv::after{
+      content:"";
+      position:absolute;
+      inset:-40%;
+      background:radial-gradient(circle at top,#f97316 0,transparent 55%);
+      opacity:0.15;
+      pointer-events:none;
+    }
+    .hero-tag{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:4px 10px;
+      border-radius:999px;
+      font-size:12px;
+      color:#fefce8;
+      background:rgba(24,37,55,0.9);
+      border:1px solid rgba(248,250,252,0.1);
+    }
+    .hero-main-copy{
+      margin:14px 0 10px;
+      font-size:26px;
+      font-weight:700;
+      letter-spacing:0.02em;
+      color:#f9fafb;
+    }
+    .hero-sub{
+      font-size:14px;
+      color:#cbd5f5;
+    }
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:14px 0 4px;
+      font-size:12px;
+    }
+    .hero-badge{
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid rgba(248,250,252,0.12);
+      background:rgba(15,23,42,0.9);
+    }
+    .hero-cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:14px;
+    }
+    .btn-primary,
+    .btn-outline{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      cursor:pointer;
+    }
+    .btn-primary{
+      background:linear-gradient(90deg,#fb923c,#f97316);
+      color:#111827;
+      border:none;
+    }
+    .btn-outline{
+      background:transparent;
+      color:#e5e7eb;
+      border:1px solid #4b5563;
+    }
+    .btn-primary:hover,
+    .btn-outline:hover{
+      text-decoration:none;
+      opacity:0.9;
+    }
+
+    .hero-side{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .hero-metric{
+      padding:16px 18px;
+      border-radius:18px;
+      border:1px solid #1f2937;
+      background:rgba(15,23,42,0.9);
+    }
+    .hero-metric strong{
+      font-size:20px;
+      color:var(--accent-soft);
+    }
+    .hero-metric span{
+      display:block;
+      font-size:12px;
+      color:#9ca3af;
+      margin-top:4px;
+    }
+
+    /* SECTIONS */
+    .section{
+      margin-top:36px;
+    }
+    .section-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,1.1fr);
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card-bg);
+      border-radius:20px;
+      padding:20px 22px;
+      margin-bottom:24px;
+      border:1px solid var(--card-border);
+      box-shadow:0 14px 40px rgba(15,23,42,0.65);
+    }
+    .card-light{
+      background:#0b1120;
+      border-color:#111827;
+      box-shadow:none;
+    }
+
+    ul{margin:0 0 8px 1.2em;padding:0;}
+    li{margin-bottom:6px;}
+
+    .tagline{
+      font-size:13px;
+      color:#9ca3af;
+      margin-bottom:4px;
+    }
+
+    .early-bird-image{
+      width:100%;
+      border-radius:18px;
+      margin:10px 0 14px;
+      border:1px solid #1f2937;
+    }
+
+    /* FOOTER */
+    footer{
+      border-top:1px solid #1f2937;
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:#9ca3af;
+      background:#020617;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .hero-inner{
+        grid-template-columns:minmax(0,1fr);
+      }
+      .hero-side{flex-direction:row;flex-wrap:wrap;}
+    }
     @media(max-width:768px){
-      .site-header-inner{flex-direction:column;align-items:flex-start;height:auto;padding:10px 0 12px;gap:10px;}
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+      .section-inner{
+        grid-template-columns:minmax(0,1fr);
+      }
     }
   </style>
 </head>
@@ -44,81 +321,233 @@
 <body>
 <header class="site-header">
   <div class="container site-header-inner">
-      <div class="brand">
-        <a href="index.html">
-          <img src="images/logo-wordmark.svg" alt="Brave Athletes Club" />
-        </a>
-        <small>Training & Performance</small>
-      </div>
+    <div class="brand">
+      <a href="index.html">
+        <!-- ヘッダーのロゴ（季節ごとに JS で差し替え） -->
+        <img src="assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" id="global-seasonal-logo" />
+      </a>
+      <small>Training &amp; Performance</small>
+    </div>
 
     <nav class="main-nav">
-      <a href="/classes.html">教室</a>
-      <a href="/personal.html" class="active">パーソナル</a>
-      <a href="/about.html">クラブについて</a>
-      <a href="/contact.html" class="cta">お問い合わせ</a>
-      <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
+      <a href="classes.html">教室</a>
+      <a href="personal.html" class="active">パーソナル</a>
+      <a href="about.html">クラブについて</a>
+      <a href="contact.html" class="cta">お問い合わせ</a>
+      <span class="lang"><a href="personal-en.html" hreflang="en">EN</a></span>
     </nav>
   </div>
 </header>
 
 <main class="container">
 
-  <h1>パーソナルトレーニング</h1>
-  <p>
-    ケガからの復帰、姿勢改善、競技パフォーマンス向上など、目的に合わせた
-    オーダーメイドのセッションを行います。
-  </p>
+  <!-- ===== HERO ===== -->
+  <section class="hero-personal">
+    <div class="hero-inner">
+      <div class="hero-kv">
+        <span class="hero-tag">Personal Conditioning &amp; Performance</span>
+        <h1 class="hero-main-copy">パフォーマンスを、もう一段階上へ。</h1>
+        <p class="hero-sub">
+          ケガからの復帰、姿勢改善、競技パフォーマンス向上まで。<br>
+          評価 → プラン設計 → トレーニング → 振り返り、のサイクルで
+          あなたの「なりたい姿」に合わせてカスタマイズします。
+        </p>
 
-  <!-- 料金 -->
-  <div class="card">
-    <h2>料金・時間</h2>
-    <ul>
-      <li>60分：13,200円（税込） … 運動機能回復・コンディショニング中心</li>
-      <li>75分：16,500円（税込） … パフォーマンストレーニングまでしっかり</li>
-      <li>出張費：現在は <strong>無料</strong>（対応エリアはご相談ください）</li>
-    </ul>
-  </div>
+        <div class="hero-badges">
+          <div class="hero-badge">ジュニアアスリート</div>
+          <div class="hero-badge">女性アスリート</div>
+          <div class="hero-badge">一般・リターン組</div>
+        </div>
 
-  <!-- Early Bird Project -->
-  <div class="card">
-    <h2>🌅 Early Bird Project（5日間限定・先着2名）</h2>
-    <p>寒い朝も動き出すチャンス！</p>
+        <div class="hero-cta-row">
+          <a href="mailto:braveathletesclub@gmail.com" class="btn-primary">メールで相談する</a>
+          <a href="#early-bird" class="btn-outline">Early Bird Project を見る</a>
+        </div>
+      </div>
 
-    <img src="assets/early-bird-project-2025.png" alt="Early Bird Project" style="width:100%; border-radius:18px; margin:12px 0;" />
+      <div class="hero-side">
+        <div class="hero-metric">
+          <strong>60 / 75 min</strong>
+          <span>目的に合わせて選べる 2 タイプのセッション。</span>
+        </div>
+        <div class="hero-metric">
+          <strong>Movement × Strength</strong>
+          <span>動きの質とコンディショニングを両方みるハイブリッドスタイル。</span>
+        </div>
+        <div class="hero-metric">
+          <strong>1 on 1</strong>
+          <span>完全マンツーマンでフォームとコンディションを細かくチェック。</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <ul>
-      <li>早朝6:00〜7:30にトレーニング開始</li>
-      <li>16回 or 24回 の回数券 → 通常価格の <b>10% OFF</b></li>
-      <li>対象期間：12月1日〜2月28日</li>
-      <li><b>11月26日から5日間限定販売</b>・<b>先着2名</b></li>
-    </ul>
+  <!-- ===== 料金・時間 ===== -->
+  <section class="section" id="plans">
+    <div class="section-inner">
+      <div class="card">
+        <div class="tagline">Session Plans</div>
+        <h2>料金・時間</h2>
+        <ul>
+          <li>60分：13,200円（税込） … 運動機能回復・コンディショニング中心</li>
+          <li>75分：16,500円（税込） … パフォーマンストレーニングまでしっかり</li>
+          <li>出張費：現在は <strong>無料</strong>（対応エリアはご相談ください）</li>
+        </ul>
+        <p style="font-size:14px;color:#cbd5f5;">
+          初回はカウンセリングと動きのチェックを行い、目標と現在地を整理したうえで
+          最適なプランをご提案します。
+        </p>
+      </div>
 
-    <p>→ <a href="contact.html">お問い合わせはこちら</a></p>
-  </div>
+      <div class="card card-light">
+        <div class="tagline">Recommended For</div>
+        <h2>こんな方におすすめ</h2>
+        <ul>
+          <li>痛みや違和感があり、思い切り動けていない</li>
+          <li>フォームを見直して、ケガを減らしたいアスリート</li>
+          <li>産後・更年期など、身体の変化に合わせて運動したい</li>
+          <li>グループではなく、マンツーマンでしっかり見てもらいたい</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <!-- おすすめ -->
-  <div class="card">
-    <h2>こんな方におすすめ</h2>
-    <ul>
-      <li>痛みや違和感があり、思い切り動けていない</li>
-      <li>フォームを見直して、ケガを減らしたいアスリート</li>
-      <li>産後・更年期など、身体の変化に合わせて運動したい</li>
-      <li>マンツーマンでしっかり見てもらいたい</li>
-    </ul>
-  </div>
+  <!-- ===== Early Bird Project ===== -->
+  <section class="section" id="early-bird">
+    <div class="card">
+      <div class="tagline">Special Offer</div>
+      <h2>🌅 Early Bird Project（5日間限定・先着2名）</h2>
+      <p>
+        寒い朝も動き出すチャンス。<br>
+        早朝の静かな時間に、自分のペースで集中してトレーニングしたい方向けの
+        期間限定プロジェクトです。
+      </p>
 
-  <!-- お問い合わせ -->
-  <div class="card">
-    <h2>お申込み・お問い合わせ</h2>
-    <p>日時や場所の相談は、お問い合わせページよりお気軽にどうぞ。</p>
-    <p>→ <a href="contact.html">お問い合わせページへ</a></p>
-  </div>
+      <img
+        src="assets/early-bird-project-2025.png"
+        alt="Early Bird Project"
+        class="early-bird-image"
+      />
+
+      <ul>
+        <li>早朝 <strong>6:00〜7:30</strong> の間にトレーニング開始</li>
+        <li>16回 or 24回 の回数券 → 通常価格の <b>10% OFF</b></li>
+        <li>トレーニング期間：12月1日〜2月28日</li>
+        <li><b>11月26日から5日間限定販売</b>・<b>先着2名</b></li>
+      </ul>
+
+      <p>
+        詳細や空き状況はメールまたはお問い合わせページからご連絡ください。<br>
+        → <a href="contact.html">お問い合わせはこちら</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== お問い合わせ ===== -->
+  <section class="section" id="contact">
+    <div class="card card-light">
+      <div class="tagline">Contact</div>
+      <h2>お申込み・お問い合わせ</h2>
+      <p>
+        日時や場所のご相談、ケガの状況や目標のご相談など、まずはお気軽にメッセージをお送りください。
+      </p>
+      <p>
+        メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br>
+        フォーム：<a href="contact.html">お問い合わせページへ</a>
+      </p>
+    </div>
+  </section>
 
 </main>
 
 <footer>
   &copy; 2025 Brave Athletes Club
 </footer>
+
+<!-- ===== ヘッダー季節ロゴ：日付で自動切り替え ===== -->
+<script>
+  (function () {
+    const img = document.getElementById("global-seasonal-logo");
+    if (!img) return;
+
+    const today = new Date();
+    const m = today.getMonth() + 1; // 1–12
+    const d = today.getDate();
+
+    let file = "logo-allseaso.png"; // デフォルト（オールシーズン）
+
+    // クリスマス：12/6〜12/25
+    if (m === 12 && d >= 6 && d <= 25) {
+      file = "logo-christmas.png";
+
+    // 冬ピンク：12/26〜2/2
+    } else if (
+      (m === 12 && d >= 26) ||
+      m === 1 ||
+      (m === 2 && d <= 2)
+    ) {
+      file = "logo-winter-pink.png";
+
+    // Spring Yellow：2/3〜3/15
+    } else if (
+      (m === 2 && d >= 3) ||
+      (m === 3 && d <= 15)
+    ) {
+      file = "logo-spring-yellow.png";
+
+    // Spring Pink：3/16〜4/15
+    } else if (
+      (m === 3 && d >= 16) ||
+      (m === 4 && d <= 15)
+    ) {
+      file = "logo-spring-pink.png";
+
+    // 黒背景ピンク：4/16〜5/15
+    } else if (
+      (m === 4 && d >= 16) ||
+      (m === 5 && d <= 15)
+    ) {
+      file = "logo-black-pink.png";
+
+    // 釣りサイ：5/16〜6/30
+    } else if (
+      (m === 5 && d >= 16) ||
+      (m === 6 && d <= 30)
+    ) {
+      file = "logo-fishing.png";
+
+    // 海サイ：7/1〜8/15
+    } else if (
+      (m === 7 && d >= 1) ||
+      (m === 8 && d <= 15)
+    ) {
+      file = "logo-summer-sea.png";
+
+    // オールシーズン：8/16〜9/30
+    } else if (
+      (m === 8 && d >= 16) ||
+      m === 9
+    ) {
+      file = "logo-allseaso.png";
+
+    // もみじ：10/1〜11/15
+    } else if (
+      m === 10 ||
+      (m === 11 && d <= 15)
+    ) {
+      file = "logo-autumn-mapl.png";
+
+    // 秋冬背景の黄色サイ：11/16〜12/5
+    } else if (
+      (m === 11 && d >= 16) ||
+      (m === 12 && d <= 5)
+    ) {
+      file = "logo-autumn-winter-yello.png";
+    }
+
+    img.src = "assets/seasonal/" + file;
+  })();
+</script>
 
 </body>
 </html>
