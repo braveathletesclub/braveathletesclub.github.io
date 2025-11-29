@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brave Athletes Club | Kids & Junior Programs</title>
-  <meta name="description" content="Kids & Junior programs designed based on motor development, posture, movement quality, and inclusive support. For ages 1–18.">
+  <title>Class Programs | Brave Athletes Club</title>
+  <meta name="description" content="Class programs at Brave Athletes Club for ages 1–18, focusing on motor development, posture and movement, and fun sport-based training.">
 
   <style>
-    :root {
-      --bg:#ffffff;
+    :root{
+      --bg:#f8fafc;
       --ink:#111827;
       --accent:#ff8800;
       --ring:#111827;
@@ -21,7 +21,8 @@
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:var(--bg);
+      background:
+        radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
     }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
@@ -32,12 +33,12 @@
       padding:0 20px;
     }
 
-    /* ====== HEADER ====== */
+    /* ===== shared header ===== */
     header.site-header{
       position:sticky;
       top:0;
       z-index:50;
-      backdrop-filter:blur(8px);
+      backdrop-filter:blur(10px);
       background:var(--nav-bg);
       border-bottom:1px solid #e5e7eb;
     }
@@ -45,7 +46,7 @@
       display:flex;
       align-items:center;
       justify-content:space-between;
-      height:80px;
+      height:72px;
       gap:24px;
     }
     .brand{
@@ -55,19 +56,12 @@
       min-width:0;
     }
     .brand img{
-      height:52px; /* ロゴ少し大きめ */
+      height:52px;
       display:block;
+      border-radius:16px;
     }
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      gap:2px;
-    }
-    .brand-name{
-      font-size:16px;
-      font-weight:700;
-    }
-    .brand-text small{
+    .brand small{
+      display:block;
       font-size:12px;
       color:var(--muted);
       white-space:nowrap;
@@ -85,9 +79,7 @@
       white-space:nowrap;
       color:var(--ink);
     }
-    nav.main-nav a.active{
-      font-weight:600;
-    }
+    nav.main-nav a.active{font-weight:600;}
     nav.main-nav a.active::after{
       content:"";
       position:absolute;
@@ -116,94 +108,101 @@
     h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
     p{line-height:1.8;margin:0 0 12px;}
 
+    /* ===== HERO ===== */
+    .hero-classes{
+      padding:40px 0 40px;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
+      gap:32px;
+      align-items:center;
+    }
+    .hero-lead{
+      color:var(--muted);
+      font-size:15px;
+    }
+    .hero-tabs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+    .hero-tab{
+      padding:10px 18px;
+      border-radius:999px;
+      border:1px solid #e5e7eb;
+      background:#fff;
+      font-size:14px;
+    }
+    .hero-tab.primary{
+      background:#111827;
+      color:#fff;
+      border-color:#111827;
+    }
+
+    .hero-visual{
+      display:flex;
+      justify-content:center;
+    }
+    .hero-visual img{
+      max-width:260px;
+      width:100%;
+      display:block;
+      border-radius:24px;
+      border:none; /* no black frame */
+      box-shadow:0 18px 40px rgba(15,23,42,0.18);
+      background:#fff;
+    }
+
+    /* ===== Sections ===== */
+    .section{margin-top:40px;}
+    .lead-small{font-size:14px;color:var(--muted);}
+
+    .grid{
+      display:grid;
+      gap:20px;
+    }
+    .grid-2{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+
     .card{
-      background:#f9fafb;
+      background:#ffffff;
       border-radius:18px;
       padding:20px 22px;
-      margin-bottom:18px;
+      border:1px solid #e5e7eb;
+      box-shadow:0 10px 30px rgba(15,23,42,0.08);
     }
-    ul{margin:0 0 12px 1.2em;padding:0;}
+    .thumb img{
+      width:100%;
+      border-radius:18px;
+      display:block;
+      object-fit:cover;
+    }
+
+    ul{margin:0 0 8px 1.2em;padding:0;}
     li{margin-bottom:6px;}
+
+    .divider{
+      margin:40px 0;
+      border-top:1px dashed #e5e7eb;
+    }
+
     footer{
       border-top:1px solid #e5e7eb;
       padding:24px 0 32px;
       text-align:center;
       font-size:12px;
       color:var(--muted);
+      background:#ffffffdd;
     }
 
-    /* ===== hero & layout ===== */
-    .hero{
-      padding:40px 0 40px;
-      background:#f9fafb;
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-visual{order:-1;margin-bottom:8px;}
+      .grid-2{grid-template-columns:1fr;}
+      .grid-3{grid-template-columns:1fr;}
     }
-    .hero-wrap{
-      display:flex;
-      flex-wrap:wrap;
-      gap:32px;
-      align-items:center;
-    }
-    .hero-wrap > div:first-child{
-      flex:1 1 320px;
-      min-width:260px;
-    }
-    .hero-photo{
-      flex:0 0 260px;   /* 右側のロゴを少し小さめに */
-      display:flex;
-      justify-content:center;
-    }
-    .hero-photo img{
-      max-width:260px;
-      width:100%;
-      border-radius:24px;
-      box-shadow:0 18px 45px rgba(15,23,42,0.25);
-      display:block;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:8px 18px;
-      border-radius:999px;
-      border:1px solid var(--ink);
-      font-size:14px;
-      font-weight:500;
-      background:#fff;
-      color:var(--ink);
-    }
-    .btn.alt{
-      border-color:var(--accent);
-      color:#fff;
-      background:var(--accent);
-    }
-    .btn:hover{
-      text-decoration:none;
-      opacity:0.9;
-    }
-
-    .section{margin-top:40px;}
-    .lead{font-size:15px;color:#374151;}
-
-    .grid{
-      display:grid;
-      gap:20px;
-    }
-    .grid-2{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
-
-    .thumb img{
-      width:100%;
-      border-radius:18px;
-      object-fit:cover;
-      display:block;
-    }
-
-    .divider{
-      margin:40px 0;
-      border-top:1px solid #e5e7eb;
-    }
-
     @media(max-width:768px){
       .site-header-inner{
         flex-direction:column;
@@ -213,12 +212,6 @@
         gap:10px;
       }
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
-      .hero-wrap{flex-direction:column-reverse;}
-      .grid-2{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:1fr;}
-      .hero-photo{
-        flex:1 1 auto;
-      }
     }
   </style>
 </head>
@@ -227,16 +220,12 @@
 <header class="site-header">
   <div class="container site-header-inner">
     <div class="brand">
-      <a href="en.html" class="brand-logo">
-        <!-- 季節ロゴ（JSで差し替え） -->
-        <img id="seasonal-logo"
-             src="/assets/seasonal/logo-allseaso.png"
-             alt="Brave Athletes Club logo" />
+      <a href="en.html">
+        <img src="assets/seasonal/logo-allseaso.png"
+             alt="Brave Athletes Club"
+             id="global-seasonal-logo" />
       </a>
-      <div class="brand-text">
-        <span class="brand-name">Brave Athletes Club</span>
-        <small>Training &amp; Performance</small>
-      </div>
+      <small>Training &amp; Performance</small>
     </div>
 
     <nav class="main-nav">
@@ -244,60 +233,63 @@
       <a href="personal-en.html">Personal</a>
       <a href="about-en.html">About</a>
       <a href="contact-en.html" class="cta">Contact</a>
-      <!-- JP 版 classes.html へリンク -->
       <span class="lang"><a href="classes.html" hreflang="ja">JP</a></span>
     </nav>
   </div>
 </header>
 
-<!-- =============== HERO =============== -->
-<header class="hero">
-  <div class="container hero-wrap">
-    <div>
-      <h1>Kids & Junior Programs (Ages 1–18)</h1>
-      <p class="lead">
-        Whether they love movement or struggle with it, every child can enjoy and grow.
-        Our programs focus on motor development, posture, movement skills, and fun.
-      </p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-        <a class="btn" href="#kids">Kids Sports</a>
-        <a class="btn alt" href="#bb">Conditioning BB</a>
-        <a class="btn" href="#cond">Conditioning Class</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <!-- 月ごとに JS で src を差し替え（初期値は何でもOK） -->
-      <img
-        id="hero-image"
-        src="assets/classes-hero/classes-hero-track.png"
-        alt="Brave Athletes Club class hero image by sport"
-      />
-    </div>
-  </div>
-</header>
-
 <main class="container">
 
-  <!-- =========== FEATURES =========== -->
+  <!-- ===== HERO ===== -->
+  <section class="hero-classes">
+    <div class="hero-inner">
+      <div>
+        <h1>Class Programs (Ages 1–18)</h1>
+        <p class="hero-lead">
+          From preschoolers to junior athletes, our class programs build solid
+          movement foundations while keeping things fun and safe. We focus on
+          motor development, posture, and sport-based play.
+        </p>
+        <div class="hero-tabs">
+          <a class="hero-tab primary" href="#kids">Kids Sports</a>
+          <a class="hero-tab" href="#bb">Conditioning BB</a>
+          <a class="hero-tab" href="#cond">Conditioning Class</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          id="classes-hero-img"
+          src="assets/classes-hero/classes-hero-track.png"
+          alt="Class hero sport logo"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
   <section class="section" id="features">
     <h2>Program Features</h2>
     <div class="grid grid-3">
       <div class="card">
         <h3>Motor Development</h3>
-        <p class="lead">
-          Running, jumping, throwing, balancing—foundational skills for all sports.
+        <p class="lead-small">
+          Running, jumping, throwing, balancing—fundamental movement skills that
+          support all sports and daily activities.
         </p>
       </div>
       <div class="card">
         <h3>Posture &amp; Movement Quality</h3>
-        <p class="lead">
-          Improving alignment and movement patterns to prevent injury.
+        <p class="lead-small">
+          Improving alignment and movement patterns to reduce stress on the
+          body and prevent injury.
         </p>
       </div>
       <div class="card">
         <h3>Fun &amp; Sport-Based Approach</h3>
-        <p class="lead">
-          Agility, coordination, and game-style drills for natural skill development.
+        <p class="lead-small">
+          Agility, coordination, and game-style drills help children naturally
+          build confidence and skills.
         </p>
       </div>
     </div>
@@ -305,7 +297,7 @@
 
   <div class="divider"></div>
 
-  <!-- =========== KIDS SPORTS =========== -->
+  <!-- ===== KIDS SPORTS ===== -->
   <section class="section" id="kids">
     <h2>🟩 Kids Sports (Ages 1–9)</h2>
     <div class="grid grid-2">
@@ -314,21 +306,21 @@
       </div>
       <div class="card">
         <h3>Building Fun and Basic Motor Skills</h3>
-        <ul class="list">
-          <li>Play-based movement</li>
-          <li>Running / jumping / throwing</li>
+        <ul>
+          <li>Play-based movement experiences</li>
+          <li>Running / jumping / throwing basics</li>
           <li>Balance &amp; coordination</li>
           <li>Foundation of posture</li>
         </ul>
         <p>
-          <b>Recommended for:</b>
-          children new to exercise, energetic movers, or those who need confidence.
+          <b>Recommended for:</b> children new to exercise, energetic movers, or
+          those who need a little confidence.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- =========== CONDITIONING BB =========== -->
+  <!-- ===== CONDITIONING BB ===== -->
   <section class="section" id="bb">
     <h2>🟦 Conditioning BB (Ages 6–15)</h2>
     <div class="grid grid-2">
@@ -337,7 +329,7 @@
       </div>
       <div class="card">
         <h3>Enhancing Movement &amp; Athletic Foundations</h3>
-        <ul class="list">
+        <ul>
           <li>Posture &amp; movement correction</li>
           <li>Agility &amp; coordination</li>
           <li>Core stability &amp; mobility</li>
@@ -347,7 +339,7 @@
     </div>
   </section>
 
-  <!-- =========== CONDITIONING CLASS =========== -->
+  <!-- ===== CONDITIONING CLASS ===== -->
   <section class="section" id="cond">
     <h2>🟥 Conditioning Class (Ages 13–18)</h2>
     <div class="grid grid-2">
@@ -356,11 +348,11 @@
       </div>
       <div class="card">
         <h3>For Junior Athletes</h3>
-        <ul class="list">
+        <ul>
           <li>Speed &amp; power development</li>
-          <li>Posture, stability &amp; movement improvement</li>
-          <li>SAQ training</li>
-          <li>Performance-based conditioning</li>
+          <li>Improved posture, stability, and movement</li>
+          <li>SAQ-based training and technique work</li>
+          <li>Performance-focused conditioning</li>
         </ul>
       </div>
     </div>
@@ -368,99 +360,121 @@
 
   <div class="divider"></div>
 
-  <!-- =========== INCLUSIVE SUPPORT =========== -->
+  <!-- ===== INCLUSIVE ===== -->
   <section class="section" id="inclusive">
     <h2>🤝 Inclusive Support</h2>
-    <p class="lead">
-      We provide individualized pacing, reduced stimuli, and communication support
-      for children who need extra assistance.
+    <p class="lead-small">
+      We adapt pace, environment, and communication style so that children who
+      need more time or support can participate safely and comfortably.
     </p>
   </section>
 
-  <!-- =========== CONTACT =========== -->
+  <!-- ===== CONTACT ===== -->
   <section class="section" id="contact">
     <h2>📞 Contact</h2>
-    <p class="lead">
-      Email: braveathletesclub@gmail.com
+    <p class="lead-small">
+      For questions about class level, schedule, or content, please email us or
+      use the contact form.<br>
+      Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
     </p>
   </section>
 
 </main>
 
-<footer class="container">
-  <small>© Brave Athletes Club</small>
+<footer>
+  © 2025 Brave Athletes Club
 </footer>
 
-<!-- ===== ヘッダーの季節ロゴ 自動切り替え ===== -->
+<!-- ===== header seasonal logo ===== -->
 <script>
   (function () {
-    const logo = document.getElementById("seasonal-logo");
-    if (!logo) return;
+    const img = document.getElementById("global-seasonal-logo");
+    if (!img) return;
 
     const today = new Date();
-    const year  = today.getFullYear();
-
-    function inRange(m1, d1, m2, d2) {
-      const start = new Date(year, m1 - 1, d1);
-      const end   = new Date(year, m2 - 1, d2, 23, 59, 59);
-      return today >= start && today <= end;
-    }
+    const m = today.getMonth() + 1;
+    const d = today.getDate();
 
     let file = "logo-allseaso.png";
 
-    // 期間は日本語ページと同じルール
-    if (inRange(12, 6, 12, 25)) {
+    if (m === 12 && d >= 6 && d <= 25) {
       file = "logo-christmas.png";
-    } else if (inRange(12, 26, 2, 2)) {
+    } else if (
+      (m === 12 && d >= 26) ||
+      m === 1 ||
+      (m === 2 && d <= 2)
+    ) {
       file = "logo-winter-pink.png";
-    } else if (inRange(2, 3, 3, 15)) {
+    } else if (
+      (m === 2 && d >= 3) ||
+      (m === 3 && d <= 15)
+    ) {
       file = "logo-spring-yellow.png";
-    } else if (inRange(3, 16, 4, 15)) {
+    } else if (
+      (m === 3 && d >= 16) ||
+      (m === 4 && d <= 15)
+    ) {
       file = "logo-spring-pink.png";
-    } else if (inRange(4, 15, 5, 15)) {
+    } else if (
+      (m === 4 && d >= 16) ||
+      (m === 5 && d <= 15)
+    ) {
       file = "logo-black-pink.png";
-    } else if (inRange(5, 15, 6, 30)) {
+    } else if (
+      (m === 5 && d >= 16) ||
+      (m === 6 && d <= 30)
+    ) {
       file = "logo-fishing.png";
-    } else if (inRange(7, 1, 8, 15)) {
+    } else if (
+      (m === 7 && d >= 1) ||
+      (m === 8 && d <= 15)
+    ) {
       file = "logo-summer-sea.png";
-    } else if (inRange(8, 16, 9, 30)) {
+    } else if (
+      (m === 8 && d >= 16) ||
+      m === 9
+    ) {
       file = "logo-allseaso.png";
-    } else if (inRange(10, 1, 11, 15)) {
+    } else if (
+      m === 10 ||
+      (m === 11 && d <= 15)
+    ) {
       file = "logo-autumn-mapl.png";
-    } else if (inRange(11, 16, 12, 5)) {
+    } else if (
+      (m === 11 && d >= 16) ||
+      (m === 12 && d <= 5)
+    ) {
       file = "logo-autumn-winter-yello.png";
     }
 
-    logo.src = "/assets/seasonal/" + file;
+    img.src = "assets/seasonal/" + file;
   })();
 </script>
 
-<!-- ===== 月ごとのヒーロー画像 自動切り替え ===== -->
+<!-- ===== hero sport logo (month-based) ===== -->
 <script>
   (function () {
-    const img = document.getElementById("hero-image");
+    const img = document.getElementById("classes-hero-img");
     if (!img) return;
 
-    const month = new Date().getMonth() + 1; // 1〜12
-    const base = "assets/classes-hero/";
-
+    const month = new Date().getMonth() + 1;
     const heroMap = {
-      1:  "classes-hero-snowboard.png",
-      2:  "classes-hero-highjump.png",
-      3:  "classes-hero-track.png",
-      4:  "classes-hero-soccer-cones.jpg",
-      5:  "classes-hero-ladder.jpg",
-      6:  "classes-hero-shotput.jpg",
-      7:  "classes-hero-tennis.png",
-      8:  "classes-hero-americanfootball.jpg",
-      9:  "classes-hero-basketball.jpg",
-      10: "classes-hero-longjump.jpg",
-      11: "classes-hero-weight.png",
-      12: "classes-hero-trainingroom.png"
+      1: "classes-hero-snowboard.png",
+      2: "classes-hero-highjump.png",
+      3: "classes-hero-track.png",
+      4: "classes-hero-soccer-cones.jpg",
+      5: "classes-hero-ladder.jpg",
+      6: "classes-hero-shotput.jpg",
+      7: "classes-hero-tennis.png",
+      8: "classes-hero-americanfootball.jpg",
+      9: "classes-hero-basketball.jpg",
+      10:"classes-hero-longjump.jpg",
+      11:"classes-hero-weight.png",
+      12:"classes-hero-trainingroom.png"
     };
 
     const filename = heroMap[month] || "classes-hero-track.png";
-    img.src = base + filename;
+    img.src = "assets/classes-hero/" + filename;
   })();
 </script>
 
