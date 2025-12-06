@@ -198,6 +198,92 @@
       margin-top:12px;
     }
 
+    /* === Trainers (staff) layout === */
+.trainers-section{
+  margin-top:32px;
+}
+
+.trainers-intro{
+  max-width:720px;
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.staff-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  margin-top:16px;
+}
+
+/* 個別スタッフカード */
+.staff-card{
+  position:relative;
+  background:#f9fafb;
+  border-radius:18px;
+  padding:18px 20px;
+  border:1px solid #e5e7eb;
+  overflow:hidden;
+}
+
+/* 左に細いスポーティなライン */
+.staff-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(180deg,#ff8800,#f97316);
+}
+
+/* 将来、顔写真を入れるためのエリア（今は非表示またはコメントアウトでOK） */
+.staff-meta{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.trainer-name{
+  font-size:16px;
+  font-weight:700;
+}
+
+.trainer-role{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.staff-bio{
+  font-size:14px;
+  margin-top:8px;
+}
+
+.staff-qual-label{
+  margin-top:10px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--muted);
+}
+
+.staff-qual-list{
+  margin:4px 0 0 1.1em;
+  padding:0;
+  font-size:13px;
+}
+
+.staff-qual-list li{
+  margin-bottom:3px;
+}
+
+/* スマホでは1列表示に */
+@media(max-width:768px){
+  .staff-grid{
+    grid-template-columns:minmax(0,1fr);
+  }
+}
+
     footer{
       border-top:1px solid #e5e7eb;
       padding:24px 0 32px;
@@ -394,121 +480,99 @@
     </section>
 
     <!-- Trainer introduction -->
-    <!-- Trainer section -->
-<section>
-  <h2>Trainers</h2>
+   <!-- Trainer / Staff -->
+<section class="trainers-section">
+  <h2>Trainers &amp; Staff</h2>
+  <p class="trainers-intro">
+    At BRAVE ATHLETES CLUB, staff with different areas of expertise – conditioning, training,
+    para-sport support, and body care – work together to support each person.
+  </p>
 
-  <div class="trainer-grid">
+  <div class="staff-grid">
 
     <!-- Hiroko Haraguchi -->
-    <article class="trainer-card">
-      <div class="trainer-header">
-        <div>
-          <div class="trainer-name">Hiroko Haraguchi</div>
-          <div class="trainer-role">Founder / Conditioning Trainer</div>
-        </div>
+    <div class="staff-card">
+      <div class="staff-meta">
+        <div class="trainer-name">Hiroko Haraguchi</div>
+        <div class="trainer-role">Founder / Conditioning Trainer</div>
       </div>
 
-      <p>
-        With experience in on-court support, strength &amp; conditioning, para-sports, and
-        health support, Hiroko works as a “go-to partner” for movement and conditioning that
-        people can rely on over the long term.
+      <p class="staff-bio">
+        Drawing on experience in sports coaching, training, para-sport, and health support,
+        Hiroko aims to be a “go-to person” for movement and conditioning for kids and adults.
       </p>
 
-      <div class="subgrid">
-        <div>
-          <div class="label">Qualifications</div>
-          <ul>
-            <li>JSPO Certified Sports Programmer</li>
-            <li>Japan Sports Facilities Association Certified Training Instructor</li>
-            <li>Japan Para-Sports Association Senior Para-Sports Instructor</li>
-            <li>NASM – Performance Enhancement Specialist</li>
-            <li>NUAD BO – RARN THAI MASSAGE</li>
-            <li>Health Management Specialist (Level 1)</li>
-            <li>JBA Certified C-Class Basketball Coach</li>
-            <li>Weight Management Specialist</li>
-            <li>Certificate of CPR &amp; AED Provider</li>
-          </ul>
-        </div>
-        <div>
-          <div class="label">Main Fields</div>
-          <ul>
-            <li>Kids &amp; junior fundamental movement and physical development</li>
-            <li>Conditioning and body care for women</li>
-            <li>Performance support for competitive athletes</li>
-            <li>Para-sport and inclusive sports support</li>
-          </ul>
-        </div>
-      </div>
-    </article>
+      <div class="staff-qual-label">Qualifications</div>
+      <ul class="staff-qual-list">
+        <li>JSPO Certified Sports Programmer</li>
+        <li>Japan Sports Facilities Association Certified Training Instructor</li>
+        <li>Japan Para-Sports Association Senior Para-Sports Instructor</li>
+        <li>NASM - Performance Enhancement Specialist</li>
+        <li>Health Management Specialist (Level 1)</li>
+        <li>JBA Certified C-Class Basketball Coach</li>
+        <li>Weight Management Specialist</li>
+        <li>NUAD BO - RARN THAI MASSAGE</li>
+        <li>Certificate of CPR &amp; AED Provider</li>
+      </ul>
+    </div>
 
     <!-- Jun Yasutomi -->
-    <article class="trainer-card">
-      <div class="trainer-header">
-        <div>
-          <div class="trainer-name">Jun Yasutomi</div>
-          <div class="trainer-role">Acupuncturist (Visiting)</div>
-        </div>
+    <div class="staff-card">
+      <div class="staff-meta">
+        <div class="trainer-name">Jun Yasutomi</div>
+        <div class="trainer-role">Acupuncturist / Conditioning Support</div>
       </div>
 
-      <p>
-        Provides body adjustment using acupuncture and moxibustion on a visiting basis,
-        supporting recovery, relaxation, and better daily movement.
+      <p class="staff-bio">
+        Provides mobile acupuncture and moxibustion-based body care and conditioning.
+        Supports better movement by combining hands-on care with training.
       </p>
 
-      <div class="subgrid">
-        <div>
-          <div class="label">Qualifications</div>
-          <ul>
-            <li>Licensed Acupuncturist</li>
-          </ul>
-        </div>
-        <div>
-          <div class="label">Main Fields</div>
-          <ul>
-            <li>Pain relief and discomfort care</li>
-            <li>Recovery and body condition adjustment</li>
-          </ul>
-        </div>
-      </div>
-    </article>
+      <div class="staff-qual-label">Qualifications</div>
+      <ul class="staff-qual-list">
+        <li>Licensed Acupuncturist</li>
+      </ul>
+    </div>
 
     <!-- Sakura Nakamura -->
-    <article class="trainer-card">
-      <div class="trainer-header">
-        <div>
-          <div class="trainer-name">Sakura Nakamura</div>
-          <div class="trainer-role">Kids &amp; Para-Sport Instructor</div>
-        </div>
+    <div class="staff-card">
+      <div class="staff-meta">
+        <div class="trainer-name">Sakura Nakamura</div>
+        <div class="trainer-role">Kids &amp; Para-Sport Support</div>
       </div>
 
-      <p>
-        Supports kids’ fundamental movement skills and inclusive sports activities, creating
-        a fun environment where everyone can enjoy moving their bodies.
+      <p class="staff-bio">
+        Supports a wide range from early childhood movement play to para-sport.
+        She values creating spaces where each child can enjoy moving in their own way.
       </p>
 
-      <div class="subgrid">
-        <div>
-          <div class="label">Qualifications</div>
-          <ul>
-            <li>Japan Para-Sports Association Introductory Para-Sports Instructor</li>
-            <li>Japan Junior Sports Education Association Preschool Physical Education Instructor (Level 3)</li>
-          </ul>
-        </div>
-        <div>
-          <div class="label">Main Fields</div>
-          <ul>
-            <li>Preschool / kids physical education</li>
-            <li>Inclusive &amp; para-sports support</li>
-          </ul>
-        </div>
+      <div class="staff-qual-label">Qualifications</div>
+      <ul class="staff-qual-list">
+        <li>Japan Para-Sports Association – Introductory Para-Sports Instructor</li>
+        <li>Japan Youth Physical Education Association – Preschool Physical Education Instructor (Level 3)</li>
+      </ul>
+    </div>
+
+    <!-- Future staff card template -->
+    <!--
+    <div class="staff-card">
+      <div class="staff-meta">
+        <div class="trainer-name">Name</div>
+        <div class="trainer-role">Role / Area</div>
       </div>
-    </article>
+      <p class="staff-bio">
+        Profile text goes here.
+      </p>
+      <div class="staff-qual-label">Qualifications</div>
+      <ul class="staff-qual-list">
+        <li>Qualification 1</li>
+        <li>Qualification 2</li>
+      </ul>
+    </div>
+    -->
 
   </div>
 </section>
-
-
 
 
     <!-- Area & Contact -->
