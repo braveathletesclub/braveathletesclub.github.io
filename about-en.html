@@ -221,6 +221,98 @@
       .two-column{grid-template-columns:minmax(0,1fr);}
       .subgrid{grid-template-columns:minmax(0,1fr);}
     }
+    /* --- Trainer section sporty style --- */
+
+/* 全体をグリッドでスポーティに並べる */
+.trainer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:24px;
+  margin-top:16px;
+}
+
+/* 1人分のカード */
+.trainer-card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:20px 22px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 10px 24px rgba(15, 23, 42, 0.06);
+  position:relative;
+  overflow:hidden;
+}
+
+/* カード上部に細いカラーライン（スポーティな感じ） */
+.trainer-card::before{
+  content:"";
+  position:absolute;
+  inset:0 0 auto 0;
+  height:4px;
+  background:linear-gradient(90deg, #f97316, #0ea5e9);
+}
+
+/* 名前と肩書き */
+.trainer-header{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:8px;
+}
+
+.trainer-name{
+  font-size:18px;
+  font-weight:700;
+}
+
+.trainer-role{
+  font-size:13px;
+  color:#6b7280;
+  margin-top:2px;
+}
+
+/* 説明文 */
+.trainer-card > p{
+  font-size:14px;
+  line-height:1.8;
+  margin:0 0 10px;
+}
+
+/* サブグリッド（資格 / 活動分野） */
+.subgrid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+  gap:16px;
+  margin-top:10px;
+}
+
+/* ラベル */
+.label{
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  color:#6b7280;
+  margin-bottom:4px;
+}
+
+/* 箇条書き */
+.trainer-card ul{
+  margin:0;
+  padding-left:1.1em;
+  font-size:13px;
+}
+
+.trainer-card li{
+  margin-bottom:4px;
+}
+
+/* スマホで1列表示になるときの余白調整 */
+@media (max-width: 640px){
+  .trainer-card{
+    padding:18px 18px;
+  }
+}
+
   </style>
 </head>
 
@@ -302,121 +394,120 @@
     </section>
 
     <!-- Trainer introduction -->
-         <!-- Trainers -->
-    <section>
-      <h2>Trainers</h2>
+    <!-- Trainer section -->
+<section>
+  <h2>Trainers</h2>
 
-      <!-- Hiroko Haraguchi -->
-      <div class="card">
-        <div class="trainer-header">
-          <!-- profile photo space in the future -->
-          <div>
-            <div class="trainer-name">Hiroko Haraguchi</div>
-            <div class="trainer-role">
-              Founder / Conditioning Trainer, BRAVE ATHLETES CLUB
-            </div>
-          </div>
-        </div>
+  <div class="trainer-grid">
 
-        <p>
-          Drawing on experience in sports settings, training instruction, para-sports
-          and health support, Hiroko aims to be a reliable
-          “go-to person for movement & conditioning support” for people of all ages.
-        </p>
-
-        <div class="subgrid">
-          <div>
-            <div class="label">Qualifications</div>
-            <ul>
-              <li>JSPO Certified Sports Programmer</li>
-              <li>Japan Sports Facilities Association Certified Training Instructor</li>
-              <li>Japan Para-Sports Association Senior Para-Sports Instructor</li>
-              <li>NASM – Performance Enhancement Specialist</li>
-              <li>NUAD BO – RARN THAI MASSAGE</li>
-              <li>Health Management Specialist (Level 1)</li>
-              <li>JBA Certified C-Class Basketball Coach</li>
-              <li>Weight Management Specialist</li>
-              <li>Certificate of CPR &amp; AED Provider</li>
-            </ul>
-          </div>
-          <div>
-            <div class="label">Main Fields</div>
-            <ul>
-              <li>Fundamental movement & physical development for kids / juniors</li>
-              <li>Conditioning & body care for women</li>
-              <li>Performance support for competitive athletes</li>
-              <li>Para-sport & inclusive sports support</li>
-            </ul>
-          </div>
+    <!-- Hiroko Haraguchi -->
+    <article class="trainer-card">
+      <div class="trainer-header">
+        <div>
+          <div class="trainer-name">Hiroko Haraguchi</div>
+          <div class="trainer-role">Founder / Conditioning Trainer</div>
         </div>
       </div>
 
-      <!-- Jun Yasutomi -->
-      <div class="card">
-        <div class="trainer-header">
-          <div>
-            <div class="trainer-name">Jun Yasutomi</div>
-            <div class="trainer-role">Acupuncturist / Body Conditioning Support</div>
-          </div>
+      <p>
+        With experience in on-court support, strength &amp; conditioning, para-sports, and
+        health support, Hiroko works as a “go-to partner” for movement and conditioning that
+        people can rely on over the long term.
+      </p>
+
+      <div class="subgrid">
+        <div>
+          <div class="label">Qualifications</div>
+          <ul>
+            <li>JSPO Certified Sports Programmer</li>
+            <li>Japan Sports Facilities Association Certified Training Instructor</li>
+            <li>Japan Para-Sports Association Senior Para-Sports Instructor</li>
+            <li>NASM – Performance Enhancement Specialist</li>
+            <li>NUAD BO – RARN THAI MASSAGE</li>
+            <li>Health Management Specialist (Level 1)</li>
+            <li>JBA Certified C-Class Basketball Coach</li>
+            <li>Weight Management Specialist</li>
+            <li>Certificate of CPR &amp; AED Provider</li>
+          </ul>
         </div>
+        <div>
+          <div class="label">Main Fields</div>
+          <ul>
+            <li>Kids &amp; junior fundamental movement and physical development</li>
+            <li>Conditioning and body care for women</li>
+            <li>Performance support for competitive athletes</li>
+            <li>Para-sport and inclusive sports support</li>
+          </ul>
+        </div>
+      </div>
+    </article>
 
-        <p>
-          Provides body conditioning on an outreach basis, using acupuncture and
-          moxibustion to help adjust the body, ease stiffness, and support recovery.
-        </p>
-
-        <div class="subgrid">
-          <div>
-            <div class="label">Qualification</div>
-            <ul>
-              <li>Licensed Acupuncturist</li>
-            </ul>
-          </div>
-          <div>
-            <div class="label">Main Role</div>
-            <ul>
-              <li>Body adjustment and recovery support for personal clients</li>
-            </ul>
-          </div>
+    <!-- Jun Hotomi -->
+    <article class="trainer-card">
+      <div class="trainer-header">
+        <div>
+          <div class="trainer-name">Jun Hotomi</div>
+          <div class="trainer-role">Acupuncturist (Visiting)</div>
         </div>
       </div>
 
-      <!-- Sakura Nakamura -->
-      <div class="card">
-        <div class="trainer-header">
-          <div>
-            <div class="trainer-name">Sakura Nakamura</div>
-            <div class="trainer-role">Kids &amp; Para-Sports Support Staff</div>
-          </div>
+      <p>
+        Provides body adjustment using acupuncture and moxibustion on a visiting basis,
+        supporting recovery, relaxation, and better daily movement.
+      </p>
+
+      <div class="subgrid">
+        <div>
+          <div class="label">Qualifications</div>
+          <ul>
+            <li>Licensed Acupuncturist</li>
+          </ul>
         </div>
-
-        <p>
-          Supports kids classes and para-sport programs, creating safe and fun
-          environments where children and para-athletes can enjoy moving.
-        </p>
-
-        <div class="subgrid">
-          <div>
-            <div class="label">Qualifications</div>
-            <ul>
-              <li>
-                Japan Para-Sports Association Introductory Para-Sports Instructor
-              </li>
-              <li>
-                Japan Junior Sports Education Association Preschool Physical
-                Education Instructor (Level 3)
-              </li>
-            </ul>
-          </div>
-          <div>
-            <div class="label">Main Role</div>
-            <ul>
-              <li>Support for kids sports and para-sport activities</li>
-            </ul>
-          </div>
+        <div>
+          <div class="label">Main Fields</div>
+          <ul>
+            <li>Pain relief and discomfort care</li>
+            <li>Recovery and body condition adjustment</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </article>
+
+    <!-- Sakura Nakamura -->
+    <article class="trainer-card">
+      <div class="trainer-header">
+        <div>
+          <div class="trainer-name">Sakura Nakamura</div>
+          <div class="trainer-role">Kids &amp; Para-Sport Instructor</div>
+        </div>
+      </div>
+
+      <p>
+        Supports kids’ fundamental movement skills and inclusive sports activities, creating
+        a fun environment where everyone can enjoy moving their bodies.
+      </p>
+
+      <div class="subgrid">
+        <div>
+          <div class="label">Qualifications</div>
+          <ul>
+            <li>Japan Para-Sports Association Introductory Para-Sports Instructor</li>
+            <li>Japan Junior Sports Education Association Preschool Physical Education Instructor (Level 3)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="label">Main Fields</div>
+          <ul>
+            <li>Preschool / kids physical education</li>
+            <li>Inclusive &amp; para-sports support</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 
 
 
