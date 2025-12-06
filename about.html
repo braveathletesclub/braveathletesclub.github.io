@@ -200,6 +200,92 @@
       margin-top:12px;
     }
 
+    /* === Trainers (staff) layout === */
+.trainers-section{
+  margin-top:32px;
+}
+
+.trainers-intro{
+  max-width:720px;
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+
+.staff-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:20px;
+  margin-top:16px;
+}
+
+/* 個別スタッフカード */
+.staff-card{
+  position:relative;
+  background:#f9fafb;
+  border-radius:18px;
+  padding:18px 20px;
+  border:1px solid #e5e7eb;
+  overflow:hidden;
+}
+
+/* 左に細いスポーティなライン */
+.staff-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(180deg,#ff8800,#f97316);
+}
+
+/* 将来、顔写真を入れるためのエリア（今は非表示またはコメントアウトでOK） */
+.staff-meta{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.trainer-name{
+  font-size:16px;
+  font-weight:700;
+}
+
+.trainer-role{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.staff-bio{
+  font-size:14px;
+  margin-top:8px;
+}
+
+.staff-qual-label{
+  margin-top:10px;
+  font-size:12px;
+  font-weight:700;
+  color:var(--muted);
+}
+
+.staff-qual-list{
+  margin:4px 0 0 1.1em;
+  padding:0;
+  font-size:13px;
+}
+
+.staff-qual-list li{
+  margin-bottom:3px;
+}
+
+/* スマホでは1列表示に */
+@media(max-width:768px){
+  .staff-grid{
+    grid-template-columns:minmax(0,1fr);
+  }
+}
+
     footer{
       border-top:1px solid #e5e7eb;
       padding:24px 0 32px;
@@ -222,7 +308,7 @@
       nav.main-nav{flex-wrap:wrap;row-gap:6px;}
       .two-column{grid-template-columns:minmax(0,1fr);}
       .subgrid{grid-template-columns:minmax(0,1fr);}
-    }
+    }  
   </style>
 </head>
 
@@ -302,114 +388,94 @@
     </section>
 
     <!-- トレーナー紹介 -->
-    <section>
-      <h2>トレーナー紹介</h2>
+    <!-- トレーナー紹介 -->
+<section class="trainers-section">
+  <h2>トレーナー紹介</h2>
+  <p class="trainers-intro">
+    BRAVE ATHLETES CLUBでは、コンディショニング・トレーニング・パラスポーツ・ボディケアなど、
+    それぞれの専門分野を持ったスタッフが連携しながらサポートを行っています。
+  </p>
 
-      <div class="card">
-        <div class="trainer-header">
-          <!-- 将来ここにプロフィール写真などを入れる想定 -->
-          <div>
-            <div class="trainer-name">原口 博子（Haraguchi Hiroko）</div>
-            <div class="trainer-role">BRAVE ATHLETES CLUB 代表／コンディショニングトレーナー</div>
-          </div>
-        </div>
+  <div class="staff-grid">
 
-        <p>
-          スポーツ現場・トレーニング指導・パラスポーツや健康支援の経験を活かし、安心して任せていただける
-          “かかりつけの運動サポート役” を目指しています。
-        </p>
-
-        <div class="subgrid">
-          <div>
-            <div class="label">保有資格</div>
-            <ul>
-              <li>日本スポーツ協会公認スポーツプログラマー</li>
-              <li>日本スポーツ施設協会公認トレーニング指導士</li>
-              <li>公益財団法人 日本パラスポーツ協会 上級パラスポーツ指導員</li>
-              <li>NASM - Performance Enhancement Specialist</li>
-              <li>NUAD BO - RARN THAI MASSAGE</li>
-              <li>健康管理士（健康管理検定１級）</li>
-              <li>日本バスケットボール協会公認C級コーチ</li>
-              <li>Weight Management Specialist</li>              
-              <li>Certificate of CPR &amp; AED Provider</li>
-            </ul>
-          </div>
-          <div>
-            <div class="label">主な活動分野</div>
-            <ul>
-              <li>キッズ／ジュニアの基礎運動・体づくり</li>
-              <li>女性のためのコンディショニング</li>
-              <li>競技者のパフォーマンス向上</li>
-              <li>パラスポーツ・インクルーシブスポーツ支援</li>
-            </ul>
-          </div>
-        </div>
+    <!-- 原口さん -->
+    <div class="staff-card">
+      <div class="staff-meta">
+        <div class="trainer-name">原口 博子（Haraguchi Hiroko）</div>
+        <div class="trainer-role">BRAVE ATHLETES CLUB 代表／コンディショニングトレーナー</div>
       </div>
-    </section>
-    
-　　<!-- ▼ スタッフ：保富 純 -->
-<section>
-  <div class="card">
-    <div class="trainer-header">
-      <div>
+
+      <p class="staff-bio">
+        スポーツ現場・トレーニング指導・パラスポーツや健康支援の経験を活かし、安心して任せていただける
+        “かかりつけの運動サポート役” を目指しています。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>日本スポーツ協会公認スポーツプログラマー</li>
+        <li>日本スポーツ施設協会公認トレーニング指導士</li>
+        <li>公益財団法人 日本パラスポーツ協会 上級パラスポーツ指導員</li>
+        <li>NASM - Performance Enhancement Specialist</li>
+        <li>健康管理士（健康管理検定１級）</li>
+        <li>日本バスケットボール協会公認C級コーチ</li>
+        <li>Weight Management Specialist</li>
+        <li>NUAD BO - RARN THAI MASSAGE</li>
+        <li>Certificate of CPR &amp; AED Provider</li>
+      </ul>
+    </div>
+
+    <!-- 保富さん -->
+    <div class="staff-card">
+      <div class="staff-meta">
         <div class="trainer-name">保富 純（Yasutomi Jun）</div>
-        <div class="trainer-role">鍼灸師 / コンディショニングサポート</div>
+        <div class="trainer-role">鍼灸師／コンディショニングサポート</div>
       </div>
+
+      <p class="staff-bio">
+        出張ベースで、鍼やお灸を用いたコンディショニングとボディケアを行っています。
+        トレーニングとケアの両面から、動きやすい身体づくりをサポートします。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>鍼灸師</li>
+      </ul>
     </div>
 
-    <p>
-      出張ベースで、鍼灸とお灸を用いて身体の調整を行っています。  
-      日常の不調ケアから運動パフォーマンス向上まで幅広くサポートします。
-    </p>
-
-    <div class="subgrid">
-      <div>
-        <div class="label">保有資格</div>
-        <ul>
-          <li>鍼灸師</li>
-        </ul>
-      </div>
-      <div>
-        <div class="label">主な活動分野</div>
-        <ul>
-          <li>鍼灸施術による身体調整</li>
-          <li>コンディショニングサポート</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-    <!-- ▼ スタッフ：中村さくら -->
-<section>
-  <div class="card">
-    <div class="trainer-header">
-      <div>
+    <!-- 中村さん -->
+    <div class="staff-card">
+      <div class="staff-meta">
         <div class="trainer-name">中村 さくら（Nakamura Sakura）</div>
-        <div class="trainer-role">パラスポーツ指導員 / 幼児体育指導員</div>
-      </div>
-    </div>
-
-    <div class="subgrid">
-      <div>
-        <div class="label">保有資格</div>
-        <ul>
-          <li>公益財団法人日本パラスポーツ協会  
-              初級パラスポーツ指導員</li>
-          <li>公益財団法人日本幼少年体育協会  
-              幼児体育指導員 3級</li>
-        </ul>
+        <div class="trainer-role">キッズ＆パラスポーツサポート</div>
       </div>
 
-      <div>
-        <div class="label">主な活動分野</div>
-        <ul>
-          <li>幼児〜ジュニア向け運動指導</li>
-          <li>パラスポーツ支援</li>
-          <li>基礎運動能力の育成</li>
-        </ul>
-      </div>
+      <p class="staff-bio">
+        幼児期の運動あそびから、パラスポーツの現場まで幅広くサポート。
+        子ども一人ひとりの特性に合わせて、「楽しく動ける場づくり」を大切にしています。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>公益財団法人 日本パラスポーツ協会 初級パラスポーツ指導員</li>
+        <li>公益財団法人 日本幼少年体育協会 幼児体育指導員3級</li>
+      </ul>
     </div>
+
+    <!-- 今後スタッフが増えたとき用の空きスペース（必要になったらこのカードを複製して使用） -->
+    <!--
+    <div class="staff-card">
+      <div class="staff-meta">
+        <div class="trainer-name">お名前（Name）</div>
+        <div class="trainer-role">担当分野など</div>
+      </div>
+      <p class="staff-bio">紹介文が入ります。</p>
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>資格１</li>
+        <li>資格２</li>
+      </ul>
+    </div>
+    -->
 
   </div>
 </section>
