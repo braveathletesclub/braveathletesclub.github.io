@@ -179,28 +179,8 @@
     ul{margin:0 0 10px 1.2em;padding:0;}
     li{margin-bottom:4px;}
 
-    .trainer-header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:8px;
-    }
-    .trainer-name{font-size:18px;font-weight:700;}
-    .trainer-role{font-size:14px;color:var(--muted);}
-    .label{
-      font-size:12px;
-      font-weight:700;
-      color:var(--muted);
-      margin-top:4px;
-    }
-    .subgrid{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-      gap:16px;
-      margin-top:12px;
-    }
+/* === スタッフ紹介セクション === */
 
-    /* === Trainers (staff) layout === */
 .trainers-section{
   margin-top:32px;
 }
@@ -212,6 +192,7 @@
   margin-bottom:16px;
 }
 
+/* カードを2列グリッドで配置（スマホでは1列） */
 .staff-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
@@ -229,7 +210,7 @@
   overflow:hidden;
 }
 
-/* 左に細いスポーティなライン */
+/* 左側に細いスポーティなアクセントライン */
 .staff-card::before{
   content:"";
   position:absolute;
@@ -240,7 +221,7 @@
   background:linear-gradient(180deg,#ff8800,#f97316);
 }
 
-/* 将来、顔写真を入れるためのエリア（今は非表示またはコメントアウトでOK） */
+/* 名前＋役割エリア */
 .staff-meta{
   display:flex;
   flex-direction:column;
@@ -257,11 +238,14 @@
   color:var(--muted);
 }
 
+/* 自己紹介テキスト */
 .staff-bio{
   font-size:14px;
   margin-top:8px;
+  line-height:1.7;
 }
 
+/* 資格ラベル＋リスト */
 .staff-qual-label{
   margin-top:10px;
   font-size:12px;
@@ -273,6 +257,7 @@
   margin:4px 0 0 1.1em;
   padding:0;
   font-size:13px;
+  line-height:1.6;
 }
 
 .staff-qual-list li{
@@ -285,30 +270,6 @@
     grid-template-columns:minmax(0,1fr);
   }
 }
-
-    footer{
-      border-top:1px solid #e5e7eb;
-      padding:24px 0 32px;
-      text-align:center;
-      font-size:12px;
-      color:var(--muted);
-      background:#ffffffdd;
-      backdrop-filter:blur(8px);
-    }
-    .socials a{margin-right:12px;}
-
-    @media(max-width:768px){
-      .site-header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        height:auto;
-        padding:10px 0 12px;
-        gap:10px;
-      }
-      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
-      .two-column{grid-template-columns:minmax(0,1fr);}
-      .subgrid{grid-template-columns:minmax(0,1fr);}
-    }  
   </style>
 </head>
 
@@ -389,112 +350,117 @@
 
     <!-- トレーナー紹介 -->
   <section class="trainers-section">
-<h2>スタッフ紹介</h2>
-<p class="trainers-intro">
-  BRAVE ATHLETES CLUBでは、コンディショニング・トレーニング・パラスポーツ・ボディケアなど、
-  それぞれの専門分野を持ったスタッフが連携しながらサポートを行っています。
-</p>
+<section class="trainers-section">
+  <h2>スタッフ紹介</h2>
+  <p class="trainers-intro">
+    BRAVE ATHLETES CLUBでは、コンディショニング・トレーニング・パラスポーツ・ボディケアなど、
+    それぞれの専門分野を持ったスタッフが連携しながらサポートを行っています。
+  </p>
 
-<div class="staff-grid">
+  <div class="staff-grid">
 
-  <!-- 原口さん -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">原口 博子（Haraguchi Hiroko）</div>
-      <div class="trainer-role">BRAVE ATHLETES CLUB 代表／コンディショニングトレーナー</div>
-    </div>
+    <!-- 原口さん -->
+    <article class="staff-card">
+      <header class="staff-meta">
+        <div class="trainer-name">原口 博子（Haraguchi Hiroko）</div>
+        <div class="trainer-role">BRAVE ATHLETES CLUB 代表／コンディショニングトレーナー</div>
+      </header>
 
-    <p class="staff-bio">
-      スポーツ現場・トレーニング指導・パラスポーツや健康支援の経験を活かし、安心して任せていただける
-      “かかりつけの運動サポート役” を目指しています。
-    </p>
+      <p class="staff-bio">
+        スポーツ現場・トレーニング指導・パラスポーツや健康支援の経験を活かし、安心して任せていただける
+        “かかりつけの運動サポート役” を目指しています。
+      </p>
 
-    <div class="staff-qual-label">保有資格</div>
-    <ul class="staff-qual-list">
-      <li>日本スポーツ協会公認スポーツプログラマー</li>
-      <li>日本スポーツ施設協会公認トレーニング指導士</li>
-      <li>日本パラスポーツ協会 上級パラスポーツ指導員</li>
-      <li>NASM（全米スポーツ医学アカデミー）- Performance Enhancement Specialist</li>
-      <li>NUAD BO - RARN THAI MASSAGE</li>
-      <li>健康管理士（健康管理検定１級）</li>
-      <li>日本バスケットボール協会公認C級コーチ</li>
-      <li>Weight Management Specialist</li>
-    </ul>
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>日本スポーツ協会公認スポーツプログラマー</li>
+        <li>日本スポーツ施設協会公認トレーニング指導士</li>
+        <li>日本パラスポーツ協会 上級パラスポーツ指導員</li>
+        <li>NASM（全米スポーツ医学アカデミー）- Performance Enhancement Specialist</li>
+        <li>NUAD BO - RARN THAI MASSAGE</li>
+        <li>健康管理士（健康管理検定１級）</li>
+        <li>日本バスケットボール協会公認C級コーチ</li>
+        <li>Weight Management Specialist</li>
+        <li>Certificate of CPR &amp; AED Provider</li>
+      </ul>
+    </article>
+
+    <!-- 保富さん -->
+    <article class="staff-card">
+      <header class="staff-meta">
+        <div class="trainer-name">保富 純（Yasutomi Jun）</div>
+        <div class="trainer-role">鍼灸師／コンディショニングサポート</div>
+      </header>
+
+      <p class="staff-bio">
+        出張ベースで、鍼やお灸を用いたコンディショニングとボディケアを行っています。
+        トレーニングとケアの両面から、動きやすい身体づくりをサポートします。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>鍼灸師</li>
+      </ul>
+    </article>
+
+    <!-- 田村 麻実さん -->
+    <article class="staff-card">
+      <header class="staff-meta">
+        <div class="trainer-name">田村 麻実（Tamura Asami）</div>
+        <div class="trainer-role">キッズ＆ジュニア＆パラスポーツサポート</div>
+      </header>
+
+      <p class="staff-bio">
+        健康運動指導・発達支援・パラスポーツ指導の経験を活かし、
+        子どもから大人まで安全で分かりやすいサポートを行っています。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>健康運動指導士</li>
+        <li>公益財団法人 日本パラスポーツ協会 中級パラスポーツ指導員</li>
+        <li>児童発達支援管理責任者</li>
+      </ul>
+    </article>
+
+    <!-- 中村さん -->
+    <article class="staff-card">
+      <header class="staff-meta">
+        <div class="trainer-name">中村 さくら（Nakamura Sakura）</div>
+        <div class="trainer-role">キッズ＆パラスポーツサポート</div>
+      </header>
+
+      <p class="staff-bio">
+        幼児期の運動あそびから、パラスポーツの現場まで幅広くサポート。
+        子ども一人ひとりの特性に合わせて、「楽しく動ける場づくり」を大切にしています。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>公益財団法人 日本パラスポーツ協会 初級パラスポーツ指導員</li>
+        <li>公益財団法人 日本幼少年体育協会 幼児体育指導員3級</li>
+      </ul>
+    </article>
+
+    <!-- 田村 あさ子さん -->
+    <article class="staff-card">
+      <header class="staff-meta">
+        <div class="trainer-name">田村 あさ子（Tamura Asako）</div>
+        <div class="trainer-role">児童発達支援管理責任者</div>
+      </header>
+
+      <p class="staff-bio">
+        子どもの発達支援を専門とし、安心して参加できる環境づくりを大切にしています。
+      </p>
+
+      <div class="staff-qual-label">保有資格</div>
+      <ul class="staff-qual-list">
+        <li>児童発達支援管理責任者</li>
+      </ul>
+    </article>
+
   </div>
-
-  <!-- 保富さん -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">保富 純（Yasutomi Jun）</div>
-      <div class="trainer-role">鍼灸師／コンディショニングサポート</div>
-    </div>
-
-    <p class="staff-bio">
-      出張ベースで、鍼やお灸を用いたコンディショニングとボディケアを行っています。
-      トレーニングとケアの両面から、動きやすい身体づくりをサポートします。
-    </p>
-
-    <div class="staff-qual-label">保有資格</div>
-    <ul class="staff-qual-list">
-      <li>鍼灸師</li>
-    </ul>
-  </div>
-
-  <!-- 田村 麻実さん -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">田村 麻実（Tamura Asami）</div>
-      <div class="trainer-role">キッズ＆ジュニア＆パラスポーツサポート</div>
-    </div>
-
-    <p class="staff-bio">
-      健康運動指導・発達支援・パラスポーツ指導の経験を活かし、
-      子どもから大人まで安全で分かりやすいサポートを行っています。
-    </p>
-
-    <div class="staff-qual-label">保有資格</div>
-    <ul class="staff-qual-list">
-      <li>健康運動指導士</li>
-      <li>公益財団法人 日本パラスポーツ協会 中級パラスポーツ指導員</li>
-      <li>児童発達支援管理責任者</li>
-    </ul>
-  </div>
-
-  <!-- 中村さん -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">中村 さくら（Nakamura Sakura）</div>
-      <div class="trainer-role">キッズ＆パラスポーツサポート</div>
-    </div>
-
-    <p class="staff-bio">
-      幼児期の運動あそびから、パラスポーツの現場まで幅広くサポート。
-      子ども一人ひとりの特性に合わせて、「楽しく動ける場づくり」を大切にしています。
-    </p>
-
-    <div class="staff-qual-label">保有資格</div>
-    <ul class="staff-qual-list">
-      <li>公益財団法人 日本パラスポーツ協会 初級パラスポーツ指導員</li>
-      <li>公益財団法人 日本幼少年体育協会 幼児体育指導員3級</li>
-    </ul>
-  </div>
-
-  <!-- 田村 あさ子さん -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">田村 あさ子（Tamura Asako）</div>
-      <div class="trainer-role">児童発達支援管理責任者</div>
-    </div>
-
-    <p class="staff-bio">
-      子どもの発達支援を専門とし、安心して参加できる環境づくりを大切にしています。
-    </p>
-
-    <div class="staff-qual-label">保有資格</div>
-    <ul class="staff-qual-list">
-      <li>児童発達支援管理責任者</li>
-    </ul>
-  </div>
+</section>
 
 </div>
 
