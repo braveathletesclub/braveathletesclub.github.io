@@ -185,6 +185,8 @@
   margin-top:32px;
 }
 
+/* ===== Staff Section ===== */
+
 .trainers-intro{
   max-width:720px;
   font-size:14px;
@@ -192,25 +194,25 @@
   margin-bottom:16px;
 }
 
-/* カードを2列グリッドで配置（スマホでは1列） */
+/* 2列グリッド（スマホは1列） */
 .staff-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:20px;
-  margin-top:16px;
+  gap:22px;
+  margin-top:20px;
 }
 
-/* 個別スタッフカード */
 .staff-card{
   position:relative;
   background:#f9fafb;
   border-radius:18px;
-  padding:18px 20px;
+  padding:20px 22px;
   border:1px solid #e5e7eb;
   overflow:hidden;
+  transition:0.25s ease;
 }
 
-/* 左側に細いスポーティなアクセントライン */
+/* 左のスポーティライン（細めに調整） */
 .staff-card::before{
   content:"";
   position:absolute;
@@ -218,10 +220,16 @@
   top:0;
   bottom:0;
   width:4px;
-  background:linear-gradient(180deg,#ff8800,#f97316);
+  background:linear-gradient(180deg,#ff9800,#f97316);
 }
 
-/* 名前＋役割エリア */
+/* Hoverでふわっと */
+.staff-card:hover{
+  background:#ffffff;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* メタ情報（名前・肩書） */
 .staff-meta{
   display:flex;
   flex-direction:column;
@@ -229,7 +237,7 @@
 }
 
 .trainer-name{
-  font-size:16px;
+  font-size:17px;
   font-weight:700;
 }
 
@@ -238,38 +246,39 @@
   color:var(--muted);
 }
 
-/* 自己紹介テキスト */
+/* 本文 */
 .staff-bio{
   font-size:14px;
-  margin-top:8px;
-  line-height:1.7;
+  margin-top:10px;
+  line-height:1.6;
 }
 
-/* 資格ラベル＋リスト */
+/* 資格 */
 .staff-qual-label{
-  margin-top:10px;
+  margin-top:14px;
   font-size:12px;
   font-weight:700;
   color:var(--muted);
 }
 
 .staff-qual-list{
-  margin:4px 0 0 1.1em;
-  padding:0;
+  margin-top:4px;
+  padding-left:1.2em;
   font-size:13px;
-  line-height:1.6;
+  line-height:1.5;
 }
 
 .staff-qual-list li{
   margin-bottom:3px;
 }
 
-/* スマホでは1列表示に */
+/* スマホでは1列のみ */
 @media(max-width:768px){
   .staff-grid{
-    grid-template-columns:minmax(0,1fr);
+    grid-template-columns:1fr;
   }
 }
+
   </style>
 </head>
 
