@@ -261,7 +261,16 @@ footer{
     height:52px;
   }
 }
- 
+ /* Winter Event image sizing (EN top) */
+.event-card img.event-thumb{
+  width: 100%;
+  height: auto;
+  max-height: 180px;          /* ←ここで“大きすぎ”を止めます */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
   </style>
 
   <!-- JSON-LD -->
@@ -393,8 +402,9 @@ footer{
 
   <!-- Feb 11 Tai Chi -->
   <article class="event-card">
-    <img src="assets/events/20260211-main.png"
-         alt="Feb 11 Special Program Tai Chi and Family Yoga">
+   <img class="event-thumb"
+     src="assets/events/20260211-main.png"
+     alt="Feb 11 Special Program Tai Chi and Family Yoga">
 
     <div class="event-body">
       <h3>Fan Tai Chi</h3>
@@ -419,8 +429,9 @@ footer{
 
   <!-- Feb 11 Family Yoga -->
   <article class="event-card">
-    <img src="assets/events/20260211-main.png"
-         alt="Feb 11 Special Program Family Yoga">
+    <img class="event-thumb"
+     src="assets/events/20260211-main.png"
+     alt="Feb 11 Special Program Tai Chi and Family Yoga">
 
     <div class="event-body">
       <h3>Family Yoga</h3>
