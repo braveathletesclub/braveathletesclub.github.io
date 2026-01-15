@@ -3,68 +3,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>2/11 イベント｜Brave Athletes Club</title>
+  <title>2/11 特別プログラム（太極拳・ファミリーヨガ）｜Brave Athletes Club</title>
+  <meta name="description" content="2026年2月11日（祝）高槻市立総合体育館 小体育室２にて、扇を使った太極拳（14:00-15:00）とファミリーで参加できるヨガ（15:30-16:30）を開催します。年齢や性別を問わず、どなたでも安心してご参加いただけます。" />
 
-  <!-- 既存サイトのCSSに合わせてパス調整してください -->
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <!-- 既存サイトのCSSがある場合は有効にしてください（パスは環境に合わせて調整） -->
+  <!-- <link rel="stylesheet" href="../assets/css/style.css" /> -->
 
   <style>
-    /* ページ単体でも崩れにくい最小限の整え（既存CSSがあれば上書き不要） */
-    .wrap{max-width:980px;margin:0 auto;padding:24px 16px;}
-    .page-hero{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:18px 18px;margin-top:10px;}
-    .kicker{font-size:13px;color:#667085;margin-bottom:6px;}
-    h1{font-size:22px;line-height:1.3;margin:0 0 10px;}
-    .meta{color:#475467;font-size:14px;margin:0 0 6px;}
-    .lead{color:#344054;font-size:14px;line-height:1.8;margin-top:10px;}
-    .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px;}
-    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr;}}
-    .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:16px;padding:16px;}
-    .card h2{font-size:18px;margin:0 0 8px;}
-    .badge{display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;background:#eef6ff;color:#1d4ed8;margin-bottom:10px;}
-    .list{margin:10px 0 0;padding-left:18px;color:#344054;font-size:14px;line-height:1.8;}
-    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
-    .btn{display:inline-block;padding:10px 14px;border-radius:999px;text-decoration:none;font-weight:700;font-size:14px;}
-    .btn-dark{background:#111827;color:#fff;}
-    .btn-ghost{border:1px solid rgba(0,0,0,.15);color:#111827;background:#fff;}
-    .note{font-size:13px;color:#667085;line-height:1.7;margin-top:10px;}
-    .divider{height:1px;background:rgba(0,0,0,.06);margin:16px 0;}
+    :root{
+      --bg:#f5f7fb;
+      --card:#ffffff;
+      --text:#101828;
+      --muted:#475467;
+      --line:rgba(16,24,40,.10);
+      --accent:#111827; /* ボタン濃色 */
+      --pill:#eef6ff;
+      --pillText:#1d4ed8;
+      --shadow:0 10px 24px rgba(16,24,40,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.7;
+    }
+    a{color:inherit}
+    .wrap{max-width:1040px;margin:0 auto;padding:24px 16px 56px;}
+    .toplink{
+      display:inline-flex; gap:8px; align-items:center;
+      color:var(--muted); text-decoration:none; font-size:13px;
+      padding:8px 10px; border-radius:999px;
+    }
+    .toplink:hover{background:rgba(255,255,255,.7)}
+    .hero{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+      margin-top:10px;
+      overflow:hidden;
+    }
+    .kicker{font-size:13px;color:var(--muted);margin:0 0 6px}
+    h1{font-size:22px;line-height:1.35;margin:0 0 8px}
+    .meta{margin:0;color:var(--muted);font-size:14px}
+    .hero-img{
+      width:100%;
+      border-radius:16px;
+      margin:14px 0 12px;
+      border:1px solid rgba(16,24,40,.08);
+    }
+    .lead{margin:0;color:var(--text);font-size:14px}
+    .note{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .actions{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:14px;
+    }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      border:1px solid transparent;
+      white-space:nowrap;
+    }
+    .btn-dark{background:var(--accent);color:#fff}
+    .btn-ghost{background:#fff;border-color:rgba(16,24,40,.18);color:var(--text)}
+    .btn-ghost:hover{background:rgba(255,255,255,.65)}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (min-width:920px){
+      .grid{grid-template-columns:1fr 1fr;}
+      h1{font-size:24px;}
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:var(--shadow);
+    }
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:12px;
+      padding:5px 10px;
+      border-radius:999px;
+      background:var(--pill);
+      color:var(--pillText);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .card h2{font-size:18px;margin:0 0 6px}
+    .divider{height:1px;background:var(--line);margin:12px 0}
+    .list{margin:10px 0 0;padding-left:18px;color:var(--text);font-size:14px}
+    .submeta{margin:0;color:var(--muted);font-size:14px}
+    .section-img{
+      width:100%;
+      border-radius:16px;
+      margin:10px 0 12px;
+      border:1px solid rgba(16,24,40,.08);
+    }
+    .img-bright{
+      filter: brightness(1.15) contrast(1.05);
+    }
+    .footer-help{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .mini{
+      font-size:12px; color:var(--muted);
+    }
   </style>
 </head>
 
 <body>
   <main class="wrap">
 
-    <a href="../index.html" style="text-decoration:none;color:#667085;font-size:13px;">← トップへ戻る</a>
+    <a class="toplink" href="../index.html" aria-label="トップページへ戻る">← トップへ戻る</a>
 
-    <section class="page-hero">
-      <div class="kicker">冬のイベント｜2つのクラスを開催します</div>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <p class="kicker">冬のイベント｜2つのクラスを開催します</p>
       <h1>2026年2月11日（祝）特別プログラム</h1>
       <p class="meta">会場：高槻市立総合体育館　小体育室２</p>
+
+      <!-- メイン画像（2クラスまとめ） -->
+      <img class="hero-img"
+           src="../assets/events/20260211-main.png"
+           alt="2月11日 特別プログラム（扇を使った太極拳・ファミリーで参加できるヨガ）" />
+
       <p class="lead">
         からだを整える時間を、もっと身近に。<br>
         扇を使った太極拳（14:00-15:00）と、ファミリーで参加できるヨガ（15:30-16:30）を同日に開催します。<br>
-        はじめての方、運動が久しぶりの方も、無理なく取り組める内容です。
+        <strong>年齢や性別を問わず、小さなお子さまから高齢の方まで、どなたでも安心してご参加いただけます。</strong>
       </p>
 
       <div class="actions">
         <a class="btn btn-ghost" href="#taichi">扇を使った太極拳へ</a>
         <a class="btn btn-ghost" href="#yoga">ファミリーヨガへ</a>
+        <a class="btn btn-dark" href="../contact.html">お問い合わせ</a>
       </div>
 
       <p class="note">
-        ※ 募集はホームページ／Facebook／LINEで行います。ご不明点はお問い合わせからお気軽にご連絡ください。
+        ※ 募集はホームページ／Facebook／LINEで行います。ご不明点は「お問い合わせ」からお気軽にご連絡ください。
       </p>
     </section>
 
-    <div class="grid">
+    <!-- ===== 2 cards ===== -->
+    <section class="grid" aria-label="プログラム詳細">
 
-      <!-- 太極拳 -->
-      <section id="taichi" class="card">
+      <!-- ========== Tai Chi ========== -->
+      <article id="taichi" class="card">
         <div class="badge">14:00-15:00</div>
         <h2>扇を使った太極拳</h2>
-        <p class="meta">2026年2月11日（祝）｜高槻市立総合体育館　小体育室２</p>
+        <p class="submeta">2026年2月11日（祝）｜高槻市立総合体育館　小体育室２</p>
 
         <div class="divider"></div>
+
+        <!-- 太極拳：チラシ単独画像 -->
+        <img class="section-img"
+             src="../assets/events/20260211-taichi.png"
+             alt="扇を使った太極拳（案内画像）" />
 
         <p class="lead" style="margin:0;">
           扇を使いながら、姿勢と呼吸を整えていくやさしいプログラムです。<br>
@@ -72,9 +187,9 @@
         </p>
 
         <ul class="list">
-          <li>目的：姿勢・呼吸・バランス感覚を整える</li>
-          <li>おすすめ：運動が久しぶりの方／リラックスしたい方</li>
-          <li>服装：動きやすい服装（室内シューズ推奨）</li>
+          <li><strong>目的：</strong>姿勢・呼吸・バランス感覚を整える</li>
+          <li><strong>おすすめ：</strong>運動が久しぶりの方／リラックスしたい方</li>
+          <li><strong>服装：</strong>動きやすい服装（室内シューズ推奨）</li>
         </ul>
 
         <div class="actions">
@@ -83,18 +198,22 @@
         </div>
 
         <p class="note">
-  小さなお子さまから高齢の方まで、男女問わずご参加可能です。
-  動きは参加者に合わせて調整しますので、初めての方も安心してご参加ください。
-</p>
-      </section>
+          ※ はじめての方も歓迎です。動きは参加者に合わせて調整しますので、安心してご参加ください。
+        </p>
+      </article>
 
-      <!-- ヨガ -->
-      <section id="yoga" class="card">
+      <!-- ========== Yoga ========== -->
+      <article id="yoga" class="card">
         <div class="badge">15:30-16:30</div>
         <h2>ファミリーで参加できるヨガ</h2>
-        <p class="meta">2026年2月11日（祝）｜高槻市立総合体育館　小体育室２</p>
+        <p class="submeta">2026年2月11日（祝）｜高槻市立総合体育館　小体育室２</p>
 
         <div class="divider"></div>
+
+        <!-- ヨガ：実写（明るさ補正あり） -->
+        <img class="section-img img-bright"
+             src="../assets/events/20260211-yoga-family.jpg"
+             alt="ファミリーで参加できるヨガの様子（親子で一緒に参加）" />
 
         <p class="lead" style="margin:0;">
           親子・ご家族で一緒に参加できる、やさしいヨガクラスです。<br>
@@ -102,9 +221,9 @@
         </p>
 
         <ul class="list">
-          <li>目的：柔軟性・体幹・呼吸を整え、心身をリフレッシュ</li>
-          <li>おすすめ：親子で運動習慣を作りたい方／家族で楽しみたい方</li>
-          <li>持ち物：タオル、飲み物（ヨガマットは可能ならご持参ください）</li>
+          <li><strong>目的：</strong>柔軟性・体幹・呼吸を整え、心身をリフレッシュ</li>
+          <li><strong>おすすめ：</strong>親子で運動習慣を作りたい方／家族で楽しみたい方</li>
+          <li><strong>持ち物：</strong>タオル、飲み物（ヨガマットは可能ならご持参ください）</li>
         </ul>
 
         <div class="actions">
@@ -113,14 +232,22 @@
         </div>
 
         <p class="note">
-  年齢・性別を問わずご参加いただけます。
-  お子さま連れのご家族から大人のみの参加まで、無理のない内容で行います。
-</p>
-      </section>
+          ※ 年齢・性別を問わずご参加いただけます。動きは無理のない範囲で調整しますので、初めての方も安心してご参加ください。
+        </p>
 
-    </div>
+        <p class="mini" style="margin-top:10px;">
+          （参考）ヨガ告知画像を表示したい場合は、上の写真を <code>../assets/events/20260211-yoga.png</code> に差し替えてもOKです。
+        </p>
+      </article>
+
+    </section>
+
+    <p class="footer-help">
+      ご質問・参加のご相談は、<a href="../contact.html">お問い合わせ</a> からお気軽にどうぞ。
+    </p>
 
   </main>
 </body>
 </html>
+
 
