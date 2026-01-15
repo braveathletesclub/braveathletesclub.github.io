@@ -209,6 +209,33 @@
   color:inherit;
   text-decoration:none;
 }
+/* ===== Winter Event thumbs (EN top) ===== */
+.event-thumb{
+  flex: 0 0 220px;          /* PCでのサムネ幅 */
+  width: 220px;
+  max-width: 100%;
+}
+
+.event-thumb img{
+  width: 100%;
+  height: 120px;            /* サムネ高さ：大きすぎない */
+  object-fit: cover;        /* 見栄え優先（少しトリミング） */
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: block;
+  background: #fff;
+}
+
+/* スマホ：横幅いっぱいで、切れすぎない高さ */
+@media (max-width:780px){
+  .event-thumb{
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  .event-thumb img{
+    height: 160px;          /* スマホは少し高めで見やすく */
+  }
+}
 
 /* スマホ向けレイアウト調整（イベントカード用） */
 @media (max-width:780px){
@@ -261,25 +288,7 @@ footer{
     height:52px;
   }
 }
- /* Winter Event image sizing (EN top) */
-.event-card img.event-thumb{
-  width: 100%;
-  height: auto;
-  max-height: 180px;          /* ←ここで“大きすぎ”を止めます */
-  object-fit: cover;
-  border-radius: 12px;
-  display: block;
-}
-/* EN: Winter Event images – force proper size */
-.event-thumb img{
-  width: 100%;
-  height: 180px;
-  max-width: 100%;
-  object-fit: contain;
-  background: #fff;
-  border-radius: 12px;
-  display: block;
-}
+ 
 
 
   </style>
