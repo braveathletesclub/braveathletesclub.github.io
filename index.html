@@ -141,9 +141,7 @@
 
 /* Footer */
 /* Sections */
-section{
-  padding:28px 0;
-}
+section{ padding:28px 0; }
 
 .grid{
   display:grid;
@@ -157,29 +155,13 @@ section{
   padding:18px 20px;
   border:1px solid #e5e7eb;
 }
+.card h3{ margin:0 0 6px; font-size:18px; }
+.card p{ margin:0; color:var(--muted); }
 
-.card h3{margin:0 0 6px;font-size:18px;}
-.card p{margin:0;color:var(--muted);}
+/* Event card */
+.event-wrap{ margin:24px 0; }
+.event-header{ font-weight:700; margin-bottom:8px; }
 
-
-/* Footer */
-footer{
-  border-top:1px solid #e5e7eb;
-  padding:24px 0 40px;
-  text-align:center;
-  font-size:12px;
-  color:var(--muted);
-  background:#ffffffcc;
-  backdrop-filter:blur(6px);
-}
-   /* Event card */
-.event-wrap{
-  margin:24px 0;
-}
-.event-header{
-  font-weight:700;
-  margin-bottom:8px;
-}
 .event-card{
   display:flex;
   align-items:center;
@@ -187,8 +169,8 @@ footer{
   padding:16px;
   border:1px solid #e5e7eb;
   border-radius:16px;
-  background:#ffffff;
-  flex-wrap:wrap;            /* 画面が狭い時に中で折り返せるように */
+  background:#fff;
+  flex-wrap:wrap;
 }
 .event-thumb img{
   width:140px;
@@ -197,21 +179,14 @@ footer{
   border:1px solid #e5e7eb;
   display:block;
 }
-.event-body{
-  flex:1;
-  min-width:0;
-}
-.event-title{
-  font-weight:700;
-  margin-bottom:4px;
-}
-.event-meta{
-  color:#6b7280;
-}
+.event-body{ flex:1; min-width:0; }
+.event-title{ font-weight:700; margin-bottom:4px; }
+.event-meta{ color:#6b7280; }
+
 .event-actions{
   display:flex;
   gap:12px;
-  flex-wrap:wrap;            /* ボタンも折り返し可能に */
+  flex-wrap:wrap;
 }
 .btn-pill{
   display:inline-flex;
@@ -230,30 +205,9 @@ footer{
   color:#fff;
   border-color:#111827;
 }
-.card-link{
-  display:block;
-  color:inherit;
-  text-decoration:none;
-}
 
-/* スマホ向けレイアウト調整（イベントカード用） */
-@media (max-width:780px){
-  .event-card{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-  .event-thumb img{
-    width:100%;
-    max-width:420px;
-  }
-  .event-actions{
-    width:100%;
-  }
-}
-/* ===== お知らせ内 Summer Body Project カード ===== */
-.news-highlight{
-  margin-top:20px;
-}
+/* News highlight card */
+.news-highlight{ margin-top:20px; }
 
 .news-highlight-inner{
   display:flex;
@@ -262,41 +216,27 @@ footer{
   padding:12px 16px;
   border-radius:16px;
   border:1px solid #e5e7eb;
-  background:#ffffff;
+  background:#fff;
   text-decoration:none;
-  transition:box-shadow 0.15s ease, transform 0.15s ease;
+  transition:box-shadow .15s ease, transform .15s ease;
 }
-
 .news-highlight-inner:hover{
   text-decoration:none;
-  box-shadow:0 8px 20px rgba(15,23,42,0.08);
+  box-shadow:0 8px 20px rgba(15,23,42,.08);
   transform:translateY(-1px);
 }
-
 .news-thumb img{
   width:112px;
   height:auto;
   border-radius:12px;
   display:block;
 }
+.news-text-label{ font-size:11px; color:#6b7280; margin:0 0 4px; }
+.news-text-title{ font-size:16px; font-weight:700; margin:0 0 4px; }
+.news-text-meta{ font-size:13px; color:#6b7280; margin:0; }
 
-.news-text-label{
-  font-size:11px;
-  color:#6b7280;
-  margin:0 0 4px;
-}
-
-.news-text-title{
-  font-size:16px;
-  font-weight:700;
-  margin:0 0 4px;
-}
-
-.news-text-meta{
-  font-size:13px;
-  color:#6b7280;
-  margin:0;
-}
+/* Footer */
+footer{
   border-top:1px solid #e5e7eb;
   padding:24px 0 40px;
   text-align:center;
@@ -305,11 +245,9 @@ footer{
   background:#ffffffcc;
   backdrop-filter:blur(6px);
 }
-.socials a{
-  margin-right:12px;
-}
+.socials a{ margin-right:12px; }
 
-/* 共通レスポンシブ調整 */
+/* Responsive */
 @media (max-width:900px){
   .site-header-inner{
     flex-direction:column;
@@ -322,26 +260,30 @@ footer{
     flex-wrap:wrap;
     row-gap:6px;
   }
-  .hero-inner{
-    grid-template-columns:minmax(0,1fr);
-  }
-  .grid{
-    grid-template-columns:minmax(0,1fr);
-  }
-  .brand img{
-    height:52px;
-  }
+  .hero-inner{ grid-template-columns:minmax(0,1fr); }
+  .grid{ grid-template-columns:minmax(0,1fr); }
+  .brand img{ height:52px; }
 }
-/* ===== スマホ用ヘッダー修正（追記） ===== */
-@media (max-width: 900px){
-  .main-nav{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px 16px;
-    font-size:14px;
+
+@media (max-width:780px){
+  .event-card{
+    flex-direction:column;
+    align-items:flex-start;
   }
-  .main-nav a{
-    white-space:nowrap;
+  .event-thumb img{
+    width:100%;
+    max-width:420px;
+  }
+  .event-actions{ width:100%; }
+
+  /* お知らせカードも縦積みに */
+  .news-highlight-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .news-thumb img{
+    width:100%;
+    max-width:420px;
   }
 }
   </style>
@@ -698,6 +640,7 @@ footer{
 </script> 
 </body>
 </html>
+
 
 
 
