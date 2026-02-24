@@ -137,18 +137,41 @@
       background:#fff;color:#111827;border:1px solid #e5e7eb;
     }
 
-    /* Sections */
-    section{padding:28px 0;}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);}
-    .card{
-      background:var(--surface);
-      border-radius:18px;
-      padding:18px 20px;
-      border:1px solid #e5e7eb;
-    }
-    .card h3{margin:0 0 6px;font-size:18px;}
-    .card p{margin:0;color:var(--muted);}
 
+
+/* Footer */
+/* Sections */
+section{
+  padding:28px 0;
+}
+
+.grid{
+  display:grid;
+  gap:16px;
+  grid-template-columns:repeat(3,1fr);
+}
+
+.card{
+  background:var(--surface);
+  border-radius:18px;
+  padding:18px 20px;
+  border:1px solid #e5e7eb;
+}
+
+.card h3{margin:0 0 6px;font-size:18px;}
+.card p{margin:0;color:var(--muted);}
+
+
+/* Footer */
+footer{
+  border-top:1px solid #e5e7eb;
+  padding:24px 0 40px;
+  text-align:center;
+  font-size:12px;
+  color:var(--muted);
+  background:#ffffffcc;
+  backdrop-filter:blur(6px);
+}
    /* Event card */
 .event-wrap{
   margin:24px 0;
@@ -274,9 +297,6 @@
   color:#6b7280;
   margin:0;
 }
-
-/* Footer */
-footer{
   border-top:1px solid #e5e7eb;
   padding:24px 0 40px;
   text-align:center;
@@ -312,7 +332,18 @@ footer{
     height:52px;
   }
 }
-
+/* ===== スマホ用ヘッダー修正（追記） ===== */
+@media (max-width: 900px){
+  .main-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 16px;
+    font-size:14px;
+  }
+  .main-nav a{
+    white-space:nowrap;
+  }
+}
   </style>
 
   <!-- JSON-LD（構造化データ） -->
@@ -667,6 +698,7 @@ footer{
 </script> 
 </body>
 </html>
+
 
 
 
