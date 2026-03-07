@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>春の室内スポーツ大会｜Brave Athletes Club</title>
+  <meta name="description" content="Brave Athletes Club 春の室内スポーツ大会。子どもから大人まで楽しめるレクリエーション型スポーツイベントです。">
+
+  <style>
+    :root{
+      --bg:#f3f4ff;
+      --surface:#ffffff;
+      --ink:#111827;
+      --muted:#6b7280;
+      --accent:#ff8800;
+      --line:#e5e7eb;
+      --nav-bg:rgba(255,255,255,0.9);
+    }
+
+    *{box-sizing:border-box;}
+
+    html, body{
+      overflow-x:hidden;
+    }
+
+    body{
+      margin:0;
+      font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.85;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--line);
+    }
+
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand img{
+      height:56px;
+      border-radius:16px;
+    }
+
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+      flex-wrap:wrap;
+    }
+
+    nav.main-nav a{
+      color:var(--ink);
+      white-space:nowrap;
+    }
+
+    main{
+      padding:32px 0 60px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#fff7ed,#fefce8,#fdf2ff);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px 24px;
+      margin-bottom:26px;
+    }
+
+    .hero-badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:5px 10px;
+      margin-bottom:14px;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.3;
+    }
+
+    .hero p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .btn-main{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-weight:600;
+      border:none;
+      text-decoration:none;
+    }
+
+    .btn-outline{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#fff;
+      color:#111827;
+      border:1px solid #e5e7eb;
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .lead-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      margin-bottom:24px;
+    }
+
+    .poster-link{
+      display:block;
+      width:100%;
+      max-width:760px;
+      margin:0 auto 18px;
+    }
+
+    .poster-link img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:18px;
+      border:1px solid var(--line);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+
+    .poster-link:hover img{
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(15,23,42,0.10);
+    }
+
+    .info-list{
+      display:grid;
+      gap:14px;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      margin-top:18px;
+    }
+
+    .info-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }
+
+    .info-box strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:14px;
+      color:#374151;
+    }
+
+    .section{
+      margin-top:28px;
+    }
+
+    .section h2{
+      font-size:24px;
+      margin:0 0 12px;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:20px;
+      line-height:1.5;
+    }
+
+    .card p{
+      margin:0 0 10px;
+      color:#374151;
+    }
+
+    .card ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+
+    .card li{
+      margin-bottom:6px;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .gallery{
+      display:grid;
+      gap:16px;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      margin-top:16px;
+    }
+
+    .gallery a{
+      display:block;
+      text-decoration:none;
+    }
+
+    .gallery img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:18px;
+      border:1px solid var(--line);
+      display:block;
+      transition:transform .15s ease, box-shadow .15s ease;
+      background:#fff;
+    }
+
+    .gallery a:hover img{
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(15,23,42,0.10);
+    }
+
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      font-weight:600;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 40px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffcc;
+      backdrop-filter:blur(6px);
+      margin-top:40px;
+    }
+
+    @media (max-width:900px){
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        gap:10px;
+        padding:10px 0 12px;
+      }
+
+      nav.main-nav{
+        width:100%;
+        gap:8px 14px;
+      }
+
+      .info-list{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .grid{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .gallery{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media (max-width:780px){
+      main{
+        padding:24px 0 46px;
+      }
+
+      .hero{
+        padding:22px 18px;
+        border-radius:22px;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .poster-link{
+        max-width:340px;
+      }
+
+      .info-list{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .gallery{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .gallery img{
+        height:auto;
+        max-height:280px;
+      }
+
+      .card h3{
+        font-size:18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header-inner">
+    <div class="brand">
+      <a href="/index.html">
+        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club">
+      </a>
+      <small>Training &amp; Performance</small>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/classes.html">教室</a>
+      <a href="/personal.html">パーソナル</a>
+      <a href="/about.html">クラブについて</a>
+      <a href="/contact.html">お問い合わせ</a>
+      <a href="/en.html">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <span class="hero-badge">みんなで楽しめる春イベント</span>
+    <h1>春の室内スポーツ大会</h1>
+    <p>
+      小さな子どもから大人まで、みんなで楽しく身体を動かせるレクリエーション型のスポーツ大会です。<br>
+      ご家族での参加も、お一人での参加も歓迎しています。
+    </p>
+    <p>
+      楽しさの中に、走る・よける・バランスをとる・協力するなど、さまざまな動きの要素を取り入れながら、自然に身体を動かせる内容です。
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">参加申し込み・お問い合わせ</a>
+      <a class="btn-outline" href="/assets/events/2026-3-indoor-sports.png" target="_blank" rel="noopener">チラシを大きく見る</a>
+    </div>
+  </section>
+
+  <section class="lead-card">
+    <a class="poster-link" href="/assets/events/2026-3-indoor-sports.png" target="_blank" rel="noopener">
+      <img src="/assets/events/2026-3-indoor-sports.png" alt="春の室内スポーツ大会 チラシ">
+    </a>
+
+    <p class="note" style="text-align:center; margin:0;">
+      ※ 画像をクリックするとチラシを大きく表示できます
+    </p>
+
+    <div class="info-list">
+      <div class="info-box">
+        <strong>開催日</strong>
+        2026年3月29日（日）
+      </div>
+      <div class="info-box">
+        <strong>時間</strong>
+        13:00〜14:30
+      </div>
+      <div class="info-box">
+        <strong>会場</strong>
+        高槻市立総合体育館 小体育室2
+      </div>
+      <div class="info-box">
+        <strong>参加費</strong>
+        1,500円 / 人<br>
+        <span class="note">家族割あり</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>こんなイベントです</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>みんなで楽しめる運動の時間</h3>
+        <p>
+          勝ち負けだけではなく、身体を動かす楽しさや、みんなで参加する面白さを大切にしたイベントです。
+        </p>
+        <p>
+          小さなお子さまから大人まで、それぞれのペースで参加しやすい内容を目指しています。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ご家族でも、お一人でも参加OK</h3>
+        <p>
+          ご家族で一緒に楽しみたい方にも、お友だちやお一人で参加したい方にもおすすめです。
+        </p>
+        <p>
+          世代をこえて同じ空間で笑顔になれる、春らしいイベントとして開催します。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>予定している主な種目</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>レクリエーション種目</h3>
+        <ul>
+          <li>鬼ごっこ系</li>
+          <li>しっぽ取り</li>
+          <li>ばらあて</li>
+          <li>タグラグビー</li>
+          <li>レクリエーションホッケー</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>チャレンジ種目</h3>
+        <ul>
+          <li>障害物競争</li>
+          <li>パン食い競争</li>
+          <li>リレー</li>
+          <li>短距離走</li>
+          <li>ぐるぐるバッド競争</li>
+          <li>大縄</li>
+          <li>風船バレー など</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:12px;">
+      ※ 当日の参加者構成や進行に合わせて、内容を調整する場合があります。
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>対象</h2>
+    <div class="card">
+      <p>
+        <strong>4歳以上の子ども・大人</strong><br>
+        小さなお子さまから大人まで、どなたでもご参加いただけます。  
+        ご家族での参加、お友だち同士での参加、お一人での参加も歓迎です。
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>イベントの雰囲気</h2>
+    <p class="note">
+      以前の開催時の様子です。画像をクリックすると大きく表示できます。
+    </p>
+
+    <div class="gallery">
+      <a href="/assets/events/indoor-sports-main.jpg" target="_blank" rel="noopener">
+        <img src="/assets/events/indoor-sports-main.jpg" alt="室内スポーツ大会の様子 1">
+      </a>
+      <a href="/assets/events/indoor-sports-1.jpg" target="_blank" rel="noopener">
+        <img src="/assets/events/indoor-sports-1.jpg" alt="室内スポーツ大会の様子 2">
+      </a>
+      <a href="/assets/events/indoor-sports-2.jpg" target="_blank" rel="noopener">
+        <img src="/assets/events/indoor-sports-2.jpg" alt="室内スポーツ大会の様子 3">
+      </a>
+      <a href="/assets/events/indoor-sports-3.jpg" target="_blank" rel="noopener">
+        <img src="/assets/events/indoor-sports-3.jpg" alt="室内スポーツ大会の様子 4">
+      </a>
+      <a href="/assets/events/indoor-sports-4.jpg" target="_blank" rel="noopener">
+        <img src="/assets/events/indoor-sports-4.jpg" alt="室内スポーツ大会の様子 5">
+      </a>
+      <a href="/assets/events/IMG_6666.JPG" target="_blank" rel="noopener">
+        <img src="/assets/events/IMG_6666.JPG" alt="室内スポーツ大会の様子 6">
+      </a>
+    </div>
+  </section>
+
+  <a class="back-link" href="/events/spring-2026.html">← 春休みイベント一覧に戻る</a>
+</main>
+
+<footer>
+  <div class="container">
+    © 2026 BRAVE ATHLETES CLUB
+  </div>
+</footer>
+
+</body>
+</html>
