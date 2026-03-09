@@ -87,7 +87,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
 
- <style>
+<style>
   :root {
     --bg:#f3f4ff;
     --surface:#ffffff;
@@ -263,6 +263,11 @@
     color:#fff;
     font-weight:600;
     border:none;
+    text-decoration:none;
+  }
+
+  .btn-main:hover{
+    text-decoration:none;
   }
 
   .btn-main.secondary{
@@ -312,24 +317,25 @@
     border:1px solid #e5e7eb;
     background:#ffffff;
     text-decoration:none;
-    transition:box-shadow 0.15s ease, transform 0.15s ease;
+    color:inherit;
+    transition:all 0.2s ease;
   }
 
   .news-highlight-inner:hover{
     text-decoration:none;
-    box-shadow:0 8px 20px rgba(15,23,42,0.08);
-    transform:translateY(-1px);
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.08);
   }
 
   .news-thumb{
-    flex:0 0 160px;
-    width:160px;
+    flex:0 0 140px;
+    width:140px;
     max-width:100%;
   }
 
   .news-thumb img{
     width:100%;
-    height:96px;
+    height:84px;
     object-fit:cover;
     border-radius:12px;
     border:1px solid #e5e7eb;
@@ -359,6 +365,7 @@
     font-size:13px;
     color:#6b7280;
     margin:0;
+    line-height:1.7;
   }
 
   /* ===== Event card ===== */
@@ -407,6 +414,7 @@
 
   .event-meta{
     color:#6b7280;
+    line-height:1.7;
   }
 
   .event-actions{
@@ -569,7 +577,7 @@
     .news-thumb img{
       width:100%;
       max-width:420px;
-      height:180px;
+      height:160px;
     }
 
     .spring-feature-card{
@@ -592,9 +600,8 @@
     .spring-feature-body h3{
       font-size:22px;
     }
-   }
+  }
 </style>
-
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
