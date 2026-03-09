@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Class Programs | Brave Athletes Club</title>
-  <meta name="description" content="Class programs at Brave Athletes Club for ages 1–18, focusing on motor development, posture and movement, and fun sport-based training.">
+  <title>Conditioning Class to Improve Movement Quality | Brave Athletes Club</title>
+  <meta name="description" content="A 2-day conditioning class by Brave Athletes Club to improve mobility, flexibility, balance, agility, and overall movement quality for junior athletes and active adults." />
 
   <style>
     :root{
       --bg:#f8fafc;
       --ink:#111827;
       --accent:#ff8800;
-      --ring:#111827;
       --muted:#6b7280;
       --nav-bg:rgba(255,255,255,0.9);
+      --line:#e5e7eb;
+      --surface:#ffffff;
     }
 
     *{box-sizing:border-box;}
@@ -21,8 +22,7 @@
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:
-        radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
+      background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
     }
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
@@ -33,14 +33,13 @@
       padding:0 20px;
     }
 
-    /* ===== shared header ===== */
     header.site-header{
       position:sticky;
       top:0;
       z-index:50;
       backdrop-filter:blur(10px);
       background:var(--nav-bg);
-      border-bottom:1px solid #e5e7eb;
+      border-bottom:1px solid var(--line);
     }
     .site-header-inner{
       display:flex;
@@ -72,6 +71,7 @@
       align-items:center;
       gap:20px;
       font-size:15px;
+      flex-wrap:wrap;
     }
     nav.main-nav a{
       position:relative;
@@ -101,109 +101,156 @@
       color:var(--muted);
       margin-left:8px;
     }
-    nav.main-nav span.lang a{color:var(--accent);}
 
     main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
-    p{line-height:1.8;margin:0 0 12px;}
+    h1{font-size:clamp(30px,4vw,44px);margin:0 0 10px;}
+    h2{font-size:24px;margin:0 0 12px;}
+    h3{font-size:20px;margin:0 0 10px;}
+    p{line-height:1.85;margin:0 0 12px;}
 
-    /* ===== HERO ===== */
-    .hero-classes{
-      padding:40px 0 40px;
+    .hero{
+      background:linear-gradient(135deg,#eef6ff,#fdf2ff,#fff7ed);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px 24px;
+      margin-bottom:28px;
     }
-    .hero-inner{
-      display:grid;
-      grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
-      gap:32px;
-      align-items:center;
+
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:5px 10px;
+      margin-bottom:14px;
     }
-    .hero-lead{
-      color:var(--muted);
-      font-size:15px;
-    }
-    .hero-tabs{
+
+    .hero-actions{
       display:flex;
-      flex-wrap:wrap;
       gap:12px;
+      flex-wrap:wrap;
       margin-top:18px;
     }
-    .hero-tab{
+
+    .btn-main{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
       padding:10px 18px;
       border-radius:999px;
-      border:1px solid #e5e7eb;
-      background:#fff;
-      font-size:14px;
-    }
-    .hero-tab.primary{
       background:#111827;
       color:#fff;
-      border-color:#111827;
+      font-weight:600;
+      border:none;
+      text-decoration:none;
     }
-
-    .hero-visual{
-      display:flex;
-      justify-content:center;
-    }
-    .hero-visual img{
-      max-width:260px;
-      width:100%;
-      display:block;
-      border-radius:24px;
-      border:none; /* no black frame */
-      box-shadow:0 18px 40px rgba(15,23,42,0.18);
+    .btn-main.secondary{
       background:#fff;
+      color:#111827;
+      border:1px solid var(--line);
     }
 
-    /* ===== Sections ===== */
-    .section{margin-top:40px;}
-    .lead-small{font-size:14px;color:var(--muted);}
+    .poster{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      margin-bottom:26px;
+    }
+
+    .poster a{
+      display:block;
+      max-width:720px;
+      margin:0 auto;
+    }
+
+    .poster img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:18px;
+      border:1px solid var(--line);
+    }
+
+    .poster-note{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      margin-top:12px;
+    }
+
+    .info-grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      margin-top:18px;
+    }
+
+    .info-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }
+    .info-box strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:14px;
+      color:#374151;
+    }
+
+    .section{
+      margin-top:28px;
+    }
 
     .grid{
       display:grid;
-      gap:20px;
+      gap:18px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
     }
-    .grid-2{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 
     .card{
-      background:#ffffff;
-      border-radius:18px;
-      padding:20px 22px;
-      border:1px solid #e5e7eb;
-      box-shadow:0 10px 30px rgba(15,23,42,0.08);
-    }
-    .thumb img{
-      width:100%;
-      border-radius:18px;
-      display:block;
-      object-fit:cover;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
     }
 
-    ul{margin:0 0 8px 1.2em;padding:0;}
-    li{margin-bottom:6px;}
+    ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    li{
+      margin-bottom:6px;
+      line-height:1.7;
+    }
 
-    .divider{
-      margin:40px 0;
-      border-top:1px dashed #e5e7eb;
+    .note{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      font-weight:600;
     }
 
     footer{
-      border-top:1px solid #e5e7eb;
+      border-top:1px solid var(--line);
       padding:24px 0 32px;
       text-align:center;
       font-size:12px;
       color:var(--muted);
       background:#ffffffdd;
+      margin-top:40px;
     }
 
     @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr;}
-      .hero-visual{order:-1;margin-bottom:8px;}
-      .grid-2{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:1fr;}
-    }
-    @media(max-width:768px){
+      .grid{grid-template-columns:1fr;}
+      .info-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
       .site-header-inner{
         flex-direction:column;
         align-items:flex-start;
@@ -211,7 +258,10 @@
         padding:10px 0 12px;
         gap:10px;
       }
-      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+    }
+
+    @media(max-width:768px){
+      .info-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -220,321 +270,141 @@
 <header class="site-header">
   <div class="container site-header-inner">
     <div class="brand">
-      <a href="en.html">
-        <img src="assets/seasonal/logo-allseaso.png"
-             alt="Brave Athletes Club"
-             id="global-seasonal-logo" />
+      <a href="/en.html">
+        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" />
       </a>
       <small>Training &amp; Performance</small>
     </div>
 
     <nav class="main-nav">
-      <a href="classes-en.html" class="active">Classes</a>
-      <a href="personal-en.html">Personal</a>
-      <a href="about-en.html">About</a>
-      <a href="contact-en.html" class="cta">Contact</a>
-      <span class="lang"><a href="classes.html" hreflang="ja">JP</a></span>
+      <a href="/classes-en.html">Classes</a>
+      <a href="/personal-en.html">Personal</a>
+      <a href="/about-en.html">About</a>
+      <a href="/contact-en.html" class="cta">Contact</a>
+      <span class="lang"><a href="/events/20260330-conditioning.html" hreflang="ja">JP</a></span>
     </nav>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- ===== HERO ===== -->
-  <section class="hero-classes">
-    <div class="hero-inner">
-      <div>
-        <h1>Class Programs </h1>
-        <p class="hero-lead">
-          From preschoolers to junior athletes, our class programs build solid
-          movement foundations while keeping things fun and safe. We focus on
-          motor development, posture, and sport-based play.
-        </p>
-        <div class="hero-tabs">
-          <a class="hero-tab primary" href="#kids">Kids Sports</a>
-          <a class="hero-tab" href="#bb">Conditioning BB</a>
-          <a class="hero-tab" href="#cond">Conditioning Class</a>
-        </div>
-      </div>
+  <section class="hero">
+    <span class="badge">BRAVE Featured Program</span>
+    <h1>Conditioning Class to Improve Movement Quality</h1>
+    <p>
+      A 2-day conditioning program designed for junior athletes and active adults
+      who want to build a stronger, more efficient body.
+    </p>
+    <p>
+      Through movement assessment and practical conditioning work, participants
+      learn how to improve mobility, flexibility, balance, stability, and overall movement quality.
+    </p>
 
-      <div class="hero-visual">
-        <img
-          id="classes-hero-img"
-          src="assets/classes-hero/classes-hero-track.png"
-          alt="Class hero sport logo"
-        />
+    <div class="hero-actions">
+      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Register / Contact</a>
+      <a class="btn-main secondary" href="/assets/events/2026-3-30-conditioning.png" target="_blank" rel="noopener">View Flyer</a>
+    </div>
+  </section>
+
+  <section class="poster">
+    <a href="/assets/events/2026-3-30-conditioning.png" target="_blank" rel="noopener">
+      <img src="/assets/events/2026-3-30-conditioning.png" alt="Conditioning Class flyer">
+    </a>
+    <p class="poster-note">Click the flyer image to view it in a larger size.</p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <strong>Dates</strong>
+        Mar 30 (Mon) &amp; Mar 31 (Tue), 2026
+      </div>
+      <div class="info-box">
+        <strong>Time</strong>
+        13:00–14:30
+      </div>
+      <div class="info-box">
+        <strong>Venue</strong>
+        Takatsuki City General Gymnasium<br>Sub Gym 2
+      </div>
+      <div class="info-box">
+        <strong>Fee</strong>
+        4,500 JPY<br>
+        <span class="note">500 JPY discount for Brave members and partner athletes</span>
       </div>
     </div>
   </section>
 
-  <!-- ===== FEATURES ===== -->
-  <section class="section" id="features">
-    <h2>Program Features</h2>
-    <div class="grid grid-3">
+  <section class="section">
+    <h2>Who is this class for?</h2>
+    <div class="grid">
       <div class="card">
-        <h3>Motor Development</h3>
-        <p class="lead-small">
-          Running, jumping, throwing, balancing—fundamental movement skills that
-          support all sports and daily activities.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Posture &amp; Movement Quality</h3>
-        <p class="lead-small">
-          Improving alignment and movement patterns to reduce stress on the
-          body and prevent injury.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Fun &amp; Sport-Based Approach</h3>
-        <p class="lead-small">
-          Agility, coordination, and game-style drills help children naturally
-          build confidence and skills.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ===== KIDS SPORTS ===== -->
-  <section class="section" id="kids">
-    <h2>🟩 Kids Sports (Ages 1–9)</h2>
-    <div class="grid grid-2">
-      <div class="thumb">
-        <img src="assets/classes-kids.jpg" alt="Kids sports class image">
-      </div>
-      <div class="card">
-        <h3>Building Fun and Basic Motor Skills</h3>
-        <ul>
-          <li>Play-based movement experiences</li>
-          <li>Running / jumping / throwing basics</li>
-          <li>Balance &amp; coordination</li>
-          <li>Foundation of posture</li>
-        </ul>
+        <h3>Junior Athletes</h3>
         <p>
-          <b>Recommended for:</b> children new to exercise, energetic movers, or
-          those who need a little confidence.
+          Recommended for athletes aged 7–18 who want to improve movement quality,
+          body control, and athletic foundations.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Active Adults</h3>
+        <p>
+          Also suitable for adults who want to move better, train more efficiently,
+          and build a healthier, stronger body.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONDITIONING BB ===== -->
-  <section class="section" id="bb">
-    <h2>🟦 Conditioning BB (Ages 6–15)</h2>
-    <div class="grid grid-2">
-      <div class="thumb">
-        <img src="assets/classes-bb.jpg" alt="Conditioning BB class image">
-      </div>
+  <section class="section">
+    <h2>What we focus on</h2>
+    <div class="grid">
       <div class="card">
-        <h3>Enhancing Movement &amp; Athletic Foundations</h3>
-        <ul>
-          <li>Posture &amp; movement correction</li>
-          <li>Agility &amp; coordination</li>
-          <li>Core stability &amp; mobility</li>
-          <li>Injury prevention</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONDITIONING CLASS ===== -->
-  <section class="section" id="cond">
-    <h2>🟥 Conditioning Class (Ages 13–18)</h2>
-    <div class="grid grid-2">
-      <div class="thumb">
-        <img src="assets/classes-cond.jpg" alt="Conditioning class image">
-      </div>
-      <div class="card">
-        <h3>For Junior Athletes</h3>
-        <ul>
-          <li>Speed &amp; power development</li>
-          <li>Improved posture, stability, and movement</li>
-          <li>SAQ-based training and technique work</li>
-          <li>Performance-focused conditioning</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!-- ===== Winter Break Sports Class 2026 ===== -->
-  <section class="section" id="winter-break-2026">
-    <h2>❄️ Winter Break Sports Class (2026)</h2>
-    <p class="lead">
-      A one-day program during the winter break to learn basic body control and ball skills
-      in a safe and enjoyable way.<br>
-      It is designed so that both kids who love sports and those who feel a bit nervous about
-      exercise can join with confidence.
-    </p>
-
-    <!-- small flyer image -->
-    <div class="thumb" style="max-width:260px;margin:16px auto 0;">
-      <img src="/assets/winter-sports-class-2026-thumb.png"
-           alt="Winter Break Sports Class flyer">
-    </div>
-
-    <div class="grid grid-2" style="margin-top:20px;">
-      <div class="card">
-        <h3>Conditioning Training Class</h3>
-        <p class="lead">
-          We focus on posture, balance and basic movement patterns to build a body that is
-          less likely to get injured. Stretching, core training and balance exercises are
-          introduced step by step.
+        <h3>Movement Assessment</h3>
+        <p>
+          We check mobility, flexibility, balance, agility, and overall movement patterns
+          from multiple angles to better understand how each body moves.
         </p>
-        <ul>
-          <li><strong>Date:</strong> Tue, Jan 6, 2026</li>
-          <li><strong>Time:</strong> 12:10–13:10</li>
-          <li><strong>Fee:</strong> 1,500 JPY</li>
-        </ul>
       </div>
-
       <div class="card">
-        <h3>Basketball Class</h3>
-        <p class="lead">
-          We practice the basics of dribbling, passing and shooting, starting from getting
-          used to handling the ball. Beginners are very welcome.
+        <h3>Practical Conditioning</h3>
+        <p>
+          Participants work on trunk stability, stretching, body control,
+          and type-based conditioning to improve movement quality and reduce injury risk.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2-Day Structure</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Day 1 | Assessment & Foundations</h3>
         <ul>
-          <li><strong>Date:</strong> Tue, Jan 6, 2026</li>
-          <li><strong>Time:</strong> 13:20–14:50</li>
-          <li><strong>Fee:</strong> 2,000 JPY</li>
+          <li>Mobility and flexibility check</li>
+          <li>Balance and stability check</li>
+          <li>Simple stretching</li>
+          <li>Basic trunk and body control training</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Day 2 | Conditioning Practice</h3>
+        <ul>
+          <li>Shared conditioning instruction</li>
+          <li>Type-based practical programming</li>
+          <li>Movement quality improvement</li>
+          <li>Foundational work for future training</li>
         </ul>
       </div>
     </div>
-
-    <div class="card" style="margin-top:20px;">
-      <h3>Registration &amp; Contact</h3>
-      <ul>
-        <li><strong>Phone:</strong> 080-3844-7719</li>
-        <li><strong>Email:</strong>
-          <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
-        </li>
-      </ul>
-      <p class="lead" style="margin-top:8px;color:#6b7280;">
-        Details about the venue and what to bring will be informed individually after registration.
-      </p>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ===== INCLUSIVE ===== -->
-  <section class="section" id="inclusive">
-    <h2>🤝 Inclusive Support</h2>
-    <p class="lead-small">
-      We adapt pace, environment, and communication style so that children who
-      need more time or support can participate safely and comfortably.
+    <p class="note" style="margin-top:12px;">
+      Both days are required to complete the program.
     </p>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="section" id="contact">
-    <h2>📞 Contact</h2>
-    <p class="lead-small">
-      For questions about class level, schedule, or content, please email us or
-      use the contact form.<br>
-      Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
-    </p>
-  </section>
-
+  <a class="back-link" href="/classes-en.html">← Back to Classes</a>
 </main>
 
 <footer>
-  © 2025 Brave Athletes Club
+  © 2026 Brave Athletes Club
 </footer>
-
-<!-- ===== header seasonal logo ===== -->
-<script>
-  (function () {
-    const img = document.getElementById("global-seasonal-logo");
-    if (!img) return;
-
-    const today = new Date();
-    const m = today.getMonth() + 1;
-    const d = today.getDate();
-
-    let file = "logo-allseaso.png";
-
-    if (m === 12 && d >= 6 && d <= 25) {
-      file = "logo-christmas.png";
-    } else if (
-      (m === 12 && d >= 26) ||
-      m === 1 ||
-      (m === 2 && d <= 2)
-    ) {
-      file = "logo-winter-pink.png";
-    } else if (
-      (m === 2 && d >= 3) ||
-      (m === 3 && d <= 15)
-    ) {
-      file = "logo-spring-yellow.png";
-    } else if (
-      (m === 3 && d >= 16) ||
-      (m === 4 && d <= 15)
-    ) {
-      file = "logo-spring-pink.png";
-    } else if (
-      (m === 4 && d >= 16) ||
-      (m === 5 && d <= 15)
-    ) {
-      file = "logo-black-pink.png";
-    } else if (
-      (m === 5 && d >= 16) ||
-      (m === 6 && d <= 30)
-    ) {
-      file = "logo-fishing.png";
-    } else if (
-      (m === 7 && d >= 1) ||
-      (m === 8 && d <= 15)
-    ) {
-      file = "logo-summer-sea.png";
-    } else if (
-      (m === 8 && d >= 16) ||
-      m === 9
-    ) {
-      file = "logo-allseaso.png";
-    } else if (
-      m === 10 ||
-      (m === 11 && d <= 15)
-    ) {
-      file = "logo-autumn-mapl.png";
-    } else if (
-      (m === 11 && d >= 16) ||
-      (m === 12 && d <= 5)
-    ) {
-      file = "logo-autumn-winter-yello.png";
-    }
-
-    img.src = "assets/seasonal/" + file;
-  })();
-</script>
-
-<!-- ===== hero sport logo (month-based) ===== -->
-<script>
-  (function () {
-    const img = document.getElementById("classes-hero-img");
-    if (!img) return;
-
-    const month = new Date().getMonth() + 1;
-    const heroMap = {
-      1: "classes-hero-snowboard.png",
-      2: "classes-hero-highjump.png",
-      3: "classes-hero-track.png",
-      4: "classes-hero-soccer-cones.jpg",
-      5: "classes-hero-ladder.jpg",
-      6: "classes-hero-shotput.jpg",
-      7: "classes-hero-tennis.png",
-      8: "classes-hero-americanfootball.jpg",
-      9: "classes-hero-basketball.jpg",
-      10:"classes-hero-longjump.jpg",
-      11:"classes-hero-weight.png",
-      12:"classes-hero-trainingroom.png"
-    };
-
-    const filename = heroMap[month] || "classes-hero-track.png";
-    img.src = "assets/classes-hero/" + filename;
-  })();
-</script>
-
 </body>
 </html>
