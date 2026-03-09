@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spring Events 2026 | Brave Athletes Club</title>
+  <meta name="description" content="Spring Events 2026 by Brave Athletes Club. Indoor Sports Festival, Yoga Class, Tai Chi Class, and a 2-day Conditioning Class for children, athletes, and adults.">
+
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --surface:#ffffff;
+      --ink:#111827;
+      --muted:#6b7280;
+      --accent:#ff8800;
+      --line:#e5e7eb;
+      --nav-bg:rgba(255,255,255,0.9);
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
+      line-height:1.85;
+    }
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--line);
+    }
+
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand img{
+      height:52px;
+      display:block;
+      border-radius:16px;
+    }
+
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+      flex-wrap:wrap;
+    }
+
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+
+    nav.main-nav span.lang a{
+      color:var(--accent);
+    }
+
+    main{
+      padding:40px 0 60px;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#fff7ed,#fdf2ff,#eef6ff);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px 24px;
+      margin-bottom:24px;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.3;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:5px 10px;
+      margin-bottom:14px;
+    }
+
+    .event-card{
+      display:flex;
+      gap:18px;
+      align-items:flex-start;
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+      margin-bottom:18px;
+    }
+
+    .event-card.featured{
+      border:1px solid #fdba74;
+      background:#fff7ed;
+    }
+
+    .event-thumb{
+      flex:0 0 220px;
+    }
+
+    .event-thumb a{
+      display:block;
+    }
+
+    .event-thumb img{
+      width:100%;
+      height:auto;
+      border-radius:16px;
+      display:block;
+      border:1px solid var(--line);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+
+    .event-thumb a:hover img{
+      transform:translateY(-1px);
+      box-shadow:0 10px 22px rgba(15,23,42,0.10);
+    }
+
+    .event-body{
+      flex:1;
+      min-width:0;
+    }
+
+    .event-body h2{
+      margin:0 0 8px;
+      font-size:24px;
+      line-height:1.4;
+    }
+
+    .meta{
+      color:var(--muted);
+      margin-bottom:10px;
+      font-size:15px;
+      line-height:1.7;
+    }
+
+    .event-body p{
+      margin:0 0 10px;
+    }
+
+    .event-body ul{
+      margin:8px 0 0 18px;
+      padding:0;
+    }
+
+    .event-body li{
+      margin-bottom:4px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:4px 10px;
+      margin-bottom:10px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+
+    .btn-main{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-weight:600;
+      border:none;
+      text-decoration:none;
+    }
+
+    .btn-main.secondary{
+      background:#fff;
+      color:#111827;
+      border:1px solid var(--line);
+    }
+
+    .note{
+      font-size:14px;
+      color:var(--muted);
+      margin-top:8px;
+    }
+
+    .contact-block{
+      margin-top:32px;
+      background:#ffffff;
+      border:1px solid #e5e7eb;
+      border-radius:22px;
+      padding:22px;
+      text-align:center;
+    }
+
+    .contact-block h2{
+      margin:0 0 10px;
+      font-size:24px;
+    }
+
+    .contact-block p{
+      margin:0 0 16px;
+      color:#6b7280;
+    }
+
+    .contact-actions{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      font-weight:600;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffdd;
+      margin-top:40px;
+    }
+
+    @media (max-width:900px){
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        gap:10px;
+        padding:10px 0 12px;
+      }
+
+      nav.main-nav{
+        width:100%;
+        gap:8px 14px;
+      }
+
+      .event-card{
+        flex-direction:column;
+      }
+
+      .event-thumb{
+        width:100%;
+        flex:0 0 auto;
+      }
+
+      .event-thumb img{
+        width:100%;
+        max-width:420px;
+      }
+    }
+
+    @media (max-width:780px){
+      main{
+        padding:24px 0 46px;
+      }
+
+      .hero{
+        padding:22px 18px;
+        border-radius:22px;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      .event-card{
+        padding:16px;
+      }
+
+      .event-body h2{
+        font-size:22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container site-header-inner">
+    <div class="brand">
+      <a href="/en.html">
+        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" />
+      </a>
+      <small>Training &amp; Performance</small>
+    </div>
+    <nav class="main-nav">
+      <a href="/en.html">Home</a>
+      <a href="/classes-en.html">Classes</a>
+      <a href="/personal-en.html">Personal</a>
+      <a href="/about-en.html">About</a>
+      <a href="/contact-en.html" class="cta">Contact</a>
+      <span class="lang"><a href="/events/spring-2026.html" hreflang="ja">JP</a></span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <span class="hero-badge">Spring Special Programs</span>
+    <h1>Spring Events 2026</h1>
+    <p>
+      During the spring break season, Brave Athletes Club offers special programs for children, athletes, and adults.<br>
+      From family-friendly activities to practical conditioning and mindful movement classes, our spring events combine fun, body awareness, and movement quality.
+    </p>
+  </section>
+
+  <div class="event-card featured">
+    <div class="event-thumb">
+      <a href="/assets/events/2026-3-30-conditioning.png" target="_blank" rel="noopener">
+        <img src="/assets/events/2026-3-30-conditioning.png" alt="Conditioning Class to Improve Movement Quality">
+      </a>
+    </div>
+    <div class="event-body">
+      <span class="badge">BRAVE Featured Program</span>
+      <h2>Conditioning Class to Improve Movement Quality</h2>
+      <div class="meta">Mar 30 (Mon) &amp; Mar 31 (Tue), 2026 | 13:00–14:30 | Takatsuki City General Gymnasium, Sub Gym 2</div>
+      <p>
+        A 2-day conditioning class designed to improve mobility, flexibility, balance, agility, and overall movement quality.
+      </p>
+      <p>
+        This program is especially recommended for junior athletes, but also suitable for active adults who want to move better and build a stronger, more efficient body.
+      </p>
+      <ul>
+        <li>Ages 7 and above</li>
+        <li>Fee: 4,500 JPY</li>
+        <li>500 JPY discount for Brave members and partner athletes</li>
+        <li>Both days are required</li>
+      </ul>
+      <div class="actions">
+        <a class="btn-main" href="/events/20260330-conditioning-en.html">View Details</a>
+        <a class="btn-main secondary" href="mailto:braveathletesclub@gmail.com">Register / Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-card">
+    <div class="event-thumb">
+      <a href="/assets/events/2026-3-indoor-sports.png" target="_blank" rel="noopener">
+        <img src="/assets/events/2026-3-indoor-sports.png" alt="Indoor Sports Festival">
+      </a>
+    </div>
+    <div class="event-body">
+      <span class="badge">Mar 29</span>
+      <h2>Indoor Sports Festival</h2>
+      <div class="meta">Mar 29 (Sun), 2026 | 13:00–14:30 | Takatsuki City General Gymnasium, Sub Gym 2</div>
+      <p>
+        A fun recreational sports event for children and adults. Families, friends, and individual participants are all welcome.
+      </p>
+      <p>
+        Events may include tag games, obstacle races, relay activities, rope jumping, balloon volleyball, and other playful movement-based challenges.
+      </p>
+      <ul>
+        <li>Ages 4 and above</li>
+        <li>Fee: 1,500 JPY per person</li>
+        <li>Family participation welcome</li>
+      </ul>
+      <div class="actions">
+        <a class="btn-main" href="/events/20260329-sports.html">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-card">
+    <div class="event-thumb">
+      <a href="/assets/events/2026-spring-yoga-taichi.png" target="_blank" rel="noopener">
+        <img src="/assets/events/2026-spring-yoga-taichi.png" alt="Yoga Class and Tai Chi Class">
+      </a>
+    </div>
+    <div class="event-body">
+      <span class="badge">Mar 29 &amp; Apr 1</span>
+      <h2>Yoga Class &amp; Tai Chi Class</h2>
+      <div class="meta">Yoga: Mar 29 (Sun), 15:00–16:00 | Tai Chi: Apr 1 (Wed), 15:00–16:00 | Takatsuki City General Gymnasium, Sub Gym 2</div>
+      <p>
+        Gentle classes designed to improve posture, breathing, relaxation, and body awareness.
+      </p>
+      <p>
+        Suitable for children and adults, with a calm and welcoming atmosphere for beginners as well as regular participants.
+      </p>
+      <ul>
+        <li>Adults: 1,000 JPY</li>
+        <li>Children: 500 JPY</li>
+      </ul>
+      <div class="actions">
+        <a class="btn-main" href="/events/20260329-yoga-0401-taichi.html">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-block">
+    <h2>Registration &amp; Questions</h2>
+    <p>
+      If you would like to join one of our spring programs, or if you are unsure which event would be the best fit, please feel free to contact us.
+    </p>
+    <div class="contact-actions">
+      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Email Us</a>
+      <a class="btn-main secondary" href="/contact-en.html">Contact Page</a>
+    </div>
+  </section>
+
+  <a class="back-link" href="/en.html">← Back to BRAVE Home</a>
+
+</main>
+
+<footer>
+  © 2026 Brave Athletes Club
+</footer>
+
+</body>
+</html>
