@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conditioning Class to Improve Movement Quality | Brave Athletes Club</title>
+  <meta name="description" content="A 2-day conditioning class by Brave Athletes Club to improve mobility, flexibility, balance, agility, and overall movement quality for junior athletes and active adults." />
+
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --ink:#111827;
+      --accent:#ff8800;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+      --line:#e5e7eb;
+      --surface:#ffffff;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
+    }
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--line);
+    }
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+    .brand img{
+      height:52px;
+      display:block;
+      border-radius:16px;
+    }
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+      flex-wrap:wrap;
+    }
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+    nav.main-nav a.active{font-weight:600;}
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+    nav.main-nav a.cta{
+      padding:8px 18px;
+      border-radius:999px;
+      border:1px solid var(--ink);
+      font-weight:600;
+    }
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+
+    main{padding:40px 0 60px;}
+    h1{font-size:clamp(30px,4vw,44px);margin:0 0 10px;}
+    h2{font-size:24px;margin:0 0 12px;}
+    h3{font-size:20px;margin:0 0 10px;}
+    p{line-height:1.85;margin:0 0 12px;}
+
+    .hero{
+      background:linear-gradient(135deg,#eef6ff,#fdf2ff,#fff7ed);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:30px 24px;
+      margin-bottom:28px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:5px 10px;
+      margin-bottom:14px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn-main{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-weight:600;
+      border:none;
+      text-decoration:none;
+    }
+    .btn-main.secondary{
+      background:#fff;
+      color:#111827;
+      border:1px solid var(--line);
+    }
+
+    .poster{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:18px;
+      margin-bottom:26px;
+    }
+
+    .poster a{
+      display:block;
+      max-width:720px;
+      margin:0 auto;
+    }
+
+    .poster img{
+      width:100%;
+      height:auto;
+      display:block;
+      border-radius:18px;
+      border:1px solid var(--line);
+    }
+
+    .poster-note{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      margin-top:12px;
+    }
+
+    .info-grid{
+      display:grid;
+      gap:14px;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      margin-top:18px;
+    }
+
+    .info-box{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px;
+    }
+    .info-box strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:14px;
+      color:#374151;
+    }
+
+    .section{
+      margin-top:28px;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px;
+    }
+
+    ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+    li{
+      margin-bottom:6px;
+      line-height:1.7;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .back-link{
+      display:inline-block;
+      margin-top:24px;
+      font-weight:600;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 32px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffdd;
+      margin-top:40px;
+    }
+
+    @media(max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .info-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        padding:10px 0 12px;
+        gap:10px;
+      }
+    }
+
+    @media(max-width:768px){
+      .info-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container site-header-inner">
+    <div class="brand">
+      <a href="/en.html">
+        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" />
+      </a>
+      <small>Training &amp; Performance</small>
+    </div>
+
+    <nav class="main-nav">
+      <a href="/classes-en.html">Classes</a>
+      <a href="/personal-en.html">Personal</a>
+      <a href="/about-en.html">About</a>
+      <a href="/contact-en.html" class="cta">Contact</a>
+      <span class="lang"><a href="/events/20260330-conditioning.html" hreflang="ja">JP</a></span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <span class="badge">BRAVE Featured Program</span>
+    <h1>Conditioning Class to Improve Movement Quality</h1>
+    <p>
+      A 2-day conditioning program designed for junior athletes and active adults
+      who want to build a stronger, more efficient body.
+    </p>
+    <p>
+      Through movement assessment and practical conditioning work, participants
+      learn how to improve mobility, flexibility, balance, stability, and overall movement quality.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Register / Contact</a>
+      <a class="btn-main secondary" href="/assets/events/2026-3-30-conditioning.png" target="_blank" rel="noopener">View Flyer</a>
+    </div>
+  </section>
+
+  <section class="poster">
+    <a href="/assets/events/2026-3-30-conditioning.png" target="_blank" rel="noopener">
+      <img src="/assets/events/2026-3-30-conditioning.png" alt="Conditioning Class flyer">
+    </a>
+    <p class="poster-note">Click the flyer image to view it in a larger size.</p>
+
+    <div class="info-grid">
+      <div class="info-box">
+        <strong>Dates</strong>
+        Mar 30 (Mon) &amp; Mar 31 (Tue), 2026
+      </div>
+      <div class="info-box">
+        <strong>Time</strong>
+        13:00–14:30
+      </div>
+      <div class="info-box">
+        <strong>Venue</strong>
+        Takatsuki City General Gymnasium<br>Sub Gym 2
+      </div>
+      <div class="info-box">
+        <strong>Fee</strong>
+        4,500 JPY<br>
+        <span class="note">500 JPY discount for Brave members and partner athletes</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Who is this class for?</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Junior Athletes</h3>
+        <p>
+          Recommended for athletes aged 7–18 who want to improve movement quality,
+          body control, and athletic foundations.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Active Adults</h3>
+        <p>
+          Also suitable for adults who want to move better, train more efficiently,
+          and build a healthier, stronger body.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What we focus on</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Movement Assessment</h3>
+        <p>
+          We check mobility, flexibility, balance, agility, and overall movement patterns
+          from multiple angles to better understand how each body moves.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Practical Conditioning</h3>
+        <p>
+          Participants work on trunk stability, stretching, body control,
+          and type-based conditioning to improve movement quality and reduce injury risk.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2-Day Structure</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Day 1 | Assessment & Foundations</h3>
+        <ul>
+          <li>Mobility and flexibility check</li>
+          <li>Balance and stability check</li>
+          <li>Simple stretching</li>
+          <li>Basic trunk and body control training</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Day 2 | Conditioning Practice</h3>
+        <ul>
+          <li>Shared conditioning instruction</li>
+          <li>Type-based practical programming</li>
+          <li>Movement quality improvement</li>
+          <li>Foundational work for future training</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note" style="margin-top:12px;">
+      Both days are required to complete the program.
+    </p>
+  </section>
+
+  <a class="back-link" href="/classes-en.html">← Back to Classes</a>
+</main>
+
+<footer>
+  © 2026 Brave Athletes Club
+</footer>
+</body>
+</html>
