@@ -1,1 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>Mental Training Course | BRAVE ATHLETES CLUB</title>
+  <meta name="description" content="Mental Training Course by BRAVE ATHLETES CLUB. Learn practical mental skills for competition, concentration, routines, and everyday life." />
+
+  <link rel="canonical" href="https://braveathletesclub.github.io/mental-training-en.html" />
+
+  <!-- SEO / SNS -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="Mental Training Course | BRAVE ATHLETES CLUB" />
+  <meta property="og:description" content="Learn practical mental skills to perform well in competition and daily life." />
+  <meta property="og:url" content="https://braveathletesclub.github.io/mental-training-en.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mental Training Course | BRAVE ATHLETES CLUB" />
+  <meta name="twitter:description" content="Learn practical mental skills to perform well in competition and daily life." />
+  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+
+  <!-- language alternates -->
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/mental-training.html" />
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/mental-training-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/mental-training.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"Mental Training Course",
+    "description":"A course to learn practical mental skills for sports and everyday life.",
+    "provider":{
+      "@type":"Organization",
+      "name":"BRAVE ATHLETES CLUB",
+      "url":"https://braveathletesclub.github.io/"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:#f3f4ff;
+      --surface:#ffffff;
+      --ink:#111827;
+      --accent:#ff8800;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+      --line:#e5e7eb;
+      --green:#0a6b5a;
+      --blue-soft:#e8f4ff;
+      --green-soft:#edf9f4;
+    }
+
+    * { box-sizing:border-box; }
+
+    html, body {
+      overflow-x:hidden;
+    }
+
+    body {
+      margin:0;
+      font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+
+    a {
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover {
+      text-decoration:underline;
+    }
+
+    .container {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header.site-header {
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--line);
+    }
+
+    .site-header-inner {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand img {
+      height:60px;
+      border-radius:18px;
+      display:block;
+    }
+
+    .brand small {
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav {
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+
+    nav.main-nav a {
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+
+    nav.main-nav a.active {
+      font-weight:600;
+    }
+
+    nav.main-nav a.active::after {
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+
+    nav.main-nav span.lang {
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+
+    nav.main-nav span.lang a {
+      color:var(--accent);
+    }
+
+    main {
+      padding:32px 0 64px;
+    }
+
+    h1 {
+      font-size:clamp(30px,4vw,44px);
+      margin:0 0 12px;
+      line-height:1.25;
+      color:var(--green);
+    }
+
+    h2 {
+      font-size:24px;
+      margin:0 0 14px;
+      line-height:1.4;
+      color:var(--green);
+    }
+
+    h3 {
+      margin:0 0 8px;
+      font-size:18px;
+      color:var(--green);
+    }
+
+    p {
+      line-height:1.85;
+      margin:0 0 12px;
+    }
+
+    ul {
+      margin:0;
+      padding-left:1.2em;
+      line-height:1.9;
+    }
+
+    .hero {
+      margin-top:8px;
+    }
+
+    .hero-inner {
+      background:linear-gradient(135deg,#e0f2fe,#fdf2ff);
+      border-radius:32px;
+      padding:32px 28px;
+      display:grid;
+      grid-template-columns:minmax(0,1.15fr) minmax(0,0.85fr);
+      gap:24px;
+      align-items:center;
+      box-shadow:0 12px 30px rgba(15,23,42,0.06);
+    }
+
+    .hero-copy p {
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-logo {
+      text-align:center;
+    }
+
+    .hero-logo img {
+      width:100%;
+      max-width:360px;
+      border-radius:24px;
+      box-shadow:0 18px 35px rgba(15,23,42,0.18);
+      background:#fff;
+    }
+
+    .hero-buttons {
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn-main {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-weight:600;
+      border:none;
+      text-decoration:none;
+    }
+
+    .btn-main:hover {
+      text-decoration:none;
+      opacity:.92;
+    }
+
+    .btn-main.secondary {
+      background:#fff;
+      color:#111827;
+      border:1px solid var(--line);
+    }
+
+    section {
+      padding:28px 0;
+    }
+
+    .card {
+      background:var(--surface);
+      border-radius:20px;
+      padding:22px 22px;
+      border:1px solid var(--line);
+      box-shadow:0 8px 24px rgba(15,23,42,0.04);
+    }
+
+    .grid-2 {
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+    }
+
+    .lead {
+      color:var(--muted);
+      max-width:880px;
+    }
+
+    .label {
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:var(--green);
+      background:var(--green-soft);
+      border-radius:999px;
+      padding:6px 10px;
+      margin-bottom:12px;
+    }
+
+    .flyer-wrap {
+      text-align:center;
+    }
+
+    .flyer-thumb {
+      display:inline-block;
+      width:100%;
+      max-width:560px;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 12px 30px rgba(15,23,42,0.12);
+      background:#fff;
+      cursor:zoom-in;
+    }
+
+    .flyer-thumb img {
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .flyer-note {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .info-list {
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:12px 18px;
+      margin:0;
+    }
+
+    .info-list dt {
+      font-weight:700;
+      color:var(--green);
+    }
+
+    .info-list dd {
+      margin:0;
+    }
+
+    .cta-box {
+      background:linear-gradient(135deg,#edf9f4,#eef6ff);
+      border-radius:24px;
+      padding:26px 24px;
+      border:1px solid var(--line);
+      text-align:center;
+    }
+
+    .lightbox {
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      background:rgba(0,0,0,0.84);
+      padding:24px;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .lightbox:target {
+      display:flex;
+    }
+
+    .lightbox img {
+      max-width:min(100%, 980px);
+      max-height:90vh;
+      border-radius:16px;
+      background:#fff;
+      box-shadow:0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    .lightbox-close {
+      position:fixed;
+      top:18px;
+      right:24px;
+      font-size:34px;
+      line-height:1;
+      color:#fff;
+      text-decoration:none;
+      font-weight:400;
+    }
+
+    .lightbox-close:hover {
+      text-decoration:none;
+      opacity:.85;
+    }
+
+    footer {
+      border-top:1px solid var(--line);
+      padding:24px 0 40px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffcc;
+      backdrop-filter:blur(6px);
+    }
+
+    @media (max-width:900px){
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        gap:10px;
+        padding:10px 0 12px;
+      }
+
+      nav.main-nav{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px 14px;
+        row-gap:6px;
+        font-size:14px;
+        line-height:1.2;
+      }
+
+      nav.main-nav a{
+        white-space:nowrap;
+      }
+
+      nav.main-nav span.lang{
+        margin-left:0;
+      }
+
+      .hero-inner{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .grid-2{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .brand img{
+        height:52px;
+      }
+
+      .info-list {
+        grid-template-columns:1fr;
+        gap:6px 0;
+      }
+    }
+
+    @media (max-width:640px){
+      main {
+        padding-top:20px;
+      }
+
+      .hero-inner {
+        padding:24px 20px;
+        border-radius:24px;
+      }
+
+      .card {
+        padding:18px 16px;
+      }
+
+      .flyer-thumb {
+        max-width:100%;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const today = new Date();
+      const mmdd = (today.getMonth() + 1) * 100 + today.getDate();
+
+      let filename = "logo-allseaso.png";
+
+      if (mmdd >= 101 && mmdd <= 107) {
+        filename = "2026NewYear.png";
+      } else if (mmdd >= 1206 && mmdd <= 1225) {
+        filename = "logo-christmas.png";
+      } else if (mmdd >= 1226 || mmdd <= 202) {
+        filename = "logo-winter-pink.png";
+      } else if (mmdd >= 203 && mmdd <= 315) {
+        filename = "logo-spring-yellow.png";
+      } else if (mmdd >= 316 && mmdd <= 414) {
+        filename = "logo-spring-pink.png";
+      } else if (mmdd >= 415 && mmdd <= 514) {
+        filename = "logo-black-pink.png";
+      } else if (mmdd >= 515 && mmdd <= 630) {
+        filename = "logo-fishing.png";
+      } else if (mmdd >= 701 && mmdd <= 815) {
+        filename = "logo-summer-sea.png";
+      } else if (mmdd >= 816 && mmdd <= 930) {
+        filename = "logo-allseaso.png";
+      } else if (mmdd >= 1001 && mmdd <= 1115) {
+        filename = "logo-autumn-mapl.png";
+      } else if (mmdd >= 1116 && mmdd <= 1205) {
+        filename = "logo-autumn-winter-yello.png";
+      }
+
+      const src = "/assets/seasonal/" + filename;
+      const headerLogo = document.getElementById("seasonalLogo");
+      const heroLogo = document.getElementById("heroSeasonalLogo");
+      if (headerLogo) headerLogo.src = src;
+      if (heroLogo) heroLogo.src = src;
+    });
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="/en.html">
+          <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
+
+      <nav class="main-nav">
+        <a href="/classes-en.html">Classes</a>
+        <a href="/personal-en.html">Personal</a>
+        <a href="/about-en.html">About</a>
+        <a href="/contact-en.html">Contact</a>
+        <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="label">Mental Training</span>
+            <h1>Mental Training Course</h1>
+            <p>
+              Just like technique and physical conditioning, mental skills can also be trained and developed.
+              This course introduces practical ways to prepare your mind for performance, improve concentration, build routines, and reflect effectively after competition.
+            </p>
+            <div class="hero-buttons">
+              <a class="btn-main" href="#overview">View Course Details</a>
+              <a class="btn-main secondary" href="#flyer">View Flyer</a>
+            </div>
+          </div>
+
+          <div class="hero-logo">
+            <img id="heroSeasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club seasonal logo" />
+          </div>
+        </div>
+      </section>
+
+      <section id="flyer">
+        <div class="card">
+          <h2>Course Flyer</h2>
+          <div class="flyer-wrap">
+            <a href="#flyer-lightbox" class="flyer-thumb">
+              <img src="/assets/events/mental-training-en.png" alt="Mental Training Course Introduction flyer" />
+            </a>
+            <p class="flyer-note">Click the image to enlarge.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview">
+        <div class="card">
+          <h2>Introduction Session Overview</h2>
+          <dl class="info-list">
+            <dt>Date & Time</dt>
+            <dd>Friday, April 10, 2026 | 19:00–20:00</dd>
+
+            <dt>Fee</dt>
+            <dd>¥1,500 / Parent & Child: ¥2,500</dd>
+
+            <dt>Age</dt>
+            <dd>Ages 7 and up. Elementary school children must attend with a parent or guardian. Junior high school students and older may attend on their own. Family participation is welcome.</dd>
+
+            <dt>Instructor</dt>
+            <dd>Yoshitaka Ikeda (Career Consultant, Ginza Coaching School Certified Coach, Teaching License)</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section>
+        <p class="lead">
+          In sports, mental condition plays an important role alongside technique and physical ability.
+          This course covers mental skills for before, during, and after competition, while also showing how these ideas can be applied to school, study, and everyday life.
+        </p>
+      </section>
+
+      <section>
+        <div class="grid-2">
+          <div class="card">
+            <h3>What You Will Learn</h3>
+            <ul>
+              <li>What mental training is</li>
+              <li>Skills for before, during, and after competition</li>
+              <li>Concentration, routines, and positive thinking</li>
+              <li>How to apply these skills in daily life and study</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Recommended For</h3>
+            <ul>
+              <li>Athletes who get nervous before competition</li>
+              <li>Those who want to perform better under pressure</li>
+              <li>Anyone who wants to improve concentration</li>
+              <li>Parents and children who want to learn together</li>
+              <li>People who want to build better daily habits</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Our Approach to Mental Training</h2>
+          <p>
+            Mental training is not only about becoming mentally “strong.”
+            It is about noticing your current condition, learning how to regulate it, and connecting that awareness to better action.
+          </p>
+          <p>
+            At Brave Athletes Club, we share these ideas in a practical and approachable way so that both children and adults can use them with confidence.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="cta-box">
+          <h2>Interested in Joining?</h2>
+          <p>
+            This session is designed to be accessible even for first-time participants.<br>
+            For more information or to register, please contact us through our website or Facebook page.
+          </p>
+          <div class="hero-buttons" style="justify-content:center;">
+            <a class="btn-main" href="/en-contact.html">Contact Us</a>
+            <a class="btn-main secondary" href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">View Facebook</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © BRAVE ATHLETES CLUB
+    </div>
+  </footer>
+
+  <div id="flyer-lightbox" class="lightbox">
+    <a href="#flyer" class="lightbox-close" aria-label="Close">×</a>
+    <img src="/assets/events/mental-training-en.png" alt="Mental Training Course Introduction flyer enlarged" />
+  </div>
+</body>
+</html>
