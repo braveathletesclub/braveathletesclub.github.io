@@ -337,7 +337,40 @@
       background:#ffffffcc;
       backdrop-filter:blur(6px);
     }
-
+.lightbox {
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(0,0,0,0.84);
+  padding:24px;
+  align-items:center;
+  justify-content:center;
+}
+.lightbox:target {
+  display:flex;
+}
+.lightbox img {
+  max-width:min(100%, 980px);
+  max-height:90vh;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 18px 40px rgba(0,0,0,0.35);
+}
+.lightbox-close {
+  position:fixed;
+  top:18px;
+  right:24px;
+  font-size:34px;
+  line-height:1;
+  color:#fff;
+  text-decoration:none;
+  font-weight:400;
+}
+.lightbox-close:hover {
+  text-decoration:none;
+  opacity:.85;
+}
     @media (max-width:900px){
       .site-header-inner{
         flex-direction:column;
@@ -489,22 +522,24 @@
         <div class="card">
           <h2>第2回 開催概要</h2>
           <dl class="info-list">
-            <dt>日時</dt>
-            <dd>2026年5月1日（金）19:00〜20:00</dd>
+  <dt>日時</dt>
+  <dd>2026年5月1日（金）19:00〜20:00</dd>
 
-            <dt>形式</dt>
-            <dd>座談会形式</dd>
+  <dt>形式</dt>
+  <dd>座談会形式</dd>
 
-            <dt>参加費</dt>
-            <dd>1,500円</dd>
+  <dt>参加費</dt>
+  <dd>1,500円（会員様500円割引）</dd>
 
-            <dt>対象</dt>
-            <dd>保護者の方、ご家族、子どもとの関わり方に関心のある方</dd>
+  <dt>対象</dt>
+  <dd>保護者の方、ご家族、子どもとの関わり方に関心のある方</dd>
 
-            <dt>講師</dt>
-            <dd>池田佳隆（キャリアコンサルタント・銀座コーチングスクール認定コーチ・教員免許）</dd>
-          </dl>
-        </div>
+  <dt>備考</dt>
+  <dd>飲み物を用意します。持ち込みもOKです。</dd>
+
+  <dt>講師</dt>
+  <dd>池田佳隆（キャリアコンサルタント・銀座コーチングスクール認定コーチ・教員免許）</dd>
+</dl>
       </section>
 
       <section>
@@ -542,15 +577,38 @@
       </section>
 
       <section>
-        <div class="card">
-          <h2>チラシについて</h2>
-          <div class="flyer-placeholder">
-            新しいチラシ画像は現在準備中です。<br>
-            完成後、このページにも掲載予定です。
-          </div>
-        </div>
-      </section>
-
+  <div class="card">
+    <h2>チラシ</h2>
+    <div class="flyer-wrap" style="text-align:center;">
+      <a href="#parent-flyer-lightbox" class="flyer-thumb" style="display:inline-block; max-width:720px; width:100%; border-radius:18px; overflow:hidden; box-shadow:0 12px 30px rgba(15,23,42,0.12);">
+        <img src="/assets/events/parenting-coaching-discussion.png" alt="子育てコーチング座談会 チラシ" style="display:block; width:100%; height:auto;" />
+      </a>
+      <p style="margin-top:12px; color:#6b7280; font-size:13px;">
+        画像をクリックすると大きく表示できます。
+      </p>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="card">
+    <h2>今回の内容について</h2>
+    <p>
+      前回好評だった内容をもとに、今回も座談会形式で開催予定です。
+      子どもとの関わり方や、保護者としてのマインドセットを見つめ直しながら、
+      日常の言葉かけや対話のあり方について、やさしく整理していきます。
+    </p>
+    <ul>
+      <li>自分のマインドセットを見つめる</li>
+      <li>相手を尊重する関わり方を考える</li>
+      <li>主体性・やる気・モチベーションを育てる視点</li>
+      <li>見守る・対話する・肯定的に伝えるためのヒント</li>
+      <li>日常で取り入れやすいコーチングの考え方</li>
+    </ul>
+    <p>
+      答えを一方的に伝える講義ではなく、参加された方それぞれが気づきを持ち帰れる時間を大切にしています。
+    </p>
+  </div>
+</section>
       <section>
         <div class="note-box">
           <h2>Brave Athletes ClubのParent向けメンタルサポート</h2>
@@ -571,5 +629,9 @@
       © BRAVE ATHLETES CLUB
     </div>
   </footer>
+  <div id="parent-flyer-lightbox" class="lightbox">
+  <a href="#" class="lightbox-close" aria-label="閉じる">×</a>
+  <img src="/assets/events/parenting-coaching-discussion.png" alt="子育てコーチング座談会 チラシ拡大画像" />
+</div>
 </body>
 </html>
