@@ -58,7 +58,6 @@
       --line:#e5e7eb;
       --green:#0a6b5a;
       --green-soft:#edf9f4;
-      --blue-soft:#eaf4ff;
     }
 
     * { box-sizing:border-box; }
@@ -201,6 +200,10 @@
       line-height:1.9;
     }
 
+    .hero-text {
+      padding-top:0;
+    }
+
     .hero-inner{
       background:linear-gradient(135deg,#e0f2fe,#fdf2ff);
       border-radius:32px;
@@ -223,10 +226,12 @@
 
     .hero-logo img{
       width:100%;
-      max-width:340px;
+      max-width:420px;
       border-radius:24px;
       box-shadow:0 18px 35px rgba(15,23,42,0.18);
       background:#fff;
+      display:block;
+      margin:0 auto;
     }
 
     .label{
@@ -293,7 +298,7 @@
 
     .card-thumb{
       width:100%;
-      aspect-ratio: 16 / 10;
+      aspect-ratio:16 / 10;
       border-radius:16px;
       overflow:hidden;
       margin-bottom:16px;
@@ -355,31 +360,7 @@
       background:#ffffffcc;
       backdrop-filter:blur(6px);
     }
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-    .hero {
-  padding: 0;
-}
 
-.hero {
-  width: 100%;
-  max-height: 420px;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero-text {
-  padding-top: 28px;
-}
     @media (max-width:900px){
       .site-header-inner{
         flex-direction:column;
@@ -429,6 +410,10 @@
       .card{
         padding:18px 16px;
       }
+
+      .hero-logo img{
+        max-width:100%;
+      }
     }
   </style>
 
@@ -465,9 +450,10 @@
 
       const src = "/assets/seasonal/" + filename;
       const headerLogo = document.getElementById("seasonalLogo");
-      const heroLogo = document.getElementById("heroSeasonalLogo");
+      const athleteThumb = document.getElementById("athleteThumbLogo");
+
       if (headerLogo) headerLogo.src = src;
-      if (heroLogo) heroLogo.src = src;
+      if (athleteThumb) athleteThumb.src = src;
     });
   </script>
 </head>
@@ -492,17 +478,13 @@
     </div>
   </header>
 
- <main>
-  <section class="hero">
-    <img src="/assets/mental-img/mental-top.png" alt="Mental Training Program">
-  </section>
-
-  <div class="container">
-    <section class="hero-text">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <span class="label">Mental Training</span>
-          <h1>メンタルトレーニング</h1>
+  <main>
+    <div class="container">
+      <section class="hero-text">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="label">Mental Training</span>
+            <h1>メンタルトレーニング</h1>
             <p>
               Brave Athletes Clubでは、技術や体力だけでなく、心の整え方や行動の習慣づくりも大切にしています。
               メンタルトレーニングは、試合や発表の本番で力を発揮するためだけでなく、日常生活や勉強、子育てや関わり方にも活かすことができます。
@@ -514,7 +496,7 @@
           </div>
 
           <div class="hero-logo">
-            <img id="heroSeasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club 季節ロゴ" />
+            <img src="/assets/mental-img/mental-top.png" alt="Mental Training Program" />
           </div>
         </div>
       </section>
@@ -543,22 +525,22 @@
           </article>
 
           <article class="card">
-  <div class="card-thumb">
-    <img src="/assets/events/parenting-coaching-discussion.png" alt="子育てコーチング座談会 コーチングマインド" />
-  </div>
-  <h3>Parent</h3>
-  <p>
-    保護者向けの座談会形式の学びです。子どもとの関わり方、声かけ、見守り方を見つめ直し、
-    主体性ややる気を育てるためのコーチングマインドを、温かい雰囲気の中で考えていきます。
-  </p>
-  <p>
-    <strong>次回開催：</strong> 2026年5月1日（金）19:00〜20:00
-  </p>
-  <div class="card-links">
-    <a class="card-link primary" href="/mental-training-parent.html">詳細を見る</a>
-  </div>
-</article>
-          
+            <div class="card-thumb">
+              <img src="/assets/events/parenting-coaching-discussion.png" alt="子育てコーチング座談会 コーチングマインド" />
+            </div>
+            <h3>Parent</h3>
+            <p>
+              保護者向けの座談会形式の学びです。子どもとの関わり方、声かけ、見守り方を見つめ直し、
+              主体性ややる気を育てるためのコーチングマインドを、温かい雰囲気の中で考えていきます。
+            </p>
+            <p>
+              <strong>次回開催：</strong> 2026年5月1日（金）19:00〜20:00
+            </p>
+            <div class="card-links">
+              <a class="card-link primary" href="/mental-training-parent.html">詳細を見る</a>
+            </div>
+          </article>
+
           <article class="card">
             <div class="card-thumb">
               <img id="athleteThumbLogo" src="/assets/seasonal/logo-allseaso.png" alt="アスリート向けメンタルトレーニング" />
@@ -594,13 +576,5 @@
       © BRAVE ATHLETES CLUB
     </div>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const src = document.getElementById("seasonalLogo")?.src;
-      const athleteThumb = document.getElementById("athleteThumbLogo");
-      if (src && athleteThumb) athleteThumb.src = src;
-    });
-  </script>
 </body>
 </html>
