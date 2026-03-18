@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Mental Training | BRAVE ATHLETES CLUB</title>
-  <meta name="description" content="Mental training programs by BRAVE ATHLETES CLUB, including introductory sessions, athlete-focused support, and parent-focused learning." />
+  <meta name="description" content="Mental training programs by BRAVE ATHLETES CLUB, including introductory learning, parent-focused sessions, and athlete-focused support." />
 
   <link rel="canonical" href="https://braveathletesclub.github.io/mental-training-en.html" />
 
@@ -38,7 +38,7 @@
     "@context":"https://schema.org",
     "@type":"Course",
     "name":"Mental Training",
-    "description":"Mental training by BRAVE ATHLETES CLUB, including introduction sessions and future programs for athletes and parents.",
+    "description":"Mental training by BRAVE ATHLETES CLUB, including introductory sessions and future programs for athletes and parents.",
     "provider":{
       "@type":"Organization",
       "name":"BRAVE ATHLETES CLUB",
@@ -58,7 +58,6 @@
       --line:#e5e7eb;
       --green:#0a6b5a;
       --green-soft:#edf9f4;
-      --blue-soft:#eaf4ff;
     }
 
     * { box-sizing:border-box; }
@@ -201,6 +200,10 @@
       line-height:1.9;
     }
 
+    .hero-text {
+      padding-top:0;
+    }
+
     .hero-inner{
       background:linear-gradient(135deg,#e0f2fe,#fdf2ff);
       border-radius:32px;
@@ -223,10 +226,12 @@
 
     .hero-logo img{
       width:100%;
-      max-width:340px;
+      max-width:420px;
       border-radius:24px;
       box-shadow:0 18px 35px rgba(15,23,42,0.18);
       background:#fff;
+      display:block;
+      margin:0 auto;
     }
 
     .label{
@@ -405,6 +410,10 @@
       .card{
         padding:18px 16px;
       }
+
+      .hero-logo img{
+        max-width:100%;
+      }
     }
   </style>
 
@@ -441,126 +450,125 @@
 
       const src = "/assets/seasonal/" + filename;
       const headerLogo = document.getElementById("seasonalLogo");
-      const heroLogo = document.getElementById("heroSeasonalLogo");
+      const athleteThumb = document.getElementById("athleteThumbLogo");
+
       if (headerLogo) headerLogo.src = src;
-      if (heroLogo) heroLogo.src = src;
+      if (athleteThumb) athleteThumb.src = src;
     });
   </script>
 </head>
 
 <body>
- <header class="site-header">
-  <div class="container site-header-inner">
-    <div class="brand">
-      <a href="/en.html">
-        <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
-      </a>
-      <small>Training &amp; Performance</small>
-    </div>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="/">
+          <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club ロゴ" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
 
-    <nav class="main-nav">
-      <a href="/classes-en.html">Classes</a>
-      <a href="/personal-en.html">Personal</a>
-      <a href="/mental-training-en.html" class="active">Mental</a>
-      <a href="/about-en.html">About</a>
-      <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav">
+        <a href="/classes.html">教室</a>
+        <a href="/personal.html">パーソナル</a>
+        <a href="/mental-training.html" class="active">メンタル</a>
+        <a href="/about.html">クラブについて</a>
+        <span class="lang"><a href="/mental-training-en.html" hreflang="en">EN</a></span>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <div class="container">
-      <section class="hero">
+      <section class="hero-text">
         <div class="hero-inner">
           <div class="hero-copy">
             <span class="label">Mental Training</span>
-            <h1>Mental Training</h1>
+            <h1>メンタルトレーニング</h1>
             <p>
-              At Brave Athletes Club, we value not only physical development and technical skills, but also how we prepare the mind and build supportive daily habits.
-              Mental training can help athletes perform in competition, and it can also support study, daily life, parenting, and communication.
+              Brave Athletes Clubでは、技術や体力だけでなく、心の整え方や行動の習慣づくりも大切にしています。
+              メンタルトレーニングは、試合や発表の本番で力を発揮するためだけでなく、日常生活や勉強、子育てや関わり方にも活かすことができます。
             </p>
             <div class="hero-buttons">
-              <a class="btn-main" href="#courses">View Programs</a>
-              <a class="btn-main secondary" href="/en-contact.html">Contact</a>
+              <a class="btn-main" href="#courses">講座一覧を見る</a>
+              <a class="btn-main secondary" href="/contact.html">お問い合わせ</a>
             </div>
           </div>
 
           <div class="hero-logo">
-            <img id="heroSeasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club seasonal logo" />
+            <img src="/assets/mental-img/mental-top.png" alt="Mental Training Program" />
           </div>
         </div>
       </section>
 
       <section>
         <p class="lead">
-          We will continue to offer approachable mental training opportunities for different needs and ages, including introductory learning, athlete-focused support, and parent-focused sessions.
-          Our goal is to provide practical guidance in a warm and supportive environment.
+          年齢や目的に合わせて、入門講座、アスリート向け、保護者向けなど、必要なテーマを分かりやすくお伝えしていきます。
+          それぞれの講座では、安心して学べる雰囲気を大切にしながら、実生活につながる視点を丁寧に共有します。
         </p>
       </section>
 
       <section id="courses">
-        <h2>Programs</h2>
-        <div class="grid-3">
-          <article class="card">
-            <div class="card-thumb">
-              <img src="/assets/events/mental-training-en.png" alt="Mental Training Introduction course flyer" />
-            </div>
-            <h3>Introduction</h3>
-            <p>
-              A beginner-friendly session introducing the basics of mental training. Learn about mental skills before, during, and after performance, as well as concentration, routines, and practical application in daily life.
-            </p>
-            <div class="card-links">
-              <a class="card-link primary" href="/mental-training-introduction-en.html">View Details</a>
-            </div>
-          </article>
+  <h2>講座・プログラム</h2>
+  <div class="grid-3">
 
-        <article class="card">
-  <div class="card-thumb">
-    <img src="/assets/events/parenting-coaching-discussion-en.png" alt="Parenting Coaching Discussion flyer" />
+    <article class="card">
+      <div class="card-thumb">
+        <img src="/assets/mental-img/mental-introduction.png" alt="メンタルトレーニング Introduction" />
+      </div>
+      <h3>Introduction</h3>
+      <p>
+        メンタルトレーニングの基本を学ぶ入門講座です。試合前・試合中・試合後の考え方や、
+        集中力、ルーティーン、日常への応用まで、やさしく整理して学びます。
+      </p>
+      <div class="card-links">
+        <a class="card-link primary" href="/mental-training-introduction.html">詳細を見る</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-thumb">
+        <img src="/assets/mental-img/mental-parent.png" alt="保護者向けメンタルトレーニング Parent" />
+      </div>
+      <h3>Parent</h3>
+      <p>
+        保護者向けの座談会形式の学びです。子どもとの関わり方、声かけ、見守り方を見つめ直し、
+        主体性ややる気を育てるためのコーチングマインドを、温かい雰囲気の中で考えていきます。
+      </p>
+      <p>
+        <strong>次回開催：</strong> 2026年5月1日（金）19:00〜20:00
+      </p>
+      <div class="card-links">
+        <a class="card-link primary" href="/mental-training-parent.html">詳細を見る</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-thumb">
+        <img src="/assets/mental-img/mental-athlete.png" alt="アスリート向けメンタルトレーニング Athlete" />
+      </div>
+      <h3>Athlete</h3>
+      <p>
+        本番での実力発揮、集中の維持、振り返り、目標設定など、
+        アスリートの継続的な成長につながるメンタルスキルを扱います。
+      </p>
+      <div class="card-links">
+        <a class="card-link" href="/mental-training-athlete.html">準備中ページ</a>
+      </div>
+    </article>
+
   </div>
-
-  <h3>Parent</h3>
-
-  <p>
-    A parent-focused discussion-style session about supportive communication,
-    everyday involvement, and a coaching mindset that helps children develop
-    confidence and independence.
-  </p>
-
-  <p>
-    <strong>Next session:</strong> May 1, 2026 (Fri) 19:00–20:00
-  </p>
-
-  <div class="card-links">
-    <a class="card-link primary" href="/mental-training-parent-en.html">
-      View Details
-    </a>
-  </div>
-</article>
-
-          <article class="card">
-            <div class="card-thumb">
-              <img id="athleteThumbLogo" src="/assets/seasonal/logo-allseaso.png" alt="Athlete mental training" />
-            </div>
-            <h3>Athlete</h3>
-            <p>
-              Future athlete-focused content will cover performance under pressure, concentration, reflection, and goal setting. This area will gradually expand as the program develops.
-            </p>
-            <div class="card-links">
-              <a class="card-link" href="/mental-training-athlete-en.html">Coming Soon</a>
-            </div>
-          </article>
-        </div>
-      </section>
+</section>
 
       <section>
         <div class="note-box">
-          <h2>What Brave Athletes Club Values</h2>
+          <h2>Brave Athletes Clubが大切にしていること</h2>
           <p>
-            Mental training is not simply about being mentally “strong.” It is about noticing your current state, learning how to respond well, and connecting that awareness to meaningful action.
+            メンタルトレーニングは、単に「気持ちを強くする」ことではなく、自分の状態に気づき、必要な行動につなげていくための学びです。
+            Brave Athletes Clubでは、スポーツ科学や行動の考え方をもとにしながら、子どもにも大人にも取り入れやすい形でお伝えしていきます。
           </p>
           <p>
-            At Brave Athletes Club, we aim to share these ideas in a practical and approachable way so they can be used by both children and adults with confidence.
+            アスリートだけでなく、保護者やご家族にとっても役立つ視点を大切にし、安心して相談できる環境づくりを目指しています。
           </p>
         </div>
       </section>
@@ -572,13 +580,9 @@
       © BRAVE ATHLETES CLUB
     </div>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const src = document.getElementById("seasonalLogo")?.src;
-      const athleteThumb = document.getElementById("athleteThumbLogo");
-      if (src && athleteThumb) athleteThumb.src = src;
-    });
-  </script>
 </body>
 </html>
+日本語ページの今のコードを載せました。
+ここまでで不要なものがあれば削除して、きれいに整理して、完成版の日本語コードをください
+英語ページはファイル名が違っても修正できるので、いったんmental-training-en.htmlの完成版コードをお願いします。
+日本語ページのコードを基本にしていただいて大丈夫です।
