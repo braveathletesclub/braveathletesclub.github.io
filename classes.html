@@ -4,29 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>教室プログラム | Brave Athletes Club</title>
-  <meta name="description" content="Brave Athletes Club の教室プログラム。1〜18歳を対象に、発育発達・姿勢改善・アジリティ・インクルーシブ対応で安全に成長をサポートします。">
+  <meta name="description" content="Brave Athletes Club の教室プログラム。キッズスポーツクラス、ジュニアアスリート・コンディショニング教室、ファンクショナル・トレーニング教室を通して、発育発達・動きの質・競技力向上を丁寧にサポートします。">
 
   <style>
     :root{
       --bg:#f8fafc;
       --ink:#111827;
       --accent:#ff8800;
-      --ring:#111827;
       --muted:#6b7280;
-      --nav-bg:rgba(255,255,255,0.9);
-      --chip-bg:#111827;
+      --nav-bg:rgba(255,255,255,0.92);
+      --line:#e5e7eb;
+      --surface:#ffffff;
+      --soft-blue:#eef6ff;
+      --soft-green:#f2fbf7;
     }
 
     *{box-sizing:border-box;}
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:
-        radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
+      background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
     }
-    a{color:var(--accent);text-decoration:none;}
-    a:hover{text-decoration:underline;}
+
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
 
     .container{
       max-width:1100px;
@@ -34,15 +43,16 @@
       padding:0 20px;
     }
 
-    /* ===== ヘッダー（全ページ共通） ===== */
+    /* ===== header ===== */
     header.site-header{
       position:sticky;
       top:0;
       z-index:50;
       backdrop-filter:blur(10px);
       background:var(--nav-bg);
-      border-bottom:1px solid #e5e7eb;
+      border-bottom:1px solid var(--line);
     }
+
     .site-header-inner{
       display:flex;
       align-items:center;
@@ -50,17 +60,20 @@
       height:72px;
       gap:24px;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
       min-width:0;
     }
+
     .brand img{
       height:52px;
       display:block;
-      border-radius:16px; /* 角丸ロゴ */
+      border-radius:16px;
     }
+
     .brand small{
       display:block;
       font-size:12px;
@@ -73,14 +86,20 @@
       align-items:center;
       gap:20px;
       font-size:15px;
+      flex-wrap:wrap;
     }
+
     nav.main-nav a{
       position:relative;
       padding:4px 0;
       white-space:nowrap;
       color:var(--ink);
     }
-    nav.main-nav a.active{font-weight:600;}
+
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+
     nav.main-nav a.active::after{
       content:"";
       position:absolute;
@@ -91,132 +110,294 @@
       border-radius:999px;
       background:var(--accent);
     }
-    nav.main-nav a.cta{
-      padding:8px 18px;
-      border-radius:999px;
-      border:1px solid var(--ink);
-      font-weight:600;
-    }
+
     nav.main-nav span.lang{
       font-size:14px;
       color:var(--muted);
       margin-left:8px;
     }
-    nav.main-nav span.lang a{color:var(--accent);}
 
-    main{padding:40px 0 60px;}
-    h1{font-size:32px;margin-bottom:10px;}
-    h2{font-size:22px;margin-top:32px;margin-bottom:12px;}
-    p{line-height:1.8;margin:0 0 12px;}
+    nav.main-nav span.lang a{
+      color:var(--accent);
+    }
 
-    /* ===== HERO ===== */
-    .hero-classes{
-      padding:40px 0 40px;
+    main{
+      padding:40px 0 64px;
     }
-    .hero-inner{
-      display:grid;
-      grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);
-      gap:32px;
-      align-items:center;
+
+    h1{
+      font-size:clamp(30px,4vw,42px);
+      margin:0 0 12px;
+      line-height:1.3;
     }
-    .hero-copy h1{
+
+    h2{
+      font-size:24px;
+      margin:0 0 14px;
+      line-height:1.4;
+    }
+
+    h3{
+      font-size:20px;
       margin:0 0 10px;
+      line-height:1.45;
     }
-    .hero-lead{
+
+    p{
+      line-height:1.9;
+      margin:0 0 12px;
+    }
+
+    .lead{
       color:var(--muted);
       font-size:15px;
     }
+
+    .section{
+      margin-top:40px;
+    }
+
+    .divider{
+      margin:42px 0;
+      border-top:1px dashed var(--line);
+    }
+
+    /* ===== buttons ===== */
+    .btn-main,
+    .btn-outline,
+    .hero-tab{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      text-decoration:none;
+      transition:all .18s ease;
+    }
+
+    .btn-main{
+      background:#111827;
+      color:#fff;
+      border:1px solid #111827;
+    }
+
+    .btn-main:hover{
+      text-decoration:none;
+      opacity:.92;
+    }
+
+    .btn-outline{
+      background:#fff;
+      color:#111827;
+      border:1px solid var(--line);
+    }
+
+    .btn-outline:hover{
+      text-decoration:none;
+      background:#fff7ed;
+    }
+
+    /* ===== hero ===== */
+    .hero-classes{
+      padding:10px 0 8px;
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);
+      gap:32px;
+      align-items:center;
+      background:linear-gradient(135deg,#eef6ff,#f7fbff,#f9fffc);
+      border:1px solid var(--line);
+      border-radius:28px;
+      padding:28px 26px;
+      box-shadow:0 14px 34px rgba(15,23,42,0.06);
+    }
+
+    .hero-copy h1{
+      margin-bottom:12px;
+    }
+
     .hero-tabs{
       display:flex;
       flex-wrap:wrap;
       gap:12px;
       margin-top:18px;
+      margin-bottom:12px;
     }
+
     .hero-tab{
-      padding:10px 18px;
-      border-radius:999px;
-      border:1px solid #e5e7eb;
       background:#fff;
-      font-size:14px;
+      color:#111827;
+      border:1px solid var(--line);
     }
+
     .hero-tab.primary{
       background:#111827;
       color:#fff;
       border-color:#111827;
     }
 
+    .hero-note{
+      font-size:14px;
+      color:var(--muted);
+    }
+
     .hero-visual{
       display:flex;
       justify-content:center;
     }
+
     .hero-visual img{
-      max-width:260px;
+      max-width:270px;
       width:100%;
       display:block;
       border-radius:24px;
-      border:none;                /* 黒枠なし */
-      box-shadow:0 18px 40px rgba(15,23,42,0.18);
+      box-shadow:0 18px 40px rgba(15,23,42,0.14);
       background:#fff;
     }
-.schedule-card{ margin-top:20px; }
 
-.schedule-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:8px;
-}
+    /* ===== card ===== */
+    .card{
+      background:var(--surface);
+      border-radius:20px;
+      padding:20px 22px;
+      border:1px solid var(--line);
+      box-shadow:0 10px 28px rgba(15,23,42,0.06);
+    }
 
-/* 「画像で見る」：白背景のサブボタン */
-.schedule-buttons .btn-main.secondary{
-  background:#fff !important;
-  border:1px solid #0ea5a6 !important;  /* サイトの差し色に合わせてOK */
-  color:#0ea5a6 !important;
-}
-
-/* 「ダウンロード」：オレンジ固定 */
-.schedule-buttons .btn-download{
-  background:#f97316 !important;
-  border:none !important;
-  color:#fff !important;
-}
-
-
-    /* ===== 共通レイアウト ===== */
-    .section{margin-top:40px;}
-    .lead{font-size:14px;color:var(--muted);}
+    .card p:last-child{
+      margin-bottom:0;
+    }
 
     .grid{
       display:grid;
       gap:20px;
     }
-    .grid-2{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 
-    .card{
-      background:#ffffff;
-      border-radius:18px;
-      padding:20px 22px;
-      border:1px solid #e5e7eb;
-      box-shadow:0 10px 30px rgba(15,23,42,0.08);
+    .grid-2{
+      grid-template-columns:repeat(2,minmax(0,1fr));
     }
+
+    .grid-3{
+      grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
     .thumb img{
       width:100%;
-      border-radius:18px;
       display:block;
+      border-radius:18px;
       object-fit:cover;
+      border:1px solid var(--line);
     }
 
-    ul{margin:0 0 8px 1.2em;padding:0;}
-    li{margin-bottom:6px;}
-
-    .divider{
-      margin:40px 0;
-      border-top:1px dashed #e5e7eb;
+    ul{
+      margin:0 0 10px 1.2em;
+      padding:0;
     }
 
+    li{
+      margin-bottom:6px;
+      line-height:1.8;
+    }
+
+    .class-meta{
+      display:inline-block;
+      font-size:13px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:5px 10px;
+      margin-bottom:10px;
+    }
+
+    .class-time{
+      font-size:14px;
+      color:#374151;
+      margin-bottom:12px;
+      font-weight:600;
+    }
+
+    .subtle-box{
+      background:var(--soft-green);
+      border:1px solid #d1fae5;
+      border-radius:18px;
+      padding:18px;
+    }
+
+    /* ===== schedule ===== */
+    .schedule-card{
+      margin-top:8px;
+    }
+
+    .schedule-buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .schedule-buttons .btn-main.secondary{
+      background:#fff;
+      border:1px solid #0ea5a6;
+      color:#0ea5a6;
+    }
+
+    .schedule-buttons .btn-download{
+      background:#f97316;
+      border-color:#f97316;
+      color:#fff;
+    }
+
+    /* ===== spring conditioning ===== */
+    .campaign-box{
+      background:linear-gradient(135deg,#fff7ed,#ffffff);
+      border:1px solid #fdba74;
+      border-radius:24px;
+      padding:22px;
+    }
+
+    .campaign-label{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:#9a3412;
+      background:#ffedd5;
+      border-radius:999px;
+      padding:5px 10px;
+      margin-bottom:10px;
+    }
+
+    .conditioning-poster-link{
+      display:block;
+      text-align:center;
+      margin-top:14px;
+    }
+
+    .conditioning-poster{
+      width:100%;
+      max-width:720px;
+      height:auto;
+      display:block;
+      margin:0 auto;
+      border-radius:18px;
+      border:1px solid var(--line);
+      box-shadow:0 12px 24px rgba(15,23,42,0.08);
+    }
+
+    .poster-note{
+      text-align:center;
+      font-size:14px;
+      color:var(--muted);
+      margin-top:10px;
+    }
+
+    /* ===== footer ===== */
     footer{
-      border-top:1px solid #e5e7eb;
+      border-top:1px solid var(--line);
       padding:24px 0 32px;
       text-align:center;
       font-size:12px;
@@ -225,11 +406,21 @@
     }
 
     @media(max-width:900px){
-      .hero-inner{grid-template-columns:1fr;}
-      .hero-visual{order:-1;margin-bottom:8px;}
-      .grid-2{grid-template-columns:1fr;}
-      .grid-3{grid-template-columns:1fr;}
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+
+      .hero-visual{
+        order:-1;
+        margin-bottom:6px;
+      }
+
+      .grid-2,
+      .grid-3{
+        grid-template-columns:1fr;
+      }
     }
+
     @media(max-width:768px){
       .site-header-inner{
         flex-direction:column;
@@ -238,53 +429,33 @@
         padding:10px 0 12px;
         gap:10px;
       }
-      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
+
+      nav.main-nav{
+        row-gap:6px;
+      }
+
+      main{
+        padding:24px 0 52px;
+      }
+
+      .hero-inner{
+        padding:22px 18px;
+        border-radius:22px;
+      }
+
+      .conditioning-poster{
+        max-width:340px;
+        border-radius:14px;
+      }
+
+      h2{
+        font-size:21px;
+      }
+
+      h3{
+        font-size:18px;
+      }
     }
-    /* ===== 春休み短期教室：画像と文字の見やすさ調整 ===== */
-.early-bird-image{
-  width:100%;
-  max-width:640px;
-  height:auto;
-  display:block;
-  margin:16px auto 20px;
-  border-radius:16px;
-}
-
-.card ul{
-  margin:12px 0 0 18px;
-  padding:0;
-}
-
-.card li{
-  margin-bottom:6px;
-  line-height:1.7;
-}
-
-@media (max-width:780px){
-  .early-bird-image{
-    width:92%;
-    max-width:320px;
-    height:auto;
-    display:block;
-    margin:14px auto 18px;
-    border-radius:14px;
-  }
-
-  #spring-break-2026 h2{
-    font-size:18px;
-    line-height:1.5;
-  }
-
-  #spring-break-2026 p{
-    font-size:15px;
-    line-height:1.9;
-  }
-
-  #spring-break-2026 .card h3{
-    font-size:17px;
-    line-height:1.5;
-  }
-}
   </style>
 </head>
 
@@ -299,7 +470,7 @@
     </div>
 
     <nav class="main-nav">
-      <a href="/classes.html">教室</a>
+      <a href="/classes.html" class="active">教室</a>
       <a href="/personal.html">パーソナル</a>
       <a href="/mental-training.html">メンタル</a>
       <a href="/about.html">クラブについて</a>
@@ -308,7 +479,6 @@
   </div>
 </header>
 
-
 <main class="container">
 
   <!-- ===== HERO ===== -->
@@ -316,71 +486,76 @@
     <div class="hero-inner">
       <div class="hero-copy">
         <h1>教室プログラム</h1>
-        <p class="hero-lead">
-  1歳〜18歳まで、発育発達に合わせた運動クラス。<br>
-  「運動が得意」「ちょっと苦手」どちらのお子さまも、楽しく・安全にステップアップできるよう
-  姿勢・動き・体力の土台づくりをサポートします。<br>
-</p>
+        <p class="lead">
+          年齢や発育発達の段階に合わせて、楽しく身体を動かしながら、
+          姿勢・動き・体力の土台を育てる教室プログラムです。<br>
+          競技を始める前の基礎づくりから、競技力を高めたいジュニアアスリートの身体づくりまで、
+          Braveらしく丁寧にサポートします。
+        </p>
+
         <div class="hero-tabs">
-          <a class="hero-tab primary" href="#kids">キッズスポーツ</a>
-          <a class="hero-tab" href="#bb">コンディショニングBB</a>
-          <a class="hero-tab" href="#cond">コンディショニングクラス</a>
+          <a class="hero-tab primary" href="#kids">キッズスポーツクラス</a>
+          <a class="hero-tab" href="#junior-conditioning">ジュニアアスリート・コンディショニング</a>
+          <a class="hero-tab" href="#functional-training">ファンクショナル・トレーニング</a>
         </div>
-          <p class="muted" style="margin-top:10px;">
-        ※最新の教室スケジュールは下でご確認ください。
-      </p>
-    </div>
+
+        <p class="hero-note">※ 最新の教室スケジュールは下でご確認ください。</p>
+      </div>
 
       <div class="hero-visual">
-        <!-- 月替わりスポーツロゴ -->
         <img
           id="classes-hero-img"
-          src="assets/classes-hero/classes-hero-track.png"
+          src="/assets/classes-hero/classes-hero-track.png"
           alt="Brave Athletes Club クラスイメージロゴ"
         />
       </div>
     </div>
   </section>
-<!-- ===== 教室スケジュール ===== -->
-<section class="section" id="schedule">
-  <div class="card schedule-card">
-    <h3>教室スケジュール</h3>
-    <p>教室予定はこちらからご確認ください。</p>
 
-    <div class="schedule-buttons">
-      <a class="btn-main secondary"
-         href="/assets/schedule-2026-spring.png"
-         target="_blank"
-         rel="noopener">画像で見る</a>
+  <!-- ===== スケジュール ===== -->
+  <section class="section" id="schedule">
+    <div class="card schedule-card">
+      <h2>教室スケジュール</h2>
+      <p>最新の教室予定はこちらからご確認ください。</p>
 
-      <a class="btn-main btn-download"
-         href="/assets/schedule-2026-spring.pdf"
-         download>ダウンロード</a>
+      <div class="schedule-buttons">
+        <a class="btn-main secondary"
+           href="/assets/schedule-2026-spring.png"
+           target="_blank"
+           rel="noopener">画像で見る</a>
+
+        <a class="btn-main btn-download"
+           href="/assets/schedule-2026-spring.pdf"
+           download>ダウンロード</a>
+      </div>
     </div>
-  </div>
-</section>
-<!-- ===== /教室スケジュール ===== -->
-  
+  </section>
+
   <!-- ===== 特徴 ===== -->
   <section class="section" id="features">
-    <h2>特徴（スポーティ × 専門性）</h2>
+    <h2>Braveの教室が大切にしていること</h2>
     <div class="grid grid-3">
       <div class="card">
-        <h3>発育発達に基づく「正しい動き」</h3>
+        <h3>発育発達に合わせた段階的な指導</h3>
         <p class="lead">
-          走る・跳ぶ・投げる・支えるなど、スポーツの土台となる基本動作を、年齢と成長に合わせて習得します。
+          年齢や経験だけでなく、身体の発達段階に合わせて無理なく進めることで、
+          「できる」を着実に増やしていきます。
         </p>
       </div>
+
       <div class="card">
-        <h3>姿勢・動作改善に強い専門性</h3>
+        <h3>動きの質を高める身体づくり</h3>
         <p class="lead">
-          猫背・反り腰・扁平足・成長痛などに配慮し、「ケガをしにくい身体づくり」を目指します。
+          走る・跳ぶ・支える・切り返すなど、スポーツの土台となる動きを整え、
+          ケガをしにくく、長く続けられる身体づくりを目指します。
         </p>
       </div>
+
       <div class="card">
-        <h3>スポーティで楽しいアプローチ</h3>
+        <h3>楽しく、でも専門的に</h3>
         <p class="lead">
-          アジリティやコーディネーション、ゲーム形式を取り入れ、「できた！」が増えるように設計しています。
+          子どもが楽しめる工夫を大切にしながら、姿勢・バランス・動作改善・競技力向上につながる
+          内容を丁寧に組み立てています。
         </p>
       </div>
     </div>
@@ -390,12 +565,16 @@
 
   <!-- ===== キッズスポーツ ===== -->
   <section class="section" id="kids">
-    <h2>🟩 キッズスポーツ（1歳〜9歳）</h2>
     <div class="grid grid-2">
       <div class="thumb">
-        <img src="assets/classes-kids.jpg" alt="キッズスポーツ クラス写真">
+        <img src="/assets/classes-kids.jpg" alt="キッズスポーツクラス写真">
       </div>
+
       <div class="card">
+        <div class="class-meta">1歳〜9歳</div>
+        <h2>🟩 キッズスポーツクラス</h2>
+        <p class="class-time">毎週水曜日 16:00〜17:30</p>
+
         <h3>運動の楽しさと “できる” を増やすクラス</h3>
         <ul>
           <li>遊びを通した運動体験</li>
@@ -403,220 +582,250 @@
           <li>バランス・コーディネーション</li>
           <li>姿勢づくりのベース</li>
         </ul>
-        <p><b>対象：</b> 1歳〜9歳（未就園児・園児・小学校低学年）</p>
-        <p><b>おすすめ：</b> 体を動かすのが好き／運動が苦手で自信をつけたい／姿勢を良くしたい など</p>
+        <p>
+          小さなお子さまから小学校低学年までを対象に、
+          運動の楽しさを感じながら、身体を思い通りに使うための基礎を育てます。
+        </p>
+        <p>
+          <strong>おすすめ：</strong>
+          体を動かすのが好きなお子さま／運動が少し苦手で自信をつけたいお子さま／姿勢や身体の使い方を整えたいお子さま
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== コンディショニングBB ===== -->
-  <section class="section" id="bb">
-    <h2>🟦 コンディショニングBB（6歳〜15歳）</h2>
+  <!-- ===== ジュニアアスリート・コンディショニング ===== -->
+  <section class="section" id="junior-conditioning">
     <div class="grid grid-2">
       <div class="thumb">
-        <img src="assets/classes-bb.jpg" alt="コンディショニングBB クラス写真">
+        <img src="/assets/classes-bb.jpg" alt="ジュニアアスリート・コンディショニング教室写真">
       </div>
+
       <div class="card">
-        <h3>運動の土台を強化し、スポーツ万能な身体へ</h3>
+        <div class="class-meta">10歳〜15歳</div>
+        <h2>🟦 ジュニアアスリート・コンディショニング教室</h2>
+        <p class="class-time">毎週水曜日 16:20〜17:50</p>
+
+        <h3>ジュニア期に大切な “動ける身体” を育てる</h3>
         <ul>
           <li>姿勢・動作改善</li>
           <li>アジリティ（敏捷性）とコーディネーション</li>
           <li>体幹・バランス・柔軟性の向上</li>
           <li>正しいフォーム習得とケガ予防</li>
         </ul>
-        <p><b>対象：</b> 6歳〜15歳（小学生〜中学生）</p>
+        <p>
+          競技の種類にかかわらず、ジュニアアスリートに必要な
+          「動きの質」「身体の安定性」「切り返しや反応の土台」を整えるクラスです。
+        </p>
+        <p>
+          運動能力を高めるだけでなく、成長期に起こりやすい不調やフォームの崩れにも配慮しながら、
+          継続的に身体づくりを行います。
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== コンディショニングクラス ===== -->
-  <section class="section" id="cond">
-    <h2>🟥 コンディショニングクラス（13歳〜18歳）</h2>
+  <!-- ===== ファンクショナル・トレーニング ===== -->
+  <section class="section" id="functional-training">
     <div class="grid grid-2">
       <div class="thumb">
-        <img src="assets/classes-cond.jpg" alt="コンディショニング クラス写真">
+        <img src="/assets/classes-cond.jpg" alt="ファンクショナル・トレーニング教室写真">
       </div>
+
       <div class="card">
-        <h3>競技力を高めたいジュニアアスリート向け</h3>
+        <div class="class-meta">14歳〜18歳</div>
+        <h2>🟥 ファンクショナル・トレーニング教室</h2>
+        <p class="class-time">中高生アスリート向け</p>
+
+        <h3>競技力を高めたい中高生アスリートのためのクラス</h3>
         <ul>
-          <li>スピード・パワー向上</li>
-          <li>姿勢・安定性（体幹）と動作改善</li>
-          <li>SAQトレーニングとフォームづくり</li>
-          <li>ケガ予防とコンディショニング</li>
+          <li>競技につながる身体の使い方の習得</li>
+          <li>スピード・パワー・安定性の土台づくり</li>
+          <li>フォーム改善とパフォーマンス向上</li>
+          <li>ケガ予防と継続的なコンディショニング</li>
         </ul>
-        <p><b>対象：</b> 13歳〜18歳（中高生アスリート）</p>
+        <p>
+          ただ強くなるだけでなく、競技の中で「使える身体」をつくることを大切にしたクラスです。
+          体幹、バランス、連動性、切り返し、姿勢の安定などを整えながら、
+          競技力向上につながる土台を育てます。
+        </p>
+        <p>
+          部活動や競技スポーツに取り組む中高生で、
+          もっと質の高いトレーニングをしたい選手におすすめです。
+        </p>
       </div>
     </div>
-    <!-- ===== 短期教室 2026 ===== -->
-<section class="section" id="spring-break-2026">
-  <h2>※ 春休みの短期教室（2026）</h2>
-
-  <p>
-    春休み期間に、身体の使い方を見直しながら、動きの質を高める短期教室を開催します。<br>
-    関節の動き・柔軟性・バランス・俊敏性などを確認し、自分の身体の状態を知るところから始めます。
-  </p>
-
-  <p>
-    初めての方でも安心して参加できる内容で、2日間を通して無理なくコンディショニングを学べます。
-  </p>
-
-  <a
-    href="assets/events/2026-3-30-conditioning.png"
-    target="_blank"
-    rel="noopener"
-    style="display:block; text-align:center;"
-  >
-    <img
-      src="assets/events/2026-3-30-conditioning.png"
-      alt="動きの質を高めるコンディショニング教室"
-      class="early-bird-image"
-    />
-  </a>
-
-  <p style="text-align:center; font-size:14px; color:#6b7280; margin-top:-4px;">
-    チラシ画像をクリックするとチラシを大きく表示できます
-  </p>
-
-  <div style="display:flex; justify-content:center; margin:10px 0 6px;">
-    <a class="btn-main" href="/events/20260330-conditioning.html">詳細ページを見る</a>
-  </div>
-
-  <p style="text-align:center; font-size:14px; color:#6b7280; margin-top:0;">
-    3月30日・31日の全2回講座です
-  </p>
-
-  <div class="grid" style="margin-top:20px;">
-    <div class="card">
-      <h3>1日目｜身体チェックと基礎づくり</h3>
-      <p>
-        可動域、柔軟性、バランス、俊敏性などを確認しながら、簡単なストレッチや体軸トレーニングを行います。
-      </p>
-      <ul>
-        <li>日程：2026年3月30日（月）</li>
-        <li>時間：13:00〜14:30</li>
-        <li>対象：7歳以上</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>2日目｜コンディショニング実践</h3>
-      <p>
-        共通するコンディショニング指導に加え、タイプ別のプログラムを提供します。<br>
-        2日続けて受講することで、より効果的に学べる構成です。
-      </p>
-      <ul>
-        <li>日程：2026年3月31日（火）</li>
-        <li>時間：13:00〜14:30</li>
-        <li>参加費：4,500円</li>
-      </ul>
-    </div>
-  </div>
-
-  <p style="margin-top:16px;">
-    ※ Brave会員さま、提携団体所属選手は500円割引となります。<br>
-    ※ 両日ともご参加ください。
-  </p>
-</section>
-
-<div class="divider"></div>
-  <!-- ===== インクルーシブ ===== -->
-  <section class="section" id="inclusive">
-    <h2>🤝 どなたでも安心して参加できる環境づくり</h2>
-    <p class="lead">
-      少し運動に不安があるお子さまや、ゆっくり取り組みたいお子さまにも、ペースに合わせてサポートします。
-      刺激（音・光）への配慮や、コミュニケーション方法の工夫を行いながら、安全に楽しく参加できる場を目指しています。
-    </p>
   </section>
 
-  <!-- ===== お問い合わせ ===== -->
+  <!-- ===== 春休み短期教室 ===== -->
+  <section class="section" id="spring-break-2026">
+    <div class="campaign-box">
+      <span class="campaign-label">春の短期教室 / 新年度クラス案内につながるおすすめ企画</span>
+      <h2>動きの質を高めるコンディショニング教室</h2>
+
+      <p>
+        3月30日・31日の2日間で、身体の使い方を見直しながら、
+        動きの質を高める短期教室を開催します。
+      </p>
+
+      <p>
+        関節の動き・柔軟性・バランス・俊敏性などを確認し、
+        自分の身体の状態を知るところからスタート。<br>
+        新年度から継続して身体づくりに取り組みたい方にもおすすめです。
+      </p>
+
+      <a
+        href="/assets/events/2026-3-30-conditioning.png"
+        target="_blank"
+        rel="noopener"
+        class="conditioning-poster-link"
+      >
+        <img
+          src="/assets/events/2026-3-30-conditioning.png"
+          alt="動きの質を高めるコンディショニング教室"
+          class="conditioning-poster"
+        />
+      </a>
+
+      <p class="poster-note">チラシ画像をクリックすると大きく表示できます。</p>
+
+      <div style="display:flex;justify-content:center;margin:12px 0 8px;">
+        <a class="btn-main" href="/events/20260330-conditioning.html">詳細ページを見る</a>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:20px;">
+        <div class="card">
+          <h3>1日目｜身体チェックと基礎づくり</h3>
+          <p>
+            可動域、柔軟性、バランス、俊敏性などを確認しながら、
+            簡単なストレッチや体軸トレーニングを行います。
+          </p>
+          <ul>
+            <li>日程：2026年3月30日（月）</li>
+            <li>時間：13:00〜14:30</li>
+            <li>対象：7歳以上</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>2日目｜コンディショニング実践</h3>
+          <p>
+            共通するコンディショニング指導に加え、
+            タイプ別のプログラムを提供します。<br>
+            2日続けて受講することで、より効果的に学べる構成です。
+          </p>
+          <ul>
+            <li>日程：2026年3月31日（火）</li>
+            <li>時間：13:00〜14:30</li>
+            <li>参加費：4,500円</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subtle-box" style="margin-top:18px;">
+        <p style="margin:0;">
+          <strong>継続クラスへのステップアップにもおすすめです。</strong><br>
+          春休み短期教室で身体の状態を確認し、
+          4月以降は年齢や競技段階に合わせて
+          「ジュニアアスリート・コンディショニング教室」
+          「ファンクショナル・トレーニング教室」へつなげていきます。<br>
+          ※ Brave会員さま、提携団体所属選手は500円割引となります。<br>
+          ※ 両日ともご参加ください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ===== インクルーシブ ===== -->
+  <section class="section" id="inclusive">
+    <h2>どなたでも安心して参加できる環境づくり</h2>
+    <div class="card">
+      <p class="lead" style="font-size:15px;">
+        少し運動に不安があるお子さまや、ゆっくり取り組みたいお子さまにも、
+        ペースに合わせてサポートします。<br>
+        刺激（音・光）への配慮や、コミュニケーション方法の工夫を行いながら、
+        安全に楽しく参加できる場を目指しています。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== contact ===== -->
   <section class="section" id="contact">
-    <h2>📞 お問い合わせ</h2>
-    <p class="lead">
-      クラスの内容・対象・振替などのご質問は、メールまたはお問い合わせページからお気軽にご連絡ください。<br>
-      メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
-    </p>
+    <h2>お問い合わせ</h2>
+    <div class="card">
+      <p>
+        クラス内容、対象、体験参加、継続方法などについては、
+        メールまたはお問い合わせページからお気軽にご相談ください。
+      </p>
+      <p>
+        メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
+      </p>
+    </div>
   </section>
 
 </main>
 
 <footer>
-  © 2025 Brave Athletes Club
+  © 2026 Brave Athletes Club
 </footer>
 
-<!-- ===== ヘッダー季節ロゴ：日付で自動切り替え ===== -->
+<!-- ===== ヘッダー季節ロゴ ===== -->
 <script>
   (function () {
-    const img = document.getElementById("global-seasonal-logo");
+    const img = document.getElementById("seasonalLogo");
     if (!img) return;
 
     const today = new Date();
-    const m = today.getMonth() + 1; // 1–12
+    const m = today.getMonth() + 1;
     const d = today.getDate();
 
-    let file = "logo-allseaso.png"; // デフォルト
+    let file = "logo-allseaso.png";
 
-    // クリスマス：12/16〜12/25
     if (m === 12 && d >= 6 && d <= 25) {
       file = "logo-christmas.png";
-
-    // 冬ピンク：12/26〜2/2
     } else if (
       (m === 12 && d >= 26) ||
       m === 1 ||
       (m === 2 && d <= 2)
     ) {
       file = "logo-winter-pink.png";
-
-    // Spring Yellow：2/3〜3/5
     } else if (
       (m === 2 && d >= 3) ||
       (m === 3 && d <= 15)
     ) {
       file = "logo-spring-yellow.png";
-
-    // Spring Pink：3/6〜4/15
     } else if (
       (m === 3 && d >= 16) ||
       (m === 4 && d <= 15)
     ) {
       file = "logo-spring-pink.png";
-
-    // 黒背景ピンク：4/16〜5/15
     } else if (
       (m === 4 && d >= 16) ||
       (m === 5 && d <= 15)
     ) {
       file = "logo-black-pink.png";
-
-    // 釣りサイ：5/6〜6/30
     } else if (
       (m === 5 && d >= 16) ||
       (m === 6 && d <= 30)
     ) {
       file = "logo-fishing.png";
-
-    // 海サイ：7/1〜8/15
     } else if (
       (m === 7 && d >= 1) ||
       (m === 8 && d <= 15)
     ) {
       file = "logo-summer-sea.png";
-
-    // オールシーズン：8/16〜9/30
     } else if (
       (m === 8 && d >= 16) ||
       m === 9
     ) {
       file = "logo-allseaso.png";
-
-    // もみじ：10/1〜11/15
     } else if (
       m === 10 ||
       (m === 11 && d <= 15)
     ) {
       file = "logo-autumn-mapl.png";
-
-    // 秋冬背景の黄色サイ：11/16〜12/15
     } else if (
       (m === 11 && d >= 16) ||
       (m === 12 && d <= 5)
@@ -624,17 +833,17 @@
       file = "logo-autumn-winter-yello.png";
     }
 
-    img.src = "assets/seasonal/" + file;
+    img.src = "/assets/seasonal/" + file;
   })();
 </script>
 
-<!-- ===== クラス用ヒーロー画像：月ごとに自動切り替え ===== -->
+<!-- ===== クラス用ヒーロー画像 ===== -->
 <script>
   (function () {
     const img = document.getElementById("classes-hero-img");
     if (!img) return;
 
-    const month = new Date().getMonth() + 1; // 1–12
+    const month = new Date().getMonth() + 1;
     const heroMap = {
       1: "classes-hero-snowboard.png",
       2: "classes-hero-highjump.png",
@@ -645,13 +854,13 @@
       7: "classes-hero-tennis.png",
       8: "classes-hero-americanfootball.jpg",
       9: "classes-hero-basketball.jpg",
-      10: "classes-hero-longjump.jpg",
-      11: "classes-hero-weight.png",
-      12: "classes-hero-trainingroom.png"
+      10:"classes-hero-longjump.jpg",
+      11:"classes-hero-weight.png",
+      12:"classes-hero-trainingroom.png"
     };
 
     const filename = heroMap[month] || "classes-hero-track.png";
-    img.src = "assets/classes-hero/" + filename;
+    img.src = "/assets/classes-hero/" + filename;
   })();
 </script>
 
