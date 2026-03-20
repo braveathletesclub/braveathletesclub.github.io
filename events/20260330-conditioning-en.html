@@ -1,524 +1,390 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Movement Quality Training | Brave Athletes Club</title>
-  <meta name="description" content="Movement Quality Training by Brave Athletes Club. A 2-day conditioning program focused on mobility, stability, balance, agility, and movement control for young athletes and active adults.">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <style>
-    :root{
-      --bg:#f8fafc;
-      --surface:#ffffff;
-      --ink:#111827;
-      --muted:#6b7280;
-      --accent:#ff8800;
-      --line:#e5e7eb;
-      --nav-bg:rgba(255,255,255,0.9);
-    }
+<title>Movement Quality Training | Brave Athletes Club</title>
 
-    *{box-sizing:border-box;}
+<meta name="description"
+content="Movement Quality Training by Brave Athletes Club. A 2-day conditioning program focused on mobility, stability, balance, agility, and movement control for young athletes and active adults." />
 
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--ink);
-      background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
-      line-height:1.85;
-    }
+<style>
+:root{
+--bg:#f8fafc;
+--surface:#ffffff;
+--ink:#111827;
+--muted:#6b7280;
+--accent:#ff8800;
+--line:#e5e7eb;
+--nav-bg:rgba(255,255,255,0.9);
+}
 
-    a{
-      color:var(--accent);
-      text-decoration:none;
-    }
+*{box-sizing:border-box;}
 
-    a:hover{
-      text-decoration:underline;
-    }
+body{
+margin:0;
+font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+color:var(--ink);
+background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
+line-height:1.85;
+}
 
-    .container{
-      max-width:1100px;
-      margin:0 auto;
-      padding:0 20px;
-    }
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
 
-    header.site-header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      backdrop-filter:blur(10px);
-      background:var(--nav-bg);
-      border-bottom:1px solid var(--line);
-    }
+.container{
+max-width:1100px;
+margin:0 auto;
+padding:0 20px;
+}
 
-    .site-header-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      height:72px;
-      gap:24px;
-    }
+/* HEADER */
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      min-width:0;
-    }
+header.site-header{
+position:sticky;
+top:0;
+z-index:50;
+backdrop-filter:blur(10px);
+background:var(--nav-bg);
+border-bottom:1px solid var(--line);
+}
 
-    .brand img{
-      height:52px;
-      display:block;
-      border-radius:16px;
-    }
+.site-header-inner{
+display:flex;
+align-items:center;
+justify-content:space-between;
+height:72px;
+gap:24px;
+}
 
-    .brand small{
-      display:block;
-      font-size:12px;
-      color:var(--muted);
-      white-space:nowrap;
-    }
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
 
-    nav.main-nav{
-      display:flex;
-      align-items:center;
-      gap:20px;
-      font-size:15px;
-      flex-wrap:wrap;
-    }
+.brand img{
+height:52px;
+border-radius:16px;
+}
 
-    nav.main-nav a{
-      position:relative;
-      padding:4px 0;
-      white-space:nowrap;
-      color:var(--ink);
-    }
+.brand small{
+font-size:12px;
+color:var(--muted);
+}
 
-    nav.main-nav a.active{
-      font-weight:600;
-    }
+nav.main-nav{
+display:flex;
+gap:20px;
+font-size:15px;
+flex-wrap:wrap;
+}
 
-    nav.main-nav a.active::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:-4px;
-      width:100%;
-      height:2px;
-      border-radius:999px;
-      background:var(--accent);
-    }
+nav.main-nav a{
+color:var(--ink);
+}
 
-    nav.main-nav a.cta{
-      padding:8px 18px;
-      border-radius:999px;
-      border:1px solid var(--ink);
-      font-weight:600;
-    }
+nav.main-nav span.lang{
+font-size:14px;
+color:var(--muted);
+}
 
-    nav.main-nav span.lang{
-      font-size:14px;
-      color:var(--muted);
-      margin-left:8px;
-    }
+/* MAIN */
 
-    nav.main-nav span.lang a{
-      color:var(--accent);
-    }
+main{
+padding:40px 0 60px;
+}
 
-    main{
-      padding:40px 0 60px;
-    }
+.hero{
+background:linear-gradient(135deg,#fff7ed,#fdf2ff,#eef6ff);
+border:1px solid var(--line);
+border-radius:28px;
+padding:30px 24px;
+margin-bottom:26px;
+}
 
-    .hero{
-      background:linear-gradient(135deg,#fff7ed,#fdf2ff,#eef6ff);
-      border:1px solid var(--line);
-      border-radius:28px;
-      padding:30px 24px;
-      margin-bottom:26px;
-    }
+.hero-badge{
+font-size:12px;
+font-weight:700;
+background:#ffedd5;
+padding:5px 10px;
+border-radius:999px;
+}
 
-    .hero-badge{
-      display:inline-block;
-      font-size:12px;
-      font-weight:700;
-      color:#9a3412;
-      background:#ffedd5;
-      border-radius:999px;
-      padding:5px 10px;
-      margin-bottom:14px;
-    }
+h1{
+font-size:42px;
+margin:10px 0;
+}
 
-    h1{
-      margin:0 0 10px;
-      font-size:clamp(30px,4vw,44px);
-      line-height:1.25;
-    }
+.hero-actions{
+margin-top:16px;
+display:flex;
+gap:12px;
+}
 
-    h2{
-      margin:0 0 12px;
-      font-size:24px;
-      line-height:1.4;
-    }
+.btn-main{
+padding:10px 18px;
+border-radius:999px;
+background:#111827;
+color:#fff;
+font-weight:600;
+}
 
-    h3{
-      margin:0 0 10px;
-      font-size:20px;
-      line-height:1.4;
-    }
+.btn-main.secondary{
+background:#fff;
+color:#111827;
+border:1px solid var(--line);
+}
 
-    p{
-      margin:0 0 12px;
-    }
+/* INFO */
 
-    .hero p{
-      color:var(--muted);
-      font-size:15px;
-    }
+.poster{
+background:#fff;
+border:1px solid var(--line);
+border-radius:20px;
+padding:18px;
+margin-bottom:26px;
+}
 
-    .hero-actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
-    }
+.poster img{
+width:100%;
+border-radius:16px;
+}
 
-    .btn-main{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 18px;
-      border-radius:999px;
-      background:#111827;
-      color:#fff;
-      font-weight:600;
-      border:none;
-      text-decoration:none;
-    }
+.info-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+margin-top:14px;
+}
 
-    .btn-main.secondary{
-      background:#fff;
-      color:#111827;
-      border:1px solid var(--line);
-    }
+.info-box{
+border:1px solid var(--line);
+border-radius:14px;
+padding:12px;
+}
 
-    .poster{
-      background:var(--surface);
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:18px;
-      margin-bottom:26px;
-    }
+/* GRID */
 
-    .poster a{
-      display:block;
-      max-width:760px;
-      margin:0 auto;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
 
-    .poster img{
-      width:100%;
-      height:auto;
-      display:block;
-      border-radius:18px;
-      border:1px solid var(--line);
-      box-shadow:0 10px 24px rgba(15,23,42,0.08);
-    }
+.card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:18px;
+padding:16px;
+}
 
-    .poster-note{
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-      margin-top:12px;
-    }
+/* CONTACT */
 
-    .info-grid{
-      display:grid;
-      gap:14px;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      margin-top:18px;
-    }
+.contact-block{
+margin-top:30px;
+border:1px solid var(--line);
+border-radius:20px;
+padding:20px;
+text-align:center;
+}
 
-    .info-box{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:16px;
-    }
+footer{
+margin-top:40px;
+border-top:1px solid var(--line);
+padding:20px;
+text-align:center;
+font-size:12px;
+color:var(--muted);
+}
 
-    .info-box strong{
-      display:block;
-      margin-bottom:8px;
-      font-size:14px;
-      color:#374151;
-    }
-
-    .section{
-      margin-top:28px;
-    }
-
-    .grid{
-      display:grid;
-      gap:18px;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-    }
-
-    .card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:18px;
-      box-shadow:0 10px 24px rgba(15,23,42,0.06);
-    }
-
-    ul{
-      margin:10px 0 0 18px;
-      padding:0;
-    }
-
-    li{
-      margin-bottom:6px;
-      line-height:1.7;
-    }
-
-    .note{
-      color:var(--muted);
-      font-size:14px;
-    }
-
-    .contact-block{
-      margin-top:32px;
-      background:#ffffff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:22px;
-      text-align:center;
-    }
-
-    .contact-block h2{
-      margin:0 0 10px;
-      font-size:24px;
-    }
-
-    .contact-block p{
-      margin:0 0 16px;
-      color:#6b7280;
-    }
-
-    .contact-actions{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-
-    .back-link{
-      display:inline-block;
-      margin-top:24px;
-      font-weight:600;
-    }
-
-    footer{
-      border-top:1px solid var(--line);
-      padding:24px 0 32px;
-      text-align:center;
-      font-size:12px;
-      color:var(--muted);
-      background:#ffffffdd;
-      margin-top:40px;
-    }
-
-    @media (max-width:900px){
-      .site-header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        height:auto;
-        gap:10px;
-        padding:10px 0 12px;
-      }
-
-      nav.main-nav{
-        width:100%;
-        gap:8px 14px;
-      }
-
-      .grid{
-        grid-template-columns:1fr;
-      }
-
-      .info-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-    }
-
-    @media (max-width:780px){
-      main{
-        padding:24px 0 46px;
-      }
-
-      .hero{
-        padding:22px 18px;
-        border-radius:22px;
-      }
-
-      .info-grid{
-        grid-template-columns:1fr;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
-<header class="site-header">
-  <div class="container site-header-inner">
-    <div class="brand">
-      <a href="/en.html">
-        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club" />
-      </a>
-      <small>Training &amp; Performance</small>
-    </div>
 
-    <nav class="main-nav">
-      <a href="/en.html">Home</a>
-      <a href="/classes-en.html">Classes</a>
-      <a href="/personal-en.html">Personal</a>
-      <a href="/about-en.html">About</a>
-      <a href="/contact-en.html" class="cta">Contact</a>
-      <span class="lang"><a href="/events/20260330-conditioning.html" hreflang="ja">JP</a></span>
-    </nav>
-  </div>
+<header class="site-header">
+<div class="container site-header-inner">
+
+<div class="brand">
+<a href="/en.html">
+<img src="/assets/seasonal/logo-allseaso.png">
+</a>
+<small>Training & Performance</small>
+</div>
+
+<nav class="main-nav">
+<a href="/en.html">Home</a>
+<a href="/classes-en.html">Classes</a>
+<a href="/personal-en.html">Personal</a>
+<a href="/mental-training-en.html">Mental</a>
+<a href="/about-en.html">About</a>
+<span class="lang">
+<a href="/events/20260330-conditioning.html">JP</a>
+</span>
+</nav>
+
+</div>
 </header>
+
 
 <main class="container">
 
-  <section class="hero">
-    <span class="hero-badge">BRAVE Featured Program</span>
-    <h1>Movement Quality Training</h1>
-    <p>
-      A 2-day conditioning program designed to improve how the body moves through
-      mobility, stability, balance, agility, and movement control.
-    </p>
-    <p>
-      This class is recommended for young athletes and active adults who want to build
-      a stronger movement foundation and improve performance with better body control.
-    </p>
+<section class="hero">
 
-    <div class="hero-actions">
-      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Register / Contact</a>
-      <a class="btn-main secondary" href="/assets/events/movement-quality-training-poster.png" target="_blank" rel="noopener">View Poster</a>
-    </div>
-  </section>
+<span class="hero-badge">BRAVE Featured Program</span>
 
-  <section class="poster">
-    <a href="/assets/events/movement-quality-training-poster.png" target="_blank" rel="noopener">
-      <img src="/assets/events/movement-quality-training-poster.png" alt="Movement Quality Training poster">
-    </a>
-    <p class="poster-note">Click the poster image to view it in a larger size.</p>
+<h1>Movement Quality Training</h1>
 
-    <div class="info-grid">
-      <div class="info-box">
-        <strong>Dates</strong>
-        Mar 30 (Mon) &amp; Mar 31 (Tue), 2026
-      </div>
-      <div class="info-box">
-        <strong>Time</strong>
-        13:00–14:30
-      </div>
-      <div class="info-box">
-        <strong>Venue</strong>
-        Takatsuki City General Gymnasium<br>Sub Gym 2
-      </div>
-      <div class="info-box">
-        <strong>Fee</strong>
-        4,500 JPY<br>
-        <span class="note">500 JPY discount for Brave members and partner athletes</span>
-      </div>
-    </div>
-  </section>
+<p>
+A 2-day conditioning program focused on improving how the body moves.
+We work on mobility, stability, balance, agility, and movement control.
+</p>
 
-  <section class="section">
-    <h2>What You Will Improve</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Movement Quality</h3>
-        <p>
-          Learn how to move with better control, better posture, and better awareness.
-          The focus is not only on exercising hard, but on moving well.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Athletic Foundation</h3>
-        <p>
-          Build a stronger base for future sports performance through conditioning that supports
-          speed, balance, and efficient body use.
-        </p>
-      </div>
-    </div>
-  </section>
+<p>
+Recommended for young athletes and active adults who want to build
+a stronger foundation and improve performance through better movement.
+</p>
 
-  <section class="section">
-    <h2>Who Should Join</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Young Athletes</h3>
-        <p>
-          Recommended for athletes who want to improve movement quality, reduce injury risk,
-          and build better body control for their sport.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Active Adults</h3>
-        <p>
-          Also suitable for adults who want to move better, improve conditioning,
-          and build a stronger, more efficient body.
-        </p>
-      </div>
-    </div>
-  </section>
+<div class="hero-actions">
+<a class="btn-main"
+href="mailto:braveathletesclub@gmail.com">
+Register / Email
+</a>
 
-  <section class="section">
-    <h2>2-Day Program Structure</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Day 1 | Assessment &amp; Foundations</h3>
-        <ul>
-          <li>Mobility and flexibility check</li>
-          <li>Balance and body control assessment</li>
-          <li>Basic stretching and conditioning work</li>
-          <li>Foundation for more efficient movement</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Day 2 | Practical Conditioning</h3>
-        <ul>
-          <li>Shared conditioning instruction</li>
-          <li>Type-based practical exercises</li>
-          <li>Movement quality improvement</li>
-          <li>Building a stronger athletic base</li>
-        </ul>
-      </div>
-    </div>
-    <p class="note" style="margin-top:12px;">Both days are required to complete the program.</p>
-  </section>
+<a class="btn-main secondary"
+href="/assets/events/movement-quality-training-poster.png"
+target="_blank">
+View Poster
+</a>
+</div>
 
-  <section class="contact-block">
-    <h2>Registration &amp; Questions</h2>
-    <p>
-      If you would like to join this program, or if you are unsure whether it is a good fit,
-      please feel free to contact us.
-    </p>
-    <div class="contact-actions">
-      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Email Us</a>
-      <a class="btn-main secondary" href="/contact-en.html">Contact Page</a>
-    </div>
-  </section>
+</section>
 
-  <a class="back-link" href="/events/spring-2026-en.html">← Back to Spring Events</a>
+
+<section class="poster">
+
+<img src="/assets/events/movement-quality-training-poster.png">
+
+<div class="info-grid">
+
+<div class="info-box">
+<strong>Dates</strong><br>
+Mar 30 & Mar 31, 2026
+</div>
+
+<div class="info-box">
+<strong>Time</strong><br>
+13:00–14:30
+</div>
+
+<div class="info-box">
+<strong>Venue</strong><br>
+Takatsuki City Gymnasium<br>
+Sub Gym 2
+</div>
+
+<div class="info-box">
+<strong>Fee</strong><br>
+4,500 JPY<br>
+<small>500 JPY discount for members</small>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>What You Will Improve</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Movement Quality</h3>
+<p>
+Better posture, better control, better awareness.
+We focus on moving well, not only moving hard.
+</p>
+</div>
+
+<div class="card">
+<h3>Athletic Foundation</h3>
+<p>
+Build a strong base for speed, balance,
+and efficient body use.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>2-Day Program</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Day 1 – Assessment</h3>
+
+<ul>
+<li>Mobility check</li>
+<li>Balance check</li>
+<li>Flexibility</li>
+<li>Basic conditioning</li>
+</ul>
+
+</div>
+
+
+<div class="card">
+<h3>Day 2 – Practical Training</h3>
+
+<ul>
+<li>Guided conditioning</li>
+<li>Type-based exercises</li>
+<li>Movement improvement</li>
+<li>Athletic foundation</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="contact-block">
+
+<h2>Registration</h2>
+
+<p>
+Please contact us by email if you would like to join.
+</p>
+
+<a class="btn-main"
+href="mailto:braveathletesclub@gmail.com">
+Email Us
+</a>
+
+</section>
+
+
+<a href="/events/spring-2026-en.html">
+← Back to Spring Events
+</a>
 
 </main>
 
+
 <footer>
-  © 2026 Brave Athletes Club
+© 2026 Brave Athletes Club
 </footer>
+
 </body>
 </html>
