@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | BRAVE ATHLETES CLUB</title>
-  <meta name="description" content="BRAVE ATHLETES CLUB is a local club that offers kids sports classes and personal conditioning support for adults and athletes. From posture & muscle function to performance enhancement and functional recovery." />
+  <meta name="description" content="BRAVE ATHLETES CLUB is a community-based club offering kids sports classes, personal conditioning support, athletic development, and functional recovery for children, adults, and athletes." />
   <link rel="canonical" href="https://braveathletesclub.github.io/about-en.html" />
 
   <!-- SEO / SNS -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
   <meta property="og:title" content="About | BRAVE ATHLETES CLUB" />
-  <meta property="og:description" content="Kids sports classes and personal conditioning support for adults and athletes." />
+  <meta property="og:description" content="Kids sports classes, personal conditioning support, and athletic development at BRAVE ATHLETES CLUB." />
   <meta property="og:url" content="https://braveathletesclub.github.io/about-en.html" />
   <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -29,28 +29,34 @@
       --bg:#fff7ed;
       --ink:#111827;
       --accent:#ff8800;
-      --ring:#111827;
       --muted:#6b7280;
       --nav-bg:rgba(255,255,255,0.9);
       --card:#ffffff;
-      --card-soft:#fef3c7;
+      --line:#e5e7eb;
+      --green:#0a6b5a;
+      --green-soft:#edf9f4;
     }
 
     *{box-sizing:border-box;}
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:
-        radial-gradient(circle at top,#fde68a 0,#fff7ed 40%,#ffffff 100%);
+      background:radial-gradient(circle at top,#fde68a 0,#fff7ed 40%,#ffffff 100%);
     }
+
     a{color:var(--accent);text-decoration:none;}
     a:hover{text-decoration:underline;}
     img{max-width:100%;display:block;}
 
-    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
 
-    /* ===== common header ===== */
+    /* ===== header ===== */
     header.site-header{
       position:sticky;
       top:0;
@@ -59,6 +65,7 @@
       background:var(--nav-bg);
       border-bottom:1px solid #e5e7eb;
     }
+
     .site-header-inner{
       display:flex;
       align-items:center;
@@ -66,33 +73,30 @@
       height:72px;
       gap:24px;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
       min-width:0;
     }
-    .brand a{
-  display:inline-flex;
-  align-items:center;
-}
 
-.brand img{
-  height:52px;
-  width:auto;
-  max-width:220px;
-  display:block;
-  border-radius:16px;
-  background:#ffffff;
-  box-shadow:0 6px 18px rgba(15,23,42,0.15);
-  object-fit:contain;
-}
-    .brand-text-title{
-      font-size:18px;
-      font-weight:700;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
+    .brand a{
+      display:inline-flex;
+      align-items:center;
     }
+
+    .brand img{
+      height:52px;
+      width:auto;
+      max-width:220px;
+      display:block;
+      border-radius:16px;
+      background:#ffffff;
+      box-shadow:0 6px 18px rgba(15,23,42,0.15);
+      object-fit:contain;
+    }
+
     .brand small{
       display:block;
       font-size:12px;
@@ -106,14 +110,18 @@
       align-items:center;
       gap:20px;
       font-size:15px;
+      flex-wrap:wrap;
     }
+
     nav.main-nav a{
       position:relative;
       padding:4px 0;
       white-space:nowrap;
       color:var(--ink);
     }
+
     nav.main-nav a.active{font-weight:600;}
+
     nav.main-nav a.active::after{
       content:"";
       position:absolute;
@@ -124,17 +132,13 @@
       border-radius:999px;
       background:var(--accent);
     }
-    nav.main-nav a.cta{
-      padding:8px 18px;
-      border-radius:999px;
-      border:1px solid var(--ink);
-      font-weight:600;
-    }
+
     nav.main-nav span.lang{
       font-size:14px;
       color:var(--muted);
       margin-left:8px;
     }
+
     nav.main-nav span.lang a{color:var(--accent);}
 
     /* ===== layout ===== */
@@ -154,6 +158,7 @@
       border:1px solid #fed7aa;
       box-shadow:0 12px 30px rgba(251,191,36,0.25);
     }
+
     .page-hero .badge{
       display:inline-block;
       background:#f97316;
@@ -164,6 +169,7 @@
       padding:4px 10px;
       margin-bottom:6px;
     }
+
     .page-hero p{max-width:760px;}
 
     .two-column{
@@ -183,127 +189,87 @@
     }
 
     ul{margin:0 0 10px 1.2em;padding:0;}
-    li{margin-bottom:4px;}
+    li{margin-bottom:4px;line-height:1.7;}
 
-    .trainer-header{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      margin-bottom:8px;
+    /* ===== staff ===== */
+    .trainers-intro{
+      max-width:720px;
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:16px;
     }
-    .trainer-name{font-size:18px;font-weight:700;}
-    .trainer-role{font-size:14px;color:var(--muted);}
-    .label{
+
+    .staff-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:22px;
+      margin-top:20px;
+    }
+
+    .staff-card{
+      position:relative;
+      background:#f9fafb;
+      border-radius:18px;
+      padding:20px 22px;
+      border:1px solid #e5e7eb;
+      overflow:hidden;
+      transition:0.25s ease;
+    }
+
+    .staff-card::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      bottom:0;
+      width:4px;
+      background:linear-gradient(180deg,#ff9800,#f97316);
+    }
+
+    .staff-card:hover{
+      background:#ffffff;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .staff-meta{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .trainer-name{
+      font-size:17px;
+      font-weight:700;
+    }
+
+    .trainer-role{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .staff-bio{
+      font-size:14px;
+      margin-top:10px;
+      line-height:1.7;
+    }
+
+    .staff-qual-label{
+      margin-top:14px;
       font-size:12px;
       font-weight:700;
       color:var(--muted);
+    }
+
+    .staff-qual-list{
       margin-top:4px;
-    }
-    .subgrid{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(0,1fr);
-      gap:16px;
-      margin-top:12px;
+      padding-left:1.2em;
+      font-size:13px;
+      line-height:1.6;
     }
 
-    /* === Trainers (staff) layout === */
-.trainers-section{
-  margin-top:32px;
-}
-
-/* ===== Staff Section ===== */
-
-.trainers-intro{
-  max-width:720px;
-  font-size:14px;
-  color:var(--muted);
-  margin-bottom:16px;
-}
-
-/* 2列グリッド（スマホは1列） */
-.staff-grid{
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:22px;
-  margin-top:20px;
-}
-
-.staff-card{
-  position:relative;
-  background:#f9fafb;
-  border-radius:18px;
-  padding:20px 22px;
-  border:1px solid #e5e7eb;
-  overflow:hidden;
-  transition:0.25s ease;
-}
-
-/* 左のスポーティライン（細めに調整） */
-.staff-card::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  width:4px;
-  background:linear-gradient(180deg,#ff9800,#f97316);
-}
-
-/* Hoverでふわっと */
-.staff-card:hover{
-  background:#ffffff;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* メタ情報（名前・肩書） */
-.staff-meta{
-  display:flex;
-  flex-direction:column;
-  gap:4px;
-}
-
-.trainer-name{
-  font-size:17px;
-  font-weight:700;
-}
-
-.trainer-role{
-  font-size:13px;
-  color:var(--muted);
-}
-
-/* 本文 */
-.staff-bio{
-  font-size:14px;
-  margin-top:10px;
-  line-height:1.6;
-}
-
-/* 資格 */
-.staff-qual-label{
-  margin-top:14px;
-  font-size:12px;
-  font-weight:700;
-  color:var(--muted);
-}
-
-.staff-qual-list{
-  margin-top:4px;
-  padding-left:1.2em;
-  font-size:13px;
-  line-height:1.5;
-}
-
-.staff-qual-list li{
-  margin-bottom:3px;
-}
-
-/* スマホでは1列のみ */
-@media(max-width:768px){
-  .staff-grid{
-    grid-template-columns:1fr;
-  }
-}
+    .staff-qual-list li{
+      margin-bottom:3px;
+    }
 
     footer{
       border-top:1px solid #e5e7eb;
@@ -314,6 +280,7 @@
       background:#ffffffdd;
       backdrop-filter:blur(8px);
     }
+
     .socials a{margin-right:12px;}
 
     @media(max-width:768px){
@@ -324,41 +291,55 @@
         padding:10px 0 12px;
         gap:10px;
       }
-      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
-      .two-column{grid-template-columns:minmax(0,1fr);}
-      .subgrid{grid-template-columns:minmax(0,1fr);}
+
+      nav.main-nav{
+        flex-wrap:wrap;
+        row-gap:6px;
+      }
+
+      .two-column{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .staff-grid{
+        grid-template-columns:1fr;
+      }
+
+      .brand img{
+        height:52px;
+      }
     }
-   
   </style>
 </head>
 
 <body>
   <header class="site-header">
-  <div class="container site-header-inner">
-    <div class="brand">
-      <a href="/en.html">
-        <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
-      </a>
-      <small>Training &amp; Performance</small>
-    </div>
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="/en.html">
+          <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
 
-    <nav class="main-nav">
-      <a href="/classes-en.html">Classes</a>
-      <a href="/personal-en.html">Personal</a>
-      <a href="/mental-training-en.html">Mental</a>
-      <a href="/about-en.html">About</a>
-      <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
-    </nav>
-  </div>
-</header>
+      <nav class="main-nav">
+        <a href="/classes-en.html">Classes</a>
+        <a href="/personal-en.html">Personal</a>
+        <a href="/mental-training-en.html">Mental</a>
+        <a href="/about-en.html" class="active">About</a>
+        <span class="lang"><a href="/about.html" hreflang="ja">JP</a></span>
+      </nav>
+    </div>
+  </header>
+
   <main class="container">
     <!-- HERO -->
     <section class="page-hero">
       <p class="badge">About BRAVE ATHLETES CLUB</p>
       <h1>About the Club</h1>
       <p class="lead">
-        BRAVE ATHLETES CLUB is a community-based club that supports growth through movement – from kids who are confident in sports to those who feel a bit hesitant, as well as adults and athletes.
-        We provide personalized support from posture &amp; muscle function to performance enhancement and functional recovery.
+        BRAVE ATHLETES CLUB is a community-based club that supports growth through movement — from children who enjoy sport to those who feel a little unsure, as well as adults and athletes.
+        We provide support ranging from kids sports classes to personal conditioning, athletic development, and functional recovery.
       </p>
     </section>
 
@@ -368,27 +349,27 @@
         <h2>What We Do</h2>
         <p>At BRAVE, we focus on:</p>
         <ul>
-          <li>Kids sports classes that turn “I’m not good at sports” into “Maybe I can do this!”</li>
-          <li>Personal conditioning for adults &amp; athletes (posture, muscle function, performance, and recovery)</li>
+          <li>Kids sports classes that turn “I’m not good at sports” into “Maybe I can do this.”</li>
+          <li>Personal conditioning support for adults and athletes, including posture, movement, performance, and recovery</li>
           <li>Inclusive environments where people with disabilities can enjoy moving together</li>
         </ul>
         <p>
-          Regardless of experience or level, we aim to help each person take one step forward from where they are now.
+          Regardless of age, experience, or level, we aim to help each person take one step forward from where they are now.
         </p>
 
         <h2>Training Approach</h2>
         <ul>
-          <li>Building a solid foundation: improving posture and movement patterns first</li>
+          <li>Building a strong foundation by improving posture and movement patterns first</li>
           <li>Step-by-step progress tailored to each individual</li>
-          <li>Emphasis on positive feedback and “small successes”</li>
+          <li>Emphasis on positive feedback and small successes</li>
           <li>Safety first, while creating an enjoyable and encouraging environment</li>
         </ul>
       </div>
 
       <div class="card">
-        <h3>Who It’s For</h3>
+        <h3>Who We Support</h3>
         <ul>
-          <li>Kids &amp; juniors (preschool to elementary)</li>
+          <li>Kids and juniors</li>
           <li>Teens and adults</li>
           <li>Athletes aiming to improve performance</li>
           <li>Those recovering from injury or wanting easier daily movement</li>
@@ -406,136 +387,127 @@
       </div>
     </section>
 
-    <!-- Trainer introduction -->
-<h2>Our Team</h2>
+    <!-- Team -->
+    <section>
+      <h2>Our Team</h2>
+      <p class="trainers-intro">
+        At BRAVE ATHLETES CLUB, specialists in conditioning, training, para-sports,
+        and body care work together to support athletes of all ages.
+      </p>
 
-<p class="trainers-intro">
-  At BRAVE ATHLETES CLUB, specialists in conditioning, training, para-sports,
-  and body care work together to support athletes of all ages.
-</p>
+      <div class="staff-grid">
 
-<div class="staff-grid">
+        <div class="staff-card">
+          <div class="staff-meta">
+            <div class="trainer-name">Hiroko Haraguchi</div>
+            <div class="trainer-role">Founder / Conditioning Trainer</div>
+          </div>
 
-  <!-- Hiroko Haraguchi -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">Hiroko Haraguchi</div>
-      <div class="trainer-role">Founder / Conditioning Trainer</div>
-    </div>
+          <p class="staff-bio">
+            With experience in sports coaching, training, para-sport, and health support,
+            Hiroko provides trusted conditioning support for both children and adults.
+          </p>
 
-    <p class="staff-bio">
-      With experience in sports coaching, training, para-sport, and health support,
-      Hiroko provides trusted “go-to” conditioning support for both kids and adults.
-    </p>
+          <div class="staff-qual-label">Qualifications</div>
+          <ul class="staff-qual-list">
+            <li>JSPO Certified Sports Programmer</li>
+            <li>Japan Sports Facilities Association Certified Training Instructor</li>
+            <li>Japan Para-Sports Association Senior Para-Sports Instructor</li>
+            <li>NASM – Performance Enhancement Specialist</li>
+            <li>NUAD BO – RARN THAI MASSAGE</li>
+            <li>Health Management Specialist (Level 1)</li>
+            <li>JBA Certified C-Class Basketball Coach</li>
+            <li>Weight Management Specialist</li>
+            <li>Certificate of CPR & AED Provider</li>
+          </ul>
+        </div>
 
-    <div class="staff-qual-label">Qualifications</div>
-    <ul class="staff-qual-list">
-      <li>JSPO Certified Sports Programmer</li>
-      <li>Japan Sports Facilities Association Certified Training Instructor</li>
-      <li>Japan Para-Sports Association Senior Para-Sports Instructor</li>
-      <li>NASM – Performance Enhancement Specialist</li>
-      <li>NUAD BO – RARN THAI MASSAGE</li>
-      <li>Health Management Specialist (Level 1)</li>
-      <li>JBA Certified C-Class Basketball Coach</li>
-      <li>Weight Management Specialist</li>
-      <li>Certificate of CPR & AED Provider</li>
-    </ul>
-  </div>
+        <div class="staff-card">
+          <div class="staff-meta">
+            <div class="trainer-name">Jun Yasutomi</div>
+            <div class="trainer-role">Acupuncturist / Conditioning Support</div>
+          </div>
 
-  <!-- Jun Yasutomi -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">Jun Yasutomi</div>
-      <div class="trainer-role">Acupuncturist / Conditioning Support</div>
-    </div>
+          <p class="staff-bio">
+            Provides mobile acupuncture and moxibustion-based body support,
+            helping clients improve movement efficiency and physical condition.
+          </p>
 
-    <p class="staff-bio">
-      Provides mobile acupuncture and moxibustion-based body support.
-      Offers conditioning care to improve movement efficiency.
-    </p>
+          <div class="staff-qual-label">Qualifications</div>
+          <ul class="staff-qual-list">
+            <li>Licensed Acupuncturist</li>
+          </ul>
+        </div>
 
-    <div class="staff-qual-label">Qualifications</div>
-    <ul class="staff-qual-list">
-      <li>Licensed Acupuncturist</li>
-    </ul>
-  </div>
+        <div class="staff-card">
+          <div class="staff-meta">
+            <div class="trainer-name">Asami Tamura</div>
+            <div class="trainer-role">Kids / Junior / Para-Sports Support</div>
+          </div>
 
-  <!-- Asami Tamura -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">Asami Tamura</div>
-      <div class="trainer-role">Kids / Junior / Para-Sports Support</div>
-    </div>
+          <p class="staff-bio">
+            With experience in health exercise guidance, developmental support,
+            and para-sports instruction, Asami provides safe and clear support
+            for both children and adults.
+          </p>
 
-    <p class="staff-bio">
-      With experience in health exercise guidance, developmental support,
-      and para-sports instruction, Asami provides safe and clear support
-      for both children and adults.
-    </p>
+          <div class="staff-qual-label">Qualifications</div>
+          <ul class="staff-qual-list">
+            <li>Health Exercise Instructor</li>
+            <li>Japan Para-Sports Association – Intermediate Para-Sports Instructor</li>
+            <li>Certified Manager for Child Development Support</li>
+          </ul>
+        </div>
 
-    <div class="staff-qual-label">Qualifications</div>
-    <ul class="staff-qual-list">
-      <li>Health Exercise Instructor</li>
-      <li>Japan Para-Sports Association – Intermediate Para-Sports Instructor</li>
-      <li>Certified Manager for Child Development Support</li>
-    </ul>
-  </div>
+        <div class="staff-card">
+          <div class="staff-meta">
+            <div class="trainer-name">Sakura Nakamura</div>
+            <div class="trainer-role">Kids & Para-Sport Support</div>
+          </div>
 
-  <!-- Sakura Nakamura -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">Sakura Nakamura</div>
-      <div class="trainer-role">Kids & Para-Sport Support</div>
-    </div>
+          <p class="staff-bio">
+            Supports a wide range of participants, from early childhood movement play to para-sports.
+            She values creating an environment where each child can move with confidence and enjoyment.
+          </p>
 
-    <p class="staff-bio">
-      Supports a wide range from early childhood movement play to para-sports.
-      She values creating environments where each child can move confidently and enjoyably.
-    </p>
+          <div class="staff-qual-label">Qualifications</div>
+          <ul class="staff-qual-list">
+            <li>Japan Para-Sports Association – Beginner Para-Sports Instructor</li>
+            <li>Japan Junior Sports Education Association – Preschool Physical Education (Level 3)</li>
+          </ul>
+        </div>
 
-    <div class="staff-qual-label">Qualifications</div>
-    <ul class="staff-qual-list">
-      <li>Japan Para-Sports Association – Beginner Para-Sports Instructor</li>
-      <li>Japan Junior Sports Education Association – Preschool Physical Education (Level 3)</li>
-    </ul>
-  </div>
+        <div class="staff-card">
+          <div class="staff-meta">
+            <div class="trainer-name">Asako Tamura</div>
+            <div class="trainer-role">Child Development Support Specialist</div>
+          </div>
 
-  <!-- Asako Tamura -->
-  <div class="staff-card">
-    <div class="staff-meta">
-      <div class="trainer-name">Asako Tamura</div>
-      <div class="trainer-role">Child Development Support Specialist</div>
-    </div>
+          <p class="staff-bio">
+            Specializes in child development support and in creating safe, inclusive learning environments.
+          </p>
 
-    <p class="staff-bio">
-      Specializes in child developmental support and creating safe, inclusive learning environments.
-    </p>
+          <div class="staff-qual-label">Qualifications</div>
+          <ul class="staff-qual-list">
+            <li>Certified Manager for Child Development Support</li>
+          </ul>
+        </div>
 
-    <div class="staff-qual-label">Qualifications</div>
-    <ul class="staff-qual-list">
-      <li>Certified Manager for Child Development Support</li>
-    </ul>
-  </div>
-
-</div>
-
-
-  </div>
-</section>
-
+      </div>
+    </section>
 
     <!-- Area & Contact -->
     <section>
       <h2>Area &amp; Contact</h2>
       <div class="card">
-        <h3>Activity Area</h3>
+        <h3>Activity Areas</h3>
         <p>
           Mainly in the Kansai region (Osaka, Kyoto, Hyogo, etc.) and the Kanto region (Tokyo, Kanagawa).<br />
-          For on-site support, we will discuss the details and location individually.
+          For on-site support, details and location will be discussed individually.
         </p>
 
         <h3>Contact</h3>
-        <p>Please feel free to contact us via email or Facebook message regarding class details or personal support.</p>
+        <p>Please feel free to contact us by email or Facebook message regarding class details or personal support.</p>
         <p>
           Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br />
           Facebook: <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Brave Athletes Club (official page)</a>
@@ -551,14 +523,14 @@
         <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">Facebook</a>
         <a href="/index.html">日本語</a>
       </div>
-      <div style="margin-top:8px;">© 2025 BRAVE ATHLETES CLUB</div>
+      <div style="margin-top:8px;">© 2026 BRAVE ATHLETES CLUB</div>
     </div>
   </footer>
 
   <!-- seasonal header logo -->
   <script>
     (function () {
-      const img = document.getElementById("global-seasonal-logo");
+      const img = document.getElementById("seasonalLogo");
       if (!img) return;
 
       const today = new Date();
@@ -617,9 +589,8 @@
         file = "logo-autumn-winter-yello.png";
       }
 
-      img.src = "assets/seasonal/" + file;
+      img.src = "/assets/seasonal/" + file;
     })();
   </script>
 </body>
 </html>
-
