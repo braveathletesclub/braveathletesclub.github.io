@@ -58,6 +58,7 @@
       --line:#e5e7eb;
       --green:#0a6b5a;
       --green-soft:#edf9f4;
+      --blue-soft:#eef6ff;
     }
 
     * { box-sizing:border-box; }
@@ -127,6 +128,7 @@
       align-items:center;
       gap:20px;
       font-size:15px;
+      flex-wrap:wrap;
     }
 
     nav.main-nav a{
@@ -287,6 +289,12 @@
       gap:18px;
     }
 
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
     .card{
       background:var(--surface);
       border-radius:22px;
@@ -344,6 +352,18 @@
       border-color:#111827;
     }
 
+    .feature-box{
+      background:linear-gradient(135deg,var(--green-soft),var(--blue-soft));
+      border-radius:24px;
+      padding:24px;
+      border:1px solid var(--line);
+    }
+
+    .feature-box p:last-child,
+    .note-box p:last-child{
+      margin-bottom:0;
+    }
+
     .note-box{
       background:linear-gradient(135deg,#edf9f4,#eef6ff);
       border-radius:24px;
@@ -388,7 +408,8 @@
         grid-template-columns:minmax(0,1fr);
       }
 
-      .grid-3{
+      .grid-3,
+      .grid-2{
         grid-template-columns:minmax(0,1fr);
       }
 
@@ -450,10 +471,8 @@
 
       const src = "/assets/seasonal/" + filename;
       const headerLogo = document.getElementById("seasonalLogo");
-      const athleteThumb = document.getElementById("athleteThumbLogo");
 
       if (headerLogo) headerLogo.src = src;
-      if (athleteThumb) athleteThumb.src = src;
     });
   </script>
 </head>
@@ -487,11 +506,11 @@
             <h1>メンタルトレーニング</h1>
             <p>
               Brave Athletes Clubでは、技術や体力だけでなく、心の整え方や行動の習慣づくりも大切にしています。
-              メンタルトレーニングは、試合や発表の本番で力を発揮するためだけでなく、日常生活や勉強、子育てや関わり方にも活かすことができます。
+              メンタルトレーニングは、本番で力を発揮するためだけでなく、日常生活や勉強、子育てや人との関わり方にも活かすことができます。
             </p>
             <div class="hero-buttons">
               <a class="btn-main" href="#courses">講座一覧を見る</a>
-              <a class="btn-main secondary" href="/contact.html">お問い合わせ</a>
+              <a class="btn-main secondary" href="mailto:braveathletesclub@gmail.com">メールで問い合わせる</a>
             </div>
           </div>
 
@@ -508,67 +527,96 @@
         </p>
       </section>
 
-     <section id="courses">
-  <h2>講座・プログラム</h2>
-  <div class="grid-3">
+      <section>
+        <div class="feature-box">
+          <h2>メンタルトレーニングで身につけられること</h2>
+          <div class="grid-2">
+            <div>
+              <ul>
+                <li>集中力の整え方</li>
+                <li>本番前のルーティーン</li>
+                <li>振り返りと自己理解</li>
+                <li>目標設定の考え方</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>自信やコミュニケーション</li>
+                <li>保護者としての関わり方</li>
+                <li>日々の行動習慣づくり</li>
+                <li>スポーツと日常に活かせる実践力</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <article class="card">
-      <div class="card-thumb">
-        <img src="/assets/mental-img/mental-introduction.png" alt="メンタルトレーニング Introduction" />
-      </div>
-      <h3>Introduction</h3>
-      <p>
-        メンタルトレーニングの基本を学ぶ入門講座です。試合前・試合中・試合後の考え方や、
-        集中力、ルーティーン、日常への応用まで、やさしく整理して学びます。
-      </p>
-      <div class="card-links">
-        <a class="card-link primary" href="/mental-training-introduction.html">詳細を見る</a>
-      </div>
-    </article>
+      <section id="courses">
+        <h2>講座・プログラム</h2>
+        <div class="grid-3">
 
-    <article class="card">
-      <div class="card-thumb">
-        <img src="/assets/mental-img/mental-parent.png" alt="保護者向けメンタルトレーニング Parent" />
-      </div>
-      <h3>Parent</h3>
-      <p>
-        保護者向けの座談会形式の学びです。子どもとの関わり方、声かけ、見守り方を見つめ直し、
-        主体性ややる気を育てるためのコーチングマインドを、温かい雰囲気の中で考えていきます。
-      </p>
-      <p>
-        <strong>次回開催：</strong> 2026年5月1日（金）19:00〜20:00
-      </p>
-      <div class="card-links">
-        <a class="card-link primary" href="/mental-training-parent.html">詳細を見る</a>
-      </div>
-    </article>
+          <article class="card">
+            <div class="card-thumb">
+              <img src="/assets/mental-img/mental-introduction.png" alt="メンタルトレーニング Introduction" />
+            </div>
+            <h3>Introduction</h3>
+            <p>
+              メンタルトレーニングの基本を学ぶ入門講座です。試合前・試合中・試合後の考え方や、
+              集中力、ルーティーン、日常への応用まで、やさしく整理して学びます。
+            </p>
+            <div class="card-links">
+              <a class="card-link primary" href="/mental-training-introduction.html">詳細を見る</a>
+            </div>
+          </article>
 
-    <article class="card">
-      <div class="card-thumb">
-        <img src="/assets/mental-img/mental-athlete.png" alt="アスリート向けメンタルトレーニング Athlete" />
-      </div>
-      <h3>Athlete</h3>
-      <p>
-        本番での実力発揮、集中の維持、振り返り、目標設定など、
-        アスリートの継続的な成長につながるメンタルスキルを扱います。
-      </p>
-      <div class="card-links">
-        <a class="card-link" href="/mental-training-athlete.html">準備中ページ</a>
-      </div>
-    </article>
+          <article class="card">
+            <div class="card-thumb">
+              <img src="/assets/mental-img/mental-parent.png" alt="保護者向けメンタルトレーニング Parent" />
+            </div>
+            <h3>Parent</h3>
+            <p>
+              保護者向けの座談会形式の学びです。子どもとの関わり方、声かけ、見守り方を見つめ直し、
+              主体性ややる気を育てるためのコーチングマインドを、温かい雰囲気の中で考えていきます。
+            </p>
+            <p>
+              <strong>次回開催：</strong> 2026年5月1日（金）19:00〜20:00
+            </p>
+            <div class="card-links">
+              <a class="card-link primary" href="/mental-training-parent.html">詳細を見る</a>
+            </div>
+          </article>
 
-  </div>
-</section>
+          <article class="card">
+            <div class="card-thumb">
+              <img src="/assets/mental-img/mental-athlete.png" alt="アスリート向けメンタルトレーニング Athlete" />
+            </div>
+            <h3>Athlete</h3>
+            <p>
+              本番での実力発揮、集中の維持、振り返り、目標設定など、
+              アスリートの継続的な成長につながるメンタルスキルを扱います。
+            </p>
+            <div class="card-links">
+              <a class="card-link" href="/mental-training-athlete.html">準備中ページ</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
 
       <section>
         <div class="note-box">
           <h2>Brave Athletes Clubが大切にしていること</h2>
           <p>
-            メンタルトレーニングは、単に「気持ちを強くする」ことではなく、自分の状態に気づき、必要な行動につなげていくための学びです。
-            Brave Athletes Clubでは、スポーツ科学や行動の考え方をもとにしながら、子どもにも大人にも取り入れやすい形でお伝えしていきます。
+            メンタルトレーニングは、単に「気持ちを強くする」ことではなく、
+            自分の状態に気づき、必要な行動につなげていくための学びです。
           </p>
           <p>
-            アスリートだけでなく、保護者やご家族にとっても役立つ視点を大切にし、安心して相談できる環境づくりを目指しています。
+            Brave Athletes Clubでは、スポーツ科学や行動の考え方をもとにしながら、
+            子どもにも大人にも取り入れやすい形でお伝えしていきます。
+          </p>
+          <p>
+            アスリートだけでなく、保護者やご家族にとっても役立つ視点を大切にし、
+            安心して相談できる環境づくりを目指しています。
           </p>
         </div>
       </section>
@@ -577,7 +625,7 @@
 
   <footer>
     <div class="container">
-      © BRAVE ATHLETES CLUB
+      © 2026 BRAVE ATHLETES CLUB
     </div>
   </footer>
 </body>
