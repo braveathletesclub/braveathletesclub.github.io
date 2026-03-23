@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Mental Training | BRAVE ATHLETES CLUB</title>
-  <meta name="description" content="Mental training programs at BRAVE ATHLETES CLUB. Explore introductory, parent-focused, and athlete-focused mental training programs." />
+  <meta name="description" content="Mental training programs at BRAVE ATHLETES CLUB. Explore introductory, parent-focused, and athlete-focused mental training programs designed for sport, daily life, communication, and personal growth." />
 
   <link rel="canonical" href="https://braveathletesclub.github.io/mental-training-en.html" />
 
@@ -58,6 +58,7 @@
       --line:#e5e7eb;
       --green:#0a6b5a;
       --green-soft:#edf9f4;
+      --blue-soft:#eef6ff;
     }
 
     * { box-sizing:border-box; }
@@ -288,6 +289,12 @@
       gap:18px;
     }
 
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
     .card{
       background:var(--surface);
       border-radius:22px;
@@ -345,6 +352,18 @@
       border-color:#111827;
     }
 
+    .feature-box{
+      background:linear-gradient(135deg,var(--green-soft),var(--blue-soft));
+      border-radius:24px;
+      padding:24px;
+      border:1px solid var(--line);
+    }
+
+    .feature-box p:last-child,
+    .note-box p:last-child{
+      margin-bottom:0;
+    }
+
     .note-box{
       background:linear-gradient(135deg,#edf9f4,#eef6ff);
       border-radius:24px;
@@ -389,7 +408,8 @@
         grid-template-columns:minmax(0,1fr);
       }
 
-      .grid-3{
+      .grid-3,
+      .grid-2{
         grid-template-columns:minmax(0,1fr);
       }
 
@@ -468,120 +488,355 @@
       </div>
 
       <nav class="main-nav">
-        <a href="/classes-en.html">Classes</a>
+        <a href="/classes-en.html" class="active">Classes</a>
         <a href="/personal-en.html">Personal</a>
-        <a href="/mental-training-en.html" class="active">Mental</a>
+        <a href="/mental-training-en.html">Mental</a>
         <a href="/about-en.html">About</a>
-        <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
+        <span class="lang"><a href="/classes.html" hreflang="ja">JP</a></span>
       </nav>
     </div>
   </header>
 
-  <main>
-    <div class="container">
-      <section class="hero-text">
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <span class="label">Mental Training</span>
-            <h1>Mental Training</h1>
-            <p>
-              At Brave Athletes Club, we value not only physical development and technical skills,
-              but also how athletes prepare mentally and build supportive daily habits.
-              Mental training can help in competition, and it can also support study, daily life,
-              parenting, and communication.
-            </p>
-            <div class="hero-buttons">
-              <a class="btn-main" href="#courses">View Programs</a>
-              <a class="btn-main secondary" href="mailto:braveathletesclub@gmail.com">Email Us</a>
-            </div>
+  <main class="container">
+
+    <section class="hero-classes">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <h1>Class Programs</h1>
+          <p class="lead">
+            Our class programs support children and young athletes through age-appropriate movement,
+            posture, coordination, and physical development.<br>
+            From playful early movement experiences to more structured athletic preparation,
+            we help each participant build a strong foundation in a safe, encouraging, and enjoyable environment.
+          </p>
+
+          <div class="hero-tabs">
+            <a class="hero-tab primary" href="#kids">Kids Sports</a>
+            <a class="hero-tab" href="#junior-conditioning">Junior Athlete Conditioning</a>
+            <a class="hero-tab" href="#functional-training">Functional Performance Training</a>
           </div>
 
-          <div class="hero-logo">
-            <img src="/assets/mental-img/mental-top.png" alt="Mental Training Program" />
-          </div>
+          <p class="hero-note">Please check the latest class schedule below.</p>
         </div>
-      </section>
 
-      <section>
-        <p class="lead">
-          We offer approachable mental training opportunities for different ages and needs, including introductory learning, parent-focused sessions, and athlete-focused support.
-          Each program is designed to be practical, supportive, and closely connected to everyday life as well as performance.
+        <div class="hero-visual">
+          <img
+            id="classes-hero-img"
+            src="/assets/classes-hero/classes-hero-track.png"
+            alt="Brave Athletes Club class visual"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="schedule">
+      <div class="card schedule-card">
+        <h2>Class Schedule</h2>
+        <p>You can check the latest class schedule here.</p>
+
+        <div class="schedule-buttons">
+          <a class="btn-main secondary"
+             href="/assets/schedule-2026-spring.png"
+             target="_blank"
+             rel="noopener">View Image</a>
+
+          <a class="btn-main btn-download"
+             href="/assets/schedule-2026-spring.pdf"
+             download>Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>What Makes Brave Classes Different</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Age-Appropriate Progression</h3>
+          <p class="lead">
+            We support each participant according to their stage of growth and development,
+            helping them improve step by step without rushing the process.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Movement Quality First</h3>
+          <p class="lead">
+            We focus on posture, balance, coordination, and body control so that children
+            and athletes can build a strong and sustainable physical foundation.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Fun, Safe, and Professional</h3>
+          <p class="lead">
+            Our classes are enjoyable and welcoming, while still grounded in professional support
+            for movement, conditioning, and athletic development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="kids">
+      <div class="grid grid-2">
+        <div class="thumb">
+          <img src="/assets/classes-kids.jpg" alt="Kids Sports Class photo">
+        </div>
+
+        <div class="card">
+          <div class="class-meta">Ages 1–9</div>
+          <h2>Kids Sports Class</h2>
+          <p class="class-time">Every Wednesday 16:00–17:30</p>
+
+          <h3>Helping children enjoy movement and build confidence</h3>
+          <ul>
+            <li>Play-based movement experiences</li>
+            <li>Basic running, jumping, and throwing skills</li>
+            <li>Balance and coordination</li>
+            <li>Foundations for good posture and body control</li>
+          </ul>
+          <p>
+            This class is designed for young children to enjoy moving their bodies while
+            building the foundations needed for future sport and daily movement.
+          </p>
+          <p>
+            <strong>Recommended for:</strong>
+            children who love to move, children who need more confidence in exercise,
+            and children who would benefit from improving posture and body awareness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="junior-conditioning">
+      <div class="grid grid-2">
+        <div class="thumb">
+          <img src="/assets/classes-bb.jpg" alt="Junior Athlete Conditioning Class photo">
+        </div>
+
+        <div class="card">
+          <div class="class-meta">Ages 10–15</div>
+          <h2>Junior Athlete Conditioning Class</h2>
+          <p class="class-time">Every Wednesday 16:20–17:50</p>
+
+          <h3>Building a stronger body for junior athletes</h3>
+          <ul>
+            <li>Posture and movement improvement</li>
+            <li>Agility and coordination</li>
+            <li>Core stability, balance, and flexibility</li>
+            <li>Technique support and injury prevention</li>
+          </ul>
+          <p>
+            This class helps junior athletes improve movement quality while having fun
+            and building a body that is more stable, more efficient, and less likely to get injured.
+          </p>
+          <p>
+            It supports important developmental years by improving how the body moves,
+            strengthening athletic foundations, and encouraging safe long-term progress.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="functional-training">
+      <div class="grid grid-2">
+        <div class="thumb">
+          <img src="/assets/classes-cond.jpg" alt="Functional Performance Training Class photo">
+        </div>
+
+        <div class="card">
+          <div class="class-meta">Ages 14–18</div>
+          <h2>Functional Performance Training Class</h2>
+          <p class="class-time">For junior high and high school athletes</p>
+
+          <h3>For student athletes who want to improve performance</h3>
+          <ul>
+            <li>More effective body use for sport</li>
+            <li>Training for speed, power, and stability</li>
+            <li>Movement and form improvement</li>
+            <li>Injury prevention and performance conditioning</li>
+          </ul>
+          <p>
+            This class builds on the same movement-quality foundations used in our conditioning work,
+            while adding more advanced training for total-body power, speed, and athletic performance.
+          </p>
+          <p>
+            It is recommended for student athletes who want more purposeful training
+            to support higher-level performance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="spring-break-2026">
+      <div class="campaign-box">
+        <span class="campaign-label">Spring Special Program</span>
+        <h2>Movement Quality Training</h2>
+
+        <p>
+          On March 30 and 31, we will hold a 2-day special conditioning program
+          focused on improving movement quality.
         </p>
-      </section>
 
-      <section id="courses">
-        <h2>Programs</h2>
-        <div class="grid-3">
+        <p>
+          Participants begin by checking mobility, flexibility, balance, agility,
+          and overall body control, then move into practical conditioning work.
+          It is a great first step for young athletes who want to move better,
+          stay injury-free, and prepare for regular training.
+        </p>
 
-          <article class="card">
-            <div class="card-thumb">
-              <img src="/assets/mental-img/mental-introduction.png" alt="Mental Training Introduction" />
-            </div>
-            <h3>Introduction</h3>
-            <p>
-              A beginner-friendly course that introduces the foundations of mental training.
-              Learn about focus, routines, reflection, and practical ways to apply mental skills in daily life.
-            </p>
-            <div class="card-links">
-              <a class="card-link primary" href="/mental-training-introduction-en.html">View Details</a>
-            </div>
-          </article>
+        <a
+          href="/assets/events/movement-quality-training-poster.png"
+          target="_blank"
+          rel="noopener"
+          class="conditioning-poster-link"
+        >
+          <img
+            src="/assets/events/movement-quality-training-poster.png"
+            alt="Movement Quality Training poster"
+            class="conditioning-poster"
+          />
+        </a>
 
-          <article class="card">
-            <div class="card-thumb">
-              <img src="/assets/mental-img/mental-parent.png" alt="Parent-focused mental training" />
-            </div>
-            <h3>Parent</h3>
-            <p>
-              A discussion-style learning opportunity for parents.
-              Reflect on communication, supportive involvement, and a coaching mindset that helps children build motivation and confidence.
-            </p>
-            <p>
-              <strong>Next session:</strong> May 1, 2026 | 19:00–20:00
-            </p>
-            <div class="card-links">
-              <a class="card-link primary" href="/mental-training-parent-en.html">View Details</a>
-            </div>
-          </article>
+        <p class="poster-note">Click the poster image to view it in a larger size.</p>
 
-          <article class="card">
-            <div class="card-thumb">
-              <img src="/assets/mental-img/mental-athlete.png" alt="Athlete mental training" />
-            </div>
-            <h3>Athlete</h3>
-            <p>
-              Focused on performance under pressure, concentration, reflection, and goal setting,
-              this program supports the ongoing growth of athletes through practical mental skills.
-            </p>
-            <div class="card-links">
-              <a class="card-link" href="/mental-training-athlete-en.html">Coming Soon</a>
-            </div>
-          </article>
-
+        <div style="display:flex;justify-content:center;margin:12px 0 8px;">
+          <a class="btn-main" href="/events/20260330-conditioning-en.html">View Details</a>
         </div>
-      </section>
 
-      <section>
-        <div class="note-box">
-          <h2>What Brave Athletes Club Values</h2>
-          <p>
-            Mental training is not simply about becoming mentally “strong.”
-            It is about noticing your current state, learning how to respond well,
-            and connecting that awareness to meaningful action.
-          </p>
-          <p>
-            At Brave Athletes Club, we aim to share these ideas in a practical and approachable way
-            so they can be used with confidence by both children and adults.
+        <div class="subtle-box" style="margin-top:18px;">
+          <p style="margin:0;">
+            <strong>A strong introduction to our regular classes.</strong><br>
+            After checking movement quality and body condition in this short program,
+            participants can continue into the most suitable regular class based on age and athletic stage.
           </p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section" id="inclusive">
+      <h2>A supportive environment for every participant</h2>
+      <div class="card">
+        <p class="lead" style="font-size:15px;">
+          We aim to create a safe and welcoming space for children who may feel uncertain about exercise
+          or who need a slower pace. We adjust support, communication, and environment so that each child
+          can participate with confidence.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>
+          If you have questions about class content, age group, trial participation,
+          or the best class option for your child, please feel free to contact us.
+        </p>
+        <p>
+          Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
+        </p>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 BRAVE ATHLETES CLUB
-    </div>
+    © 2026 Brave Athletes Club
   </footer>
+
+  <script>
+    (function () {
+      const img = document.getElementById("seasonalLogo");
+      if (!img) return;
+
+      const today = new Date();
+      const m = today.getMonth() + 1;
+      const d = today.getDate();
+
+      let file = "logo-allseaso.png";
+
+      if (m === 12 && d >= 6 && d <= 25) {
+        file = "logo-christmas.png";
+      } else if (
+        (m === 12 && d >= 26) ||
+        m === 1 ||
+        (m === 2 && d <= 2)
+      ) {
+        file = "logo-winter-pink.png";
+      } else if (
+        (m === 2 && d >= 3) ||
+        (m === 3 && d <= 15)
+      ) {
+        file = "logo-spring-yellow.png";
+      } else if (
+        (m === 3 && d >= 16) ||
+        (m === 4 && d <= 15)
+      ) {
+        file = "logo-spring-pink.png";
+      } else if (
+        (m === 4 && d >= 16) ||
+        (m === 5 && d <= 15)
+      ) {
+        file = "logo-black-pink.png";
+      } else if (
+        (m === 5 && d >= 16) ||
+        (m === 6 && d <= 30)
+      ) {
+        file = "logo-fishing.png";
+      } else if (
+        (m === 7 && d >= 1) ||
+        (m === 8 && d <= 15)
+      ) {
+        file = "logo-summer-sea.png";
+      } else if (
+        (m === 8 && d >= 16) ||
+        m === 9
+      ) {
+        file = "logo-allseaso.png";
+      } else if (
+        m === 10 ||
+        (m === 11 && d <= 15)
+      ) {
+        file = "logo-autumn-mapl.png";
+      } else if (
+        (m === 11 && d >= 16) ||
+        (m === 12 && d <= 5)
+      ) {
+        file = "logo-autumn-winter-yello.png";
+      }
+
+      img.src = "/assets/seasonal/" + file;
+    })();
+  </script>
+
+  <script>
+    (function () {
+      const img = document.getElementById("classes-hero-img");
+      if (!img) return;
+
+      const month = new Date().getMonth() + 1;
+      const heroMap = {
+        1: "classes-hero-snowboard.png",
+        2: "classes-hero-highjump.png",
+        3: "classes-hero-track.png",
+        4: "classes-hero-soccer-cones.jpg",
+        5: "classes-hero-ladder.jpg",
+        6: "classes-hero-shotput.jpg",
+        7: "classes-hero-tennis.png",
+        8: "classes-hero-americanfootball.jpg",
+        9: "classes-hero-basketball.jpg",
+        10:"classes-hero-longjump.jpg",
+        11:"classes-hero-weight.png",
+        12:"classes-hero-trainingroom.png"
+      };
+
+      const filename = heroMap[month] || "classes-hero-track.png";
+      img.src = "/assets/classes-hero/" + filename;
+    })();
+  </script>
+
 </body>
 </html>
