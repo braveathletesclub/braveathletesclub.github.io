@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Athlete | メンタルトレーニング | BRAVE ATHLETES CLUB</title>
+  <meta name="description" content="BRAVE ATHLETES CLUBのアスリート向けメンタルトレーニング。本番で力を発揮するための集中、ルーティーン、振り返り、目標設定などを実践的に学びます。" />
+
+  <link rel="canonical" href="https://braveathletesclub.github.io/mental-training-athlete.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="Athlete | メンタルトレーニング | BRAVE ATHLETES CLUB" />
+  <meta property="og:description" content="本番で力を発揮するための集中、ルーティーン、振り返り、目標設定などを実践的に学ぶアスリート向けページです。" />
+  <meta property="og:url" content="https://braveathletesclub.github.io/mental-training-athlete.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Athlete | メンタルトレーニング | BRAVE ATHLETES CLUB" />
+  <meta name="twitter:description" content="本番で力を発揮するための集中、ルーティーン、振り返り、目標設定などを実践的に学ぶアスリート向けページです。" />
+  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/mental-training-athlete.html" />
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/mental-training-athlete-en.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/mental-training-athlete.html" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Course",
+    "name":"アスリート向けメンタルトレーニング",
+    "description":"集中、ルーティーン、振り返り、目標設定などを実践的に学ぶアスリート向けメンタルトレーニング。",
+    "provider":{
+      "@type":"Organization",
+      "name":"BRAVE ATHLETES CLUB",
+      "url":"https://braveathletesclub.github.io/"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:#f3f4ff;
+      --surface:#ffffff;
+      --ink:#111827;
+      --accent:#ff8800;
+      --muted:#6b7280;
+      --nav-bg:rgba(255,255,255,0.9);
+      --line:#e5e7eb;
+      --green:#0a6b5a;
+      --green-soft:#edf9f4;
+    }
+
+    * { box-sizing:border-box; }
+    html, body { overflow-x:hidden; }
+
+    body {
+      margin:0;
+      font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+    }
+
+    a { color:var(--accent); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+
+    .container {
+      max-width:1100px;
+      margin:0 auto;
+      padding:0 20px;
+    }
+
+    header.site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--line);
+    }
+
+    .site-header-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:72px;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width:0;
+    }
+
+    .brand img{
+      height:60px;
+      border-radius:18px;
+      display:block;
+    }
+
+    .brand small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    nav.main-nav{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:15px;
+    }
+
+    nav.main-nav a{
+      position:relative;
+      padding:4px 0;
+      white-space:nowrap;
+      color:var(--ink);
+    }
+
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+
+    nav.main-nav span.lang a{
+      color:var(--accent);
+    }
+
+    main { padding:32px 0 64px; }
+    section { padding:28px 0; }
+
+    h1 {
+      font-size:clamp(30px,4vw,44px);
+      margin:0 0 12px;
+      line-height:1.25;
+      color:var(--green);
+    }
+
+    h2 {
+      font-size:24px;
+      margin:0 0 14px;
+      line-height:1.4;
+      color:var(--green);
+    }
+
+    h3 {
+      margin:0 0 8px;
+      font-size:20px;
+      color:var(--green);
+    }
+
+    p {
+      line-height:1.85;
+      margin:0 0 12px;
+    }
+
+    ul {
+      margin:0;
+      padding-left:1.2em;
+      line-height:1.9;
+    }
+
+    .hero-inner{
+      background:linear-gradient(135deg,#e0f2fe,#fdf2ff);
+      border-radius:32px;
+      padding:32px 28px;
+      display:grid;
+      grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr);
+      gap:24px;
+      align-items:center;
+      box-shadow:0 12px 30px rgba(15,23,42,0.06);
+    }
+
+    .hero-copy p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    .hero-logo{
+      text-align:center;
+    }
+
+    .hero-logo img{
+      width:100%;
+      max-width:420px;
+      border-radius:24px;
+      box-shadow:0 18px 35px rgba(15,23,42,0.18);
+      background:#fff;
+      display:block;
+      margin:0 auto;
+    }
+
+    .label{
+      display:inline-block;
+      font-size:12px;
+      font-weight:700;
+      color:var(--green);
+      background:var(--green-soft);
+      border-radius:999px;
+      padding:6px 10px;
+      margin-bottom:12px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn-main{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
+      background:#111827;
+      color:#fff;
+      font-weight:600;
+      border:none;
+      text-decoration:none;
+    }
+
+    .btn-main:hover{
+      text-decoration:none;
+      opacity:.92;
+    }
+
+    .btn-main.secondary{
+      background:#fff;
+      color:#111827;
+      border:1px solid var(--line);
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      background:var(--surface);
+      border-radius:22px;
+      padding:22px;
+      border:1px solid var(--line);
+      box-shadow:0 8px 24px rgba(15,23,42,0.04);
+      height:100%;
+    }
+
+    .info-list {
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:12px 18px;
+      margin:0;
+    }
+
+    .info-list dt {
+      font-weight:700;
+      color:var(--green);
+    }
+
+    .info-list dd {
+      margin:0;
+    }
+
+    .note-box{
+      background:linear-gradient(135deg,#edf9f4,#eef6ff);
+      border-radius:24px;
+      padding:24px;
+      border:1px solid var(--line);
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:24px 0 40px;
+      text-align:center;
+      font-size:12px;
+      color:var(--muted);
+      background:#ffffffcc;
+      backdrop-filter:blur(6px);
+    }
+
+    @media (max-width:900px){
+      .site-header-inner{
+        flex-direction:column;
+        align-items:flex-start;
+        height:auto;
+        gap:10px;
+        padding:10px 0 12px;
+      }
+
+      nav.main-nav{
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        gap:8px 14px;
+        row-gap:6px;
+        font-size:14px;
+        line-height:1.2;
+      }
+
+      nav.main-nav span.lang{
+        margin-left:0;
+      }
+
+      .hero-inner, .grid-2{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .info-list{
+        grid-template-columns:1fr;
+        gap:6px 0;
+      }
+
+      .brand img{
+        height:52px;
+      }
+    }
+
+    @media (max-width:640px){
+      main{ padding-top:20px; }
+
+      .hero-inner{
+        padding:24px 20px;
+        border-radius:24px;
+      }
+
+      .card{
+        padding:18px 16px;
+      }
+
+      .hero-logo img{
+        max-width:100%;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const today = new Date();
+      const mmdd = (today.getMonth() + 1) * 100 + today.getDate();
+
+      let filename = "logo-allseaso.png";
+
+      if (mmdd >= 101 && mmdd <= 107) {
+        filename = "2026NewYear.png";
+      } else if (mmdd >= 1206 && mmdd <= 1225) {
+        filename = "logo-christmas.png";
+      } else if (mmdd >= 1226 || mmdd <= 202) {
+        filename = "logo-winter-pink.png";
+      } else if (mmdd >= 203 && mmdd <= 315) {
+        filename = "logo-spring-yellow.png";
+      } else if (mmdd >= 316 && mmdd <= 414) {
+        filename = "logo-spring-pink.png";
+      } else if (mmdd >= 415 && mmdd <= 514) {
+        filename = "logo-black-pink.png";
+      } else if (mmdd >= 515 && mmdd <= 630) {
+        filename = "logo-fishing.png";
+      } else if (mmdd >= 701 && mmdd <= 815) {
+        filename = "logo-summer-sea.png";
+      } else if (mmdd >= 816 && mmdd <= 930) {
+        filename = "logo-allseaso.png";
+      } else if (mmdd >= 1001 && mmdd <= 1115) {
+        filename = "logo-autumn-mapl.png";
+      } else if (mmdd >= 1116 && mmdd <= 1205) {
+        filename = "logo-autumn-winter-yello.png";
+      }
+
+      const src = "/assets/seasonal/" + filename;
+      const headerLogo = document.getElementById("seasonalLogo");
+      if (headerLogo) headerLogo.src = src;
+    });
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <div class="brand">
+        <a href="/en.html">
+          <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
+        </a>
+        <small>Training &amp; Performance</small>
+      </div>
+
+      <nav class="main-nav">
+        <a href="/classes-en.html">Classes</a>
+        <a href="/personal-en.html">Personal</a>
+        <a href="/mental-training-en.html" class="active">Mental</a>
+        <a href="/about-en.html">About</a>
+        <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="label">Mental Training</span>
+            <h1>Mental Training</h1>
+            <p>
+              At Brave Athletes Club, we value not only physical development and technical skills, but also how we prepare the mind and build supportive daily habits.
+              Mental training can help athletes perform in competition, and it can also support study, daily life, parenting, and communication.
+            </p>
+            <div class="hero-buttons">
+              <a class="btn-main" href="#overview">Overview</a>
+              <a class="btn-main secondary" href="/contact-en.html">Contact</a>
+            </div>
+          </div>
+
+          <div class="hero-logo">
+            <img src="/assets/mental-img/mental-athlete.png" alt="Athlete mental training" />
+          </div>
+        </div>
+      </section>
+
+      <section id="overview">
+        <div class="card">
+          <h2>Athlete Mental Training</h2>
+          <p>
+            This page introduces our athlete-focused mental training approach.
+            A regular schedule is planned in the future, and sessions will include both practical application and guided learning.
+          </p>
+          <p>
+            The aim is not simply to “be tougher.” Instead, we work on awareness, focus, routines, reflection, and communication so that athletes can use their skills more consistently in real performance settings.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>What We Plan to Work On</h2>
+          <div class="grid-2">
+            <div>
+              <h3>Before performance</h3>
+              <ul>
+                <li>pre-performance routines</li>
+                <li>breathing and regulation</li>
+                <li>settling nerves before competition</li>
+                <li>focusing on the next action</li>
+              </ul>
+            </div>
+            <div>
+              <h3>During performance</h3>
+              <ul>
+                <li>resetting after mistakes</li>
+                <li>maintaining concentration</li>
+                <li>using cue words and self-talk</li>
+                <li>staying connected to game or event demands</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="grid-2">
+          <div class="card">
+            <h2>After performance</h2>
+            <ul>
+              <li>reflection and review</li>
+              <li>identifying what worked well</li>
+              <li>setting the next goal clearly</li>
+              <li>building repeatable habits over time</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Practical session elements</h2>
+            <ul>
+              <li>focus training</li>
+              <li>routine practice</li>
+              <li>visualisation and mental rehearsal</li>
+              <li>communication and feedback</li>
+              <li>simple written reflection</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h2>Who This Is For</h2>
+          <ul>
+            <li>young athletes who want to perform more consistently</li>
+            <li>athletes who get nervous before competition</li>
+            <li>those who want to improve focus and reset after mistakes</li>
+            <li>players who want to connect training habits with performance</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="note-box">
+          <h2>Our Approach</h2>
+          <p>
+            We want athletes to understand that mental training is part of regular development, just like movement, skill, and physical conditioning.
+            It should feel practical, understandable, and useful in everyday training as well as competition.
+          </p>
+          <p>
+            Sessions will be designed so that participants can try strategies, reflect on them, and gradually build habits they can trust.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © BRAVE ATHLETES CLUB
+    </div>
+  </footer>
+</body>
+</html>
