@@ -276,22 +276,6 @@
       height:100%;
     }
 
-    .info-list {
-      display:grid;
-      grid-template-columns:180px 1fr;
-      gap:12px 18px;
-      margin:0;
-    }
-
-    .info-list dt {
-      font-weight:700;
-      color:var(--green);
-    }
-
-    .info-list dd {
-      margin:0;
-    }
-
     .note-box{
       background:linear-gradient(135deg,#edf9f4,#eef6ff);
       border-radius:24px;
@@ -334,11 +318,6 @@
 
       .hero-inner, .grid-2{
         grid-template-columns:minmax(0,1fr);
-      }
-
-      .info-list{
-        grid-template-columns:1fr;
-        gap:6px 0;
       }
 
       .brand img{
@@ -406,18 +385,18 @@
   <header class="site-header">
     <div class="container site-header-inner">
       <div class="brand">
-        <a href="/en.html">
-          <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
+        <a href="/">
+          <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club ロゴ" />
         </a>
         <small>Training &amp; Performance</small>
       </div>
 
       <nav class="main-nav">
-        <a href="/classes-en.html">Classes</a>
-        <a href="/personal-en.html">Personal</a>
-        <a href="/mental-training-en.html" class="active">Mental</a>
-        <a href="/about-en.html">About</a>
-        <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
+        <a href="/classes.html">教室</a>
+        <a href="/personal.html">パーソナル</a>
+        <a href="/mental-training.html" class="active">メンタル</a>
+        <a href="/about.html">クラブについて</a>
+        <span class="lang"><a href="/mental-training-athlete-en.html" hreflang="en">EN</a></span>
       </nav>
     </div>
   </header>
@@ -427,57 +406,57 @@
       <section>
         <div class="hero-inner">
           <div class="hero-copy">
-            <span class="label">Mental Training</span>
-            <h1>Mental Training</h1>
+            <span class="label">Athlete</span>
+            <h1>アスリート向けメンタルトレーニング</h1>
             <p>
-              At Brave Athletes Club, we value not only physical development and technical skills, but also how we prepare the mind and build supportive daily habits.
-              Mental training can help athletes perform in competition, and it can also support study, daily life, parenting, and communication.
+              本番で力を発揮するためには、技術や体力だけでなく、心の準備や集中の整え方も大切です。
+              Brave Athletes Clubでは、アスリートが日々の練習から本番まで一貫して取り組めるよう、実践的なメンタルスキルを分かりやすく扱っていきます。
             </p>
             <div class="hero-buttons">
-              <a class="btn-main" href="#overview">Overview</a>
-              <a class="btn-main secondary" href="/contact-en.html">Contact</a>
+              <a class="btn-main" href="#overview">概要を見る</a>
+              <a class="btn-main secondary" href="/contact.html">お問い合わせ</a>
             </div>
           </div>
 
           <div class="hero-logo">
-            <img src="/assets/mental-img/mental-athlete.png" alt="Athlete mental training" />
+            <img src="/assets/mental-img/mental-athlete.png" alt="アスリート向けメンタルトレーニング" />
           </div>
         </div>
       </section>
 
       <section id="overview">
         <div class="card">
-          <h2>Athlete Mental Training</h2>
+          <h2>このページについて</h2>
           <p>
-            This page introduces our athlete-focused mental training approach.
-            A regular schedule is planned in the future, and sessions will include both practical application and guided learning.
+            このページでは、今後定期開催を予定しているアスリート向けメンタルトレーニングの考え方と内容の方向性をご紹介します。
+            まだ日程は未定ですが、集中トレーニングの実践や、ルーティーン、振り返り、目標設定などを継続的に扱っていく予定です。
           </p>
           <p>
-            The aim is not simply to “be tougher.” Instead, we work on awareness, focus, routines, reflection, and communication so that athletes can use their skills more consistently in real performance settings.
+            ただ「気持ちを強くする」のではなく、自分の状態に気づき、必要な行動につなげられる力を育てていくことを大切にしています。
           </p>
         </div>
       </section>
 
       <section>
         <div class="card">
-          <h2>What We Plan to Work On</h2>
+          <h2>取り組んでいく内容</h2>
           <div class="grid-2">
             <div>
-              <h3>Before performance</h3>
+              <h3>本番前</h3>
               <ul>
-                <li>pre-performance routines</li>
-                <li>breathing and regulation</li>
-                <li>settling nerves before competition</li>
-                <li>focusing on the next action</li>
+                <li>試合前の気持ちの整え方</li>
+                <li>呼吸や落ち着きのつくり方</li>
+                <li>ルーティーンの活用</li>
+                <li>今やるべきことに集中する準備</li>
               </ul>
             </div>
             <div>
-              <h3>During performance</h3>
+              <h3>本番中</h3>
               <ul>
-                <li>resetting after mistakes</li>
-                <li>maintaining concentration</li>
-                <li>using cue words and self-talk</li>
-                <li>staying connected to game or event demands</li>
+                <li>ミスの切り替え</li>
+                <li>集中の維持</li>
+                <li>セルフトークやキューの使い方</li>
+                <li>競技の流れの中で意識を整えること</li>
               </ul>
             </div>
           </div>
@@ -487,23 +466,23 @@
       <section>
         <div class="grid-2">
           <div class="card">
-            <h2>After performance</h2>
+            <h2>本番後</h2>
             <ul>
-              <li>reflection and review</li>
-              <li>identifying what worked well</li>
-              <li>setting the next goal clearly</li>
-              <li>building repeatable habits over time</li>
+              <li>振り返りと整理</li>
+              <li>できたことの確認</li>
+              <li>次の目標設定</li>
+              <li>日々の習慣につなげる工夫</li>
             </ul>
           </div>
 
           <div class="card">
-            <h2>Practical session elements</h2>
+            <h2>実践予定の内容</h2>
             <ul>
-              <li>focus training</li>
-              <li>routine practice</li>
-              <li>visualisation and mental rehearsal</li>
-              <li>communication and feedback</li>
-              <li>simple written reflection</li>
+              <li>集中トレーニング</li>
+              <li>ルーティーンの練習</li>
+              <li>イメージやメンタルリハーサル</li>
+              <li>対話とフィードバック</li>
+              <li>簡単な記録や振り返り</li>
             </ul>
           </div>
         </div>
@@ -511,25 +490,26 @@
 
       <section>
         <div class="card">
-          <h2>Who This Is For</h2>
+          <h2>こんな選手におすすめです</h2>
           <ul>
-            <li>young athletes who want to perform more consistently</li>
-            <li>athletes who get nervous before competition</li>
-            <li>those who want to improve focus and reset after mistakes</li>
-            <li>players who want to connect training habits with performance</li>
+            <li>試合で緊張しやすい</li>
+            <li>集中が切れやすいと感じている</li>
+            <li>ミスのあとに切り替えに時間がかかる</li>
+            <li>練習と本番をつなげたい</li>
+            <li>競技力だけでなく、自分の整え方も学びたい</li>
           </ul>
         </div>
       </section>
 
       <section>
         <div class="note-box">
-          <h2>Our Approach</h2>
+          <h2>Brave Athletes Clubの考え方</h2>
           <p>
-            We want athletes to understand that mental training is part of regular development, just like movement, skill, and physical conditioning.
-            It should feel practical, understandable, and useful in everyday training as well as competition.
+            メンタルトレーニングは、技術やフィジカルと同じように、日々の取り組みの中で育てていくものだと考えています。
+            特別な場面だけでなく、普段の練習の中で使いやすく、続けやすいことが大切です。
           </p>
           <p>
-            Sessions will be designed so that participants can try strategies, reflect on them, and gradually build habits they can trust.
+            わかりやすく、実践しやすく、そして本番で役立つ。そんな形でアスリート向けの学びを整えていく予定です。
           </p>
         </div>
       </section>
