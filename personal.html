@@ -57,7 +57,7 @@
       min-width:0;
     }
     .brand img{
-      height:52px;           /* ロゴを少し大きめに */
+      height:52px;
       display:block;
       border-radius:16px;
     }
@@ -73,6 +73,7 @@
       align-items:center;
       gap:20px;
       font-size:15px;
+      flex-wrap:wrap;
     }
     nav.main-nav a{
       position:relative;
@@ -92,12 +93,6 @@
       height:2px;
       border-radius:999px;
       background:var(--accent);
-    }
-    nav.main-nav a.cta{
-      padding:8px 18px;
-      border-radius:999px;
-      border:1px solid #e5e7eb;
-      font-weight:600;
     }
     nav.main-nav span.lang{
       font-size:14px;
@@ -315,6 +310,10 @@
       .section-inner{
         grid-template-columns:minmax(0,1fr);
       }
+      .hero-cta-row{
+        flex-direction:column;
+        align-items:stretch;
+      }
     }
   </style>
 </head>
@@ -331,7 +330,7 @@
 
     <nav class="main-nav">
       <a href="/classes.html">教室</a>
-      <a href="/personal.html">パーソナル</a>
+      <a href="/personal.html" class="active">パーソナル</a>
       <a href="/mental-training.html">メンタル</a>
       <a href="/about.html">クラブについて</a>
       <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
@@ -349,8 +348,11 @@
         <h1 class="hero-main-copy">パフォーマンスを、もう一段階上へ。</h1>
         <p class="hero-sub">
           ケガからの復帰、姿勢改善、競技パフォーマンス向上まで。<br>
-          評価 → プラン設計 → トレーニング → 振り返り、のサイクルで
+          評価 → プラン設計 → トレーニング → 振り返り、の流れで
           あなたの「なりたい姿」に合わせてカスタマイズします。
+        </p>
+        <p class="hero-sub">
+          大阪を拠点に、東京・横浜でもパーソナルサポートを行っています。
         </p>
 
         <div class="hero-badges">
@@ -360,15 +362,15 @@
         </div>
 
         <div class="hero-cta-row">
-  　　　<a href="mailto:braveathletesclub@gmail.com" class="btn-primary">メールで相談する</a>
-       <a href="#early-bird" class="btn-outline">Early Bird project を見る</a>
-　　　　</div>
+          <a href="mailto:braveathletesclub@gmail.com" class="btn-primary">メールで相談する</a>
+          <a href="#early-bird" class="btn-outline">Early Bird Project を見る</a>
+        </div>
       </div>
 
       <div class="hero-side">
         <div class="hero-metric">
           <strong>60 / 75 min</strong>
-          <span>目的に合わせて選べる 2 タイプのセッション。</span>
+          <span>目的に合わせて選べる2タイプのセッション。</span>
         </div>
         <div class="hero-metric">
           <strong>Movement × Strength</strong>
@@ -411,38 +413,88 @@
       </div>
     </div>
   </section>
-<!-- ===== Early Bird Project ===== -->
-<section class="section" id="early-bird">
-  <div class="card">
-    <div class="tagline">Limited Offer</div>
-    <h2>🌅 Early Bird Project 第三弾（先着2名限定募集）</h2>
 
-    <p>
-      寒くて身体が動かなかった方も、そろそろ朝から動き出せる季節。<br>
-      早朝の時間を使って、コンディションと習慣を整える短期集中プロジェクトです。
-    </p>
+  <!-- ===== What We Do ===== -->
+  <section class="section" id="what-we-do">
+    <div class="card">
+      <div class="tagline">What We Do</div>
+      <h2>Braveのパーソナルで行うこと</h2>
 
-    <img
-      src="assets/early-bird-3.png"
-      alt="Early Bird Project 第三弾"
-      class="early-bird-image"
-    />
+      <p>
+        Braveのパーソナルは、単なる筋力トレーニングではなく、
+        身体の状態を見極めたうえで行うコンディショニングベースの指導です。
+      </p>
 
-    <ul>
-      <li>トレーニング時間：<strong>早朝 6:00〜7:30</strong></li>
-      <li>トレーニング期間：<strong>3月1日〜5月31日</strong></li>
-      <li>コース：<strong>16回 / 24回</strong>（どちらも <strong>10% OFF</strong>）</li>
-      <li>定員：<strong>先着2名</strong></li>
-    </ul>
+      <ul>
+        <li>動きの評価・姿勢チェック</li>
+        <li>可動域・柔軟性の確認</li>
+        <li>体幹安定性の向上</li>
+        <li>姿勢・動作改善</li>
+        <li>バランス・コーディネーション</li>
+        <li>機能的な筋力づくり</li>
+        <li>ケガ予防</li>
+        <li>リハビリ的サポート</li>
+        <li>女性のコンディショニング</li>
+        <li>競技特性に応じたトレーニング</li>
+      </ul>
 
-    <p style="font-size:14px;color:#cbd5f5;">
-      参加目的や体力に合わせて内容を調整し、無理なく継続できる形で進めます。<br>
-      詳細や空き状況はメールまたはお問い合わせページからご連絡ください。<br>
-      → <a href="contact.html">お問い合わせはこちら</a>
-    </p>
-  </div>
-</section>
- 
+      <p style="font-size:14px;color:#cbd5f5;">
+        年齢、競技、身体の状態、目的に合わせて、一人ひとりに合った内容へ調整します。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Flow ===== -->
+  <section class="section" id="flow">
+    <div class="card">
+      <div class="tagline">Session Flow</div>
+      <h2>パーソナルトレーニングの流れ</h2>
+
+      <ul>
+        <li><strong>Step 1</strong> カウンセリング・動きの確認</li>
+        <li><strong>Step 2</strong> 姿勢・可動域・バランスの評価</li>
+        <li><strong>Step 3</strong> 個別プログラムの設計</li>
+        <li><strong>Step 4</strong> トレーニング・フォーム修正</li>
+        <li><strong>Step 5</strong> 振り返りと次回への調整</li>
+      </ul>
+
+      <p style="font-size:14px;color:#cbd5f5;">
+        その場限りではなく、長期的に身体が変わっていくことを大切にした設計です。
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Early Bird Project ===== -->
+  <section class="section" id="early-bird">
+    <div class="card">
+      <div class="tagline">Limited Offer</div>
+      <h2>🌅 Early Bird Project 第三弾（先着2名限定募集）</h2>
+
+      <p>
+        寒い時期に身体が重く感じていた方も、そろそろ朝から動き出せる季節。<br>
+        早朝の時間を使って、コンディションと習慣を整える短期集中プロジェクトです。
+      </p>
+
+      <img
+        src="/assets/early-bird-3.png"
+        alt="Early Bird Project 第三弾"
+        class="early-bird-image"
+      />
+
+      <ul>
+        <li>トレーニング時間：<strong>早朝 6:00〜7:30</strong></li>
+        <li>トレーニング期間：<strong>3月1日〜5月31日</strong></li>
+        <li>コース：<strong>16回 / 24回</strong>（どちらも <strong>10% OFF</strong>）</li>
+        <li>定員：<strong>先着2名</strong></li>
+      </ul>
+
+      <p style="font-size:14px;color:#cbd5f5;">
+        参加目的や体力に合わせて内容を調整し、無理なく継続できる形で進めます。<br>
+        詳細や空き状況はメールからご連絡ください。<br>
+        → <a href="mailto:braveathletesclub@gmail.com">メールで問い合わせる</a>
+      </p>
+    </div>
+  </section>
 
   <!-- ===== お問い合わせ ===== -->
   <section class="section" id="contact">
@@ -453,8 +505,7 @@
         日時や場所のご相談、ケガの状況や目標のご相談など、まずはお気軽にメッセージをお送りください。
       </p>
       <p>
-        メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a><br>
-        フォーム：<a href="contact.html">お問い合わせページへ</a>
+        メール：<a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
       </p>
     </div>
   </section>
@@ -462,83 +513,64 @@
 </main>
 
 <footer>
-  &copy; 2025 Brave Athletes Club
+  &copy; 2026 Brave Athletes Club
 </footer>
 
 <!-- ===== ヘッダー季節ロゴ：日付で自動切り替え ===== -->
 <script>
   (function () {
-    const img = document.getElementById("global-seasonal-logo");
+    const img = document.getElementById("seasonalLogo");
     if (!img) return;
 
     const today = new Date();
-    const m = today.getMonth() + 1; // 1–12
+    const m = today.getMonth() + 1;
     const d = today.getDate();
 
-    let file = "logo-allseaso.png"; // デフォルト（オールシーズン）
+    let file = "logo-allseaso.png";
 
-    // クリスマス：12/16〜12/25
     if (m === 12 && d >= 6 && d <= 25) {
       file = "logo-christmas.png";
-
-    // 冬ピンク：12/26〜2/2
     } else if (
       (m === 12 && d >= 26) ||
       m === 1 ||
       (m === 2 && d <= 2)
     ) {
       file = "logo-winter-pink.png";
-
-    // Spring Yellow：2/3〜3/15
     } else if (
       (m === 2 && d >= 3) ||
       (m === 3 && d <= 15)
     ) {
       file = "logo-spring-yellow.png";
-
-    // Spring Pink：3/16〜4/15
     } else if (
       (m === 3 && d >= 16) ||
       (m === 4 && d <= 15)
     ) {
       file = "logo-spring-pink.png";
-
-    // 黒背景ピンク：4/16〜5/4
     } else if (
       (m === 4 && d >= 16) ||
       (m === 5 && d <= 15)
     ) {
       file = "logo-black-pink.png";
-
-    // 釣りサイ：5/5〜6/30
     } else if (
       (m === 5 && d >= 16) ||
       (m === 6 && d <= 30)
     ) {
       file = "logo-fishing.png";
-
-    // 海サイ：7/1〜8/15
     } else if (
       (m === 7 && d >= 1) ||
       (m === 8 && d <= 15)
     ) {
       file = "logo-summer-sea.png";
-
-    // オールシーズン：8/16〜9/30
     } else if (
       (m === 8 && d >= 16) ||
       m === 9
     ) {
       file = "logo-allseaso.png";
-
-    // もみじ：10/1〜11/15
     } else if (
       m === 10 ||
       (m === 11 && d <= 15)
     ) {
       file = "logo-autumn-mapl.png";
-
-    // 秋冬背景の黄色サイ：11/16〜12/15
     } else if (
       (m === 11 && d >= 16) ||
       (m === 12 && d <= 5)
@@ -546,7 +578,7 @@
       file = "logo-autumn-winter-yello.png";
     }
 
-    img.src = "assets/seasonal/" + file;
+    img.src = "/assets/seasonal/" + file;
   })();
 </script>
 
