@@ -4,7 +4,54 @@
   <meta charset="UTF-8" />
   <title>Personal Support | Brave Athletes Club</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Personal support by Brave Athletes Club for posture improvement, conditioning, performance development, and functional recovery in Osaka, Tokyo, and Yokohama." />
+  <meta name="description" content="Personal support at Brave Athletes Club for athletes and adults. We provide one-to-one conditioning, movement assessment, posture support, functional recovery, and performance training in Osaka, Tokyo, and Yokohama." />
+  <link rel="canonical" href="https://braveathletesclub.github.io/personal-en.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
+  <meta property="og:title" content="Personal Support | Brave Athletes Club" />
+  <meta property="og:description" content="One-to-one conditioning, posture support, functional recovery, and performance training in Osaka, Tokyo, and Yokohama." />
+  <meta property="og:url" content="https://braveathletesclub.github.io/personal-en.html" />
+  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Personal Support | Brave Athletes Club" />
+  <meta name="twitter:description" content="One-to-one conditioning, posture support, functional recovery, and performance training." />
+  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
+
+  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/personal-en.html" />
+  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/personal.html" />
+  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/personal-en.html" />
+
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#111827" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsActivityLocation",
+    "name":"BRAVE ATHLETES CLUB",
+    "url":"https://braveathletesclub.github.io/personal-en.html",
+    "description":"Personal support including conditioning, posture support, functional recovery, and performance training.",
+    "sport":["Conditioning","Personal Training","Fitness"],
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Takatsuki",
+      "addressRegion":"Osaka",
+      "addressCountry":"JP"
+    },
+    "contactPoint":{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "email":"braveathletesclub@gmail.com"
+    },
+    "sameAs":[
+      "https://www.facebook.com/BraveAthletesClub/"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -19,6 +66,7 @@
     }
 
     *{box-sizing:border-box;}
+    html, body{overflow-x:hidden;}
 
     body{
       margin:0;
@@ -36,7 +84,6 @@
       padding:0 20px;
     }
 
-    /* ===== HEADER ===== */
     header.site-header{
       position:sticky;
       top:0;
@@ -114,7 +161,6 @@
       color:var(--accent);
     }
 
-    /* ===== MAIN ===== */
     main{
       padding:40px 0 60px;
       color:#e5e7eb;
@@ -137,7 +183,6 @@
       margin:0 0 12px;
     }
 
-    /* ===== HERO ===== */
     .hero-personal{
       padding:40px 0 32px;
     }
@@ -270,10 +315,8 @@
       font-size:12px;
       color:#9ca3af;
       margin-top:4px;
-      line-height:1.7;
     }
 
-    /* ===== SECTIONS ===== */
     .section{
       margin-top:36px;
     }
@@ -299,15 +342,8 @@
       box-shadow:none;
     }
 
-    ul{
-      margin:0 0 8px 1.2em;
-      padding:0;
-    }
-
-    li{
-      margin-bottom:6px;
-      line-height:1.7;
-    }
+    ul{margin:0 0 8px 1.2em;padding:0;}
+    li{margin-bottom:6px;}
 
     .tagline{
       font-size:13px;
@@ -315,28 +351,14 @@
       margin-bottom:4px;
     }
 
-    .early-bird-link{
-      display:block;
-      max-width:760px;
-      margin:10px auto 0;
-    }
-
     .early-bird-image{
       width:100%;
       border-radius:18px;
-      margin:0;
+      margin:10px 0 14px;
       border:1px solid #1f2937;
       display:block;
     }
 
-    .poster-note{
-      text-align:center;
-      font-size:14px;
-      color:#9ca3af;
-      margin-top:10px;
-    }
-
-    /* ===== FOOTER ===== */
     footer{
       border-top:1px solid #1f2937;
       padding:24px 0 32px;
@@ -346,19 +368,13 @@
       background:#020617;
     }
 
-    /* ===== RESPONSIVE ===== */
     @media(max-width:900px){
       .hero-inner{
         grid-template-columns:minmax(0,1fr);
       }
-
       .hero-side{
         flex-direction:row;
         flex-wrap:wrap;
-      }
-
-      .section-inner{
-        grid-template-columns:minmax(0,1fr);
       }
     }
 
@@ -376,8 +392,13 @@
         row-gap:6px;
       }
 
-      .hero-main-copy{
-        font-size:24px;
+      .section-inner{
+        grid-template-columns:minmax(0,1fr);
+      }
+
+      .hero-cta-row{
+        flex-direction:column;
+        align-items:stretch;
       }
     }
   </style>
@@ -405,25 +426,24 @@
 
 <main class="container">
 
-  <!-- HERO -->
   <section class="hero-personal">
     <div class="hero-inner">
       <div class="hero-kv">
         <span class="hero-tag">Personal Conditioning &amp; Performance</span>
         <h1 class="hero-main-copy">Take your performance to the next level.</h1>
         <p class="hero-sub">
-          From return-to-sport support after injury to posture improvement and performance development,
-          each session is tailored to your goals, your movement, and your current condition.
+          From return-to-sport after injury to posture support and performance development,
+          each program is built through assessment → planning → training → review,
+          based on how <strong>you</strong> want to move and perform.
         </p>
         <p class="hero-sub">
-          Based in Osaka and also active in Tokyo and Yokohama,
-          BRAVE mainly provides personal support in the Kanto area while also offering selected group lessons.
+          Based in Osaka, we also provide personal support in Tokyo and Yokohama.
         </p>
 
         <div class="hero-badges">
           <div class="hero-badge">Junior Athletes</div>
           <div class="hero-badge">Women Athletes</div>
-          <div class="hero-badge">Adults &amp; Returners</div>
+          <div class="hero-badge">General &amp; Returners</div>
         </div>
 
         <div class="hero-cta-row">
@@ -435,21 +455,20 @@
       <div class="hero-side">
         <div class="hero-metric">
           <strong>60 / 75 min</strong>
-          <span>Two session lengths depending on your goals, condition, and training focus.</span>
+          <span>Two session lengths based on your goals and training needs.</span>
         </div>
         <div class="hero-metric">
           <strong>Movement × Strength</strong>
-          <span>A hybrid style combining movement quality, conditioning, and performance support.</span>
+          <span>A hybrid approach that looks at both movement quality and conditioning.</span>
         </div>
         <div class="hero-metric">
           <strong>1 on 1</strong>
-          <span>Careful one-to-one guidance with detailed movement observation and feedback.</span>
+          <span>Fully one-to-one sessions with detailed form and condition checks.</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Session Plans -->
   <section class="section" id="plans">
     <div class="section-inner">
       <div class="card">
@@ -457,11 +476,11 @@
         <h2>Session Length &amp; Fees</h2>
         <ul>
           <li>60 minutes – 13,200 JPY (functional recovery / conditioning focus)</li>
-          <li>75 minutes – 16,500 JPY (conditioning plus performance-oriented training)</li>
-          <li>Travel fee – currently <strong>free</strong> within our service range (please ask)</li>
+          <li>75 minutes – 16,500 JPY (conditioning plus performance training)</li>
+          <li>Travel fee – currently <strong>free</strong> within our service area (please ask)</li>
         </ul>
         <p style="font-size:14px;color:#cbd5f5;">
-          In the first session, we begin with a short interview and movement screen
+          In the first session, we begin with a movement screen and a short consultation
           to clarify your goals and current condition, then build the most suitable plan for you.
         </p>
       </div>
@@ -471,87 +490,76 @@
         <h2>Who This Is For</h2>
         <ul>
           <li>Athletes or adults dealing with pain, tightness, or recurring issues</li>
-          <li>Those who want to refine technique and reduce injury risk</li>
-          <li>Women experiencing physical changes such as postpartum recovery or menopause</li>
-          <li>Anyone who prefers focused one-to-one support rather than group sessions</li>
+          <li>Those who want to improve technique and reduce injury risk</li>
+          <li>Women experiencing physical changes such as postpartum or menopause</li>
+          <li>Anyone who prefers focused one-to-one guidance over group sessions</li>
         </ul>
       </div>
     </div>
   </section>
 
-<section class="section" id="what-we-do">
-  <div class="card">
-    <div class="tagline">What We Do</div>
-    <h2>Conditioning Based Personal Training</h2>
-
-    <p>
-      Personal sessions at Brave are based on movement assessment and conditioning,
-      not only strength training.
-    </p>
-
-    <ul>
-      <li>Movement assessment</li>
-      <li>Mobility & flexibility</li>
-      <li>Core stability</li>
-      <li>Posture correction</li>
-      <li>Balance & coordination</li>
-      <li>Functional strength</li>
-      <li>Injury prevention</li>
-      <li>Rehabilitation support</li>
-      <li>Women's conditioning</li>
-      <li>Sport-specific training</li>
-    </ul>
-
-    <p style="font-size:14px;color:#cbd5f5;">
-      Each program is adjusted individually based on age, sport, and physical condition.
-    </p>
-  </div>
-</section>
+  <section class="section" id="what-we-do">
+    <div class="card">
+      <div class="tagline">What We Do</div>
+      <h2>What Personal Support at Brave Includes</h2>
+      <p>
+        Personal support at Brave is not simply about working harder.
+        It is a conditioning-based approach that begins with understanding how your body is moving now.
+      </p>
+      <ul>
+        <li>Movement assessment and posture check</li>
+        <li>Mobility and flexibility screening</li>
+        <li>Core stability and balance work</li>
+        <li>Posture and movement improvement</li>
+        <li>Coordination and body control</li>
+        <li>Functional strength development</li>
+        <li>Injury prevention support</li>
+        <li>Recovery-oriented training</li>
+        <li>Women’s conditioning support</li>
+        <li>Sport-specific programming</li>
+      </ul>
+      <p style="font-size:14px;color:#cbd5f5;">
+        Every session is adjusted to the individual’s age, sport, condition, and goals.
+      </p>
+    </div>
+  </section>
 
   <section class="section" id="flow">
-  <div class="card">
-    <div class="tagline">Session Flow</div>
-    <h2>How Personal Training Works</h2>
+    <div class="card">
+      <div class="tagline">Session Flow</div>
+      <h2>How a Session Works</h2>
+      <ul>
+        <li><strong>Step 1</strong> Consultation and movement review</li>
+        <li><strong>Step 2</strong> Posture, mobility, and balance assessment</li>
+        <li><strong>Step 3</strong> Individual program design</li>
+        <li><strong>Step 4</strong> Training and form correction</li>
+        <li><strong>Step 5</strong> Review and next-step adjustment</li>
+      </ul>
+      <p style="font-size:14px;color:#cbd5f5;">
+        The goal is not a one-off workout, but gradual, meaningful improvement over time.
+      </p>
+    </div>
+  </section>
 
-    <ul>
-      <li><strong>Step 1</strong> Interview & movement check</li>
-      <li><strong>Step 2</strong> Assessment of posture, mobility, balance</li>
-      <li><strong>Step 3</strong> Individual conditioning program</li>
-      <li><strong>Step 4</strong> Training & correction</li>
-      <li><strong>Step 5</strong> Follow-up and progression</li>
-    </ul>
-
-    <p style="font-size:14px;color:#cbd5f5;">
-      Sessions are designed to support long-term improvement, not just short-term training.
-    </p>
-  </div>
-</section>
-  
-  <!-- Early Bird Project -->
   <section class="section" id="early-bird">
     <div class="card">
       <div class="tagline">Limited Offer</div>
       <h2>☁ Early Bird Project Vol.3 (Limited to 2 spots)</h2>
 
       <p>
-        If your body felt slow and heavy during the colder season,
-        this is a great time to start moving again in the morning.
+        For those whose bodies felt slow and heavy during the colder season,
+        this is the time to start moving again in the morning.
       </p>
-
       <p>
-        Early Bird Project is a short-term focused program designed to rebuild good movement habits,
-        improve conditioning, and create a stronger daily rhythm through early morning training.
+        Early Bird Project is a short-term focused program designed to improve your conditioning
+        and daily rhythm through early morning training.
       </p>
 
-      <a href="/assets/early-bird-3.png" target="_blank" rel="noopener" class="early-bird-link">
-        <img
-          src="/assets/early-bird-3.png"
-          alt="Early Bird Project Vol.3"
-          class="early-bird-image"
-        />
-      </a>
-
-      <p class="poster-note">Click the image to view it in a larger size.</p>
+      <img
+        src="/assets/early-bird-3.png"
+        alt="Early Bird Project Vol.3"
+        class="early-bird-image"
+      />
 
       <ul>
         <li>Training time: <strong>6:00–7:30 AM</strong></li>
@@ -562,22 +570,21 @@
       </ul>
 
       <p style="font-size:14px;color:#cbd5f5;">
-        This project is ideal for those who want to improve conditioning,
-        rebuild consistent movement habits, and start the day with a more active rhythm.<br>
-        For details, schedule, and availability, please contact us by email.<br>
-        → <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
+        This project is ideal for those who want to rebuild good movement habits,
+        improve conditioning, and start the day with a more active rhythm.<br>
+        For details and availability, please contact us by email.<br>
+        → <a href="mailto:braveathletesclub@gmail.com">Email us here</a>
       </p>
     </div>
   </section>
 
-  <!-- Contact -->
   <section class="section" id="contact">
     <div class="card card-light">
       <div class="tagline">Contact</div>
       <h2>Booking &amp; Questions</h2>
       <p>
-        If you have questions about schedule, location, injury history, goals,
-        or whether personal support is right for you, feel free to message us first.
+        If you have questions about scheduling, location, injury history, or goals,
+        feel free to send us a message first.
       </p>
       <p>
         Email: <a href="mailto:braveathletesclub@gmail.com">braveathletesclub@gmail.com</a>
@@ -591,7 +598,6 @@
   &copy; 2026 Brave Athletes Club
 </footer>
 
-<!-- Seasonal header logo -->
 <script>
   (function () {
     const img = document.getElementById("seasonalLogo");
