@@ -73,6 +73,7 @@
     .brand img{
       height:56px;
       border-radius:16px;
+      display:block;
     }
 
     .brand small{
@@ -91,8 +92,35 @@
     }
 
     nav.main-nav a{
+      position:relative;
       color:var(--ink);
       white-space:nowrap;
+      padding:4px 0;
+    }
+
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
+    }
+
+    nav.main-nav span.lang{
+      font-size:14px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+
+    nav.main-nav span.lang a{
+      color:var(--accent);
     }
 
     main{
@@ -289,6 +317,7 @@
       nav.main-nav{
         width:100%;
         gap:8px 14px;
+        row-gap:6px;
       }
 
       .grid{
@@ -338,7 +367,7 @@
   <div class="container site-header-inner">
     <div class="brand">
       <a href="/index.html">
-        <img src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club">
+        <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club ロゴ">
       </a>
       <small>Training &amp; Performance</small>
     </div>
@@ -346,9 +375,9 @@
     <nav class="main-nav">
       <a href="/classes.html">教室</a>
       <a href="/personal.html">パーソナル</a>
+      <a href="/mental-training.html">メンタル</a>
       <a href="/about.html">クラブについて</a>
-      <a href="/contact.html">お問い合わせ</a>
-      <a href="/en.html">EN</a>
+      <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
     </nav>
   </div>
 </header>
@@ -359,8 +388,8 @@
     <span class="hero-badge">BRAVEおすすめ企画</span>
     <h1>動きの質を高める<br>コンディショニング教室</h1>
     <p>
-      ジュニアアスリートはもちろん、スポーツ愛好家の大人まで。<br>
-      7歳〜18歳のアスリートを目指す方を中心に、しっかりと身体づくりをしたい方へ向けた2日間の教室です。
+      ジュニアアスリートはもちろん、スポーツ愛好家の大人の方にもご参加いただけます。<br>
+      7歳以上を対象に、競技力向上を目指す方や、しっかりと身体づくりをしたい方へ向けた2日間の教室です。
     </p>
     <p>
       さまざまな角度から身体の状態を確認し、今の自分に必要な土台づくりとコンディショニングを学びます。
@@ -433,12 +462,13 @@
       <div class="card">
         <h3>1日目｜身体チェックと基礎づくり</h3>
         <p>
-          初日は、可動域・柔軟性・バランス・俊敏性などを確認しながら、身体の状態を把握していきます。
+          初日は、関節可動域や筋肉の柔軟性、バランスなどを確認しながら、身体の状態を把握していきます。
         </p>
         <ul>
           <li>関節の動きや柔軟性の確認</li>
           <li>バランス・安定性のチェック</li>
           <li>基本的なストレッチ</li>
+          <li>簡単なバランストレーニング</li>
           <li>体軸トレーニング・土台づくり</li>
         </ul>
       </div>
@@ -446,13 +476,14 @@
       <div class="card">
         <h3>2日目｜コンディショニング実践</h3>
         <p>
-          2日目は、共通するコンディショニング指導に加えて、タイプ別のプログラムを行います。
+          2日目は、1日目の内容を踏まえながら、身体の使い方、バランスやアジリティトレーニング、部位別の指導、自宅で行えるストレッチまで実践的に行います。
         </p>
         <ul>
           <li>共通コンディショニング</li>
-          <li>タイプ別アプローチ</li>
-          <li>正しい身体の使い方の確認</li>
-          <li>今後につながる運動の土台づくり</li>
+          <li>身体の使い方の確認</li>
+          <li>バランス・アジリティトレーニング</li>
+          <li>部位別アプローチ</li>
+          <li>自宅で続けられるストレッチ指導</li>
         </ul>
       </div>
     </div>
@@ -464,7 +495,7 @@
       <div class="card">
         <h3>ジュニアアスリート・競技志向の方</h3>
         <p>
-          7歳〜18歳で、競技力向上を目指したい方、身体の使い方を見直したい方におすすめです。
+          7歳以上で、競技力向上を目指したい方、身体の使い方を見直したい方におすすめです。
         </p>
       </div>
 
@@ -488,6 +519,71 @@
     © 2026 BRAVE ATHLETES CLUB
   </div>
 </footer>
+
+<script>
+  (function () {
+    const img = document.getElementById("seasonalLogo");
+    if (!img) return;
+
+    const today = new Date();
+    const m = today.getMonth() + 1;
+    const d = today.getDate();
+
+    let file = "logo-allseaso.png";
+
+    if (m === 12 && d >= 6 && d <= 25) {
+      file = "logo-christmas.png";
+    } else if (
+      (m === 12 && d >= 26) ||
+      m === 1 ||
+      (m === 2 && d <= 2)
+    ) {
+      file = "logo-winter-pink.png";
+    } else if (
+      (m === 2 && d >= 3) ||
+      (m === 3 && d <= 15)
+    ) {
+      file = "logo-spring-yellow.png";
+    } else if (
+      (m === 3 && d >= 16) ||
+      (m === 4 && d <= 15)
+    ) {
+      file = "logo-spring-pink.png";
+    } else if (
+      (m === 4 && d >= 16) ||
+      (m === 5 && d <= 15)
+    ) {
+      file = "logo-black-pink.png";
+    } else if (
+      (m === 5 && d >= 16) ||
+      (m === 6 && d <= 30)
+    ) {
+      file = "logo-fishing.png";
+    } else if (
+      (m === 7 && d >= 1) ||
+      (m === 8 && d <= 15)
+    ) {
+      file = "logo-summer-sea.png";
+    } else if (
+      (m === 8 && d >= 16) ||
+      m === 9
+    ) {
+      file = "logo-allseaso.png";
+    } else if (
+      m === 10 ||
+      (m === 11 && d <= 15)
+    ) {
+      file = "logo-autumn-mapl.png";
+    } else if (
+      (m === 11 && d >= 16) ||
+      (m === 12 && d <= 5)
+    ) {
+      file = "logo-autumn-winter-yello.png";
+    }
+
+    img.src = "/assets/seasonal/" + file;
+  })();
+</script>
 
 </body>
 </html>
