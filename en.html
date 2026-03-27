@@ -607,6 +607,20 @@ traditional Japanese arts, and stage performance.
         </a>
       </p>
 
+<div class="news-highlight">
+        <a href="/events/20260330-conditioning-en.html" class="news-highlight-inner">
+          <div class="news-thumb">
+            <img src="/assets/events/2026-3-30-conditioning.png" alt="Conditioning Class to Improve Movement Quality" />
+          </div>
+          <div class="news-text">
+            <p class="news-text-label">BRAVE Featured Program</p>
+            <p class="news-text-title">Conditioning Class to Improve Movement Quality</p>
+            <p class="news-text-meta">Mar 30 &amp; 31 | 2-day course | Ages 7+</p>
+            <p class="news-text-meta">Mobility, flexibility, balance, and movement quality assessment &amp; training.</p>
+          </div>
+        </a>
+      </div>
+      
       <div class="news-highlight">
         <a href="/mental-training-introduction-en.html" class="news-highlight-inner">
           <div class="news-thumb">
@@ -634,7 +648,7 @@ traditional Japanese arts, and stage performance.
     </div>
   </a>
 </div>
-      
+           
       <div class="news-highlight" id="news-earlybird-en">
         <a href="/personal-en.html#early-bird" class="news-highlight-inner">
           <div class="news-thumb">
@@ -651,21 +665,7 @@ traditional Japanese arts, and stage performance.
             </p>
           </div>
         </a>
-      </div>
-
-      <div class="news-highlight">
-        <a href="/events/20260330-conditioning-en.html" class="news-highlight-inner">
-          <div class="news-thumb">
-            <img src="/assets/events/2026-3-30-conditioning.png" alt="Conditioning Class to Improve Movement Quality" />
-          </div>
-          <div class="news-text">
-            <p class="news-text-label">BRAVE Featured Program</p>
-            <p class="news-text-title">Conditioning Class to Improve Movement Quality</p>
-            <p class="news-text-meta">Mar 30 &amp; 31 | 2-day course | Ages 7+</p>
-            <p class="news-text-meta">Mobility, flexibility, balance, and movement quality assessment &amp; training.</p>
-          </div>
-        </a>
-      </div>
+      </div>     
     </div>
   </section>
 
@@ -770,5 +770,19 @@ traditional Japanese arts, and stage performance.
     <div style="margin-top:8px;">© 2026 BRAVE ATHLETES CLUB</div>
   </div>
 </footer>
+  <script>
+  (function(){
+    const start = new Date('2026-02-24T00:00:00');
+    const end   = new Date('2026-03-25T23:59:59');
+    const now   = new Date();
+
+    const eb = document.getElementById('news-earlybird-en');
+    if(!eb) return;
+
+    if(now < start || now > end){
+      eb.style.display = 'none';
+    }
+  })();
+</script>
 </body>
 </html>
