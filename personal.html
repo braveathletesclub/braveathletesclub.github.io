@@ -314,6 +314,25 @@
         flex-direction:column;
         align-items:stretch;
       }
+     .class-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.class-hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+@media (max-width: 900px) {
+  .class-hero {
+    grid-template-columns: 1fr;
+  }
+}
     }
   </style>
 </head>
