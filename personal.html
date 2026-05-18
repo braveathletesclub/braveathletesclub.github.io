@@ -291,66 +291,61 @@
       background:#020617;
     }
 
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .hero-inner{
-        grid-template-columns:minmax(0,1fr);
-      }
-      .hero-side{flex-direction:row;flex-wrap:wrap;}
-    }
-    @media(max-width:768px){
-      .site-header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-        height:auto;
-        padding:10px 0 12px;
-        gap:10px;
-      }
-      nav.main-nav{flex-wrap:wrap;row-gap:6px;}
-      .section-inner{
-        grid-template-columns:minmax(0,1fr);
-      }
-      .hero-cta-row{
-        flex-direction:column;
-        align-items:stretch;
-      }
-     .class-hero {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.class-hero-media img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-}
-
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .class-hero {
-    grid-template-columns: 1fr;
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-side {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
-    /* Early Bird Project */
+
+@media (max-width: 768px) {
+  .site-header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 0 12px;
+    gap: 10px;
+  }
+
+  nav.main-nav {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .section-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* Early Bird Project */
 .earlybird-layout {
   display: grid;
-  grid-template-columns: minmax(260px, 380px) 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 28px;
   align-items: start;
   margin-top: 24px;
 }
 
 .earlybird-image {
-  max-width: 380px;
+  width: 260px;
+  max-width: 100%;
 }
 
 .earlybird-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 20px;
+  border-radius: 18px;
   object-fit: contain;
 }
 
@@ -370,9 +365,11 @@
   }
 
   .earlybird-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
   }
-}  
+} 
     }
   </style>
 </head>
