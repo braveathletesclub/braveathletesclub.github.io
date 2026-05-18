@@ -616,70 +616,59 @@
     </div>
   </section>
 
-  <section class="section" id="news">
-    <div class="card">
-      <h2>お知らせ</h2>
-      <p>
-        最新のイベント情報は Facebook で公開中です。<br>
-        → <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">
-          Facebookで見る
-        </a>
-      </p>
+ <section class="section" id="news">
+  <div class="card">
+    <h2>お知らせ</h2>
+    <p>
+      最新のイベント情報は Facebook で公開中です。<br>
+      → <a href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">
+        Facebookで見る
+      </a>
+    </p>
 
-     <div class="news-highlight"> 
-  <a href="/mental-training-parent.html" class="news-highlight-inner">
-    <div class="news-thumb">
-      <img src="/assets/events/parenting-coaching-discussion.png" alt="子育てにおけるコーチングマインド" />
+    <div class="news-highlight">
+      <a href="/mental-training-parent.html" class="news-highlight-inner">
+        <div class="news-thumb">
+          <img src="/assets/events/parenting-coaching-discussion.png" alt="子育てにおけるコーチングマインド" />
+        </div>
+        <div class="news-text">
+          <p class="news-text-label">New</p>
+          <p class="news-text-title">子育てにおけるコーチングマインド</p>
+          <p class="news-text-meta">2026年6月20日（土）19:00〜20:00</p>
+          <p class="news-text-meta">保護者向け座談会｜参加費 1,500円（会員様500円割引）</p>
+        </div>
+      </a>
     </div>
 
-    <div class="news-text">
-      <p class="news-text-label">New</p>
-
-      <p class="news-text-title">
-        子育てにおけるコーチングマインド
-      </p>
-
-      <p class="news-text-meta">
-        2026年6月20日（土）19:00〜20:00
-      </p>
-
-      <p class="news-text-meta">
-        保護者向け座談会｜参加費 1,500円（会員様500円割引）
-      </p>
+    <div class="news-highlight">
+      <a href="mental-training-introduction.html" class="news-highlight-inner">
+        <div class="news-thumb">
+          <img src="assets/mental-training.png" alt="メンタルトレーニング講座">
+        </div>
+        <div class="news-text">
+          <p class="news-text-label">New</p>
+          <p class="news-text-title">メンタルトレーニング講座 Introduction 2</p>
+          <p class="news-text-meta">2026年7月11日（土）19:00〜20:00</p>
+          <p class="news-text-meta">参加費 1,500円 / 親子 2,500円</p>
+        </div>
+      </a>
     </div>
-  </a>
-</div>      
-      
-      <div class="news-highlight">
-        <a href="mental-training-introduction.html" class="news-highlight-inner">
-          <div class="news-thumb">
-            <img src="assets/mental-training.png" alt="メンタルトレーニング講座">
-          </div>
-          <div class="news-text">
-            <p class="news-text-label">New</p>
-            <p class="news-text-title">メンタルトレーニング講座 Introduction 2</p>
-            <p class="news-text-meta">2026年7月11日（土）19:00〜20:00</p>
-            <p class="news-text-meta">参加費 1,500円 / 親子 2,500円</p>
-          </div>
-        </a>
-      </div>
 
-     
-      <div class="news-highlight" id="news-earlybird">
-  <a href="personal.html#early-bird" class="news-highlight-inner">
-    <div class="news-thumb">
-      <img src="assets/early-bird-3.png" alt="Early Bird Project 第4弾" />
+    <div class="news-highlight" id="news-earlybird">
+      <a href="personal.html#early-bird" class="news-highlight-inner">
+        <div class="news-thumb">
+          <img src="assets/early-bird-3.png" alt="Early Bird Project 第4弾" />
+        </div>
+        <div class="news-text">
+          <p class="news-text-label">先着3名</p>
+          <p class="news-text-title">Early Bird Project 第4弾</p>
+          <p class="news-text-meta">早朝6:00〜7:30｜6月1日〜8月31日</p>
+          <p class="news-text-meta">16回 / 24回コース 10％OFF</p>
+        </div>
+      </a>
     </div>
-    <div class="news-text">
-      <p class="news-text-label">先着3名</p>
-      <p class="news-text-title">Early Bird Project 第4弾</p>
-      <p class="news-text-meta">早朝6:00〜7:30｜6月1日〜8月31日</p>
-      <p class="news-text-meta">16回 / 24回コース 10％OFF</p>
-    </div>
-  </a>
-</div>
-    </div>
-  </section>
+  </div>
+</section>
 
 <div class="event-wrap">
   <div class="event-header">5月6日イベント</div>
@@ -795,19 +784,6 @@
   </div>
 </footer>
 
-<script>
-  (function(){
-    const start = new Date('2026-02-24T00:00:00+09:00');
-    const end   = new Date('2026-03-25T23:59:59+09:00');
-    const now   = new Date();
 
-    const eb = document.getElementById('news-earlybird');
-    if(!eb) return;
-
-    if(now < start || now > end){
-      eb.style.display = 'none';
-    }
-  })();
-</script>
 </body>
 </html>
