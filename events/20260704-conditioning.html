@@ -1,36 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Movement Quality Training | Brave Athletes Club</title>
-  <meta name="description" content="Movement Quality Training by Brave Athletes Club. A 2-day conditioning program focused on mobility, flexibility, balance, agility, and movement control for young athletes and active adults." />
-  <link rel="canonical" href="https://braveathletesclub.github.io/events/20260330-conditioning-en.html" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
-  <meta property="og:title" content="Movement Quality Training | Brave Athletes Club" />
-  <meta property="og:description" content="A 2-day conditioning program to improve mobility, flexibility, balance, agility, and movement quality." />
-  <meta property="og:url" content="https://braveathletesclub.github.io/events/20260330-conditioning-en.html" />
-  <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
-  <meta property="og:locale" content="en_US" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Movement Quality Training | Brave Athletes Club" />
-  <meta name="twitter:description" content="A 2-day conditioning program for young athletes and active adults." />
-  <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
-
-  <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/events/20260330-conditioning.html" />
-  <link rel="alternate" hreflang="en" href="https://braveathletesclub.github.io/events/20260330-conditioning-en.html" />
-  <link rel="alternate" hreflang="x-default" href="https://braveathletesclub.github.io/events/20260330-conditioning-en.html" />
-
-  <link rel="icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <meta name="theme-color" content="#111827" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>動きの質を高めるコンディショニング教室｜Brave Athletes Club</title>
+  <meta name="description" content="Brave Athletes Clubの2日間コンディショニング教室。可動域・柔軟性・バランス・俊敏性などを多角的に確認し、動きの質を高める教室です。">
 
   <style>
     :root{
-      --bg:#f8fafc;
+      --bg:#f3f4ff;
       --surface:#ffffff;
       --ink:#111827;
       --muted:#6b7280;
@@ -40,16 +18,27 @@
     }
 
     *{box-sizing:border-box;}
+
+    html, body{
+      overflow-x:hidden;
+    }
+
     body{
       margin:0;
-      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-family:"Noto Sans JP",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--ink);
-      background:radial-gradient(circle at top left,#e0f2fe 0,#f8fafc 45%,#eef2ff 100%);
+      background:var(--bg);
       line-height:1.85;
     }
 
-    a{color:var(--accent);text-decoration:none;}
-    a:hover{text-decoration:underline;}
+    a{
+      color:var(--accent);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
 
     .container{
       max-width:1100px;
@@ -82,9 +71,9 @@
     }
 
     .brand img{
-      height:52px;
-      display:block;
+      height:56px;
       border-radius:16px;
+      display:block;
     }
 
     .brand small{
@@ -104,9 +93,24 @@
 
     nav.main-nav a{
       position:relative;
-      padding:4px 0;
-      white-space:nowrap;
       color:var(--ink);
+      white-space:nowrap;
+      padding:4px 0;
+    }
+
+    nav.main-nav a.active{
+      font-weight:600;
+    }
+
+    nav.main-nav a.active::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-4px;
+      width:100%;
+      height:2px;
+      border-radius:999px;
+      background:var(--accent);
     }
 
     nav.main-nav span.lang{
@@ -120,15 +124,27 @@
     }
 
     main{
-      padding:40px 0 60px;
+      padding:32px 0 60px;
     }
 
     .hero{
-      background:linear-gradient(135deg,#fff7ed,#fdf2ff,#eef6ff);
+      background:linear-gradient(135deg,#eef6ff,#fdf2ff,#fff7ed);
       border:1px solid var(--line);
       border-radius:28px;
       padding:30px 24px;
       margin-bottom:26px;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.3;
+    }
+
+    .hero p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:15px;
     }
 
     .hero-badge{
@@ -142,38 +158,10 @@
       margin-bottom:14px;
     }
 
-    h1{
-      margin:0 0 10px;
-      font-size:clamp(30px,4vw,44px);
-      line-height:1.25;
-    }
-
-    h2{
-      margin:0 0 12px;
-      font-size:24px;
-      line-height:1.4;
-    }
-
-    h3{
-      margin:0 0 10px;
-      font-size:20px;
-      line-height:1.4;
-    }
-
-    p{
-      margin:0 0 12px;
-    }
-
-    .hero p{
-      color:var(--muted);
-      font-size:15px;
-      max-width:950px;
-    }
-
     .hero-actions{
       display:flex;
-      gap:12px;
       flex-wrap:wrap;
+      gap:10px;
       margin-top:18px;
     }
 
@@ -190,48 +178,91 @@
       text-decoration:none;
     }
 
-    .btn-main:hover{
-      text-decoration:none;
-      opacity:.94;
-    }
-
-    .btn-main.secondary{
+    .btn-outline{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px 18px;
+      border-radius:999px;
       background:#fff;
       color:#111827;
-      border:1px solid var(--line);
+      border:1px solid #e5e7eb;
+      font-weight:600;
+      text-decoration:none;
     }
 
-    .poster{
-      background:var(--surface);
-      border:1px solid var(--line);
+    .lead-card{
+      background:#fff7ed;
+      border:1px solid #fdba74;
       border-radius:22px;
       padding:18px;
-      margin-bottom:26px;
+      margin-bottom:22px;
     }
 
-    .poster a{
+    .poster-link{
       display:block;
+      width:100%;
       max-width:760px;
-      margin:0 auto;
+      margin:0 auto 18px;
     }
 
-    .poster img{
+    .poster-link img{
       width:100%;
       height:auto;
       display:block;
       border-radius:18px;
       border:1px solid var(--line);
-      box-shadow:0 10px 24px rgba(15,23,42,0.08);
+      transition:transform .15s ease, box-shadow .15s ease;
     }
 
-    .poster-note{
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-      margin-top:12px;
+    .poster-link:hover img{
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(15,23,42,0.10);
     }
 
-    .info-grid{
+    .section{
+      margin-top:26px;
+    }
+
+    .section h2{
+      font-size:24px;
+      margin:0 0 12px;
+    }
+
+    .grid{
+      display:grid;
+      gap:18px;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px 18px;
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:20px;
+      line-height:1.5;
+    }
+
+    .card p{
+      margin:0 0 10px;
+      color:#374151;
+    }
+
+    .card ul{
+      margin:10px 0 0 18px;
+      padding:0;
+    }
+
+    .card li{
+      margin-bottom:6px;
+    }
+
+    .info-list{
       display:grid;
       gap:14px;
       grid-template-columns:repeat(4,minmax(0,1fr));
@@ -252,63 +283,9 @@
       color:#374151;
     }
 
-    .section{
-      margin-top:28px;
-    }
-
-    .grid{
-      display:grid;
-      gap:18px;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-    }
-
-    .card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:18px;
-      box-shadow:0 10px 24px rgba(15,23,42,0.06);
-    }
-
-    ul{
-      margin:10px 0 0 18px;
-      padding:0;
-    }
-
-    li{
-      margin-bottom:6px;
-      line-height:1.7;
-    }
-
     .note{
       color:var(--muted);
       font-size:14px;
-    }
-
-    .contact-block{
-      margin-top:32px;
-      background:#ffffff;
-      border:1px solid var(--line);
-      border-radius:22px;
-      padding:22px;
-      text-align:center;
-    }
-
-    .contact-block h2{
-      margin:0 0 10px;
-      font-size:24px;
-    }
-
-    .contact-block p{
-      margin:0 0 16px;
-      color:#6b7280;
-    }
-
-    .contact-actions{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
     }
 
     .back-link{
@@ -319,11 +296,12 @@
 
     footer{
       border-top:1px solid var(--line);
-      padding:24px 0 32px;
+      padding:24px 0 40px;
       text-align:center;
       font-size:12px;
       color:var(--muted);
-      background:#ffffffdd;
+      background:#ffffffcc;
+      backdrop-filter:blur(6px);
       margin-top:40px;
     }
 
@@ -339,13 +317,14 @@
       nav.main-nav{
         width:100%;
         gap:8px 14px;
+        row-gap:6px;
       }
 
       .grid{
-        grid-template-columns:1fr;
+        grid-template-columns:minmax(0,1fr);
       }
 
-      .info-grid{
+      .info-list{
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
     }
@@ -360,52 +339,45 @@
         border-radius:22px;
       }
 
-      .hero-actions{
-        flex-direction:column;
-        align-items:stretch;
+      .hero h1{
+        font-size:30px;
       }
 
-      .hero-actions .btn-main{
-        width:100%;
+      .hero p{
+        font-size:15px;
       }
 
-      .poster{
-        padding:14px;
+      .poster-link{
+        max-width:340px;
       }
 
-      .info-grid{
-        grid-template-columns:1fr;
+      .info-list{
+        grid-template-columns:minmax(0,1fr);
       }
 
-      .contact-actions{
-        flex-direction:column;
-        align-items:stretch;
-      }
-
-      .contact-actions .btn-main{
-        width:100%;
+      .card h3{
+        font-size:18px;
       }
     }
   </style>
 </head>
-
 <body>
+
 <header class="site-header">
   <div class="container site-header-inner">
     <div class="brand">
-      <a href="/en.html">
-        <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
+      <a href="/index.html">
+        <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club ロゴ">
       </a>
       <small>Training &amp; Performance</small>
     </div>
 
     <nav class="main-nav">
-      <a href="/en.html">Home</a>
-      <a href="/classes-en.html">Classes</a>
-      <a href="/personal-en.html">Personal</a>
-      <a href="/mental-training-en.html">Mental</a>
-      <a href="/about-en.html">About</a>
-      <span class="lang"><a href="/events/20260704-conditioning.html" hreflang="ja">JP</a></span>
+      <a href="/classes.html">教室</a>
+      <a href="/personal.html">パーソナル</a>
+      <a href="/mental-training.html">メンタル</a>
+      <a href="/about.html">クラブについて</a>
+      <span class="lang"><a href="/en.html" hreflang="en">EN</a></span>
     </nav>
   </div>
 </header>
@@ -413,146 +385,139 @@
 <main class="container">
 
   <section class="hero">
-    <span class="hero-badge">Brave Featured Program</span>
-    <h1>Movement Quality Training</h1>
+    <span class="hero-badge">Braveおすすめ企画</span>
+    <h1>動きの質を高める<br>コンディショニング教室</h1>
     <p>
-      A 2-day conditioning program designed to improve how the body moves through mobility, flexibility, balance, agility, and movement control.
+      ジュニアアスリートはもちろん、スポーツ愛好家の大人の方にもご参加いただけます。<br>
+      7歳以上を対象に、競技力向上を目指す方や、しっかりと身体づくりをしたい方へ向けた2日間の教室です。
     </p>
     <p>
-      This course is recommended for young athletes and active adults who want to build a stronger movement foundation, reduce injury risk, and improve performance through better body awareness and body control.
+      さまざまな角度から身体の状態を確認し、今の自分に必要な土台づくりとコンディショニングを学びます。
     </p>
 
     <div class="hero-actions">
-      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Register / Email</a>
-      <a class="btn-main secondary" href="/assets/events/movement-quality-training-poster.png" target="_blank" rel="noopener">View Poster</a>
+      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">参加申し込み・お問い合わせ</a>
+      <a class="btn-outline" href="/assets/events/2026-7-4-conditioning.png" target="_blank" rel="noopener">チラシを大きく見る</a>
     </div>
   </section>
 
-  <section class="poster">
-    <a href="/assets/events/movement-quality-training-poster.png" target="_blank" rel="noopener">
-      <img src="/assets/events/movement-quality-training-poster.png" alt="Movement Quality Training poster">
+  <section class="lead-card">
+    <a class="poster-link" href="/assets/events/2026-7-4-conditioning.png" target="_blank" rel="noopener">
+      <img src="/assets/events/2026-7-4-conditioning.png" alt="動きの質を高めるコンディショニング教室 チラシ">
     </a>
-    <p class="poster-note">Click the poster image to view it in a larger size.</p>
 
-    <div class="info-grid">
-      <div class="info-box">
-        <strong>Dates:</strong> Saturday, July 4 &amp; Saturday, July 11, 2026
-      </div>
-      <div class="info-box">
-        <strong>Time</strong>
-        16:00–17:30
-      </div>
-      <div class="info-box">
-        <strong>Venue</strong>
-        Takatsuki City General Gymnasium<br>Sub Gym 2
-      </div>
-      <div class="info-box">
-        <strong>Fee</strong>
-        4,500 JPY<br>
-        <span class="note">500 JPY discount for BRAVE members and partner athletes</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>What This Program Covers</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Movement Screening</h3>
-        <p>
-          We begin with a practical self-screening and body movement check to understand current movement quality and identify areas that need attention.
-        </p>
-        <ul>
-          <li>Ankle mobility</li>
-          <li>Shoulder mobility and scapular mobility</li>
-          <li>Thoracic spine mobility</li>
-          <li>Hip mobility and hip-spine flexibility</li>
-          <li>Lower-body and trunk stability</li>
-          <li>Shoulder stability and lower-body strength</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Conditioning Practice</h3>
-        <p>
-          Based on the first-day assessment, participants learn how to use the body more effectively through practical conditioning and movement instruction.
-        </p>
-        <ul>
-          <li>Balance and agility work</li>
-          <li>Strength and control exercises</li>
-          <li>Part-specific guidance</li>
-          <li>Simple home stretching and self-care</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>2-Day Program Structure</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Day 1 | Assessment &amp; Foundations</h3>
-        <p>
-          The first day focuses on checking current body condition and building a foundation for better movement.
-        </p>
-        <ul>
-          <li>Joint range of motion and muscle flexibility checks</li>
-          <li>Balance and stability testing</li>
-          <li>Basic balance training</li>
-          <li>Simple stretching and mobility work</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Day 2 | Practical Training &amp; Home Care</h3>
-        <p>
-          The second day builds on the first-day results and focuses on practical movement training and daily carryover.
-        </p>
-        <ul>
-          <li>How to use the body more efficiently</li>
-          <li>Balance and agility training</li>
-          <li>Part-specific coaching and corrections</li>
-          <li>Home stretching and self-conditioning guidance</li>
-        </ul>
-      </div>
-    </div>
-    <p class="note" style="margin-top:12px;">Both days are required to complete the full program.</p>
-  </section>
-
-  <section class="section">
-    <h2>Who Should Join</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Young Athletes</h3>
-        <p>
-          Recommended for athletes who want to improve movement quality, build a better athletic base, and reduce injury risk.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Active Adults</h3>
-        <p>
-          Also suitable for adults who want to move better, improve conditioning, and build a stronger, more efficient body.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-block">
-    <h2>Registration &amp; Questions</h2>
-    <p>
-      If you would like to join this program, or if you are unsure whether it is a good fit, please feel free to contact us by email.
+    <p class="note" style="text-align:center; margin:0;">
+      ※ 画像をクリックするとチラシを大きく表示できます
     </p>
-    <div class="contact-actions">
-      <a class="btn-main" href="mailto:braveathletesclub@gmail.com">Email Us</a>
+
+    <div class="info-list">
+      <div class="info-box">
+        <strong>開催日</strong>
+        2026年7月4日（土）・11日（土）
+      </div>
+      <div class="info-box">
+        <strong>時間</strong>
+        16:00〜17:30（全2回）
+      </div>
+      <div class="info-box">
+        <strong>会場</strong>
+        高槻市立総合体育館 小体育室2
+      </div>
+      <div class="info-box">
+        <strong>参加費</strong>
+        4,500円<br>
+        <span class="note">Brave会員さま・提携団体所属選手は500円割引</span>
+      </div>
     </div>
   </section>
 
-  <a class="back-link" href="/events/spring-2026-en.html">← Back to Spring Events</a>
+  <section class="section">
+    <h2>この教室で大切にしていること</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>多角的に身体をチェックする</h3>
+        <p>
+          可動域、柔軟性、バランス、安定性、脚筋力、体幹の使い方などを、さまざまな角度から確認していきます。
+        </p>
+        <p>
+          足首・肩・肩甲骨・胸椎・股関節・体幹・下半身の安定性などを含めて、多面的に身体の状態を見ていく構成です。
+        </p>
+      </div>
 
+      <div class="card">
+        <h3>今の状態を知り、次につなげる</h3>
+        <p>
+          ただ運動するだけではなく、今の身体の特徴や課題を知ることから始めます。
+        </p>
+        <p>
+          正しい身体の使い方を身につけることで、ケガの予防やパフォーマンス向上、日々のトレーニングの質向上につなげていきます。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>2日間の流れ</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>1日目｜身体チェックと基礎づくり</h3>
+        <p>
+          初日は、関節可動域や筋肉の柔軟性、バランスなどを確認しながら、身体の状態を把握していきます。
+        </p>
+        <ul>
+          <li>関節の動きや柔軟性の確認</li>
+          <li>バランス・安定性のチェック</li>
+          <li>基本的なストレッチ</li>
+          <li>簡単なバランストレーニング</li>
+          <li>体軸トレーニング・土台づくり</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>2日目｜コンディショニング実践</h3>
+        <p>
+          2日目は、1日目の内容を踏まえながら、身体の使い方、バランスやアジリティトレーニング、部位別の指導、自宅で行えるストレッチまで実践的に行います。
+        </p>
+        <ul>
+          <li>共通コンディショニング</li>
+          <li>身体の使い方の確認</li>
+          <li>バランス・アジリティトレーニング</li>
+          <li>部位別アプローチ</li>
+          <li>自宅で続けられるストレッチ指導</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>こんな方におすすめ</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>ジュニアアスリート・競技志向の方</h3>
+        <p>
+          7歳以上で、競技力向上を目指したい方、身体の使い方を見直したい方におすすめです。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>スポーツ愛好家の大人の方</h3>
+        <p>
+          しっかり身体づくりをしたい方、無理なく自分の身体を整えながら動きの質を高めたい方にも適しています。
+        </p>
+      </div>
+    </div>
+    <p class="note" style="margin-top:12px;">
+      ※ 2日続けて受講していただくことで、より効果的に学べる内容です。両日ともご参加ください。
+    </p>
+  </section>
+
+  <a class="back-link" href="/index.html">← topに戻る</a>
 </main>
 
 <footer>
-  © 2026 Brave Athletes Club
+  <div class="container">
+    © 2026 Brave Athletes Club
+  </div>
 </footer>
 
 <script>
