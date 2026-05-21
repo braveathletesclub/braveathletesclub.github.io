@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>グループ・チームサポート｜Brave Athletes Club</title>
+  <meta name="description" content="Brave Athletes Clubの企業・団体・チーム・親子グループ向け少人数グループレッスン。姿勢・柔軟性・安定性・バランス・動きの質を確認しながら、目的に合わせたコンディショニングを行います。" />
+
+  <style>
+    :root {
+      --navy: #0f172a;
+      --blue: #2563eb;
+      --sky: #e0f2fe;
+      --green: #10b981;
+      --orange: #f97316;
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #dbe3ef;
+      --bg: #f5f9ff;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #f8fbff 0%, #eef6ff 48%, #f7fbff 100%);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .site-header-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 52px;
+      height: auto;
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .main-nav a {
+      color: #1e293b;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      color: var(--blue);
+      border-bottom-color: var(--blue);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 64px 0 48px;
+      background:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 34%),
+        linear-gradient(135deg, #ffffff 0%, #eef7ff 58%, #e8fff6 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.18;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-lead {
+      margin: 22px 0 0;
+      font-size: 17px;
+      color: #334155;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #2563eb, #0ea5e9);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+    }
+
+    .btn.secondary {
+      background: #ffffff;
+      color: #1d4ed8;
+      border-color: #bfdbfe;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .hero-card ul {
+      margin: 0;
+      padding-left: 1.2em;
+      color: #334155;
+    }
+
+    .section {
+      padding: 56px 0 0;
+    }
+
+    .section:last-of-type {
+      padding-bottom: 72px;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.35;
+    }
+
+    .section-lead {
+      margin: 0 0 24px;
+      color: #475569;
+      font-size: 16px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      margin: 0 0 14px;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .feature-list {
+      margin: 0;
+      padding-left: 1.2em;
+    }
+
+    .feature-list li {
+      margin-bottom: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 5px 10px;
+      margin: 0 0 12px;
+      border-radius: 999px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 16px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .price-table th {
+      background: #eff6ff;
+      color: #1e3a8a;
+      font-size: 14px;
+    }
+
+    .price-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .flow {
+      counter-reset: step;
+      display: grid;
+      gap: 14px;
+    }
+
+    .flow-item {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 18px 18px 58px;
+    }
+
+    .flow-item::before {
+      counter-increment: step;
+      content: counter(step);
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #2563eb;
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .flow-item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .area-box {
+      background: linear-gradient(135deg, #ecfeff, #f0fdf4);
+      border: 1px solid #bae6fd;
+      border-radius: 24px;
+      padding: 28px;
+    }
+
+    .contact-box {
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: #ffffff;
+      border-radius: 28px;
+      padding: 36px 28px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+    }
+
+    .contact-box h2 {
+      margin: 0 0 12px;
+      font-size: 28px;
+    }
+
+    .contact-box p {
+      margin: 0 0 18px;
+      color: #dbeafe;
+    }
+
+    .contact-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-box .btn.secondary {
+      color: #ffffff;
+      background: transparent;
+      border-color: rgba(255,255,255,0.45);
+    }
+
+    .site-footer {
+      padding: 28px 0;
+      background: #0f172a;
+      color: #cbd5e1;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 44px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .site-header-inner {
+        height: auto;
+        padding: 10px 0 12px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .main-nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .brand img {
+        width: 46px;
+      }
+
+      .card,
+      .hero-card,
+      .area-box,
+      .contact-box {
+        border-radius: 20px;
+        padding: 22px;
+      }
+
+      .price-table,
+      .price-table tbody,
+      .price-table tr,
+      .price-table td,
+      .price-table th {
+        display: block;
+        width: 100%;
+      }
+
+      .price-table thead {
+        display: none;
+      }
+
+      .price-table tr {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .price-table td {
+        border-bottom: none;
+        padding: 12px 14px;
+      }
+
+      .price-table td::before {
+        content: attr(data-label);
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 800;
+        color: #1e3a8a;
+      }
+    }
+  </style>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date();
+    const mmdd = (today.getMonth() + 1) * 100 + today.getDate();
+
+    let filename = "logo-allseaso.png";
+
+    if (mmdd >= 101 && mmdd <= 107) {
+      filename = "2026NewYear.png";
+    } else if (mmdd >= 1206 && mmdd <= 1225) {
+      filename = "logo-christmas.png";
+    } else if (mmdd >= 1226 || mmdd <= 202) {
+      filename = "logo-winter-pink.png";
+    } else if (mmdd >= 203 && mmdd <= 315) {
+      filename = "logo-spring-yellow.png";
+    } else if (mmdd >= 316 && mmdd <= 414) {
+      filename = "logo-spring-pink.png";
+    } else if (mmdd >= 415 && mmdd <= 514) {
+      filename = "logo-black-pink.png";
+    } else if (mmdd >= 515 && mmdd <= 630) {
+      filename = "logo-fishing.png";
+    } else if (mmdd >= 701 && mmdd <= 815) {
+      filename = "logo-summer-sea.png";
+    } else if (mmdd >= 816 && mmdd <= 930) {
+      filename = "logo-allseaso.png";
+    } else if (mmdd >= 1001 && mmdd <= 1115) {
+      filename = "logo-autumn-mapl.png";
+    } else if (mmdd >= 1116 && mmdd <= 1205) {
+      filename = "logo-autumn-winter-yello.png";
+    }
+
+    const src = "/assets/seasonal/" + filename;
+    const headerLogo = document.getElementById("seasonalLogo");
+    const heroLogo = document.getElementById("heroSeasonalLogo");
+    if (headerLogo) headerLogo.src = src;
+    if (heroLogo) heroLogo.src = src;
+  });
+</script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="/index.html">
+        <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club ロゴ" />
+        <span class="brand-text">Training &amp; Performance</span>
+      </a>
+
+      <nav class="main-nav">
+  <a href="/classes-en.html">Classes</a>
+  <a href="/personal-en.html">Personal</a>
+  <a href="/group-training-en.html">Group</a>
+  <a href="/mental-training-en.html">Mental</a>
+  <a href="/about-en.html">About</a>
+  <a href="/index.html">日本語</a>
+</nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">Group &amp; Team Support</p>
+      <h1>Group &amp; Team Support</h1>
+      <p class="hero-lead">
+        Brave Athletes Club provides conditioning support for companies,
+        organizations, sports teams, parent-child groups, and local groups.
+        From small group lessons to team-wide conditioning sessions,
+        each program is adjusted based on the group’s goals, size, and physical condition.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:braveathletesclub@gmail.com">Contact by Email</a>
+        <a class="btn secondary" href="#price">View Fee Guide</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>What You Can Find Here</h2>
+      <ul>
+        <li>Small group lessons for companies and organizations</li>
+        <li>Parent-child group lessons</li>
+        <li>Team conditioning support</li>
+        <li>Basic fee guide and consultation flow</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="section">
+  <div class="container">
+    <h2 class="section-title">Support Options</h2>
+
+    <div class="grid-3">
+      <article class="card">
+        <span class="tag">Small Group</span>
+        <h3>Small Group Lessons</h3>
+        <p>
+          Lessons for companies, organizations, local groups, and small teams.
+          As a general guideline, one instructor works with up to six participants.
+        </p>
+        <p>
+          We support posture, movement quality, balance, stability,
+          and conditioning habits that can be continued safely.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Parent &amp; Child</span>
+        <h3>Parent-Child Group Lessons</h3>
+        <p>
+          Parent-child sessions focus on enjoyable movement experiences such as running,
+          jumping, balancing, throwing, and body control.
+        </p>
+        <p>
+          These sessions are generally designed for up to six parent-child pairs.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="tag">Team Support</span>
+        <h3>Team Conditioning Support</h3>
+        <p>
+          Conditioning support for high school teams, university teams,
+          club teams, and sports organizations.
+        </p>
+        <p>
+          Team sessions are planned separately based on the number of participants,
+          session length, training period, and competition demands.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="price">
+  <div class="container">
+    <h2 class="section-title">Fee Guide</h2>
+    <p class="section-lead">
+      Fees may vary depending on location, number of participants,
+      session length, frequency, and program content.
+      The following is a basic guide.
+    </p>
+
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th>Program</th>
+          <th>Guide Fee</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Program">Small Group Lesson</td>
+          <td data-label="Guide Fee">60 min / from 22,000 JPY</td>
+          <td data-label="Notes">Up to 6 participants per instructor</td>
+        </tr>
+        <tr>
+          <td data-label="Program">Parent-Child Group Lesson</td>
+          <td data-label="Guide Fee">60 min / from 22,000 JPY</td>
+          <td data-label="Notes">Up to 6 parent-child pairs</td>
+        </tr>
+        <tr>
+          <td data-label="Program">Company / Organization Contract</td>
+          <td data-label="Guide Fee">4 sessions per month / from 88,000 JPY</td>
+          <td data-label="Notes">Example: weekly 60-minute sessions</td>
+        </tr>
+        <tr>
+          <td data-label="Program">Team Conditioning Support</td>
+          <td data-label="Guide Fee">From 25,000 JPY</td>
+          <td data-label="Notes">Depends on group size, session length, frequency, and period</td>
+        </tr>
+        <tr>
+          <td data-label="Program">Instructor Dispatch for Sports Classes</td>
+          <td data-label="Guide Fee">From 22,000 JPY</td>
+          <td data-label="Notes">Program details are discussed individually</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="note" style="margin-top:12px;">
+      * Venue fees, travel distance, service area, contract period, and program content may affect the final fee.<br>
+      * Team support, school club activities, camps, and tournament support are quoted individually after consultation.
+    </p>
+  </div>
+</section>
+
+    <section class="section">
+  <div class="container">
+    <h2 class="section-title">Service Area</h2>
+
+    <div class="area-box">
+      <p>
+        We are mainly based in Osaka and Takatsuki.
+        We also accept consultations for sessions in Tokyo, Kanagawa,
+        and other selected areas in the Kanto region.
+      </p>
+      <p>
+        Parent-child lessons in the Shibuya area and small group lessons in Yokohama
+        may also be available depending on schedule and venue conditions.
+      </p>
+      <p class="note">
+        * Please contact us to discuss location, venue conditions, and travel arrangements.
+      </p>
+    </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="container">
+    <div class="contact-box">
+      <h2>Contact Us About Group or Team Support</h2>
+      <p>
+        We will suggest a suitable format based on your goals,
+        number of participants, location, and preferred schedule.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:braveathletesclub@gmail.com">Contact by Email</a>
+        <a class="btn secondary" href="https://www.facebook.com/BraveAthletesClub/" target="_blank" rel="noopener">View Facebook</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="site-footer">
+  © 2026 Brave Athletes Club
+</footer>
+</body>
+</html>
