@@ -463,6 +463,45 @@
       }
     }
   </style>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date();
+    const mmdd = (today.getMonth() + 1) * 100 + today.getDate();
+
+    let filename = "logo-allseaso.png";
+
+    if (mmdd >= 101 && mmdd <= 107) {
+      filename = "2026NewYear.png";
+    } else if (mmdd >= 1206 && mmdd <= 1225) {
+      filename = "logo-christmas.png";
+    } else if (mmdd >= 1226 || mmdd <= 202) {
+      filename = "logo-winter-pink.png";
+    } else if (mmdd >= 203 && mmdd <= 315) {
+      filename = "logo-spring-yellow.png";
+    } else if (mmdd >= 316 && mmdd <= 414) {
+      filename = "logo-spring-pink.png";
+    } else if (mmdd >= 415 && mmdd <= 514) {
+      filename = "logo-black-pink.png";
+    } else if (mmdd >= 515 && mmdd <= 630) {
+      filename = "logo-fishing.png";
+    } else if (mmdd >= 701 && mmdd <= 815) {
+      filename = "logo-summer-sea.png";
+    } else if (mmdd >= 816 && mmdd <= 930) {
+      filename = "logo-allseaso.png";
+    } else if (mmdd >= 1001 && mmdd <= 1115) {
+      filename = "logo-autumn-mapl.png";
+    } else if (mmdd >= 1116 && mmdd <= 1205) {
+      filename = "logo-autumn-winter-yello.png";
+    }
+
+    const src = "/assets/seasonal/" + filename;
+    const headerLogo = document.getElementById("seasonalLogo");
+    const heroLogo = document.getElementById("heroSeasonalLogo");
+    if (headerLogo) headerLogo.src = src;
+    if (heroLogo) heroLogo.src = src;
+  });
+</script>
 </head>
 
 <body>
