@@ -959,3 +959,80 @@
     line-height: 1.45;
   }
 }
+/* ==============================
+   Fixed hero title layout
+   スマホでタイトルが切れないように改行固定
+   ============================== */
+
+.summer-hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15em;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 22px;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.summer-hero-title span {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.speed-agility-page .summer-hero-title,
+.speed-power-page .summer-hero-title {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+/* スマホ専用 */
+@media (max-width: 760px) {
+  .summer-hero-title {
+    gap: 0.18em;
+    line-height: 1.25;
+  }
+
+  .speed-agility-page .summer-hero-title,
+  .speed-power-page .summer-hero-title {
+    font-size: 2rem;
+  }
+
+  .summer-hero-title span {
+    white-space: nowrap;
+  }
+
+  .summer-hero p {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* iPhone幅にさらに合わせる */
+@media (max-width: 430px) {
+  .speed-agility-page .summer-hero-title {
+    font-size: 1.82rem;
+  }
+
+  .speed-power-page .summer-hero-title {
+    font-size: 1.72rem;
+  }
+
+  .summer-hero {
+    padding-top: 50px;
+    padding-bottom: 48px;
+  }
+}
+
+/* かなり狭い画面用 */
+@media (max-width: 380px) {
+  .speed-agility-page .summer-hero-title {
+    font-size: 1.68rem;
+  }
+
+  .speed-power-page .summer-hero-title {
+    font-size: 1.58rem;
+  }
+}
