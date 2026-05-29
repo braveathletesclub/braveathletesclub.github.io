@@ -282,3 +282,180 @@
     font-size: 0.9rem;
   }
 }
+/* ==============================
+   Summer events page polish
+   ============================== */
+
+.summer-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.summer-hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 166, 166, 0.18), rgba(0, 166, 166, 0));
+  border-radius: 50%;
+}
+
+.summer-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  left: -120px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(0, 119, 182, 0.16), rgba(0, 119, 182, 0));
+  border-radius: 50%;
+}
+
+.summer-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.summer-hero h1 {
+  letter-spacing: 0.03em;
+}
+
+.summer-section {
+  position: relative;
+}
+
+.summer-section h2 {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.summer-flow .flow-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.summer-flow .flow-item::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 166, 166, 0.08);
+  border-radius: 50%;
+}
+
+.summer-card {
+  position: relative;
+}
+
+.summer-card-grid .summer-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.summer-card-grid .summer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14);
+  border-color: #93c5fd;
+}
+
+.summer-card-thumb {
+  background: #ffffff;
+}
+
+.summer-card-body {
+  position: relative;
+}
+
+.summer-card-body h3 {
+  font-weight: 900;
+  letter-spacing: 0.01em;
+}
+
+.summer-card-body .summer-tag {
+  letter-spacing: 0.04em;
+}
+
+.summer-card-body .summer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.summer-card-body .summer-btn::after {
+  content: "→";
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.summer-card-body .summer-btn:hover::after {
+  transform: translateX(3px);
+}
+
+.summer-message,
+.summer-info {
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.06);
+}
+
+.summer-message h2,
+.summer-info h2 {
+  border-left-color: #0077b6;
+}
+
+.summer-info {
+  border: 1px solid #dbeafe;
+}
+
+/* イベント一覧ページの3カードを少し見やすく */
+.summer-card-grid .summer-card:nth-child(1) .summer-tag {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.summer-card-grid .summer-card:nth-child(2) .summer-tag {
+  background: #e6fffa;
+  color: #008080;
+}
+
+.summer-card-grid .summer-card:nth-child(3) .summer-tag {
+  background: #ffe4ef;
+  color: #db2777;
+}
+
+/* チラシ画像が大きく見えすぎないように調整 */
+.summer-card-grid .summer-card-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* スマホで余白と文字サイズを調整 */
+@media (max-width: 760px) {
+  .summer-hero h1 {
+    font-size: 2rem;
+    line-height: 1.35;
+  }
+
+  .summer-hero p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .summer-section h2 {
+    font-size: 1.45rem;
+  }
+
+  .summer-card-body h3 {
+    font-size: 1.15rem;
+  }
+
+  .summer-card-body p {
+    font-size: 0.94rem;
+  }
+
+  .summer-card-grid .summer-card:hover {
+    transform: none;
+  }
+}
