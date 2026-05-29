@@ -792,3 +792,109 @@
     border-radius: 22px;
   }
 }
+/* ==============================
+   Final responsive polish
+   summer event pages
+   ============================== */
+
+/* 全体の文字を少し読みやすく */
+.summer-hero,
+.summer-section,
+.summer-card,
+.flow-item {
+  font-family: "Noto Sans JP", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ヒーロー下の余白を整える */
+.summer-hero + .summer-section {
+  padding-top: 52px;
+}
+
+/* 大きな画像カードをPCで見たときに横に広がりすぎないように */
+.summer-section > .summer-card {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+/* 詳細ページのメイン画像をきれいに中央配置 */
+.summer-section > .summer-card .summer-card-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.summer-section > .summer-card .summer-card-thumb img {
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+}
+
+/* カード内の文章幅を少し整える */
+.summer-section > .summer-card .summer-card-body {
+  padding: 30px 34px 34px;
+}
+
+.summer-section > .summer-card .summer-card-body p {
+  max-width: 760px;
+}
+
+/* 開催概要を見やすく */
+.summer-info p {
+  margin: 0 0 14px;
+}
+
+.summer-info strong {
+  color: #0f2f4a;
+}
+
+/* ボタンの配置を整える */
+.event-actions {
+  text-align: center;
+}
+
+.btn-pill.primary {
+  display: inline-block;
+  min-width: 220px;
+  text-align: center;
+}
+
+/* スマホでの最終調整 */
+@media (max-width: 760px) {
+  .summer-hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .summer-hero h1 {
+    word-break: keep-all;
+  }
+
+  .summer-section {
+    padding: 38px 16px;
+  }
+
+  .summer-section > .summer-card .summer-card-body {
+    padding: 24px 20px 26px;
+  }
+
+  .summer-flow {
+    gap: 16px;
+  }
+
+  .flow-item {
+    padding: 22px 20px;
+  }
+
+  .summer-card-grid {
+    gap: 18px;
+  }
+
+  .summer-info p {
+    font-size: 0.95rem;
+  }
+
+  .btn-pill.primary {
+    width: 100%;
+    max-width: 340px;
+  }
+}
