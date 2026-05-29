@@ -459,3 +459,148 @@
     transform: none;
   }
 }
+/* ==============================
+   Speed & Agility page
+   小学生向け詳細ページ
+   ============================== */
+
+.speed-agility-page {
+  background:
+    radial-gradient(circle at top right, rgba(0, 166, 166, 0.10), transparent 34%),
+    radial-gradient(circle at top left, rgba(0, 119, 182, 0.10), transparent 28%),
+    #ffffff;
+}
+
+.speed-agility-page .summer-hero {
+  background:
+    linear-gradient(135deg, rgba(0, 119, 182, 0.92) 0%, rgba(0, 166, 166, 0.88) 100%),
+    linear-gradient(135deg, #eaf7ff 0%, #f3fff7 100%);
+  color: #ffffff;
+  padding: 82px 20px 74px;
+}
+
+.speed-agility-page .summer-label {
+  background: rgba(255, 255, 255, 0.96);
+  color: #0077b6;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.speed-agility-page .summer-hero h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(15, 23, 42, 0.18);
+}
+
+.speed-agility-page .summer-hero p {
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.speed-agility-page .summer-section h2 {
+  border-left-color: #00a6a6;
+  color: #0f2f4a;
+}
+
+.speed-agility-page .summer-card {
+  border: 1px solid rgba(0, 166, 166, 0.22);
+  box-shadow: 0 16px 42px rgba(0, 119, 182, 0.10);
+}
+
+.speed-agility-page .summer-card-thumb {
+  background: linear-gradient(135deg, #ffffff 0%, #f0fbff 100%);
+}
+
+.speed-agility-page .summer-card-body {
+  background: #ffffff;
+}
+
+.speed-agility-page .summer-card-body h2,
+.speed-agility-page .summer-card-body h3 {
+  color: #0f2f4a;
+  font-weight: 900;
+}
+
+.speed-agility-page .summer-tag {
+  background: #e6fffa;
+  color: #008080;
+  letter-spacing: 0.04em;
+}
+
+.speed-agility-page .flow-item {
+  border: 1px solid rgba(0, 166, 166, 0.22);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fffd 100%);
+}
+
+.speed-agility-page .flow-item h3 {
+  color: #0f2f4a;
+  font-weight: 900;
+}
+
+.speed-agility-page .summer-card-grid .summer-card {
+  border-radius: 24px;
+}
+
+.speed-agility-page .summer-card-grid .summer-card:nth-child(1) .summer-tag {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.speed-agility-page .summer-card-grid .summer-card:nth-child(2) .summer-tag {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.speed-agility-page .summer-card-grid .summer-card:nth-child(3) .summer-tag {
+  background: #fef9c3;
+  color: #a16207;
+}
+
+.speed-agility-page .summer-info {
+  background:
+    linear-gradient(135deg, #eaf7ff 0%, #f0fdfa 100%);
+  border: 1px solid #bae6fd;
+  box-shadow: 0 16px 40px rgba(0, 119, 182, 0.10);
+}
+
+.speed-agility-page .event-actions {
+  text-align: center;
+}
+
+.speed-agility-page .btn-pill.primary {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0077b6 0%, #00a6a6 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(0, 119, 182, 0.24);
+}
+
+.speed-agility-page .btn-pill.primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* 小学生向けページ：スマホ調整 */
+@media (max-width: 760px) {
+  .speed-agility-page .summer-hero {
+    padding: 62px 18px 56px;
+  }
+
+  .speed-agility-page .summer-hero h1 {
+    font-size: 2rem;
+  }
+
+  .speed-agility-page .summer-hero p {
+    font-size: 0.96rem;
+  }
+
+  .speed-agility-page .summer-card {
+    border-radius: 22px;
+  }
+
+  .speed-agility-page .summer-info {
+    border-radius: 22px;
+  }
+}
