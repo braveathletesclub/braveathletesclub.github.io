@@ -604,3 +604,191 @@
     border-radius: 22px;
   }
 }
+/* ==============================
+   Speed & Power page
+   ジュニア向け詳細ページ
+   ============================== */
+
+.speed-power-page {
+  background:
+    radial-gradient(circle at top right, rgba(219, 39, 119, 0.14), transparent 32%),
+    radial-gradient(circle at top left, rgba(15, 23, 42, 0.12), transparent 30%),
+    #ffffff;
+}
+
+.speed-power-page .summer-hero {
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.96) 0%, rgba(72, 19, 52, 0.94) 52%, rgba(219, 39, 119, 0.88) 100%);
+  color: #ffffff;
+  padding: 86px 20px 78px;
+}
+
+.speed-power-page .summer-label {
+  background: rgba(255, 255, 255, 0.96);
+  color: #db2777;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.22);
+}
+
+.speed-power-page .summer-hero h1 {
+  color: #ffffff;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.28);
+  letter-spacing: 0.035em;
+}
+
+.speed-power-page .summer-hero p {
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+.speed-power-page .summer-section h2 {
+  border-left-color: #db2777;
+  color: #111827;
+  font-weight: 900;
+}
+
+.speed-power-page .summer-card {
+  border: 1px solid rgba(219, 39, 119, 0.20);
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.12);
+}
+
+.speed-power-page .summer-card-thumb {
+  background:
+    linear-gradient(135deg, #111827 0%, #3b112b 100%);
+}
+
+.speed-power-page .summer-card-body {
+  background: #ffffff;
+}
+
+.speed-power-page .summer-card-body h2,
+.speed-power-page .summer-card-body h3 {
+  color: #111827;
+  font-weight: 900;
+}
+
+.speed-power-page .summer-tag {
+  background: #ffe4ef;
+  color: #db2777;
+  letter-spacing: 0.04em;
+}
+
+.speed-power-page .flow-item {
+  border: 1px solid rgba(219, 39, 119, 0.18);
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fff7fb 100%);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+.speed-power-page .flow-item h3 {
+  color: #111827;
+  font-weight: 900;
+}
+
+.speed-power-page .flow-item::after {
+  background: rgba(219, 39, 119, 0.08);
+}
+
+.speed-power-page .summer-card-grid .summer-card {
+  border-radius: 24px;
+}
+
+.speed-power-page .summer-card-grid .summer-card:nth-child(1) .summer-tag {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.speed-power-page .summer-card-grid .summer-card:nth-child(2) .summer-tag {
+  background: #ffe4ef;
+  color: #db2777;
+}
+
+.speed-power-page .summer-card-grid .summer-card:nth-child(3) .summer-tag {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.speed-power-page .summer-message {
+  background:
+    linear-gradient(135deg, #111827 0%, #3b112b 100%);
+  color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.18);
+}
+
+.speed-power-page .summer-message h2 {
+  color: #ffffff;
+  border-left-color: #f472b6;
+}
+
+.speed-power-page .summer-message p {
+  color: #f8fafc;
+}
+
+.speed-power-page .summer-info {
+  background:
+    linear-gradient(135deg, #fff7fb 0%, #f8fafc 100%);
+  border: 1px solid #f9a8d4;
+  box-shadow: 0 16px 40px rgba(219, 39, 119, 0.10);
+}
+
+.speed-power-page .summer-info h2 {
+  border-left-color: #db2777;
+}
+
+.speed-power-page .summer-info a {
+  color: #db2777;
+}
+
+.speed-power-page .event-actions {
+  text-align: center;
+}
+
+.speed-power-page .btn-pill.primary {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #111827 0%, #db2777 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 10px 26px rgba(219, 39, 119, 0.28);
+}
+
+.speed-power-page .btn-pill.primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* ジュニア向けページ：画像まわりを少し引き締め */
+.speed-power-page .summer-section > .summer-card {
+  overflow: hidden;
+}
+
+.speed-power-page .summer-section > .summer-card .summer-card-thumb {
+  padding: 0;
+}
+
+/* ジュニア向けページ：スマホ調整 */
+@media (max-width: 760px) {
+  .speed-power-page .summer-hero {
+    padding: 64px 18px 58px;
+  }
+
+  .speed-power-page .summer-hero h1 {
+    font-size: 1.9rem;
+    line-height: 1.4;
+  }
+
+  .speed-power-page .summer-hero p {
+    font-size: 0.96rem;
+  }
+
+  .speed-power-page .summer-card {
+    border-radius: 22px;
+  }
+
+  .speed-power-page .summer-message,
+  .speed-power-page .summer-info {
+    border-radius: 22px;
+  }
+}
