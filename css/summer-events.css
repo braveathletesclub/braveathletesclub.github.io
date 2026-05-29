@@ -898,3 +898,64 @@
     max-width: 340px;
   }
 }
+/* ==============================
+   Mobile hero title fix
+   スマホ表示のタイトルはみ出し修正
+   ============================== */
+
+@media (max-width: 760px) {
+  .summer-hero {
+    padding: 54px 16px 50px;
+  }
+
+  .summer-hero-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .summer-label {
+    max-width: 90%;
+    white-space: normal;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    padding: 7px 14px;
+  }
+
+  .summer-hero h1 {
+    max-width: 100%;
+    font-size: clamp(1.75rem, 8vw, 2.25rem);
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  .summer-hero p {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.85;
+  }
+
+  .speed-agility-page .summer-hero h1,
+  .speed-power-page .summer-hero h1 {
+    font-size: clamp(1.7rem, 7.6vw, 2.15rem);
+    line-height: 1.38;
+  }
+}
+
+/* さらに幅が狭いスマホ用 */
+@media (max-width: 430px) {
+  .summer-hero h1 {
+    font-size: clamp(1.55rem, 7.4vw, 2rem);
+  }
+
+  .speed-power-page .summer-hero h1 {
+    font-size: clamp(1.5rem, 7vw, 1.9rem);
+    line-height: 1.45;
+  }
+
+  .speed-agility-page .summer-hero h1 {
+    font-size: clamp(1.55rem, 7.2vw, 1.95rem);
+    line-height: 1.45;
+  }
+}
