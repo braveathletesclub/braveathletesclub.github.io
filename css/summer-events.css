@@ -1056,3 +1056,32 @@
   color: #db2777 !important;
   background: #ffffff !important;
 }
+/* ==============================
+   Overview box position polish
+   開催概要を上に移動した後の余白調整
+   ============================== */
+
+.speed-agility-page .summer-section + .summer-info,
+.speed-power-page .summer-section + .summer-info {
+  margin-top: -22px;
+}
+
+.speed-agility-page .summer-info,
+.speed-power-page .summer-info {
+  max-width: 920px;
+  padding-top: 42px;
+  padding-bottom: 42px;
+}
+
+@media (max-width: 760px) {
+  .speed-agility-page .summer-section + .summer-info,
+  .speed-power-page .summer-section + .summer-info {
+    margin-top: -14px;
+  }
+
+  .speed-agility-page .summer-info,
+  .speed-power-page .summer-info {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
