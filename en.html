@@ -491,6 +491,187 @@
         font-size:22px;
       }
     }
+    /* ==============================
+   English top page summer events
+   ============================== */
+
+.en-summer-event {
+  max-width: 1120px;
+  margin: 56px auto;
+  padding: 34px 22px 38px;
+  background: linear-gradient(135deg, #f0fbff 0%, #f6fff8 100%);
+  border: 1px solid #d7eef7;
+  border-radius: 30px;
+  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
+}
+
+.en-summer-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.en-summer-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0077b6;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.en-summer-head h2 {
+  margin: 0 0 10px;
+  color: #0f2f4a;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.en-summer-head p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.en-summer-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.en-summer-card {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 24px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.en-summer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.13);
+}
+
+.en-summer-img {
+  height: 150px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.en-summer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.en-summer-text {
+  padding: 20px 20px 22px;
+}
+
+.en-summer-text span {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #e6fffa;
+  color: #008080;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.en-summer-card.conditioning .en-summer-text span {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.en-summer-card.power .en-summer-text span {
+  background: #ffe4ef;
+  color: #db2777;
+}
+
+.en-summer-text h3 {
+  margin: 0 0 10px;
+  color: #0f2f4a;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  font-weight: 900;
+}
+
+.en-summer-text p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.en-summer-action {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.en-summer-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0077b6 0%, #00a6a6 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(0, 119, 182, 0.25);
+}
+
+.en-summer-btn:hover {
+  opacity: 0.92;
+}
+
+/* スマホ対応 */
+@media (max-width: 900px) {
+  .en-summer-event {
+    margin: 40px 16px;
+    padding: 28px 16px 32px;
+    border-radius: 24px;
+  }
+
+  .en-summer-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .en-summer-img {
+    height: auto;
+    max-height: none;
+  }
+
+  .en-summer-img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .en-summer-text {
+    padding: 18px;
+  }
+
+  .en-summer-btn {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+}
   </style>
 
   <!-- seasonal logo -->
@@ -654,52 +835,58 @@
   </div>
 </section>
 
-<section class="summer-top-event">
-  <div class="summer-top-head">
-    <span class="summer-top-label">Summer Program 2026</span>
+<section class="en-summer-event">
+  <div class="en-summer-head">
+    <span class="en-summer-label">Summer Program 2026</span>
     <h2>Summer Events</h2>
     <p>
       Build your movement foundation in July, then move into practical speed, agility, and power training during summer break.
     </p>
   </div>
 
-  <div class="summer-top-cards">
-    <a class="summer-top-card conditioning" href="/events/20260704-conditioning-en.html">
-      <div class="summer-top-img">
-        <img src="/assets/events/2026-7-4-conditioning-en.png" alt="Movement Quality Conditioning Clinic">
+  <div class="en-summer-cards">
+    <a class="en-summer-card conditioning" href="/events/20260704-conditioning-en.html">
+      <div class="en-summer-img">
+        <img src="/assets/events/2026-7-4-conditioning.png" alt="Movement Quality Conditioning Clinic">
       </div>
-      <div class="summer-top-text">
+      <div class="en-summer-text">
         <span>July Event</span>
         <h3>Movement Quality Conditioning Clinic</h3>
-        <p>Improve mobility, balance, stability, and movement control to build a better foundation.</p>
+        <p>
+          Improve mobility, balance, stability, and movement control to build a better foundation.
+        </p>
       </div>
     </a>
 
-    <a class="summer-top-card agility" href="/events/summer-speed-agility-2026-en.html">
-      <div class="summer-top-img">
+    <a class="en-summer-card agility" href="/events/summer-speed-agility-2026-en.html">
+      <div class="en-summer-img">
         <img src="/assets/events/speed-agility-en.png" alt="Speed & Agility Class">
       </div>
-      <div class="summer-top-text">
+      <div class="en-summer-text">
         <span>Ages 6–12</span>
-        <h3>Speed & Agility Class</h3>
-        <p>Improve running, stopping, turning, and reaction skills in a fun and safe way.</p>
+        <h3>Speed &amp; Agility Class</h3>
+        <p>
+          Improve running, stopping, turning, and reaction skills in a fun and safe way.
+        </p>
       </div>
     </a>
 
-    <a class="summer-top-card power" href="/events/summer-speed-power-2026-en.html">
-      <div class="summer-top-img">
+    <a class="en-summer-card power" href="/events/summer-speed-power-2026-en.html">
+      <div class="en-summer-img">
         <img src="/assets/events/speed-power-up-en.png" alt="Speed & Power-Up Training">
       </div>
-      <div class="summer-top-text">
+      <div class="en-summer-text">
         <span>Ages 11–16</span>
-        <h3>Speed & Power-Up Training</h3>
-        <p>Develop first-step quickness, acceleration, change of direction, and jumping power.</p>
+        <h3>Speed &amp; Power-Up Training</h3>
+        <p>
+          Develop first-step quickness, acceleration, change of direction, and jumping power.
+        </p>
       </div>
     </a>
   </div>
 
-  <div class="summer-top-action">
-    <a class="summer-top-btn" href="/summer-events-2026-en.html">View Summer Events</a>
+  <div class="en-summer-action">
+    <a class="en-summer-btn" href="/summer-events-2026-en.html">View Summer Events</a>
   </div>
 </section>
   
