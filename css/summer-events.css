@@ -1085,3 +1085,20 @@
     padding-bottom: 32px;
   }
 }
+/* ==============================
+   English summer pages
+   ============================== */
+
+.summer-hero-title span {
+  white-space: normal;
+}
+
+@media (max-width: 760px) {
+  .summer-hero-title {
+    gap: 0.2em;
+  }
+
+  .summer-hero-title span {
+    white-space: normal;
+  }
+}
