@@ -1036,3 +1036,23 @@
     font-size: 1.58rem;
   }
 }
+/* ==============================
+   Hero label visibility fix
+   Summer Short Program の文字色修正
+   ============================== */
+
+.summer-label {
+  color: #0077b6 !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  font-weight: 900;
+}
+
+.speed-agility-page .summer-label {
+  color: #0077b6 !important;
+  background: #ffffff !important;
+}
+
+.speed-power-page .summer-label {
+  color: #db2777 !important;
+  background: #ffffff !important;
+}
