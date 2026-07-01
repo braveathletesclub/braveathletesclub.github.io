@@ -192,84 +192,100 @@
     li{margin-bottom:4px;line-height:1.7;}
 
     /* ===== staff ===== */
-    .trainers-intro{
-      max-width:720px;
-      font-size:14px;
-      color:var(--muted);
-      margin-bottom:16px;
-    }
+.trainers-section{
+  margin-top:32px;
+}
 
-    .staff-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:22px;
-      margin-top:20px;
-    }
+.trainers-intro{
+  max-width:720px;
+  font-size:14px;
+  color:var(--muted);
+  margin-bottom:16px;
+}
 
-    .staff-card{
-      position:relative;
-      background:#f9fafb;
-      border-radius:18px;
-      padding:20px 22px;
-      border:1px solid #e5e7eb;
-      overflow:hidden;
-      transition:0.25s ease;
-    }
+.staff-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-top:20px;
+  align-items:start;
+}
 
-    .staff-card::before{
-      content:"";
-      position:absolute;
-      left:0;
-      top:0;
-      bottom:0;
-      width:4px;
-      background:linear-gradient(180deg,#ff9800,#f97316);
-    }
+.staff-card{
+  position:relative;
+  width:auto;
+  background:#f9fafb;
+  border-radius:18px;
+  padding:20px 22px;
+  border:1px solid #e5e7eb;
+  overflow:hidden;
+  transition:0.25s ease;
+  height:auto;
+  align-self:start;
+}
 
-    .staff-card:hover{
-      background:#ffffff;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    }
+.staff-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(180deg,#ff9800,#f97316);
+}
 
-    .staff-meta{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-    }
+.staff-card:hover{
+  background:#ffffff;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
 
-    .trainer-name{
-      font-size:17px;
-      font-weight:700;
-    }
+.staff-meta{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
 
-    .trainer-role{
-      font-size:13px;
-      color:var(--muted);
-    }
+.trainer-name{
+  font-size:17px;
+  font-weight:700;
+}
 
-    .staff-bio{
-      font-size:14px;
-      margin-top:10px;
-      line-height:1.7;
-    }
+.trainer-role{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+}
 
-    .staff-qual-label{
-      margin-top:14px;
-      font-size:12px;
-      font-weight:700;
-      color:var(--muted);
-    }
+.staff-bio,
+.staff-card p{
+  font-size:14px;
+  margin-top:10px;
+  line-height:1.8;
+}
 
-    .staff-qual-list{
-      margin-top:4px;
-      padding-left:1.2em;
-      font-size:13px;
-      line-height:1.6;
-    }
+.staff-qual-label{
+  margin-top:14px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--ink);
+}
 
-    .staff-qual-list li{
-      margin-bottom:3px;
-    }
+.staff-qual-list{
+  margin-top:8px;
+  padding-left:1.2em;
+  font-size:14px;
+  line-height:1.7;
+}
+
+.staff-qual-list li{
+  margin-bottom:4px;
+}
+
+@media(max-width:768px){
+  .staff-grid{
+    grid-template-columns:1fr;
+  }
+}
 
     footer{
       border-top:1px solid #e5e7eb;
