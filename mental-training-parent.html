@@ -426,6 +426,40 @@
         padding:18px 16px;
       }
     }
+    /* ==============================
+   Parent coaching flyer adjustment
+   mental-training-parent.html
+   ============================== */
+
+.flyer-wrap {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.flyer-wrap img,
+.flyer-thumb img {
+  display: block;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12);
+  object-fit: contain;
+}
+
+.card .flyer-wrap {
+  overflow: visible;
+}
+
+/* スマホ対応 */
+@media (max-width: 760px) {
+  .flyer-wrap img,
+  .flyer-thumb img {
+    max-width: 100%;
+    border-radius: 14px;
+  }
+}
   </style>
 
   <script>
