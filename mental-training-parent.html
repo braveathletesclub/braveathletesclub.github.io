@@ -460,6 +460,53 @@
     border-radius: 14px;
   }
 }
+   /* ==============================
+   Parent coaching flyer mobile fix
+   ============================== */
+
+#parent-flyer,
+.parent-flyer,
+.flyer-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.flyer-wrap,
+.flyer-thumb {
+  display: block !important;
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  text-align: center;
+}
+
+.flyer-wrap img,
+.flyer-thumb img {
+  display: block !important;
+  width: 100% !important;
+  max-width: 720px !important;
+  height: auto !important;
+  margin: 0 auto !important;
+  object-fit: contain !important;
+  border-radius: 18px;
+}
+
+/* スマホでは画面内に必ず収める */
+@media (max-width: 760px) {
+  .flyer-wrap,
+  .flyer-thumb {
+    max-width: 100% !important;
+  }
+
+  .flyer-wrap img,
+  .flyer-thumb img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 14px;
+  }
+} 
   </style>
 
   <script>
@@ -621,16 +668,22 @@
     </div>
   </div>
 </section>
-      <section>
+     <section>
   <div class="card">
     <h2>チラシ</h2>
-    <div class="flyer-wrap" style="text-align:center;">
-      <a href="#parent-flyer-lightbox" class="flyer-thumb" style="display:inline-block; max-width:720px; width:100%; border-radius:18px; overflow:hidden; box-shadow:0 12px 30px rgba(15,23,42,0.12);">
-       <img src="/assets/events/2026-10-mental-parent.png" alt="子育てコーチング第3弾 コミュニケーションのヒント探し">
+
+    <div class="flyer-wrap">
+      <a
+        href="/assets/events/2026-10-mental-parent.png"
+        target="_blank"
+        rel="noopener"
+        class="flyer-thumb"
+      >
+        <img
+          src="/assets/events/2026-10-mental-parent.png"
+          alt="子育てコーチング第3弾 コミュニケーションのヒント探し チラシ"
+        >
       </a>
-      <p style="margin-top:12px; color:#6b7280; font-size:13px;">
-        画像をクリックすると大きく表示できます。
-      </p>
     </div>
   </div>
 </section>
