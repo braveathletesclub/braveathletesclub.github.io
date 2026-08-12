@@ -1429,3 +1429,286 @@
   font-weight: 800;
   letter-spacing: 0.02em;
 }
+/* ==============================
+   Winter bowling event detail page
+   ============================== */
+
+.winter-event-page {
+  background: #fff8fb;
+  font-family:
+    "Hiragino Maru Gothic ProN",
+    "Yu Gothic",
+    "Yu Gothic Medium",
+    "Noto Sans JP",
+    system-ui,
+    sans-serif;
+  color: #2f2a24;
+}
+
+.winter-event-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 86px 20px 78px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.winter-event-hero.bowling {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 215, 128, 0.26), transparent 26%),
+    radial-gradient(circle at 82% 18%, rgba(255, 90, 140, 0.22), transparent 30%),
+    linear-gradient(135deg, rgba(10, 16, 38, 0.97), rgba(45, 20, 74, 0.93), rgba(183, 88, 24, 0.86));
+}
+
+.winter-event-hero-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.winter-event-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #b45309;
+  font-weight: 900;
+  font-size: 0.86rem;
+  letter-spacing: 0.05em;
+}
+
+.winter-event-hero h1 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(2.1rem, 5.4vw, 4rem);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.28);
+}
+
+.winter-event-hero p {
+  max-width: 780px;
+  margin: 0 auto;
+  color: #fffdf8;
+  font-size: 1.05rem;
+  line-height: 1.95;
+  font-weight: 500;
+}
+
+.winter-event-section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 52px 20px;
+}
+
+.winter-event-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #f3d1de;
+  border-radius: 28px;
+  box-shadow: 0 18px 46px rgba(120, 72, 80, 0.10);
+}
+
+.winter-event-flyer {
+  background: #ffffff;
+}
+
+.winter-event-flyer a {
+  display: block;
+}
+
+.winter-event-flyer img {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.winter-event-body {
+  padding: 30px 34px 34px;
+}
+
+.winter-event-tag {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #b45309;
+  font-weight: 900;
+  font-size: 0.84rem;
+}
+
+.winter-event-body h2,
+.winter-event-info h2,
+.winter-prize-box h2,
+.winter-event-page .note-box h2 {
+  margin: 0 0 18px;
+  color: #3b2f1f;
+  font-size: 1.7rem;
+  line-height: 1.4;
+  font-weight: 800;
+  border-left: 6px solid #d97706;
+  padding-left: 14px;
+}
+
+.winter-event-body p,
+.winter-event-note,
+.winter-prize-box p,
+.winter-event-page .note-box p {
+  color: #3f3a35;
+  line-height: 1.95;
+  font-weight: 500;
+}
+
+.winter-event-info {
+  background: #ffffff;
+  border: 1px solid #f3d1de;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(120, 72, 80, 0.08);
+}
+
+.winter-event-info .info-list {
+  margin-top: 18px;
+}
+
+.winter-event-info dt {
+  font-weight: 800;
+  color: #b45309;
+}
+
+.winter-event-info dd {
+  color: #3f3a35;
+  line-height: 1.85;
+  font-weight: 500;
+}
+
+.winter-event-note {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: #fff7ed;
+  border-radius: 16px;
+  font-size: 0.95rem;
+}
+
+.winter-event-page .grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.winter-event-page .card {
+  border: 1px solid #f3d1de;
+  box-shadow: 0 10px 28px rgba(120, 72, 80, 0.07);
+}
+
+.winter-event-page .card h3 {
+  color: #3b2f1f;
+  font-weight: 800;
+}
+
+.winter-event-page .card li {
+  color: #3f3a35;
+  line-height: 1.9;
+  font-weight: 500;
+}
+
+.winter-prize-box {
+  background: linear-gradient(135deg, #fff7ed 0%, #fff1f7 100%);
+  border: 1px solid #f3d1de;
+  border-radius: 28px;
+  padding: 34px;
+  box-shadow: 0 16px 40px rgba(120, 72, 80, 0.08);
+}
+
+.sponsor-card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.sponsor-image {
+  padding: 0 24px 28px;
+}
+
+.sponsor-image img {
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10);
+}
+
+.winter-event-page .note-box {
+  background: linear-gradient(135deg, #fff7ed 0%, #fff8fb 100%);
+  border: 1px solid #f3d1de;
+}
+
+.winter-event-page .event-actions {
+  text-align: center;
+}
+
+.winter-event-page .btn-pill.primary {
+  display: inline-block;
+  min-width: 220px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #b45309 0%, #db2777 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 10px 26px rgba(219, 39, 119, 0.24);
+}
+
+.winter-event-page .btn-pill.primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* スマホ対応 */
+@media (max-width: 760px) {
+  .winter-event-hero {
+    padding: 60px 18px 56px;
+  }
+
+  .winter-event-hero h1 {
+    font-size: 2rem;
+    line-height: 1.35;
+  }
+
+  .winter-event-hero p {
+    font-size: 0.96rem;
+  }
+
+  .winter-event-section {
+    padding: 38px 16px;
+  }
+
+  .winter-event-body {
+    padding: 24px 20px 26px;
+  }
+
+  .winter-event-body h2,
+  .winter-event-info h2,
+  .winter-prize-box h2,
+  .winter-event-page .note-box h2 {
+    font-size: 1.45rem;
+  }
+
+  .winter-event-page .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .winter-prize-box {
+    padding: 26px 20px;
+    border-radius: 22px;
+  }
+
+  .sponsor-image {
+    padding: 0 16px 22px;
+  }
+
+  .winter-event-page .btn-pill.primary {
+    width: 100%;
+    max-width: 340px;
+  }
+}
