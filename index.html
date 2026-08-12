@@ -512,170 +512,7 @@
       border-radius:16px;
     }
   }
-  /* ==============================
-   Top page summer event card
-   ============================== */
-
-.summer-top-event {
-  max-width: 1120px;
-  margin: 56px auto;
-  padding: 34px 22px 38px;
-  background: linear-gradient(135deg, #f0fbff 0%, #f6fff8 100%);
-  border: 1px solid #d7eef7;
-  border-radius: 30px;
-  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
-}
-
-.summer-top-head {
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.summer-top-label {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 6px 16px;
-  border-radius: 999px;
-  background: #ffffff;
-  color: #0077b6;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-}
-
-.summer-top-head h2 {
-  margin: 0 0 10px;
-  color: #0f2f4a;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  line-height: 1.25;
-  font-weight: 900;
-}
-
-.summer-top-head p {
-  margin: 0 auto;
-  max-width: 760px;
-  color: #334155;
-  font-size: 1rem;
-  line-height: 1.8;
-}
-
-.summer-top-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.summer-top-card {
-  display: block;
-  overflow: hidden;
-  background: #ffffff;
-  border-radius: 24px;
-  text-decoration: none;
-  color: inherit;
-  border: 1px solid #dbeafe;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.summer-top-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.13);
-}
-
-.summer-top-img {
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.summer-top-img img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.summer-top-text {
-  padding: 20px 20px 22px;
-}
-
-.summer-top-text span {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: #e6fffa;
-  color: #008080;
-  font-size: 0.8rem;
-  font-weight: 800;
-}
-
-.summer-top-card.conditioning .summer-top-text span {
-  background: #fff7ed;
-  color: #ea580c;
-}
-
-.summer-top-card.power .summer-top-text span {
-  background: #ffe4ef;
-  color: #db2777;
-}
-
-.summer-top-text h3 {
-  margin: 0 0 10px;
-  color: #0f2f4a;
-  font-size: 1.15rem;
-  line-height: 1.45;
-  font-weight: 900;
-}
-
-.summer-top-text p {
-  margin: 0;
-  color: #475569;
-  font-size: 0.93rem;
-  line-height: 1.75;
-}
-
-.summer-top-action {
-  text-align: center;
-  margin-top: 28px;
-}
-
-.summer-top-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #0077b6 0%, #00a6a6 100%);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 900;
-  box-shadow: 0 10px 24px rgba(0, 119, 182, 0.25);
-}
-
-.summer-top-btn:hover {
-  opacity: 0.92;
-}
-
-/* スマホ対応 */
-@media (max-width: 900px) {
-  .summer-top-event {
-    margin: 40px 16px;
-    padding: 28px 16px 32px;
-    border-radius: 24px;
-  }
-
-  .summer-top-cards {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .summer-top-text {
-    padding: 18px;
-  }
-
-  .summer-top-btn {
-    width: 100%;
-    max-width: 360px;
-    text-align: center;
-  }
-}
+ 
   /* ==============================
    Class schedule image block
    ============================== */
@@ -765,6 +602,160 @@
   .class-schedule-actions .btn-pill.ghost {
     width: 100%;
     text-align: center;
+  }
+}
+  /* ==============================
+   Autumn top event section
+   ============================== */
+
+.autumn-top-event {
+  max-width: 1120px;
+  margin: 56px auto;
+  padding: 34px 22px 38px;
+  background: linear-gradient(135deg, #fff7ed 0%, #f8fff3 100%);
+  border: 1px solid #f3d7b6;
+  border-radius: 30px;
+  box-shadow: 0 18px 46px rgba(120, 72, 24, 0.08);
+}
+
+.autumn-top-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.autumn-top-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #c2410c;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.autumn-top-head h2 {
+  margin: 0 0 10px;
+  color: #3b2f1f;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.autumn-top-head p {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.autumn-top-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.autumn-top-card {
+  display: block;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 24px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #f1dec7;
+  box-shadow: 0 12px 30px rgba(120, 72, 24, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.autumn-top-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(120, 72, 24, 0.14);
+}
+
+.autumn-top-img {
+  background: #fffaf3;
+  border-bottom: 1px solid #f1dec7;
+}
+
+.autumn-top-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.autumn-top-text {
+  padding: 22px 22px 24px;
+}
+
+.autumn-top-text span {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: #fff7ed;
+  color: #ea580c;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.autumn-top-card.karuta .autumn-top-text span {
+  background: #f0fdf4;
+  color: #15803d;
+}
+
+.autumn-top-text h3 {
+  margin: 0 0 10px;
+  color: #3b2f1f;
+  font-size: 1.25rem;
+  line-height: 1.45;
+  font-weight: 900;
+}
+
+.autumn-top-text p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.autumn-top-meta {
+  margin-top: 12px !important;
+  color: #c2410c !important;
+  font-weight: 800;
+}
+
+.autumn-top-note {
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 18px;
+  border: 1px dashed #f59e0b;
+}
+
+.autumn-top-note p {
+  margin: 0;
+  color: #6b4f2a;
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+/* スマホ対応 */
+@media (max-width: 900px) {
+  .autumn-top-event {
+    margin: 40px 16px;
+    padding: 28px 16px 32px;
+    border-radius: 24px;
+  }
+
+  .autumn-top-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .autumn-top-text {
+    padding: 18px;
   }
 }
 </style>
@@ -896,57 +887,66 @@
     </div>
   </a>
 </div>
+    <div class="news-highlight">
+  <a href="/assets/events/2026-12-19-bowling.png" class="news-highlight-inner" target="_blank" rel="noopener">
+    <div class="news-thumb">
+      <img src="/assets/events/2026-12-19-bowling.png" alt="クリスマスプレゼント争奪 ボウリング大会">
+    </div>
+    <div class="news-text">
+      <p class="news-text-label">New</p>
+      <p class="news-text-title">クリスマスプレゼント争奪<br>ボウリング大会</p>
+      <p class="news-text-meta">2026年12月19日（土）15:00〜17:00</p>
+      <p class="news-text-meta">場所：バスターボウル阪急茨木店</p>
+      <p class="news-text-meta">詳細・お申し込みはホームページをご確認ください。</p>
+    </div>
+  </a>
+</div>
     </div>
 </section>
 
-<div class="summer-top-event">
-  <div class="summer-top-head">
-    <span class="summer-top-label">Summer Program 2026</span>
-    <h2>夏の短期イベント</h2>
+<div class="autumn-top-event">
+  <div class="autumn-top-head">
+    <span class="autumn-top-label">Autumn Events 2026</span>
+    <h2>秋のイベント</h2>
     <p>
-      7月は動きの土台づくり。夏休みは、スピード・アジリティ・パワーを実践へ。
+      身体を動かす楽しさ、遊びながら学ぶ時間、人と関わるあたたかさを大切にした秋のイベントです。
     </p>
   </div>
 
-  <div class="summer-top-cards">
-    <a class="summer-top-card conditioning" href="/events/20260704-conditioning.html">
-      <div class="summer-top-img">
-        <img src="/assets/events/2026-7-4-conditioning.png" alt="動きの質を高めるコンディショニング教室">
+  <div class="autumn-top-cards">
+    <a class="autumn-top-card sports" href="/assets/events/2026-11-7-sports.png" target="_blank" rel="noopener">
+      <div class="autumn-top-img">
+        <img src="/assets/events/2026-11-7-sports.png" alt="大人が本気で遊ぶ球技大会">
       </div>
-      <div class="summer-top-text">
-        <span>7月開催</span>
-        <h3>コンディショニング教室</h3>
-        <p>姿勢・柔軟性・安定性・バランスを整え、動きの土台をつくります。</p>
-      </div>
-    </a>
-
-    <a class="summer-top-card agility" href="/events/summer-speed-agility-2026.html">
-      <div class="summer-top-img">
-        <img src="/assets/events/speed-agility.png" alt="小学生向けスピード＆アジリティ教室">
-      </div>
-      <div class="summer-top-text">
-        <span>6〜12歳</span>
-        <h3>スピード＆アジリティ教室</h3>
-        <p>走る・止まる・曲がる・反応する力を、楽しく身につけます。</p>
+      <div class="autumn-top-text">
+        <span>11月7日（土）</span>
+        <h3>大人が本気で遊ぶ<br>球技大会</h3>
+        <p>
+          走って、笑って、夢中になる2時間。大人も思いきり身体を動かして楽しめるイベントです。
+        </p>
+        <p class="autumn-top-meta">12:30〜14:30</p>
       </div>
     </a>
 
-    <a class="summer-top-card power" href="/events/summer-speed-power-2026.html">
-      <div class="summer-top-img">
-        <img src="/assets/events/speed-power-up.png" alt="ジュニア向けスピード＆パワーアップトレーニング">
+    <a class="autumn-top-card karuta" href="/assets/events/2026-11-21-karuta.png" target="_blank" rel="noopener">
+      <div class="autumn-top-img">
+        <img src="/assets/events/2026-11-21-karuta.png" alt="なんちゃってカルタ大会">
       </div>
-      <div class="summer-top-text">
-        <span>11〜16歳</span>
-        <h3>スピード＆パワーアップ</h3>
-        <p>一歩目・加速・切り返し・ジャンプを競技につなげます。</p>
+      <div class="autumn-top-text">
+        <span>11月21日（土）</span>
+        <h3>なんちゃって<br>カルタ大会</h3>
+        <p>
+          百人一首・防災かるた・スポーツかるたを楽しむ、どなたでも参加しやすいイベントです。
+        </p>
+        <p class="autumn-top-meta">14:30〜16:30</p>
       </div>
     </a>
   </div>
 
-  <div class="summer-top-action">
-    <a class="summer-top-btn" href="/summer-events-2026.html">夏のイベント一覧を見る</a>
-  </div>
-</div>
+  <div class="autumn-top-note">
+    <p>
+      ※ 防災イベントとのタイアップについては、詳細が決まり次第お知らせします。
+    </p>
   </div>
 </div>
   
