@@ -1712,3 +1712,6 @@
     max-width: 340px;
   }
 }
+.news-highlight + .news-highlight {
+  margin-top: 16px;
+}
