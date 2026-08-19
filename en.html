@@ -491,185 +491,143 @@
         font-size:22px;
       }
     }
+ 
     /* ==============================
-   English top page summer events
+   English autumn top events
    ============================== */
 
-.en-summer-event {
+.en-autumn-event {
   max-width: 1120px;
   margin: 56px auto;
   padding: 34px 22px 38px;
-  background: linear-gradient(135deg, #f0fbff 0%, #f6fff8 100%);
-  border: 1px solid #d7eef7;
+  background: linear-gradient(135deg, #fff7ed 0%, #f8fff3 100%);
+  border: 1px solid #f3d7b6;
   border-radius: 30px;
-  box-shadow: 0 18px 46px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 46px rgba(120, 72, 24, 0.08);
 }
 
-.en-summer-head {
+.en-autumn-head {
   text-align: center;
   margin-bottom: 28px;
 }
 
-.en-summer-label {
+.en-autumn-label {
   display: inline-block;
   margin-bottom: 10px;
   padding: 6px 16px;
   border-radius: 999px;
   background: #ffffff;
-  color: #0077b6;
+  color: #c2410c;
   font-size: 0.85rem;
   font-weight: 800;
   letter-spacing: 0.05em;
 }
 
-.en-summer-head h2 {
+.en-autumn-head h2 {
   margin: 0 0 10px;
-  color: #0f2f4a;
+  color: #3b2f1f;
   font-size: clamp(1.8rem, 4vw, 2.8rem);
   line-height: 1.25;
   font-weight: 900;
 }
 
-.en-summer-head p {
+.en-autumn-head p {
   margin: 0 auto;
   max-width: 760px;
-  color: #334155;
+  color: #475569;
   font-size: 1rem;
   line-height: 1.8;
 }
 
-.en-summer-cards {
+.en-autumn-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
-.en-summer-card {
+.en-autumn-card {
   display: block;
   overflow: hidden;
   background: #ffffff;
   border-radius: 24px;
   text-decoration: none;
   color: inherit;
-  border: 1px solid #dbeafe;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #f1dec7;
+  box-shadow: 0 12px 30px rgba(120, 72, 24, 0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.en-summer-card:hover {
+.en-autumn-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(15, 23, 42, 0.13);
+  box-shadow: 0 18px 42px rgba(120, 72, 24, 0.14);
 }
 
-.en-summer-img {
-  height: 150px;
-  background: #ffffff;
-  border-bottom: 1px solid #e2e8f0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+.en-autumn-img {
+  background: #fffaf3;
+  border-bottom: 1px solid #f1dec7;
 }
 
-.en-summer-img img {
+.en-autumn-img img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
   display: block;
 }
 
-.en-summer-text {
-  padding: 20px 20px 22px;
+.en-autumn-text {
+  padding: 22px 22px 24px;
 }
 
-.en-summer-text span {
+.en-autumn-text span {
   display: inline-block;
   margin-bottom: 10px;
   padding: 5px 12px;
   border-radius: 999px;
-  background: #e6fffa;
-  color: #008080;
-  font-size: 0.8rem;
+  background: #fff7ed;
+  color: #ea580c;
+  font-size: 0.82rem;
   font-weight: 800;
 }
 
-.en-summer-card.conditioning .en-summer-text span {
-  background: #fff7ed;
-  color: #ea580c;
+.en-autumn-card.karuta .en-autumn-text span {
+  background: #f0fdf4;
+  color: #15803d;
 }
 
-.en-summer-card.power .en-summer-text span {
-  background: #ffe4ef;
-  color: #db2777;
-}
-
-.en-summer-text h3 {
+.en-autumn-text h3 {
   margin: 0 0 10px;
-  color: #0f2f4a;
-  font-size: 1.08rem;
-  line-height: 1.4;
+  color: #3b2f1f;
+  font-size: 1.25rem;
+  line-height: 1.45;
   font-weight: 900;
 }
 
-.en-summer-text p {
+.en-autumn-text p {
   margin: 0;
   color: #475569;
-  font-size: 0.9rem;
-  line-height: 1.65;
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
-.en-summer-action {
-  text-align: center;
-  margin-top: 28px;
+.en-autumn-meta {
+  margin-top: 12px !important;
+  color: #c2410c !important;
+  font-weight: 800;
 }
 
-.en-summer-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #0077b6 0%, #00a6a6 100%);
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 900;
-  box-shadow: 0 10px 24px rgba(0, 119, 182, 0.25);
-}
-
-.en-summer-btn:hover {
-  opacity: 0.92;
-}
-
-/* スマホ対応 */
 @media (max-width: 900px) {
-  .en-summer-event {
+  .en-autumn-event {
     margin: 40px 16px;
     padding: 28px 16px 32px;
     border-radius: 24px;
   }
 
-  .en-summer-cards {
+  .en-autumn-cards {
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
-  .en-summer-img {
-    height: auto;
-    max-height: none;
-  }
-
-  .en-summer-img img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .en-summer-text {
+  .en-autumn-text {
     padding: 18px;
-  }
-
-  .en-summer-btn {
-    width: 100%;
-    max-width: 360px;
-    text-align: center;
   }
 }
   </style>
@@ -792,90 +750,74 @@
     </p>
 
     <div class="news-highlight">
-      <a href="/mental-training-introduction-en.html" class="news-highlight-inner">
-        <div class="news-thumb">
-          <img src="/assets/events/mental-training-en.png" alt="Mental Training Course Introduction flyer" />
-        </div>
-        <div class="news-text">
-          <p class="news-text-label">New</p>
-          <p class="news-text-title">Mental Training Course: Introduction</p>
-          <p class="news-text-meta">Saturday, July 18, 2026 | 19:00–20:00</p>
-          <p class="news-text-meta">Fee: ¥1,500 / Parent &amp; Child: ¥2,500</p>
-        </div>
-      </a>
+  <a href="/mental-training-parent-en.html" class="news-highlight-inner">
+    <div class="news-thumb">
+      <img src="/assets/events/2026-10-mental-parent.png" alt="Parent Coaching Session">
     </div>
-
-       <div class="news-highlight" id="news-earlybird-en">
-      <a href="/personal-en.html#early-bird" class="news-highlight-inner">
-        <div class="news-thumb">
-          <img src="/assets/early-bird-en4.png" alt="Early Bird Project Vol.4" />
-        </div>
-        <div class="news-text">
-          <p class="news-text-label">Limited Offer | First 3 spots</p>
-          <p class="news-text-title">Early Bird Project Vol.4</p>
-          <p class="news-text-meta">Start time between 6:00 and 7:30 | June 1 – August 31</p>
-          <p class="news-text-meta">16 / 24 session courses | 10% OFF</p>
-        </div>
-      </a>
+    <div class="news-text">
+      <p class="news-text-label">New</p>
+      <p class="news-text-title">Parent Coaching Vol.3<br>Finding Hints for Better Communication</p>
+      <p class="news-text-meta">Saturday, October 10, 2026｜7:00–8:00 PM</p>
+      <p class="news-text-meta">For parents, teachers, coaches, and anyone supporting children</p>
+      <p class="news-text-meta">Fee: ¥1,500 / ¥500 off for Brave members</p>
     </div>
-  </div>
-</section>
+  </a>
+</div>
 
-<section class="en-summer-event">
-  <div class="en-summer-head">
-    <span class="en-summer-label">Summer Program 2026</span>
-    <h2>Summer Events</h2>
+    <div class="news-highlight">
+  <a href="/events/20261219-bowling-en.html" class="news-highlight-inner">
+    <div class="news-thumb">
+      <img src="/assets/events/2026-12-19-bowling.png" alt="Christmas Bowling Tournament">
+    </div>
+    <div class="news-text">
+      <p class="news-text-label">New</p>
+      <p class="news-text-title">Christmas Bowling Tournament</p>
+      <p class="news-text-meta">Saturday, December 19, 2026｜3:00–5:00 PM</p>
+      <p class="news-text-meta">Venue: Buster Bowl Hankyu Ibaraki</p>
+      <p class="news-text-meta">A fun Christmas event for children, adults, and seniors.</p>
+    </div>
+  </a>
+</div>
+
+    <section class="en-autumn-event">
+  <div class="en-autumn-head">
+    <span class="en-autumn-label">Autumn Events 2026</span>
+    <h2>Autumn Events</h2>
     <p>
-      Build your movement foundation in July, then move into practical speed, agility, and power training during summer break.
+      Enjoy movement, play, learning, and connection through our autumn community events.
     </p>
   </div>
 
-  <div class="en-summer-cards">
-    <a class="en-summer-card conditioning" href="/events/20260704-conditioning-en.html">
-      <div class="en-summer-img">
-        <img src="/assets/events/2026-7-4-conditioning-en.png" alt="Movement Quality Conditioning Clinic">
+  <div class="en-autumn-cards">
+    <a class="en-autumn-card sports" href="/events/20261107-sports-en.html">
+      <div class="en-autumn-img">
+        <img src="/assets/events/2026-11-7-sports.png" alt="Adult Ball Game Event">
       </div>
-      <div class="en-summer-text">
-        <span>July Event</span>
-        <h3>Movement Quality Conditioning Clinic</h3>
+      <div class="en-autumn-text">
+        <span>Saturday, November 7</span>
+        <h3>Adult Ball Game Event</h3>
         <p>
-          Improve mobility, balance, stability, and movement control to build a better foundation.
+          Run, laugh, and enjoy playing seriously for two hours. A fun movement event for adults.
         </p>
+        <p class="en-autumn-meta">3:30–5:30 PM</p>
       </div>
     </a>
 
-    <a class="en-summer-card agility" href="/events/summer-speed-agility-2026-en.html">
-      <div class="en-summer-img">
-        <img src="/assets/events/speed-agility-en.png" alt="Speed & Agility Class">
+    <a class="en-autumn-card karuta" href="/events/20261121-karuta-en.html">
+      <div class="en-autumn-img">
+        <img src="/assets/events/2026-11-21-karuta.png" alt="Casual Karuta Event">
       </div>
-      <div class="en-summer-text">
-        <span>Ages 6–12</span>
-        <h3>Speed &amp; Agility Class</h3>
+      <div class="en-autumn-text">
+        <span>Saturday, November 21</span>
+        <h3>Casual Karuta Event</h3>
         <p>
-          Improve running, stopping, turning, and reaction skills in a fun and safe way.
+          A friendly event where children and adults can enjoy Hyakunin Isshu, disaster-prevention karuta, and sports karuta.
         </p>
+        <p class="en-autumn-meta">2:30–4:30 PM</p>
       </div>
     </a>
-
-    <a class="en-summer-card power" href="/events/summer-speed-power-2026-en.html">
-      <div class="en-summer-img">
-        <img src="/assets/events/speed-power-up-en.png" alt="Speed & Power-Up Training">
-      </div>
-      <div class="en-summer-text">
-        <span>Ages 11–16</span>
-        <h3>Speed &amp; Power-Up Training</h3>
-        <p>
-          Develop first-step quickness, acceleration, change of direction, and jumping power.
-        </p>
-      </div>
-    </a>
-  </div>
-
-  <div class="en-summer-action">
-    <a class="en-summer-btn" href="/summer-events-2026-en.html">View Summer Events</a>
   </div>
 </section>
-  
 <section id="classes">
   <h2>Classes</h2>
   <div class="grid">
