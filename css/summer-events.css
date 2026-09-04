@@ -1776,3 +1776,49 @@
     max-width: 100%;
   }
 }
+.sponsor-download-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.4;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sponsor-download-btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+}
+
+.sponsor-download-btn.primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, #c75318, #dc2f73);
+}
+
+.karuta-event-page .sponsor-download-btn.primary {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+}
+
+.sponsor-download-btn.secondary {
+  color: #8a3b12;
+  background: #ffffff;
+  border: 2px solid #f0b37a;
+}
+
+.karuta-event-page .sponsor-download-btn.secondary {
+  color: #166534;
+  border-color: #86efac;
+}
+
+@media (max-width: 900px) {
+  .sponsor-download-btn {
+    width: 100%;
+    min-width: 0;
+  }
+}
