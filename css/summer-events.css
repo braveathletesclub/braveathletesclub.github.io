@@ -1829,7 +1829,7 @@
 
 .sponsor-feature-card {
   display: grid;
-  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
   gap: 30px;
   align-items: center;
   padding: 24px;
