@@ -1822,3 +1822,31 @@
     min-width: 0;
   }
 }
+.sponsor-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.sponsor-photo {
+  padding: 20px;
+}
+
+.sponsor-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 760px) {
+  .sponsor-card {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-photo {
+    padding: 20px 20px 0;
+  }
+}
