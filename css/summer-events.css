@@ -1822,53 +1822,32 @@
     min-width: 0;
   }
 }
-.sponsor-card {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 24px;
-  align-items: center;
-}
 
-.sponsor-photo {
-  padding: 20px;
-}
-
-.sponsor-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-}
-
-@media (max-width: 760px) {
-  .sponsor-card {
-    grid-template-columns: 1fr;
-  }
-
-  .sponsor-photo {
-    padding: 20px 20px 0;
-  }
-}
 /* ==============================
    2026 Sponsor introduction
    ============================== */
 
 .sponsor-feature-card {
   display: grid;
-  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
-  gap: 28px;
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 30px;
   align-items: center;
+  padding: 24px;
 }
 
 .sponsor-feature-photo {
-  padding: 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .sponsor-feature-photo img {
   display: block;
   width: 100%;
+  max-width: 340px;
+  max-height: 520px;
   height: auto;
+  margin: 0 auto;
+  object-fit: contain;
   border-radius: 18px;
   box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
@@ -1900,11 +1879,13 @@
 @media (max-width: 760px) {
   .sponsor-feature-card {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 18px;
+    padding: 18px;
   }
 
-  .sponsor-feature-photo {
-    padding: 18px 18px 0;
+  .sponsor-feature-photo img {
+    max-width: 100%;
+    max-height: none;
   }
 
   .sponsor-instagram-link {
