@@ -2029,7 +2029,29 @@
     font-size: 0.95rem;
   }
 }
-.coffee-sponsor-img {
+
+/* ==============================
+   Image corner fix - PC / Mobile
+   ============================== */
+
+/* スポンサー画像 */
+.sponsor-partner-photo img {
   border-radius: 16px !important;
   overflow: hidden;
+}
+
+/* 秋イベントのチラシ画像 */
+.autumn-event-flyer img {
+  border-radius: 18px !important;
+}
+
+/* 冬イベントのチラシ画像 */
+.winter-event-flyer img {
+  border-radius: 18px !important;
+}
+
+/* 通常のイベント画像 */
+.autumn-event-card img,
+.winter-event-card img {
+  border-radius: 16px;
 }
