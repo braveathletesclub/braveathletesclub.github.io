@@ -1856,7 +1856,11 @@
 
 .sponsor-partner-photo {
   width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
   text-align: center;
+  border-radius: 16px;
+  overflow: hidden;
 }
 
 .sponsor-partner-photo img {
