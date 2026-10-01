@@ -3400,3 +3400,32 @@
     grid-template-columns: 1fr;
   }
 }
+/* =========================================
+   Karuta event image blocks
+   防災・カルタ画像
+   ========================================= */
+
+.karuta-event-image {
+  margin-top: 22px;
+  text-align: center;
+}
+
+.karuta-event-image img {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(74, 48, 24, 0.14);
+}
+
+@media (max-width: 760px) {
+  .karuta-event-image {
+    margin-top: 16px;
+  }
+
+  .karuta-event-image img {
+    border-radius: 14px;
+  }
+}
