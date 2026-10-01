@@ -2852,3 +2852,514 @@
   }
 
 }
+/* =========================================
+   Bowling Page - Christmas Night
+   クリスマス・イルミネーション風
+   ========================================= */
+
+.bowling-event-page {
+  position: relative;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at 12% 15%, rgba(255, 190, 95, 0.14), transparent 20%),
+    radial-gradient(circle at 88% 18%, rgba(192, 32, 72, 0.12), transparent 24%),
+    radial-gradient(circle at 18% 82%, rgba(39, 110, 78, 0.10), transparent 20%),
+    linear-gradient(
+      180deg,
+      #11182b 0%,
+      #1b2035 22%,
+      #302338 48%,
+      #4a2833 68%,
+      #f8f2e9 100%
+    );
+
+  color: #2f2a24;
+}
+
+
+/* ------------------------------
+   星・イルミネーション
+   ------------------------------ */
+
+.bowling-event-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.65) 0 1px, transparent 1.6px),
+    radial-gradient(circle, rgba(255,210,120,0.55) 0 1px, transparent 1.7px),
+    radial-gradient(circle, rgba(255,255,255,0.28) 0 1px, transparent 1.5px);
+
+  background-size:
+    90px 90px,
+    130px 130px,
+    170px 170px;
+
+  background-position:
+    0 0,
+    30px 40px,
+    60px 20px;
+
+  opacity: 0.55;
+}
+
+
+.bowling-event-page main,
+.bowling-event-page .site-header,
+.bowling-event-page .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.bowling-event-page .site-header {
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.bowling-event-page .winter-event-hero.bowling {
+  position: relative;
+  overflow: hidden;
+
+  padding: 96px 20px 88px;
+
+  background:
+    radial-gradient(circle at 16% 20%, rgba(255,214,126,0.28), transparent 22%),
+    radial-gradient(circle at 85% 22%, rgba(255,74,120,0.22), transparent 26%),
+    linear-gradient(
+      135deg,
+      #081426 0%,
+      #181d3b 38%,
+      #4b193d 70%,
+      #8f3d24 100%
+    );
+}
+
+
+/* 光の粒 */
+.bowling-event-page .winter-event-hero.bowling::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 8% 20%, rgba(255,255,255,0.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 18% 55%, rgba(255,220,130,0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 34% 18%, rgba(255,255,255,0.72) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 65% 22%, rgba(255,225,150,0.85) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 62%, rgba(255,255,255,0.72) 0 1.5px, transparent 3px),
+    radial-gradient(circle at 92% 25%, rgba(255,201,102,0.9) 0 2px, transparent 3px);
+
+  pointer-events: none;
+}
+
+
+/* 下部のゴールドライン */
+.bowling-event-page .winter-event-hero.bowling::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 14px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,197,83,0.85),
+      rgba(255,235,170,0.95),
+      rgba(255,197,83,0.85),
+      transparent
+    );
+
+  box-shadow:
+    0 0 14px rgba(255,205,100,0.55);
+}
+
+
+.bowling-event-page .winter-event-hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+
+.bowling-event-page .winter-event-label {
+  background: rgba(255,248,236,0.96);
+  color: #b45309;
+  border: 1px solid rgba(255,205,120,0.45);
+}
+
+
+/* タイトル */
+.bowling-event-page .winter-event-hero h1 {
+  color: #fffaf2;
+  letter-spacing: 0.04em;
+  text-shadow:
+    0 3px 16px rgba(0,0,0,0.38),
+    0 0 18px rgba(255,204,100,0.15);
+}
+
+
+/* ヒーロー本文 */
+.bowling-event-page .winter-event-hero p {
+  color: #fff6e8;
+}
+
+
+/* =========================================
+   SECTION SPACING
+   カード間を少し詰める
+   ========================================= */
+
+.bowling-event-page .winter-event-section {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 26px 20px;
+}
+
+
+.bowling-event-page main
+  > .winter-event-section:first-of-type {
+  padding-top: 40px;
+}
+
+
+/* =========================================
+   大きなカード
+   ========================================= */
+
+.bowling-event-page .winter-event-card,
+.bowling-event-page .winter-event-info,
+.bowling-event-page .winter-prize-box,
+.bowling-event-page .note-box,
+.bowling-event-page .sponsor-partners-card {
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,253,248,0.97),
+      rgba(250,242,234,0.96)
+    );
+
+  border:
+    1px solid rgba(232, 194, 176, 0.55);
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 14px 34px rgba(18, 20, 42, 0.18),
+    inset 0 0 0 1px rgba(255,255,255,0.45);
+}
+
+
+/* =========================================
+   見出し
+   ========================================= */
+
+.bowling-event-page .winter-event-body h2,
+.bowling-event-page .winter-event-info h2,
+.bowling-event-page .winter-prize-box h2,
+.bowling-event-page .note-box h2,
+.bowling-event-page .sponsor-partners-head h2 {
+
+  color: #6f2b2b;
+
+  border-left:
+    5px solid #b45309;
+
+  padding-left:
+    12px;
+
+  font-weight:
+    800;
+
+  letter-spacing:
+    0.025em;
+}
+
+
+/* =========================================
+   本文
+   ========================================= */
+
+.bowling-event-page p,
+.bowling-event-page li,
+.bowling-event-page dd {
+
+  color: #4e4039;
+  line-height: 1.9;
+}
+
+
+/* =========================================
+   TAG
+   ========================================= */
+
+.bowling-event-page .winter-event-tag {
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff3dc,
+      #fde6d1
+    );
+
+  color:
+    #a34d13;
+
+  border:
+    1px solid rgba(210, 143, 78, 0.22);
+}
+
+
+/* =========================================
+   INFO
+   ========================================= */
+
+.bowling-event-page .winter-event-info dt {
+
+  color:
+    #8c3b25;
+
+  font-weight:
+    800;
+}
+
+
+.bowling-event-page .winter-event-note {
+
+  background:
+    linear-gradient(
+      135deg,
+      #f3f7ee,
+      #edf3e7
+    );
+
+  color:
+    #41583a;
+
+  border:
+    1px solid #d5dfcf;
+
+  border-radius:
+    12px;
+}
+
+
+/* =========================================
+   小カード
+   ========================================= */
+
+.bowling-event-page .card {
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf9 0%,
+      #fbf3eb 100%
+    );
+
+  border:
+    1px solid rgba(220, 181, 160, 0.45);
+
+  border-radius:
+    15px;
+
+  box-shadow:
+    0 6px 18px rgba(68, 43, 46, 0.07);
+}
+
+
+/* =========================================
+   PRIZE BOX
+   ========================================= */
+
+.bowling-event-page .winter-prize-box {
+
+  background:
+    radial-gradient(circle at 92% 12%, rgba(218, 41, 74, 0.08), transparent 22%),
+
+    radial-gradient(circle at 10% 85%, rgba(43, 112, 74, 0.08), transparent 24%),
+
+    linear-gradient(
+      135deg,
+      #fffaf1,
+      #fff4f7
+    );
+}
+
+
+/* =========================================
+   スポンサー
+   ========================================= */
+
+.bowling-event-page
+.sponsor-partner-item {
+
+  border-top:
+    1px solid rgba(203, 170, 155, 0.40);
+
+  padding-top:
+    24px;
+
+  margin-top:
+    24px;
+}
+
+
+.bowling-event-page
+.sponsor-partner-item:first-of-type {
+
+  border-top:
+    none;
+
+  padding-top:
+    0;
+
+  margin-top:
+    0;
+}
+
+
+/* Main Sponsor */
+.bowling-event-page
+.main-partner
+.sponsor-partner-label {
+
+  background:
+    #fff2d6;
+
+  color:
+    #9a4c0d;
+
+  border:
+    1px solid rgba(206, 151, 70, 0.25);
+}
+
+
+/* Sponsor */
+.bowling-event-page
+.sponsor-partner-label {
+
+  background:
+    #edf6ee;
+
+  color:
+    #367148;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.bowling-event-page
+.btn-pill.primary,
+
+.bowling-event-page
+.sponsor-download-btn.primary,
+
+.bowling-event-page
+.sponsor-link-btn {
+
+  background:
+    linear-gradient(
+      135deg,
+      #9e2f39 0%,
+      #c14f3f 45%,
+      #b36c21 100%
+    );
+
+  color:
+    #ffffff;
+
+  border:
+    none;
+
+  box-shadow:
+    0 8px 20px
+    rgba(131, 43, 44, 0.24);
+}
+
+
+.bowling-event-page
+.sponsor-download-btn.secondary {
+
+  background:
+    #fffaf4;
+
+  color:
+    #8b3a2d;
+
+  border:
+    2px solid #e2b38e;
+}
+
+
+/* =========================================
+   Footer
+   ========================================= */
+
+.bowling-event-page .site-footer {
+
+  background:
+    rgba(20, 25, 45, 0.94);
+
+  color:
+    #eee6db;
+}
+
+
+/* =========================================
+   Mobile
+   ========================================= */
+
+@media (max-width: 760px) {
+
+  .bowling-event-page
+  .winter-event-hero.bowling {
+
+    padding:
+      72px 18px 64px;
+  }
+
+
+  .bowling-event-page
+  .winter-event-section {
+
+    padding:
+      18px 14px;
+  }
+
+
+  .bowling-event-page
+  main > .winter-event-section:first-of-type {
+
+    padding-top:
+      28px;
+  }
+
+
+  .bowling-event-page
+  .winter-event-body {
+
+    padding:
+      22px 18px 24px;
+  }
+
+}
