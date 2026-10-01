@@ -2251,3 +2251,325 @@
     padding: 18px 16px;
   }
 }
+/* =========================================
+   Karuta page redesign
+   秋らしい和風・かるた風の背景
+   ========================================= */
+
+.karuta-event-page {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(214, 122, 50, 0.10) 0, rgba(214, 122, 50, 0) 22%),
+    radial-gradient(circle at 85% 18%, rgba(153, 56, 35, 0.08) 0, rgba(153, 56, 35, 0) 20%),
+    radial-gradient(circle at 20% 85%, rgba(98, 124, 61, 0.10) 0, rgba(98, 124, 61, 0) 20%),
+    linear-gradient(180deg, #f8f2e8 0%, #f5eee2 45%, #f7f1e8 100%);
+  color: #4d3724;
+  position: relative;
+}
+
+/* うっすら和紙っぽい質感 */
+.karuta-event-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.35) 0px,
+      rgba(255,255,255,0.35) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  z-index: 0;
+}
+
+.karuta-event-page main,
+.karuta-event-page .site-header,
+.karuta-event-page .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.autumn-event-hero.karuta {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(123, 77, 37, 0.92), rgba(107, 130, 66, 0.88)),
+    #7b4d25;
+  color: #fffef8;
+  padding: 96px 20px 88px;
+}
+
+.autumn-event-hero.karuta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255,255,255,0.12) 0px,
+      rgba(255,255,255,0.12) 2px,
+      transparent 2px,
+      transparent 12px
+    );
+}
+
+.autumn-event-hero.karuta::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 90px;
+  background:
+    radial-gradient(circle at 10% 100%, rgba(255,196,0,0.20), transparent 32%),
+    radial-gradient(circle at 85% 100%, rgba(255,140,0,0.16), transparent 30%);
+  pointer-events: none;
+}
+
+.karuta-event-page .autumn-event-label {
+  background: rgba(255, 248, 238, 0.92);
+  color: #8b4513;
+  font-weight: 800;
+}
+
+.karuta-event-page .autumn-event-hero h1 {
+  color: #fffef7;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.18);
+}
+
+.karuta-event-page .autumn-event-hero p {
+  color: #fffaf1;
+  font-size: 1.02rem;
+  line-height: 1.95;
+}
+
+/* =========================
+   section spacing
+   ========================= */
+
+.karuta-event-page .autumn-event-section {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 52px 20px;
+}
+
+/* =========================
+   メインカード類
+   白ではなく、札・和紙っぽく
+   ========================= */
+
+.karuta-event-page .autumn-event-card,
+.karuta-event-page .autumn-event-info,
+.karuta-event-page .card,
+.karuta-event-page .note-box,
+.karuta-event-page .sponsor-partners-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.92), rgba(252,248,241,0.96));
+  border: 1px solid #e5d2bd;
+  border-radius: 24px;
+  box-shadow: 0 12px 34px rgba(110, 77, 42, 0.10);
+}
+
+/* 開催概要などの中身 */
+.karuta-event-page .autumn-event-body,
+.karuta-event-page .autumn-event-info,
+.karuta-event-page .card,
+.karuta-event-page .note-box {
+  color: #4d3724;
+}
+
+/* 見出し */
+.karuta-event-page .autumn-event-body h2,
+.karuta-event-page .autumn-event-info h2,
+.karuta-event-page .card h3,
+.karuta-event-page .note-box h2,
+.karuta-event-page .sponsor-partners-head h2 {
+  color: #5c3112;
+  border-left: 6px solid #a5672d;
+  padding-left: 14px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+/* 段落 */
+.karuta-event-page p,
+.karuta-event-page li,
+.karuta-event-page dd {
+  color: #5b4633;
+  line-height: 1.9;
+}
+
+/* タグ */
+.karuta-event-page .autumn-event-tag {
+  background: #f6ede1;
+  color: #8c5428;
+  font-weight: 800;
+}
+
+/* info-list の見出し */
+.karuta-event-page .info-list dt {
+  color: #6a3818;
+  font-weight: 700;
+}
+
+/* 案内note */
+.karuta-event-page .autumn-event-note {
+  background: #edf4e9;
+  color: #46613a;
+  border-radius: 14px;
+  border: 1px solid #d7e7d0;
+}
+
+/* =========================
+   チラシ画像
+   ========================= */
+
+.karuta-event-page .autumn-event-flyer {
+  background: transparent;
+  padding: 18px 18px 0;
+}
+
+.karuta-event-page .autumn-event-flyer img {
+  display: block;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(70, 45, 25, 0.14);
+}
+
+/* =========================
+   3つ並びの説明カード
+   ========================= */
+
+.karuta-event-page .grid-2 .card,
+.karuta-event-page .highlight-grid .card,
+.karuta-event-page .event-point-card {
+  background:
+    linear-gradient(180deg, #fffdfa 0%, #fbf5ec 100%);
+  border: 1px solid #ead8c4;
+}
+
+/* =========================
+   防災・カルタ説明ブロック
+   ========================= */
+
+.karuta-event-page .event-time-card,
+.karuta-event-page .event-detail-card,
+.karuta-event-page .event-highlight-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(250,245,237,0.97));
+  border: 1px solid #e4d2bd;
+  border-radius: 24px;
+  box-shadow: 0 10px 28px rgba(95, 66, 37, 0.08);
+}
+
+/* 時間ラベル */
+.karuta-event-page .time-badge,
+.karuta-event-page .mini-time-badge {
+  display: inline-block;
+  background: #f3eadf;
+  color: #8c5a2c;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+/* 小さい説明ボックス */
+.karuta-event-page .mini-box,
+.karuta-event-page .event-mini-box {
+  background: #fffdf9;
+  border: 1px solid #ead9c4;
+  border-radius: 14px;
+}
+
+/* =========================
+   ボタン
+   ========================= */
+
+.karuta-event-page .btn-pill.primary,
+.karuta-event-page .sponsor-download-btn.primary,
+.karuta-event-page .sponsor-link-btn {
+  background: linear-gradient(135deg, #8b4a1f 0%, #c07a2d 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 24px rgba(140, 84, 28, 0.20);
+}
+
+.karuta-event-page .btn-pill.primary:hover,
+.karuta-event-page .sponsor-download-btn.primary:hover,
+.karuta-event-page .sponsor-link-btn:hover {
+  opacity: 0.95;
+  text-decoration: none;
+}
+
+.karuta-event-page .sponsor-download-btn.secondary {
+  background: #fffdf8;
+  color: #7b4b20;
+  border: 2px solid #e0bf93;
+}
+
+/* =========================
+   区切り線やスポンサーセクション
+   ========================= */
+
+.karuta-event-page .sponsor-partner-item {
+  border-top: 1px solid #e8d7c2;
+  padding-top: 28px;
+  margin-top: 28px;
+}
+
+.karuta-event-page .sponsor-partner-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.karuta-event-page .sponsor-partner-label {
+  background: #eef6ea;
+  color: #577a41;
+  padding: 5px 12px;
+  border-radius: 999px;
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* =========================
+   footer
+   ========================= */
+
+.karuta-event-page .site-footer {
+  background: transparent;
+  color: #6b5a48;
+}
+
+/* =========================
+   スマホ
+   ========================= */
+
+@media (max-width: 760px) {
+  .autumn-event-hero.karuta {
+    padding: 72px 18px 64px;
+  }
+
+  .karuta-event-page .autumn-event-section {
+    padding: 38px 16px;
+  }
+
+  .karuta-event-page .autumn-event-body h2,
+  .karuta-event-page .autumn-event-info h2,
+  .karuta-event-page .card h3,
+  .karuta-event-page .note-box h2 {
+    font-size: 1.35rem;
+  }
+}
