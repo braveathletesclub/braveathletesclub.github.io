@@ -3364,31 +3364,37 @@
 
 }
 /* =========================================
-   Bowling page card width unify
-   ボウリング大会：カード横幅統一
+   Bowling page width alignment
+   ボウリング大会：カード幅を安全に統一
    ========================================= */
 
 .bowling-event-page .winter-event-section {
-  max-width: 1040px;
+  width: 100%;
+  max-width: 980px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 
-.bowling-event-page .winter-event-card,
-.bowling-event-page .winter-event-info,
-.bowling-event-page .winter-prize-box,
-.bowling-event-page .sponsor-partners-card,
-.bowling-event-page .sponsor-recruit-card,
-.bowling-event-page .note-box {
+/* セクションの中に入っているカードだけ横幅を揃える */
+.bowling-event-page .winter-event-section > .winter-event-card,
+.bowling-event-page .winter-event-section > .winter-prize-box,
+.bowling-event-page .winter-event-section > .note-box {
   width: 100%;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+/* 協賛紹介・協賛募集も親カード内で100% */
+.bowling-event-page .sponsor-partners-card,
+.bowling-event-page .sponsor-recruit-card {
+  width: 100%;
   box-sizing: border-box;
 }
 .bowling-event-page .sponsor-recruit-card {
   grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
 }
+
 @media (max-width: 900px) {
   .bowling-event-page .sponsor-recruit-card {
     grid-template-columns: 1fr;
