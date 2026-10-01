@@ -3363,3 +3363,26 @@
   }
 
 }
+/* =========================================
+   Bowling page card width unify
+   ボウリング大会：カード横幅統一
+   ========================================= */
+
+.bowling-event-page .winter-event-section {
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bowling-event-page .winter-event-card,
+.bowling-event-page .winter-event-info,
+.bowling-event-page .winter-prize-box,
+.bowling-event-page .sponsor-partners-card,
+.bowling-event-page .sponsor-recruit-card,
+.bowling-event-page .note-box {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
