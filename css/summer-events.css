@@ -2075,3 +2075,179 @@
   border-radius: 0;
   box-shadow: none;
 }
+/* ==============================
+   Karuta page redesign
+   秋らしい・百人一首らしい雰囲気
+   ============================== */
+
+.karuta-event-page {
+  background:
+    radial-gradient(circle at 10% 15%, rgba(214, 153, 67, 0.10), transparent 20%),
+    radial-gradient(circle at 85% 10%, rgba(124, 110, 53, 0.10), transparent 22%),
+    linear-gradient(180deg, #fffdf8 0%, #fbf5ea 52%, #f6efe5 100%);
+}
+
+/* ヒーロー */
+.karuta-event-page .autumn-event-hero.karuta {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(103, 63, 30, 0.92), rgba(88, 112, 53, 0.86)),
+    #6b4b2a;
+}
+
+.karuta-event-page .autumn-event-hero.karuta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.10), transparent 18%),
+    radial-gradient(circle at 82% 28%, rgba(255,255,255,0.08), transparent 20%),
+    linear-gradient(
+      45deg,
+      rgba(255,255,255,0.03) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255,255,255,0.03) 50%,
+      rgba(255,255,255,0.03) 75%,
+      transparent 75%,
+      transparent
+    );
+  background-size: auto, auto, 24px 24px;
+  pointer-events: none;
+}
+
+.karuta-event-page .autumn-event-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* 見出しを少し和風に */
+.karuta-event-page .autumn-event-hero h1,
+.karuta-event-page .autumn-event-body h2,
+.karuta-event-page .autumn-event-info h2,
+.karuta-event-page .card h3,
+.karuta-event-page .note-box h2,
+.karuta-event-page .sponsor-partners-head h2,
+.karuta-event-page .sponsor-partner-body h3 {
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", "MS PMincho", serif;
+  letter-spacing: 0.04em;
+}
+
+/* カード全体をやわらかく */
+.karuta-event-page .autumn-event-card,
+.karuta-event-page .autumn-event-info,
+.karuta-event-page .card,
+.karuta-event-page .note-box {
+  background: rgba(255,255,255,0.96);
+  border: 1px solid #eadfcf;
+  box-shadow: 0 16px 36px rgba(102, 72, 37, 0.08);
+}
+
+/* タグ色 */
+.karuta-event-page .autumn-event-tag {
+  background: #f7f3e8;
+  color: #7a4c1f;
+}
+
+/* 見出しライン */
+.karuta-event-page .autumn-event-body h2,
+.karuta-event-page .autumn-event-info h2 {
+  border-left-color: #8b5e34;
+  color: #453222;
+}
+
+/* 本文 */
+.karuta-event-page .autumn-event-body p,
+.karuta-event-page .card p,
+.karuta-event-page .card li,
+.karuta-event-page .note-box p,
+.karuta-event-page .info-list dd,
+.karuta-event-page .sponsor-partner-body p {
+  color: #4b5563;
+  line-height: 1.95;
+}
+
+.karuta-event-page .info-list dt {
+  color: #5d4328;
+}
+
+/* 画像を少しやわらかく */
+.karuta-event-page .autumn-event-flyer img {
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(62, 40, 20, 0.14);
+}
+
+/* 楽しさを伝える追加カード */
+.karuta-highlight-card {
+  background: linear-gradient(135deg, #fffaf1 0%, #fffdf9 100%);
+}
+
+.karuta-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.karuta-point {
+  background: #fffdf8;
+  border: 1px solid #ece2d3;
+  border-radius: 18px;
+  padding: 22px 18px;
+}
+
+.karuta-point-number {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: #8b5e34;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.92rem;
+}
+
+.karuta-point h3 {
+  margin-bottom: 10px;
+  font-size: 1.08rem;
+  color: #4a3523;
+}
+
+.karuta-point p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.85;
+}
+
+/* もし写真を後で追加するなら使える */
+.karuta-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.karuta-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+}
+
+/* スマホ */
+@media (max-width: 760px) {
+  .karuta-points,
+  .karuta-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .karuta-point {
+    padding: 18px 16px;
+  }
+}
