@@ -3386,3 +3386,11 @@
   margin-right: auto;
   box-sizing: border-box;
 }
+.bowling-event-page .sponsor-recruit-card {
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+}
+@media (max-width: 900px) {
+  .bowling-event-page .sponsor-recruit-card {
+    grid-template-columns: 1fr;
+  }
+}
