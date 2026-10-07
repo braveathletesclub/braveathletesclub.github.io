@@ -3453,3 +3453,31 @@
     gap: 16px;
   }
 }
+/* =========================================
+   Hosokoshi main sponsor
+   細越工務店：カルタ大会メインスポンサー
+   ========================================= */
+
+.karuta-event-page .hosokoshi-partner {
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+}
+
+.karuta-event-page .hosokoshi-partner .sponsor-partner-photo {
+  max-width: 360px;
+}
+
+.karuta-event-page .hosokoshi-partner .sponsor-partner-photo img {
+  max-width: 360px;
+  max-height: 420px;
+}
+
+@media (max-width: 760px) {
+  .karuta-event-page .hosokoshi-partner {
+    grid-template-columns: 1fr;
+  }
+
+  .karuta-event-page .hosokoshi-partner .sponsor-partner-photo,
+  .karuta-event-page .hosokoshi-partner .sponsor-partner-photo img {
+    max-width: 100%;
+  }
+}
