@@ -341,6 +341,37 @@
         max-width:100%;
       }
     }
+    
+/* 開催概要 */
+.info-list {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px 16px;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.info-list dt {
+  font-weight: 700;
+  color: #0a6b5a;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-list dd {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+@media (max-width: 640px) {
+  .info-list {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 8px 12px;
+    font-size: 14px;
+  }
+}
+
   </style>
 
   <script>
@@ -424,18 +455,52 @@
         </div>
       </section>
 
-      <section id="overview">
-        <div class="card">
-          <h2>このページについて</h2>
-          <p>
-            このページでは、今後定期開催を予定しているアスリート向けメンタルトレーニングの考え方と内容の方向性をご紹介します。
-            まだ日程は未定ですが、集中トレーニングの実践や、ルーティーン、振り返り、目標設定などを継続的に扱っていく予定です。
-          </p>
-          <p>
-            ただ「気持ちを強くする」のではなく、自分の状態に気づき、必要な行動につなげられる力を育てていくことを大切にしています。
-          </p>
-        </div>
-      </section>
+     
+
+<section id="overview">
+  <div class="card">
+    <h2>次回開催概要</h2>
+
+    <p>
+      アスリートが本番で自分の力を発揮するために、
+      集中力や気持ちの切り替え方など、
+      実践的なメンタルスキルを学ぶ講座です。
+    </p>
+
+    <p>
+      スポーツに取り組む方はもちろん、
+      指導者や保護者の方にも役立つ考え方を、
+      わかりやすくお伝えします。
+    </p>
+
+    <dl class="info-list">
+      <dt>開催日時</dt>
+      <dd>2027年1月16日（土）19:00〜20:00</dd>
+
+      <dt>講師</dt>
+      <dd>池田 佳隆</dd>
+
+      <dt>対象</dt>
+      <dd>
+        9歳以上のアスリート・指導者・保護者、
+        メンタルトレーニングに興味のある方
+      </dd>
+
+      <dt>内容</dt>
+      <dd>
+        集中力、気持ちの切り替え、
+        ルーティーン、目標設定など、
+        アスリートのためのメンタルトレーニング
+      </dd>
+    </dl>
+
+    <p>
+      ※参加費・会場・申込方法などの詳細は、
+      決まり次第ご案内します。
+    </p>
+  </div>
+</section>
+
 
      <section>
   <div class="card">
