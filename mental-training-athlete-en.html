@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Athlete | メンタルトレーニング | Brave Athletes Club</title>
-  <meta name="description" content="Brave Athletes Clubのアスリート向けメンタルトレーニング。本番で力を発揮するための集中、ルーティーン、振り返り、目標設定などを実践的に学びます。" />
+  <title>Athletes &amp; Performers | Mental Training | Brave Athletes Club</title>
+  <meta name="description" content="Practical mental training for athletes, dancers, ballet students and stage performers. Learn focus, emotional regulation, routines and goal setting to support your performance." />
 
-  <link rel="canonical" href="https://braveathletesclub.github.io/mental-training-athlete.html" />
+  <link rel="canonical" href="https://braveathletesclub.github.io/mental-training-athlete-en.html" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BRAVE ATHLETES CLUB" />
-  <meta property="og:title" content="Athlete | メンタルトレーニング | Brave Athletes Club" />
-  <meta property="og:description" content="本番で力を発揮するための集中、ルーティーン、振り返り、目標設定などを実践的に学ぶアスリート向けページです。" />
-  <meta property="og:url" content="https://braveathletesclub.github.io/mental-training-athlete.html" />
+  <meta property="og:site_name" content="Brave Athletes Club" />
+  <meta property="og:title" content="Athletes &amp; Performers | Mental Training | Brave Athletes Club" />
+  <meta property="og:description" content="Mental training for sports and performing arts: develop focus, reset after setbacks, build routines and set meaningful goals." />
+  <meta property="og:url" content="https://braveathletesclub.github.io/mental-training-athlete-en.html" />
   <meta property="og:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
-  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:locale" content="en_US" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Athlete | メンタルトレーニング | Brave Athletes Club" />
-  <meta name="twitter:description" content="本番で力を発揮するための集中、ルーティーン、振り返り、目標設定などを実践的に学ぶアスリート向けページです。" />
+  <meta name="twitter:title" content="Athletes &amp; Performers | Mental Training | Brave Athletes Club" />
+  <meta name="twitter:description" content="Mental training for sports and performing arts: develop focus, reset after setbacks, build routines and set meaningful goals." />
   <meta name="twitter:image" content="https://braveathletesclub.github.io/assets/og.jpg" />
 
   <link rel="alternate" hreflang="ja" href="https://braveathletesclub.github.io/mental-training-athlete.html" />
@@ -37,8 +37,8 @@
   {
     "@context":"https://schema.org",
     "@type":"Course",
-    "name":"アスリート向けメンタルトレーニング",
-    "description":"集中、ルーティーン、振り返り、目標設定などを実践的に学ぶアスリート向けメンタルトレーニング。",
+    "name":"Mental Training for Athletes & Performers",
+    "description":"Practical mental training for athletes and performers, covering focus, routines, reflection and goal setting.",
     "provider":{
       "@type":"Organization",
       "name":"Brave Athletes Club",
@@ -276,22 +276,6 @@
       height:100%;
     }
 
-    .info-list {
-      display:grid;
-      grid-template-columns:180px 1fr;
-      gap:12px 18px;
-      margin:0;
-    }
-
-    .info-list dt {
-      font-weight:700;
-      color:var(--green);
-    }
-
-    .info-list dd {
-      margin:0;
-    }
-
     .note-box{
       background:linear-gradient(135deg,#edf9f4,#eef6ff);
       border-radius:24px;
@@ -336,11 +320,6 @@
         grid-template-columns:minmax(0,1fr);
       }
 
-      .info-list{
-        grid-template-columns:1fr;
-        gap:6px 0;
-      }
-
       .brand img{
         height:52px;
       }
@@ -362,6 +341,37 @@
         max-width:100%;
       }
     }
+    
+/* 開催概要 */
+.info-list {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 12px 16px;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.info-list dt {
+  font-weight: 700;
+  color: #0a6b5a;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-list dd {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+@media (max-width: 640px) {
+  .info-list {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 8px 12px;
+    font-size: 14px;
+  }
+}
+
   </style>
 
   <script>
@@ -406,7 +416,7 @@
   <header class="site-header">
     <div class="container site-header-inner">
       <div class="brand">
-        <a href="/en.html">
+        <a href="/">
           <img id="seasonalLogo" src="/assets/seasonal/logo-allseaso.png" alt="Brave Athletes Club logo" />
         </a>
         <small>Training &amp; Performance</small>
@@ -414,10 +424,10 @@
 
       <nav class="main-nav">
         <a href="/classes-en.html">Classes</a>
-        <a href="/personal-en.html">Personal</a>
-        <a href="/mental-training-en.html" class="active">Mental</a>
-        <a href="/about-en.html">About</a>
-        <span class="lang"><a href="/mental-training.html" hreflang="ja">JP</a></span>
+        <a href="/personal-en.html">Personal Training</a>
+        <a href="/mental-training-en.html" class="active">Mental Training</a>
+        <a href="/about.html">About</a>
+        <span class="lang"><a href="/mental-training-athlete.html" hreflang="ja">JP</a></span>
       </nav>
     </div>
   </header>
@@ -427,57 +437,96 @@
       <section>
         <div class="hero-inner">
           <div class="hero-copy">
-            <span class="label">Mental Training</span>
-            <h1>Mental Training</h1>
+            <span class="label">Athletes &amp; Performers</span>
+            <h1>Mental Training for Better Performance</h1>
             <p>
-              At Brave Athletes Club, we value not only physical development and technical skills, but also how we prepare the mind and build supportive daily habits.
-              Mental training can help athletes perform in competition, and it can also support study, daily life, parenting, and communication.
+              Whether you compete in sports or perform in ballet, dance or on stage,
+              performing at your best involves more than physical preparation and technique.
+              Learning to manage your mental state is important, too.
+              At Brave Athletes Club, we introduce practical skills for focus, emotional regulation
+              and pre-performance routines that can be used in both everyday practice and important performances.
             </p>
             <div class="hero-buttons">
-              <a class="btn-main" href="#overview">Overview</a>
-              <a class="btn-main secondary" href="/contact-en.html">Contact</a>
+              <a class="btn-main" href="#overview">View Course Details</a>
+              <a class="btn secondary" href="mailto:braveathletesclub@gmail.com">Contact Us</a>
             </div>
           </div>
-
           <div class="hero-logo">
-            <img src="/assets/mental-img/mental-athlete.png" alt="Athlete mental training" />
+            <img src="/assets/mental-img/mental-athlete.png" alt="Mental training illustration featuring ballet, soccer, sprinting and dance performers" />
           </div>
         </div>
       </section>
 
       <section id="overview">
         <div class="card">
-          <h2>Athlete Mental Training</h2>
+          <h2>Upcoming Session</h2>
           <p>
-            This page introduces our athlete-focused mental training approach.
-            A regular schedule is planned in the future, and sessions will include both practical application and guided learning.
+            This session introduces practical mental skills to help you prepare for important moments,
+            stay focused and respond to challenges during a competition or performance.
           </p>
           <p>
-            The aim is not simply to “be tougher.” Instead, we work on awareness, focus, routines, reflection, and communication so that athletes can use their skills more consistently in real performance settings.
+            The ideas are useful not only for athletes and performing artists,
+            but also for coaches, teachers and parents who support them.
           </p>
+          <dl class="info-list">
+            <dt>Date &amp; Time</dt>
+            <dd>Saturday, January 16, 2027 · 7:00–8:00 PM (JST)</dd>
+            <dt>Instructor</dt>
+            <dd>Yoshitaka Ikeda</dd>
+            <dt>Who Can Join</dt>
+            <dd>Athletes and performers aged 9 and above, coaches, teachers, parents, and anyone interested in mental training</dd>
+            <dt>Topics</dt>
+            <dd>Focus, resetting your mindset, pre-performance routines, goal setting and practical mental skills for performing at your best</dd>
+          </dl>
+          <p>
+            Venue and participation fee details are provided individually to those who inquire or apply.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn-main" href="mailto:braveathletesclub@gmail.com?subject=Mental%20Training%20January%2016%202027%20Inquiry">Inquire or Register</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- January 16, 2027 event flyer -->
+      <section id="event-flyer">
+        <div class="card">
+          <h2>January 16, 2027 — Session Information</h2>
+          <p>
+            Under the theme <strong>For Better Performance</strong>, we will explore mental skills
+            that help you prepare for and make the most of important performances.
+          </p>
+          <div style="text-align:center; margin-top:20px;">
+            <a href="/assets/events/2027-01-16-mental-training.png" target="_blank" rel="noopener noreferrer" style="display:inline-block; width:100%; max-width:780px;">
+              <img src="/assets/events/2027-01-16-mental-training.png"
+                   alt="Mental Training — For Better Performance, January 16, 2027 event flyer"
+                   loading="lazy"
+                   style="display:block; width:100%; height:auto; border-radius:18px; box-shadow:0 12px 30px rgba(15,23,42,0.12);" />
+            </a>
+            <p style="margin-top:12px; color:#6b7280; font-size:13px;">Click the flyer to view a larger version.</p>
+          </div>
         </div>
       </section>
 
       <section>
         <div class="card">
-          <h2>What We Plan to Work On</h2>
+          <h2>What We Work On</h2>
           <div class="grid-2">
             <div>
-              <h3>Before performance</h3>
+              <h3>Before a Performance</h3>
               <ul>
-                <li>pre-performance routines</li>
-                <li>breathing and regulation</li>
-                <li>settling nerves before competition</li>
-                <li>focusing on the next action</li>
+                <li>Managing your mindset before competitions and performances</li>
+                <li>Using breathing to find a calm, focused state</li>
+                <li>Building a helpful pre-performance routine</li>
+                <li>Directing attention to what matters right now</li>
               </ul>
             </div>
             <div>
-              <h3>During performance</h3>
+              <h3>During a Performance</h3>
               <ul>
-                <li>resetting after mistakes</li>
-                <li>maintaining concentration</li>
-                <li>using cue words and self-talk</li>
-                <li>staying connected to game or event demands</li>
+                <li>Resetting after mistakes</li>
+                <li>Maintaining focus</li>
+                <li>Using constructive self-talk and simple cues</li>
+                <li>Regaining composure during a game or performance</li>
               </ul>
             </div>
           </div>
@@ -487,23 +536,22 @@
       <section>
         <div class="grid-2">
           <div class="card">
-            <h3>After performance</h3>
+            <h3>After a Performance</h3>
             <ul>
-              <li>reflection and review</li>
-              <li>identifying what worked well</li>
-              <li>setting the next goal clearly</li>
-              <li>building repeatable habits over time</li>
+              <li>Reflecting on your experience</li>
+              <li>Recognizing what went well</li>
+              <li>Setting your next goals</li>
+              <li>Turning insights into everyday habits</li>
             </ul>
           </div>
-
           <div class="card">
-            <h3>Practical session elements</h3>
+            <h3>Practical Activities</h3>
             <ul>
-              <li>focus training</li>
-              <li>routine practice</li>
-              <li>visualisation and mental rehearsal</li>
-              <li>communication and feedback</li>
-              <li>simple written reflection</li>
+              <li>Attention and focus exercises</li>
+              <li>Practicing performance routines</li>
+              <li>Visualization and mental rehearsal</li>
+              <li>Discussion and feedback</li>
+              <li>Simple reflection and progress notes</li>
             </ul>
           </div>
         </div>
@@ -511,26 +559,42 @@
 
       <section>
         <div class="card">
-          <h2>Who This Is For</h2>
+          <h2>Who Is This For?</h2>
           <ul>
-            <li>young athletes who want to perform more consistently</li>
-            <li>athletes who get nervous before competition</li>
-            <li>those who want to improve focus and reset after mistakes</li>
-            <li>players who want to connect training habits with performance</li>
+            <li>People who feel nervous before competitions or performances</li>
+            <li>Those who find it difficult to stay focused</li>
+            <li>Those who struggle to recover mentally after mistakes</li>
+            <li>Anyone who wants to bring their practice into performance</li>
+            <li>Those who want to develop mental skills alongside technical and expressive abilities</li>
           </ul>
         </div>
       </section>
 
       <section>
         <div class="note-box">
-          <h2>Our Approach</h2>
+          <h2>Our Approach at Brave Athletes Club</h2>
           <p>
-            We want athletes to understand that mental training is part of regular development, just like movement, skill, and physical conditioning.
-            It should feel practical, understandable, and useful in everyday training as well as competition.
+            We believe mental skills, like physical and technical skills, can be developed through regular practice.
+            The goal is not to eliminate every nervous feeling, but to learn useful ways to prepare,
+            refocus and respond to different situations.
           </p>
           <p>
-            Sessions will be designed so that participants can try strategies, reflect on them, and gradually build habits they can trust.
+            Our approach emphasizes clear, practical strategies that can become part of everyday training,
+            supporting each person's development in sports and the performing arts.
           </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h2>Questions &amp; Registration</h2>
+          <p>
+            Please email us if you have questions or would like to register.
+            Venue and fee details will be shared individually.
+          </p>
+          <div class="hero-buttons">
+            <a class="btn-main" href="mailto:braveathletesclub@gmail.com?subject=Mental%20Training%20January%2016%202027%20Inquiry">Inquire or Register</a>
+          </div>
         </div>
       </section>
     </div>
