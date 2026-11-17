@@ -3481,3 +3481,30 @@
     max-width: 100%;
   }
 }
+/* =========================================
+   Matsumoto / Infini Takatsuki
+   横長スポンサー画像
+   ========================================= */
+
+.karuta-event-page .sponsor-wide-photo {
+  max-width: 380px;
+}
+
+.karuta-event-page .sponsor-wide-photo img {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  max-height: none;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(74, 48, 24, 0.10);
+}
+
+@media (max-width: 760px) {
+  .karuta-event-page .sponsor-wide-photo,
+  .karuta-event-page .sponsor-wide-photo img {
+    max-width: 100%;
+  }
+}
